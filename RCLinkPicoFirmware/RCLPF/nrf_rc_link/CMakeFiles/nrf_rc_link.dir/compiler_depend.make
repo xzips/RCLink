@@ -2863,12 +2863,32 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: nrf_rc_link\nrf_rc_link.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\boards\include\boards\pico.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_common.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_compiler.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_debug.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_mcu.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_timeout.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_types.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_verify.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\osal\osal.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\osal\osal_pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb_option.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\assert.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\config.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\error.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\types.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_stdlib\include\pico\stdlib.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include\pico\critical_section.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include\pico\lock_core.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include\pico\mutex.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include\pico\sem.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_time\include\pico\time.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
@@ -2889,11 +2909,13 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pi
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\include\hardware\irq.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\include\hardware\sync.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\include\hardware\timer.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\include\hardware\uart.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\include\pico\stdio.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include\tusb_config.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: generated\pico_base\pico\config_autogen.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: generated\pico_base\pico\version.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_ansi.h"
@@ -2908,7 +2930,10 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdio.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\string.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\strings.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_locale.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_pthreadtypes.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_sigset.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_stdint.h"
@@ -2923,6 +2948,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\sched.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\select.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\stdio.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\string.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\timespec.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdarg.h"

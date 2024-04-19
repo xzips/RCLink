@@ -20,5 +20,8 @@ nmake
 :: Copy the .uf2 file back to the batch file's directory
 copy "nrf_rc_link\nrf_rc_link.uf2" "%BAT_DIR%"
 
+cd "C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\"
+
+
 :: Pause the script to view any output or errors
-pause
+:: pause

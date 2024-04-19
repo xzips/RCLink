@@ -69,4 +69,35 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: \
  C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/uart.h \
  C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/uart.h \
  C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dreq.h \
- C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h
+ C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/tusb.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_common.h \
+ c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\string.h \
+ c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\sys\_locale.h \
+ c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\strings.h \
+ c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\sys\string.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/tusb_option.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_compiler.h \
+ C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include/tusb_config.h \
+ C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_mcu.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_compiler.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_verify.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_types.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_debug.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_timeout.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/osal/osal.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_common.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/osal/osal_pico.h \
+ C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include/pico/sem.h \
+ C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include/pico/lock_core.h \
+ C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\include/hardware/sync.h \
+ C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include/pico/mutex.h \
+ C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include/pico/critical_section.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_fifo.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/osal/osal.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_fifo.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/class/hid/hid.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/device/usbd.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/class/cdc/cdc_device.h \
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/class/cdc/cdc.h

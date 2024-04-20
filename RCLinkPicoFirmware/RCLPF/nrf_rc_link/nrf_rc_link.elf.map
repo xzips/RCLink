@@ -24,8 +24,10 @@ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../..
                               c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-realloc.o) (_realloc_r)
 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
                               c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o) (_sbrk_r)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
+                              CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj (strcmp)
 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
-                              CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj (strlen)
+                              CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj (strlen)
 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
                               c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o) (_free_r)
 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
@@ -53,6 +55,80 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+ .text.recieve_loop
+                0x00000000        0x4 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+ .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_read_packet
+                0x00000000      0x12c CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_configure
+                0x00000000       0xdc CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_tx_destination
+                0x00000000       0xa0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_rf_channel
+                0x00000000       0x48 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_initialise
+                0x00000000      0x214 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_rf_data_rate
+                0x00000000       0x84 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_receiver_mode
+                0x00000000       0xe4 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_auto_retransmission
+                0x00000000       0x5c CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_rf_power
+                0x00000000       0x84 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_standby_mode
+                0x00000000       0x88 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_payload_size
+                0x00000000       0xc8 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_is_packet
+                0x00000000      0x110 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .rodata.nrf_driver_rx_destination.str1.4
+                0x00000000        0x7 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_rx_destination
+                0x00000000      0x174 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_dyn_payloads_enable
+                0x00000000       0xac CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_dyn_payloads_disable
+                0x00000000       0xa8 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_send_packet
+                0x00000000      0x314 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text.nrf_driver_create_client
+                0x00000000       0x84 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .data.nrf_driver
+                0x00000000       0x20 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .comment       0x00000000       0x4a CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .ARM.attributes
+                0x00000000       0x2c CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+ .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .text.spi_manager_init_spi
+                0x00000000       0x34 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .text.spi_manager_deinit_spi
+                0x00000000        0x8 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .text.spi_manager_transfer
+                0x00000000       0x34 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .comment       0x00000000       0x4a CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .ARM.attributes
+                0x00000000       0x2c CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+ .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .text.csn_put_high
+                0x00000000        0xc CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .text.csn_put_low
+                0x00000000        0xc CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .text.ce_put_high
+                0x00000000        0xc CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .text.ce_put_low
+                0x00000000        0xc CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .text.pin_manager_configure
+                0x00000000       0xb8 CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .comment       0x00000000       0x4a CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
+ .ARM.attributes
+                0x00000000       0x2c CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
  .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -464,7 +540,6 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .text.runtime_install_stack_guard
                 0x00000000       0x38 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .text._sbrk    0x00000000       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .text._gettimeofday
                 0x00000000       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .text.settimeofday
@@ -482,41 +557,15 @@ Discarded input sections
                 0x00000000        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .bss.epoch_time_us_since_boot
                 0x00000000        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .bss.heap_end.0
-                0x00000000        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._out_buffer
-                0x00000000        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._out_null
-                0x00000000        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._out_rev
-                0x00000000       0x9c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ntoa_format
-                0x00000000      0x1cc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._out_fct
-                0x00000000       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x00000000      0x44c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .rodata._ftoa.str1.4
-                0x00000000       0x15 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x00000000      0x398 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._vsnprintf
-                0x00000000      0xb04 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .rodata._vsnprintf
-                0x00000000      0x1e0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text.__wrap_sprintf
-                0x00000000       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_snprintf
                 0x00000000       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_vsnprintf
                 0x00000000       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text.vfctprintf
-                0x00000000       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.weak_raw_printf
                 0x00000000       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .rodata.pow10.0
-                0x00000000       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.clzsi    0x00000000        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -537,10 +586,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .text.__wrap___aeabi_idiv
-                0x00000000       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .text.__wrap___aeabi_ldiv
-                0x00000000      0x424 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .text.divmod_s64s64_rem
                 0x00000000        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .text.divmod_u64u64_rem
@@ -552,31 +597,11 @@ Discarded input sections
                 0x00000000        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.pop_r8_r11
                 0x00000000        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_darithmetic
-                0x00000000       0x80 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_cdcmple
-                0x00000000       0x6c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.__wrap___aeabi_dcmpeq
                 0x00000000       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_dcmplt
-                0x00000000        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_dcmple
-                0x00000000       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_dcmpge
-                0x00000000       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_dcmpgt
-                0x00000000        0xa CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_dcmpun
-                0x00000000       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.__wrap___aeabi_ui2d
                 0x00000000       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_i2d
-                0x00000000       0x38 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_d2iz
-                0x00000000       0x48 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.double2int
-                0x00000000       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_d2uiz
                 0x00000000       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.fix2double
                 0x00000000       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -700,14 +725,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.__wrap___aeabi_dsub
-                0x00000000       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.dadd_shim
-                0x00000000      0x15c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.dmul_shim
-                0x00000000      0x15c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.ddiv_shim
-                0x00000000      0x1b0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.dsqrt_shim
                 0x00000000      0x1a8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.dcordic_vec_step
@@ -716,18 +733,12 @@ Discarded input sections
                 0x00000000       0x76 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.double2int_shim
                 0x00000000        0xe CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.double2uint_shim
-                0x00000000        0xe CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.double2int64_shim
                 0x00000000       0x1a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.double2uint64_shim
-                0x00000000       0x70 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.double2float_shim
                 0x00000000       0x5c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.x2double_shims
                 0x00000000       0x90 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.dunpacks
-                0x00000000       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.dreduce  0x00000000       0x82 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.dtan_shim
                 0x00000000       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -911,19 +922,12 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .rodata.__wrap_malloc.str1.4
-                0x00000000        0xe CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .text.__wrap_malloc
-                0x00000000       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .text.__wrap_calloc
                 0x00000000       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .text.__wrap_realloc
                 0x00000000       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .text.__wrap_free
                 0x00000000        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .comment       0x00000000       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .ARM.attributes
-                0x00000000       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .text.aeabi_memset_memcpy
@@ -949,8 +953,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .text.stdio_buffered_printer
-                0x00000000       0x64 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
                 0x00000000       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_end
@@ -968,10 +970,6 @@ Discarded input sections
  .text._isatty  0x00000000        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_flush
                 0x00000000       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .text.__wrap_vprintf
-                0x00000000       0xd8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .text.__wrap_printf
-                0x00000000       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.getchar_timeout_us
                 0x00000000       0x98 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_filter_driver
@@ -1202,9 +1200,35 @@ Discarded input sections
  .comment       0x00000000       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
- .text          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccofTJDn.o
- .data          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccofTJDn.o
- .bss           0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccofTJDn.o
+ .text          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .data          0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .text.spi_init
+                0x00000000      0x138 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .text.spi_deinit
+                0x00000000       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .text.spi_set_baudrate
+                0x00000000       0xc0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .text.spi_get_baudrate
+                0x00000000       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .time_critical.spi_write_read_blocking
+                0x00000000       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .time_critical.spi_write_blocking
+                0x00000000       0x4c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .time_critical.spi_read_blocking
+                0x00000000       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .time_critical.spi_write16_read16_blocking
+                0x00000000       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .time_critical.spi_write16_blocking
+                0x00000000       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .time_critical.spi_read16_blocking
+                0x00000000       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .comment       0x00000000       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .ARM.attributes
+                0x00000000       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .text          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccGL435L.o
+ .data          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccGL435L.o
+ .bss           0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccGL435L.o
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-calloc.o)
@@ -1232,14 +1256,8 @@ Discarded input sections
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
- .data._impure_ptr
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
- .data.impure_data
-                0x00000000      0x428 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
  .rodata._global_impure_ptr
                 0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-init.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-init.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-init.o)
@@ -1251,43 +1269,13 @@ Discarded input sections
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
- .text.malloc   0x00000000       0x14 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
  .text.free     0x00000000       0x14 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
- .debug_frame   0x00000000       0x40 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .text._malloc_r
-                0x00000000      0x584 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .bss.__malloc_current_mallinfo
-                0x00000000       0x28 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .bss.__malloc_max_sbrked_mem
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .bss.__malloc_max_total_mem
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .bss.__malloc_top_pad
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .data.__malloc_av_
-                0x00000000      0x408 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .data.__malloc_sbrk_base
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .data.__malloc_trim_threshold
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .debug_frame   0x00000000       0x3c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
- .text.__malloc_lock
-                0x00000000       0x10 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
- .text.__malloc_unlock
-                0x00000000       0x10 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
- .debug_frame   0x00000000       0x40 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-realloc.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-realloc.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-realloc.o)
@@ -1306,22 +1294,14 @@ Discarded input sections
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
- .text._sbrk_r  0x00000000       0x24 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
- .debug_frame   0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
- .text._malloc_trim_r
-                0x00000000       0x9c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
- .text._free_r  0x00000000      0x1c4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
- .debug_frame   0x00000000       0x54 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
@@ -1335,15 +1315,11 @@ Discarded input sections
                 0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .text.__retarget_lock_acquire
                 0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
- .text.__retarget_lock_acquire_recursive
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .text.__retarget_lock_try_acquire
                 0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .text.__retarget_lock_try_acquire_recursive
                 0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .text.__retarget_lock_release
-                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
- .text.__retarget_lock_release_recursive
                 0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .bss.__lock___arc4random_mutex
                 0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
@@ -1355,17 +1331,12 @@ Discarded input sections
                 0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .bss.__lock___env_recursive_mutex
                 0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
- .bss.__lock___malloc_recursive_mutex
-                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .bss.__lock___sfp_recursive_mutex
                 0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .bss.__lock___sinit_recursive_mutex
                 0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .bss.__lock___tz_mutex
                 0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
- .debug_frame   0x00000000       0xb0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-memmove.o)
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-memmove.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-memmove.o)
@@ -1380,10 +1351,6 @@ Discarded input sections
                 0x00000000       0x50 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)
  .text._reclaim_reent
                 0x00000000       0xa0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)
- .bss.errno     0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)
- .debug_frame   0x00000000       0x50 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)
- .ARM.attributes
-                0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
@@ -1420,11 +1387,11 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\aspen\AppData\Local\Temp\ccofTJDn.o
+ .boot2         0x10000000      0x100 C:\Users\aspen\AppData\Local\Temp\ccGL435L.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x4650
+.text           0x10000100     0x7320
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1485,461 +1452,608 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x100002b8                _init
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x100002bc       0x48 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .text.send_message
+                0x10000304       0xf8 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+                0x10000304                send_message
  .text.startup.main
-                0x10000304       0x60 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
-                0x10000304                main
+                0x100003fc       0x7c CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+                0x100003fc                main
  .text.running_on_fpga
-                0x10000364       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10000364                running_on_fpga
+                0x10000478       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10000478                running_on_fpga
  .text.hw_claim_or_assert
-                0x10000374       0x44 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000374                hw_claim_or_assert
+                0x10000488       0x44 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000488                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x100003b8       0x9c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x100003b8                hw_claim_unused_from_range
+                0x100004cc       0x9c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x100004cc                hw_claim_unused_from_range
  .text.spin_locks_reset
-                0x10000454       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000454                spin_locks_reset
+                0x10000568       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000568                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10000470       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000470                next_striped_spin_lock_num
+                0x10000584       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000584                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x10000488       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000488                spin_lock_claim_unused
+                0x1000059c       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x1000059c                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x100004a8       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100004a8                irq_set_enabled
+                0x100005bc       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100005bc                irq_set_enabled
  .text.irq_set_pending
-                0x100004cc       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100004cc                irq_set_pending
+                0x100005e0       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100005e0                irq_set_pending
  .text.irq_has_shared_handler
-                0x100004dc       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100004dc                irq_has_shared_handler
+                0x100005f0       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100005f0                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x10000508       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000508                irq_get_vtable_handler
+                0x1000061c       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000061c                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10000518       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000518                irq_set_exclusive_handler
+                0x1000062c       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000062c                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x1000056c      0x1e8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x1000056c                irq_add_shared_handler
+                0x10000680      0x1e8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000680                irq_add_shared_handler
  .text.irq_remove_handler
-                0x10000754      0x1b0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000754                irq_remove_handler
+                0x10000868      0x1b0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000868                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10000904       0xb4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000904                irq_add_tail_to_free_list
+                0x10000a18       0xb4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000a18                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x100009b8       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100009b8                irq_init_priorities
+                0x10000acc       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000acc                irq_init_priorities
  .text.user_irq_claim_unused
-                0x100009dc       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100009dc                user_irq_claim_unused
+                0x10000af0       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000af0                user_irq_claim_unused
  .text.lock_init
-                0x10000a04       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10000a04                lock_init
+                0x10000b18       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10000b18                lock_init
  .text.mutex_init
-                0x10000a14       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10000a14                mutex_init
+                0x10000b28       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10000b28                mutex_init
  .text.recursive_mutex_init
-                0x10000a30       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10000a30                recursive_mutex_init
+                0x10000b44       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10000b44                recursive_mutex_init
  .text.critical_section_init
-                0x10000a4c       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10000a4c                critical_section_init
+                0x10000b60       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10000b60                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x10000a6c       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10000a6c                critical_section_init_with_lock_num
+                0x10000b80       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10000b80                critical_section_init_with_lock_num
  .text.timer_pool_entry_comparator
-                0x10000a80       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000a80                timer_pool_entry_comparator
+                0x10000b94       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000b94                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x10000ab4       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000bc8       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x10000ae4      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000bf8      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10000be4      0x1bc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000cf8      0x1bc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10000da0       0x6c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000da0                alarm_pool_init_default
+                0x10000eb4       0x6c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000eb4                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10000e0c        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000e0c                alarm_pool_get_default
+                0x10000f20        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000f20                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10000e14      0x178 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000e14                alarm_pool_add_alarm_at
+                0x10000f28      0x178 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000f28                alarm_pool_add_alarm_at
  .text.alarm_pool_core_num
-                0x10000f8c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000f8c                alarm_pool_core_num
+                0x100010a0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x100010a0                alarm_pool_core_num
  .text.sleep_until
-                0x10000f90       0xc4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000f90                sleep_until
+                0x100010a4       0xc4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x100010a4                sleep_until
  .text.sleep_ms
-                0x10001054       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001054                sleep_ms
+                0x10001168       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001168                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10001088       0xd4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001088                best_effort_wfe_or_timeout
+                0x1000119c       0xd4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000119c                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x1000115c       0xbc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001270       0xbc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001218       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001218                hardware_alarm_claim
+                0x1000132c       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000132c                hardware_alarm_claim
  .text.time_us_64
-                0x10001230       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001230                time_us_64
+                0x10001344       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001344                time_us_64
  .text.busy_wait_us
-                0x10001244       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001244                busy_wait_us
+                0x10001358       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001358                busy_wait_us
  .text.busy_wait_until
-                0x10001298       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001298                busy_wait_until
+                0x100013ac       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100013ac                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x100012b8       0x8c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x100012b8                hardware_alarm_set_callback
+                0x100013cc       0x8c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100013cc                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10001344       0xd4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001344                hardware_alarm_set_target
+                0x10001458       0xd4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001458                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001418       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001418                hardware_alarm_cancel
+                0x1000152c       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000152c                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x10001454       0x68 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001568       0x68 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x100014bc       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100014bc                ph_post_alloc_init
+                0x100015d0       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100015d0                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x100014f8       0x90 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100014f8                ph_merge_two_pass
+                0x1000160c       0x90 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000160c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x10001588      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000169c      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x10001688      0x104 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001688                ph_remove_head
+                0x1000179c      0x104 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000179c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x1000178c       0x7c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000178c                ph_remove_and_free_node
+                0x100018a0       0x7c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100018a0                ph_remove_and_free_node
  .text.clocks_init
-                0x10001808      0x2d0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001808                clocks_init
+                0x1000191c      0x2d0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000191c                clocks_init
  .text.pll_init
-                0x10001ad8       0xa0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x10001ad8                pll_init
+                0x10001bec       0xa0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10001bec                pll_init
  .text.watchdog_start_tick
-                0x10001b78       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10001b78                watchdog_start_tick
+                0x10001c8c       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10001c8c                watchdog_start_tick
  .text.watchdog_reboot
-                0x10001b88       0x98 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10001b88                watchdog_reboot
+                0x10001c9c       0x98 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10001c9c                watchdog_reboot
  .text.xosc_init
-                0x10001c20       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10001c20                xosc_init
+                0x10001d34       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10001d34                xosc_init
  .text.runtime_init
-                0x10001c48       0xf0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001c48                runtime_init
- .text._exit    0x10001d38        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001d38                _exit
- .text.exit     0x10001d3c        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001d3c                exit
- .text.panic    0x10001d44       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001d44                panic
+                0x10001d5c       0xf0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001d5c                runtime_init
+ .text._exit    0x10001e4c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001e4c                _exit
+ .text._sbrk    0x10001e50       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001e50                _sbrk
+ .text.exit     0x10001e84        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001e84                exit
+ .text.panic    0x10001e8c       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001e8c                panic
  .text.hard_assertion_failure
-                0x10001d74        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001d74                hard_assertion_failure
+                0x10001ebc        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001ebc                hard_assertion_failure
+ .text._out_buffer
+                0x10001ec8        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._out_null
+                0x10001ed0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._out_rev
+                0x10001ed4       0x9c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ntoa_format
+                0x10001f70      0x1cc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x10001d80       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000213c       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._out_fct
+                0x1000214c       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x1000215c      0x44c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x100025a8      0x398 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._vsnprintf
+                0x10002940      0xb04 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text.__wrap_sprintf
+                0x10003444       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003444                __wrap_sprintf
+ .text.vfctprintf
+                0x1000346c       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000346c                vfctprintf
  .text.weak_raw_vprintf
-                0x10001d90       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10001d90                weak_raw_vprintf
- .text          0x10001dc0       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x1000348c       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000348c                weak_raw_vprintf
+ .text          0x100034bc       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10001dd0       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10001dd0                rom_func_lookup
+                0x100034cc       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100034cc                rom_func_lookup
  .text.rom_data_lookup
-                0x10001de0       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10001de0                rom_data_lookup
+                0x100034dc       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100034dc                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10001df0       0x44 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10001df0                rom_funcs_lookup
+                0x100034ec       0x44 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100034ec                rom_funcs_lookup
+ .text.__wrap___aeabi_idiv
+                0x10003530       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003530                __wrap___aeabi_idivmod
+                0x10003530                divmod_s32s32
+                0x10003530                div_s32s32
+                0x10003530                __wrap___aeabi_idiv
+                0x10003538                divmod_s32s32_unsafe
+                0x10003564                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x10001e34       0x4c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10001e34                __wrap___aeabi_uidiv
-                0x10001e34                __wrap___aeabi_uidivmod
-                0x10001e34                div_u32u32
-                0x10001e34                divmod_u32u32
-                0x10001e3c                divmod_u32u32_unsafe
-                0x10001e64                divmod_u32u32_savestate
+                0x10003580       0x4c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003580                __wrap___aeabi_uidiv
+                0x10003580                __wrap___aeabi_uidivmod
+                0x10003580                div_u32u32
+                0x10003580                divmod_u32u32
+                0x10003588                divmod_u32u32_unsafe
+                0x100035b0                divmod_u32u32_savestate
+ .text.__wrap___aeabi_ldiv
+                0x100035cc      0x424 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100035cc                div_s64s64
+                0x100035cc                divmod_s64s64
+                0x100035cc                __wrap___aeabi_ldivmod
+                0x100035fc                divmod_u64u64
+                0x100035fc                div_u64u64
+                0x100035fc                __wrap___aeabi_uldivmod
+                0x1000360c                divmod_u64u64_savestate
+                0x1000362c                divmod_s64s64_unsafe
+                0x100036b4                divmod_u64u64_unsafe
+ .text.__wrap___aeabi_darithmetic
+                0x100039f0       0x80 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100039f0                __wrap___aeabi_drsub
+                0x100039f6                __wrap___aeabi_dsub
+                0x10003a08                __wrap___aeabi_dadd
+                0x10003a1a                __wrap___aeabi_ddiv
+                0x10003a56                __wrap___aeabi_dmul
+ .text.__wrap___aeabi_cdcmple
+                0x10003a70       0x6c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003a70                __wrap___aeabi_cdrcmple
+                0x10003a80                __wrap___aeabi_cdcmpeq
+                0x10003a80                __wrap___aeabi_cdcmple
+ .text.__wrap___aeabi_dcmplt
+                0x10003adc        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003adc                __wrap___aeabi_dcmplt
+ .text.__wrap___aeabi_dcmple
+                0x10003ae8       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003ae8                __wrap___aeabi_dcmple
+ .text.__wrap___aeabi_dcmpge
+                0x10003af8       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003af8                __wrap___aeabi_dcmpge
+ .text.__wrap___aeabi_dcmpgt
+                0x10003b08        0xa CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003b08                __wrap___aeabi_dcmpgt
+ .text.__wrap___aeabi_dcmpun
+                0x10003b12       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003b12                __wrap___aeabi_dcmpun
+ *fill*         0x10003b2e        0x2 
+ .text.__wrap___aeabi_i2d
+                0x10003b30       0x38 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003b30                __wrap___aeabi_ui2d
+                0x10003b38                __wrap___aeabi_i2d
+ .text.__wrap___aeabi_d2iz
+                0x10003b68       0x48 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003b68                double2int_z
+                0x10003b68                __wrap___aeabi_d2iz
+ .text.__wrap___aeabi_d2uiz
+                0x10003bb0       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003bb0                __wrap___aeabi_d2uiz
+                0x10003bb0                double2uint
  .text.__aeabi_double_init
-                0x10001e80       0x94 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x10001e80                __aeabi_double_init
+                0x10003bc8       0x94 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10003bc8                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10001f14       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10001f14                double_table_shim_on_use_helper
+                0x10003c5c       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003c5c                double_table_shim_on_use_helper
+ .text.__wrap___aeabi_dsub
+                0x10003c88       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003c88                drsub_shim
+                0x10003c8e                dsub_shim
+ .text.dadd_shim
+                0x10003c98      0x15c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003c98                dadd_shim
+ .text.dmul_shim
+                0x10003df4      0x15c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003df4                dmul_shim
+ .text.ddiv_shim
+                0x10003f50      0x1b0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003f50                ddiv_shim
+ .text.double2uint_shim
+                0x10004100        0xe CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004100                double2uint_shim
+                0x10004102                double2ufix_shim
+ *fill*         0x1000410e        0x2 
+ .text.double2uint64_shim
+                0x10004110       0x70 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004110                double2uint64_shim
+                0x10004112                double2ufix64_shim
+                0x10004132                d2fix_a
+ .text.dunpacks
+                0x10004180       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004180                dunpacks
  .text.__aeabi_lmul
-                0x10001f40       0x32 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10001f40                __wrap___aeabi_lmul
- *fill*         0x10001f72        0x2 
+                0x100041bc       0x32 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x100041bc                __wrap___aeabi_lmul
+ *fill*         0x100041ee        0x2 
  .text.__aeabi_float_init
-                0x10001f74       0x64 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10001f74                __aeabi_float_init
+                0x100041f0       0x64 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x100041f0                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10001fd8       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10001fd8                float_table_shim_on_use_helper
- .text          0x10002004       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10002004                __aeabi_mem_init
- .text.memset   0x10002014        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10002014                __wrap_memset
- .text.memcpy   0x10002020        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10002020                __wrap_memcpy
-                0x10002020                __wrap___aeabi_memcpy
+                0x10004254       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10004254                float_table_shim_on_use_helper
+ .text.__wrap_malloc
+                0x10004280       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x10004280                __wrap_malloc
+ .text          0x100042a4       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x100042a4                __aeabi_mem_init
+ .text.memset   0x100042b4        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x100042b4                __wrap_memset
+ .text.memcpy   0x100042c0        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x100042c0                __wrap_memcpy
+                0x100042c0                __wrap___aeabi_memcpy
  .text.stdio_out_chars_no_crlf
-                0x1000202c       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100042cc       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x1000203c       0xb4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100042dc       0xb4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .text.stdio_buffered_printer
+                0x10004390       0x64 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string.isra.0
-                0x100020f0       0xfc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100043f4       0xfc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x100021ec       0x98 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100021ec                __wrap_putchar
+                0x100044f0       0x98 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100044f0                __wrap_putchar
  .text.__wrap_puts
-                0x10002284       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10002284                __wrap_puts
+                0x10004588       0x3c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004588                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x100022c0       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100022c0                stdio_set_driver_enabled
+                0x100045c4       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100045c4                stdio_set_driver_enabled
+ .text.__wrap_vprintf
+                0x100045f4       0xd8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100045f4                __wrap_vprintf
+ .text.__wrap_printf
+                0x100046cc       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100046cc                __wrap_printf
  .text.stdio_init_all
-                0x100022f0        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100022f0                stdio_init_all
+                0x100046e4        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100046e4                stdio_init_all
  .text.__wrap_getchar
-                0x100022f8       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100022f8                __wrap_getchar
+                0x100046ec       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100046ec                __wrap_getchar
  .text.resetd_init
-                0x1000236c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004760        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x10002370        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004764        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x1000237c       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004770       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x100023a4        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004798        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x100023a8       0x64 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x1000479c       0x64 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x1000240c        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x1000240c                usbd_app_driver_get_cb
+                0x10004800        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004800                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x10002418       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x10002418                tud_cdc_line_coding_cb
+                0x1000480c       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x1000480c                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x1000244c       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x1000244c                stdio_usb_set_chars_available_callback
- .text.usb_irq  0x10002460       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004840       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004840                stdio_usb_set_chars_available_callback
+ .text.usb_irq  0x10004854       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x10002470       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004864       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_in_chars
-                0x100024c4       0x90 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x100024c4                stdio_usb_in_chars
+                0x100048b8       0x90 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100048b8                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x10002554      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004948      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x10002654       0xa8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004a48       0xa8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.tud_cdc_rx_cb
-                0x100026fc       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x100026fc                tud_cdc_rx_cb
+                0x10004af0       0x20 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004af0                tud_cdc_rx_cb
  .text.stdio_usb_init
-                0x1000271c       0xdc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x1000271c                stdio_usb_init
+                0x10004b10       0xdc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004b10                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x100027f8        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x100027f8                tud_descriptor_device_cb
+                0x10004bec        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10004bec                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x10002800        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10002800                tud_descriptor_configuration_cb
+                0x10004bf4        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10004bf4                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x10002808       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10002808                tud_descriptor_string_cb
+                0x10004bfc       0x74 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10004bfc                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x1000287c       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x10004c70       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x1000288c      0x1a8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x1000288c                pico_get_unique_board_id_string
+                0x10004c80      0x1a8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x10004c80                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x10002a34       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x10002a34                flash_get_unique_id
+                0x10004e28       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x10004e28                flash_get_unique_id
  .text.dcd_int_enable
-                0x10002a74        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002a74                dcd_int_enable
+                0x10004e68        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004e68                dcd_int_enable
  .text.dcd_set_address
-                0x10002a80       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002a80                dcd_set_address
+                0x10004e74       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004e74                dcd_set_address
  .text.dcd_connect
-                0x10002a94       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002a94                dcd_connect
+                0x10004e88       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004e88                dcd_connect
  .text.dcd_init
-                0x10002aa4       0x98 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002aa4                dcd_init
+                0x10004e98       0x98 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004e98                dcd_init
  .text.dcd_edpt0_status_complete
-                0x10002b3c       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002b3c                dcd_edpt0_status_complete
+                0x10004f30       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004f30                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x10002b58      0x108 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002b58                dcd_edpt_open
+                0x10004f4c      0x108 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004f4c                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x10002c60        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002c60                dcd_edpt_close_all
+                0x10005054        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005054                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x10002c68       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002c68                dcd_edpt_xfer
+                0x1000505c       0x24 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x1000505c                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x10002c8c       0x38 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002c8c                dcd_edpt_stall
+                0x10005080       0x38 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005080                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x10002cc4       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10002cc4                dcd_edpt_clear_stall
+                0x100050b8       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x100050b8                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x10002cf4       0x4c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10002cf4                rp2040_usb_init
+                0x100050e8       0x4c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x100050e8                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x10002d40       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10002d40                hw_endpoint_xfer_start
+                0x10005134       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10005134                hw_endpoint_xfer_start
  .text.tud_mounted
-                0x10002d90       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10002d90                tud_mounted
+                0x10005184       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005184                tud_mounted
  .text.tud_suspended
-                0x10002da0       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10002da0                tud_suspended
+                0x10005194       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005194                tud_suspended
  .text.tud_inited
-                0x10002db0       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10002db0                tud_inited
+                0x100051a4       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100051a4                tud_inited
  .text.tud_init
-                0x10002dc4       0xe4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10002dc4                tud_init
+                0x100051b8       0xe4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100051b8                tud_init
  .text.tud_task_ext
-                0x10002ea8      0x854 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10002ea8                tud_task_ext
+                0x1000529c      0x854 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000529c                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x100036fc       0x9c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x100036fc                usbd_open_edpt_pair
+                0x10005af0       0x9c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005af0                usbd_open_edpt_pair
  .text.usbd_defer_func
-                0x10003798       0x48 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10003798                usbd_defer_func
+                0x10005b8c       0x48 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005b8c                usbd_defer_func
  .text.usbd_edpt_open
-                0x100037e0       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x100037e0                usbd_edpt_open
+                0x10005bd4       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005bd4                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x10003814       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10003814                usbd_edpt_claim
+                0x10005c08       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005c08                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x1000383c       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x1000383c                usbd_edpt_release
+                0x10005c30       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005c30                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x10003864       0x4c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10003864                usbd_edpt_xfer
+                0x10005c58       0x4c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005c58                usbd_edpt_xfer
  .text.tud_control_status
-                0x100038b0       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100038b0                tud_control_status
+                0x10005ca4       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10005ca4                tud_control_status
  .text.tud_control_xfer
-                0x100038e0       0xbc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100038e0                tud_control_xfer
+                0x10005cd4       0xbc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10005cd4                tud_control_xfer
  .text.usbd_control_reset
-                0x1000399c       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x1000399c                usbd_control_reset
+                0x10005d90       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10005d90                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x100039b0        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100039b0                usbd_control_set_complete_callback
+                0x10005da4        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10005da4                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x100039bc       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100039bc                usbd_control_set_request
+                0x10005db0       0x1c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10005db0                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x100039d8       0xfc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100039d8                usbd_control_xfer_cb
+                0x10005dcc       0xfc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10005dcc                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x10003ad4       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003ad4                tud_cdc_n_connected
+                0x10005ec8       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10005ec8                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x10003b04       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003b04                tud_cdc_n_available
+                0x10005ef8       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10005ef8                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x10003b1c       0x70 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003b1c                tud_cdc_n_read
+                0x10005f10       0x70 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10005f10                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x10003b8c       0x78 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003b8c                tud_cdc_n_write_flush
+                0x10005f80       0x78 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10005f80                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x10003c04       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003c04                tud_cdc_n_write
+                0x10005ff8       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10005ff8                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x10003c38       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003c38                tud_cdc_n_write_available
+                0x1000602c       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x1000602c                tud_cdc_n_write_available
  .text.cdcd_init
-                0x10003c50       0x7c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003c50                cdcd_init
+                0x10006044       0x7c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006044                cdcd_init
  .text.cdcd_reset
-                0x10003ccc       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003ccc                cdcd_reset
+                0x100060c0       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x100060c0                cdcd_reset
  .text.cdcd_open
-                0x10003cf8       0xe8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003cf8                cdcd_open
+                0x100060ec       0xe8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x100060ec                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x10003de0       0xe4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003de0                cdcd_control_xfer_cb
+                0x100061d4       0xe4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x100061d4                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x10003ec4      0x148 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10003ec4                cdcd_xfer_cb
+                0x100062b8      0x148 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x100062b8                cdcd_xfer_cb
  .text.tusb_init
-                0x1000400c        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x1000400c                tusb_init
+                0x10006400        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006400                tusb_init
  .text.tusb_inited
-                0x10004018        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10004018                tusb_inited
+                0x1000640c        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x1000640c                tusb_inited
  .text.tu_edpt_claim
-                0x10004020       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10004020                tu_edpt_claim
+                0x10006414       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006414                tu_edpt_claim
  .text.tu_edpt_release
-                0x10004070       0x38 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10004070                tu_edpt_release
+                0x10006464       0x38 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006464                tu_edpt_release
  .text.tu_edpt_validate
-                0x100040a8       0x78 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x100040a8                tu_edpt_validate
+                0x1000649c       0x78 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x1000649c                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x10004120       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10004120                tu_edpt_bind_driver
+                0x10006514       0x34 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006514                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x10004154       0x70 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10004154                tu_fifo_config
+                0x10006548       0x70 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006548                tu_fifo_config
  .text.tu_fifo_count
-                0x100041c4       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100041c4                tu_fifo_count
+                0x100065b8       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100065b8                tu_fifo_count
  .text.tu_fifo_empty
-                0x100041f0       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100041f0                tu_fifo_empty
+                0x100065e4       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100065e4                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x10004200       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10004200                tu_fifo_remaining
+                0x100065f4       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100065f4                tu_fifo_remaining
  .text.tu_fifo_read
-                0x1000422c       0xa0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x1000422c                tu_fifo_read
+                0x10006620       0xa0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006620                tu_fifo_read
  .text.tu_fifo_read_n
-                0x100042cc       0xec CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100042cc                tu_fifo_read_n
+                0x100066c0       0xec CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100066c0                tu_fifo_read_n
  .text.tu_fifo_write
-                0x100043b8       0x88 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100043b8                tu_fifo_write
+                0x100067ac       0x88 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100067ac                tu_fifo_write
  .text.tu_fifo_write_n
-                0x10004440      0x168 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10004440                tu_fifo_write_n
+                0x10006834      0x168 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006834                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x100045a8       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100045a8                tu_fifo_clear
+                0x1000699c       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x1000699c                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x100045e8       0x48 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100045e8                tu_fifo_set_overwritable
- .text.strlen   0x10004630       0x5c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
-                0x10004630                strlen
+                0x100069dc       0x48 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100069dc                tu_fifo_set_overwritable
+ .text.malloc   0x10006a24       0x14 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
+                0x10006a24                malloc
+ .text._malloc_r
+                0x10006a38      0x584 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x10006a38                _malloc_r
+ .text.__malloc_lock
+                0x10006fbc       0x10 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
+                0x10006fbc                __malloc_lock
+ .text.__malloc_unlock
+                0x10006fcc       0x10 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
+                0x10006fcc                __malloc_unlock
+ .text._sbrk_r  0x10006fdc       0x24 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
+                0x10006fdc                _sbrk_r
+ .text          0x10007000       0x88 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
+                0x10007000                strcmp
+ .text.strlen   0x10007088       0x5c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+                0x10007088                strlen
+ .text._malloc_trim_r
+                0x100070e4       0x9c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
+                0x100070e4                _malloc_trim_r
+ .text._free_r  0x10007180      0x1c4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
+                0x10007180                _free_r
+ .text.__retarget_lock_acquire_recursive
+                0x10007344        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
+                0x10007344                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x10007348        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
+                0x10007348                __retarget_lock_release_recursive
  *(.fini)
- .fini          0x1000468c        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x1000468c                _fini
- .fini.__stub   0x10004690       0xc0 linker stubs
+ .fini          0x1000734c        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x1000734c                _fini
+ .fini.__stub   0x10007350       0xd0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1951,124 +2065,139 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10004750        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x10004750                . = ALIGN (0x4)
+ .eh_frame      0x10007420        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x10007420                . = ALIGN (0x4)
 
-.glue_7         0x10004750        0x0
- .glue_7        0x10004750        0x0 linker stubs
+.glue_7         0x10007420        0x0
+ .glue_7        0x10007420        0x0 linker stubs
 
-.glue_7t        0x10004750        0x0
- .glue_7t       0x10004750        0x0 linker stubs
+.glue_7t        0x10007420        0x0
+ .glue_7t       0x10007420        0x0 linker stubs
 
-.vfp11_veneer   0x10004750        0x0
- .vfp11_veneer  0x10004750        0x0 linker stubs
+.vfp11_veneer   0x10007420        0x0
+ .vfp11_veneer  0x10007420        0x0 linker stubs
 
-.v4_bx          0x10004750        0x0
- .v4_bx         0x10004750        0x0 linker stubs
+.v4_bx          0x10007420        0x0
+ .v4_bx         0x10007420        0x0 linker stubs
 
-.iplt           0x10004750        0x0
- .iplt          0x10004750        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10007420        0x0
+ .iplt          0x10007420        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10004750      0x344
+.rodata         0x10007420      0x5c8
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
+ .rodata.send_message.str1.4
+                0x10007420       0x14 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
  .rodata.main.str1.4
-                0x10004750       0x14 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+                0x10007434       0x31 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+ *fill*         0x10007465        0x3 
  .rodata.spin_lock_claim_unused.str1.4
-                0x10004764       0x1b CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x1000477f        0x1 
+                0x10007468       0x1b CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x10007483        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x10004780       0x1b CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000479b        0x5 
+                0x10007484       0x1b CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000749f        0x1 
  .rodata.at_the_end_of_time
-                0x100047a0        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x100047a0                at_the_end_of_time
+                0x100074a0        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x100074a0                at_the_end_of_time
  .rodata.hardware_alarm_claim.str1.4
-                0x100047a8       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x100047ca        0x2 
+                0x100074a8       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x100074ca        0x2 
  .rodata.panic.str1.4
-                0x100047cc       0x12 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x100047de        0x2 
+                0x100074cc       0x12 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x100074de        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x100047e0        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100074e0        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .rodata._ftoa.str1.4
+                0x100074ec       0x15 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10007501        0x3 
+ .rodata._vsnprintf
+                0x10007504      0x1e0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x100076e4        0x4 
+ .rodata.pow10.0
+                0x100076e8       0x50 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .rodata.__wrap_malloc.str1.4
+                0x10007738        0xe CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ *fill*         0x10007746        0x2 
  .rodata.str1.4
-                0x100047ec       0x84 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10007748       0x84 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x10004870        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100077cc        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_69
-                0x1000487c        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100077d8        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x10004888        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100077e4        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x10004894        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100077f0        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x100048a0        0x2 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100048a2        0x2 
+                0x100077fc        0x2 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x100077fe        0x2 
  .rodata._resetd_driver
-                0x100048a4       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10007800       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x100048bc       0x13 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x100048cf        0x1 
+                0x10007818       0x13 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x1000782b        0x1 
  .rodata.__bi_182.0
-                0x100048d0        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1000782c        0xc CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x100048dc       0x2a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x10004906        0x2 
+                0x10007838       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                                 0x2a (size before relaxing)
+ *fill*         0x1000785a        0x2 
  .rodata.usbd_desc_cfg
-                0x10004908       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000785c       0x54 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x1000495c       0x12 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x1000496e        0x2 
+                0x100078b0       0x12 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x100078c2        0x2 
  .rodata.usbd_desc_str
-                0x10004970       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x100078c4       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x10004988       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x100078dc       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x1000499c       0x53 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x100049ef        0x1 
+                0x100078f0       0x53 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x10007943        0x1 
  .rodata.tud_task_ext
-                0x100049f0       0x8c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10007944       0x8c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x10004a7c       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10004a94                . = ALIGN (0x4)
+                0x100079d0       0x18 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100079e8                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10004a94                . = ALIGN (0x4)
+                0x100079e8                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10004a94                __exidx_start = .
+                0x100079e8                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10004a94                __exidx_end = .
-                0x10004a94                . = ALIGN (0x4)
-                0x10004a94                __binary_info_start = .
+                0x100079e8                __exidx_end = .
+                0x100079e8                . = ALIGN (0x4)
+                0x100079e8                __binary_info_start = .
 
-.binary_info    0x10004a94       0x24
+.binary_info    0x100079e8       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x10004a94        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100079e8        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10004a98        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100079ec        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10004a9c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100079f0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10004aa0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100079f4        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10004aa4        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100079f8        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr69
-                0x10004aa8        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100079fc        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10004aac        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10007a00        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x10004ab0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10007a04        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr182
-                0x10004ab4        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10004ab8                __binary_info_end = .
+                0x10007a08        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10007a0c                __binary_info_end = .
 
-.rel.dyn        0x10004ab8        0x0
- .rel.iplt      0x10004ab8        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x10004ab8                . = ALIGN (0x4)
+.rel.dyn        0x10007a0c        0x0
+ .rel.iplt      0x10007a0c        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x10007a0c                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2077,7 +2206,7 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x20000000       0xc0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0xe50 load address 0x10004ab8
+.data           0x200000c0     0x1690 load address 0x10007a0c
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2174,178 +2303,209 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x20000ed0                _usbd_qdef
  .data._usbd_rhport
                 0x20000eec        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x20000ef0                . = ALIGN (0x4)
  *fill*         0x20000eed        0x3 
+ .data._impure_ptr
+                0x20000ef0        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
+                0x20000ef0                _impure_ptr
+ *fill*         0x20000ef4        0x4 
+ .data.impure_data
+                0x20000ef8      0x428 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
+ .data.__malloc_av_
+                0x20001320      0x408 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x20001320                __malloc_av_
+ .data.__malloc_sbrk_base
+                0x20001728        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x20001728                __malloc_sbrk_base
+ .data.__malloc_trim_threshold
+                0x2000172c        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x2000172c                __malloc_trim_threshold
+                0x20001730                . = ALIGN (0x4)
  *(.after_data.*)
-                0x20000ef0                . = ALIGN (0x4)
-                0x20000ef0                PROVIDE (__mutex_array_start = .)
+                0x20001730                . = ALIGN (0x4)
+                0x20001730                PROVIDE (__mutex_array_start = .)
  *(SORT_BY_NAME(.mutex_array.*))
  *(.mutex_array)
- .mutex_array   0x20000ef0        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x20000ef8                PROVIDE (__mutex_array_end = .)
-                0x20000ef8                . = ALIGN (0x4)
-                0x20000ef8                PROVIDE (__preinit_array_start = .)
+ .mutex_array   0x20001730        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x20001738                PROVIDE (__mutex_array_end = .)
+                0x20001738                . = ALIGN (0x4)
+                0x20001738                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00001
-                0x20000ef8        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x20001738        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00010
-                0x20000efc        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x2000173c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00020
-                0x20000f00        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x20001740        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .preinit_array.00020
-                0x20000f04        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x20001744        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  *(.preinit_array)
-                0x20000f08                PROVIDE (__preinit_array_end = .)
-                0x20000f08                . = ALIGN (0x4)
-                0x20000f08                PROVIDE (__init_array_start = .)
+                0x20001748                PROVIDE (__preinit_array_end = .)
+                0x20001748                . = ALIGN (0x4)
+                0x20001748                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x20000f08        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
- .init_array    0x20000f0c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x20000f10                PROVIDE (__init_array_end = .)
-                0x20000f10                . = ALIGN (0x4)
+ .init_array    0x20001748        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .init_array    0x2000174c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x20001750                PROVIDE (__init_array_end = .)
+                0x20001750                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                PROVIDE (__fini_array_end = .)
  *(.jcr)
-                0x20000f10                . = ALIGN (0x4)
-                0x20000f10                __data_end__ = .
-                0x10004ab8                __etext = LOADADDR (.data)
+                0x20001750                . = ALIGN (0x4)
+                0x20001750                __data_end__ = .
+                0x10007a0c                __etext = LOADADDR (.data)
 
-.igot.plt       0x20000f10        0x0 load address 0x10005908
- .igot.plt      0x20000f10        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x20001750        0x0 load address 0x1000909c
+ .igot.plt      0x20001750        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20000f10        0x0 load address 0x10005908
-                0x20000f10                . = ALIGN (0x4)
+                0x20001750        0x0 load address 0x1000909c
+                0x20001750                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10005908
+.scratch_x      0x20040000        0x0 load address 0x1000909c
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x10005908                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x1000909c                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10005908
+.scratch_y      0x20041000        0x0 load address 0x1000909c
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x10005908                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x1000909c                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x20000f10      0xd98
-                0x20000f10                . = ALIGN (0x4)
-                0x20000f10                __bss_start__ = .
+.bss            0x20001750      0xdc8
+                0x20001750                . = ALIGN (0x4)
+                0x20001750                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
  .bss.default_alarm_pool_entries
-                0x20000f10      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x20001750      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .bss.last_avail_time.1
-                0x20001010        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .bss.sd_table  0x20001018      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x20001018                sd_table
- .bss.sf_table  0x20001118      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x20001118                sf_table
- .bss           0x20001218       0x1c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x20001850        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .bss.sd_table  0x20001858      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x20001858                sd_table
+ .bss.sf_table  0x20001958      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x20001958                sf_table
+ .bss           0x20001a58       0x1c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .bss.__lock___malloc_recursive_mutex
+                0x20001a74        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
+                0x20001a74                __lock___malloc_recursive_mutex
+ *fill*         0x20001a75        0x3 
+ .bss.__malloc_current_mallinfo
+                0x20001a78       0x28 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x20001a78                __malloc_current_mallinfo
+ .bss.__malloc_max_sbrked_mem
+                0x20001aa0        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x20001aa0                __malloc_max_sbrked_mem
+ .bss.__malloc_max_total_mem
+                0x20001aa4        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x20001aa4                __malloc_max_total_mem
+ .bss.__malloc_top_pad
+                0x20001aa8        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+                0x20001aa8                __malloc_top_pad
  .bss._app_driver
-                0x20001234        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x20001aac        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._cdcd_itf
-                0x20001238      0x2c8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x20001ab0      0x2c8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
  .bss._ctrl_xfer
-                0x20001500       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x20001d78       0x14 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._ubsd_mutexdef
-                0x20001514        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x20001d8c        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_ctrl_buf
-                0x2000151c       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x20001d94       0x40 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._usbd_dev
-                0x2000155c       0x53 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x200015af        0x1 
+                0x20001dd4       0x53 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x20001e27        0x1 
  .bss._usbd_mutex
-                0x200015b0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .bss._usbd_q   0x200015b4        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x20001e28        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .bss._usbd_q   0x20001e2c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_qdef_buf
-                0x200015b8       0xc0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x200015b8                _usbd_qdef_buf
+                0x20001e30       0xc0 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x20001e30                _usbd_qdef_buf
  .bss.alarm_callbacks
-                0x20001678       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x20001ef0       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.boot2_copyout
-                0x20001688      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x20001f00      0x100 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .bss.chars_available_callback
-                0x20001788        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x20002000        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.chars_available_param
-                0x2000178c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .bss.claimed   0x20001790        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x20002004        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .bss.claimed   0x20002008        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .bss.configured_freq
-                0x20001794       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x2000200c       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x200017bc       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x20002034       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x200017cc       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x20002044       0x30 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .bss.desc_str.0
-                0x200017fc       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .bss.drivers   0x20001824        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x20002074       0x28 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .bss.drivers   0x2000209c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss.e15_last_sof
-                0x20001828        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x20001828                e15_last_sof
- .bss.filter    0x2000182c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x200020a0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x200020a0                e15_last_sof
+ .bss.errno     0x200020a4        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)
+                0x200020a4                errno
+ .bss.filter    0x200020a8        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.heap_end.0
+                0x200020ac        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .bss.hw_endpoints
-                0x20001830      0x400 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x200020b0      0x400 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.lazy_vsnprintf
-                0x20001c30        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x200024b0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .bss.load_value
-                0x20001c34        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .bss.message.0
-                0x20001c38        0xc CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
- .bss.message_pos.1
-                0x20001c44        0x4 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+                0x200024b4        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .bss.next_buffer_ptr
-                0x20001c48        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x200024b8        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.one_shot_timer_crit_sec
-                0x20001c4c        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .bss.pools     0x20001c54       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x200024bc        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .bss.pools     0x200024c4       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .bss.retrieved_id
-                0x20001c64        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x200024d4        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .bss.sf_clz_func
-                0x20001c6c        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x20001c6c                sf_clz_func
+                0x200024dc        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x200024dc                sf_clz_func
  .bss.sleep_notifier
-                0x20001c70        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x200024e0        0x4 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .bss.stdio_usb_mutex
-                0x20001c74        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x200024e4        0x8 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.target_hi
-                0x20001c7c       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x200024ec       0x10 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.usbd_serial_str
-                0x20001c8c       0x11 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x200024fc       0x11 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .bss._app_driver_count
-                0x20001c9d        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x2000250d        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._sof_enable
-                0x20001c9e        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x2000250e        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.boot2_copyout_valid
-                0x20001c9f        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .bss.claimed   0x20001ca0        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x2000250f        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .bss.claimed   0x20002510        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.irq_hander_chain_free_slot_head
-                0x20001ca1        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .bss.itf_num   0x20001ca2        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x20002511        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .bss.itf_num   0x20002512        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .bss.low_priority_irq_num
-                0x20001ca3        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x20002513        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.one_shot_timer_pending
-                0x20001ca4        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x20002514        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.timer_callbacks_pending
-                0x20001ca5        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x20002515        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.user_irq_claimed
-                0x20001ca6        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x20002516        0x1 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  *(COMMON)
-                0x20001ca8                . = ALIGN (0x4)
- *fill*         0x20001ca7        0x1 
-                0x20001ca8                __bss_end__ = .
+                0x20002518                . = ALIGN (0x4)
+ *fill*         0x20002517        0x1 
+                0x20002518                __bss_end__ = .
 
-.heap           0x20001ca8      0x800
-                0x20001ca8                __end__ = .
-                0x20001ca8                end = __end__
+.heap           0x20002518      0x800
+                0x20002518                __end__ = .
+                0x20002518                end = __end__
  *(.heap*)
- .heap          0x20001ca8      0x800 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x200024a8                __HeapLimit = .
+ .heap          0x20002518      0x800 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x20002d18                __HeapLimit = .
 
 .stack1_dummy   0x20040000        0x0
  *(.stack1*)
@@ -2354,8 +2514,8 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10005908        0x0
-                0x10005908                PROVIDE (__flash_binary_end = .)
+.flash_end      0x1000909c        0x0
+                0x1000909c                PROVIDE (__flash_binary_end = .)
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2365,6 +2525,9 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed)
                 0x00000001                ASSERT (((__binary_info_header_end - __logical_binary_start) <= 0x100), Binary info must be in first 256 bytes of the binary)
 LOAD CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
+LOAD CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj
+LOAD CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj
+LOAD CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj
 LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -2433,7 +2596,8 @@ LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/cla
 LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
 LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
-LOAD C:\Users\aspen\AppData\Local\Temp\ccofTJDn.o
+LOAD CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+LOAD C:\Users\aspen\AppData\Local\Temp\ccGL435L.o
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -2513,43 +2677,63 @@ LOAD linker stubs
  .ARM.attributes
                 0x000004a8       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .ARM.attributes
-                0x000004ca       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x000004ca       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .ARM.attributes
-                0x000004ec       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x000004f6       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .ARM.attributes
-                0x0000050e       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000518       0x22 CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
  .ARM.attributes
-                0x0000053a       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000053a       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .ARM.attributes
-                0x00000566       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000566       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .ARM.attributes
-                0x00000592       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x00000592       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .ARM.attributes
-                0x000005be       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x000005be       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .ARM.attributes
-                0x000005ea       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x000005ea       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .ARM.attributes
-                0x00000616       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x00000616       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .ARM.attributes
-                0x00000642       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000642       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .ARM.attributes
-                0x0000066e       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000066e       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .ARM.attributes
-                0x0000069a       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000069a       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .ARM.attributes
-                0x000006c6       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000006c6       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .ARM.attributes
-                0x000006f2       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000006f2       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .ARM.attributes
-                0x0000071e       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000071e       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
  .ARM.attributes
-                0x0000074a       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000074a       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .ARM.attributes
-                0x00000776       0x22 C:\Users\aspen\AppData\Local\Temp\ccofTJDn.o
+                0x00000776       0x2c CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .ARM.attributes
-                0x00000798       0x1e c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x000007a2       0x22 C:\Users\aspen\AppData\Local\Temp\ccGL435L.o
  .ARM.attributes
-                0x000007b6       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+                0x000007c4       0x1e c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000007e2       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000080e       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x0000083a       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x00000866       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000892       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x000008be       0x1b c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x000008d9       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+ .ARM.attributes
+                0x00000905       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000931       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x0000095d       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)
 
 .comment        0x00000000       0x49
  .comment       0x00000000       0x49 CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj
@@ -2573,6 +2757,7 @@ LOAD linker stubs
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
@@ -2588,5 +2773,13 @@ LOAD linker stubs
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .comment       0x00000049       0x4a CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
-.debug_frame    0x00000000       0x28
- .debug_frame   0x00000000       0x28 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+.debug_frame    0x00000000      0x284
+ .debug_frame   0x00000000       0x40 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00000040       0x3c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000007c       0x40 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-mlock.o)
+ .debug_frame   0x000000bc       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x000000e8       0x20 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
+ .debug_frame   0x00000108       0x28 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+ .debug_frame   0x00000130       0x54 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-freer.o)
+ .debug_frame   0x00000184       0xb0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
+ .debug_frame   0x00000234       0x50 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-reent.o)

@@ -100,4 +100,12 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: \
  C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/class/hid/hid.h \
  C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/device/usbd.h \
  C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/class/cdc/cdc_device.h \
- C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/class/cdc/cdc.h
+ C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/class/cdc/cdc.h \
+ c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\stdlib.h \
+ c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\machine\stdlib.h \
+ c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\alloca.h \
+ C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib/nrf24l01/nrf24_driver.h \
+ C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib/nrf24l01/error_manager/error_manager.h \
+ C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include/hardware/spi.h \
+ C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/spi.h \
+ C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/spi.h

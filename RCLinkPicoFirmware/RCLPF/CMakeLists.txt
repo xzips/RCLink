@@ -20,8 +20,8 @@ pico_sdk_init()
 
 include(example_auto_set_url.cmake)
 
-# Add hello world example
 add_subdirectory(nrf_rc_link)
+
 
 add_compile_options(-Wall
         -Wno-format          # int != int32_t as far as the compiler is concerned because gcc has int32_t as long int

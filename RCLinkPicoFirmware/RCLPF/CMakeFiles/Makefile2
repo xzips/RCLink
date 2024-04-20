@@ -72,16 +72,99 @@ clean: nrf_rc_link\clean
 # Recursive "all" directory target.
 nrf_rc_link\all: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\all
 nrf_rc_link\all: nrf_rc_link\CMakeFiles\ELF2UF2Build.dir\all
+nrf_rc_link\all: nrf_rc_link\lib\all
 .PHONY : nrf_rc_link\all
 
 # Recursive "preinstall" directory target.
-nrf_rc_link\preinstall:
+nrf_rc_link\preinstall: nrf_rc_link\lib\preinstall
 .PHONY : nrf_rc_link\preinstall
 
 # Recursive "clean" directory target.
 nrf_rc_link\clean: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\clean
 nrf_rc_link\clean: nrf_rc_link\CMakeFiles\ELF2UF2Build.dir\clean
+nrf_rc_link\clean: nrf_rc_link\lib\clean
 .PHONY : nrf_rc_link\clean
+
+#=============================================================================
+# Directory level rules for directory nrf_rc_link\lib
+
+# Recursive "all" directory target.
+nrf_rc_link\lib\all: nrf_rc_link\lib\nrf24l01\all
+.PHONY : nrf_rc_link\lib\all
+
+# Recursive "preinstall" directory target.
+nrf_rc_link\lib\preinstall: nrf_rc_link\lib\nrf24l01\preinstall
+.PHONY : nrf_rc_link\lib\preinstall
+
+# Recursive "clean" directory target.
+nrf_rc_link\lib\clean: nrf_rc_link\lib\nrf24l01\clean
+.PHONY : nrf_rc_link\lib\clean
+
+#=============================================================================
+# Directory level rules for directory nrf_rc_link\lib\nrf24l01
+
+# Recursive "all" directory target.
+nrf_rc_link\lib\nrf24l01\all: nrf_rc_link\lib\nrf24l01\spi_manager\all
+nrf_rc_link\lib\nrf24l01\all: nrf_rc_link\lib\nrf24l01\pin_manager\all
+nrf_rc_link\lib\nrf24l01\all: nrf_rc_link\lib\nrf24l01\error_manager\all
+.PHONY : nrf_rc_link\lib\nrf24l01\all
+
+# Recursive "preinstall" directory target.
+nrf_rc_link\lib\nrf24l01\preinstall: nrf_rc_link\lib\nrf24l01\spi_manager\preinstall
+nrf_rc_link\lib\nrf24l01\preinstall: nrf_rc_link\lib\nrf24l01\pin_manager\preinstall
+nrf_rc_link\lib\nrf24l01\preinstall: nrf_rc_link\lib\nrf24l01\error_manager\preinstall
+.PHONY : nrf_rc_link\lib\nrf24l01\preinstall
+
+# Recursive "clean" directory target.
+nrf_rc_link\lib\nrf24l01\clean: nrf_rc_link\lib\nrf24l01\spi_manager\clean
+nrf_rc_link\lib\nrf24l01\clean: nrf_rc_link\lib\nrf24l01\pin_manager\clean
+nrf_rc_link\lib\nrf24l01\clean: nrf_rc_link\lib\nrf24l01\error_manager\clean
+.PHONY : nrf_rc_link\lib\nrf24l01\clean
+
+#=============================================================================
+# Directory level rules for directory nrf_rc_link\lib\nrf24l01\error_manager
+
+# Recursive "all" directory target.
+nrf_rc_link\lib\nrf24l01\error_manager\all:
+.PHONY : nrf_rc_link\lib\nrf24l01\error_manager\all
+
+# Recursive "preinstall" directory target.
+nrf_rc_link\lib\nrf24l01\error_manager\preinstall:
+.PHONY : nrf_rc_link\lib\nrf24l01\error_manager\preinstall
+
+# Recursive "clean" directory target.
+nrf_rc_link\lib\nrf24l01\error_manager\clean:
+.PHONY : nrf_rc_link\lib\nrf24l01\error_manager\clean
+
+#=============================================================================
+# Directory level rules for directory nrf_rc_link\lib\nrf24l01\pin_manager
+
+# Recursive "all" directory target.
+nrf_rc_link\lib\nrf24l01\pin_manager\all:
+.PHONY : nrf_rc_link\lib\nrf24l01\pin_manager\all
+
+# Recursive "preinstall" directory target.
+nrf_rc_link\lib\nrf24l01\pin_manager\preinstall:
+.PHONY : nrf_rc_link\lib\nrf24l01\pin_manager\preinstall
+
+# Recursive "clean" directory target.
+nrf_rc_link\lib\nrf24l01\pin_manager\clean:
+.PHONY : nrf_rc_link\lib\nrf24l01\pin_manager\clean
+
+#=============================================================================
+# Directory level rules for directory nrf_rc_link\lib\nrf24l01\spi_manager
+
+# Recursive "all" directory target.
+nrf_rc_link\lib\nrf24l01\spi_manager\all:
+.PHONY : nrf_rc_link\lib\nrf24l01\spi_manager\all
+
+# Recursive "preinstall" directory target.
+nrf_rc_link\lib\nrf24l01\spi_manager\preinstall:
+.PHONY : nrf_rc_link\lib\nrf24l01\spi_manager\preinstall
+
+# Recursive "clean" directory target.
+nrf_rc_link\lib\nrf24l01\spi_manager\clean:
+.PHONY : nrf_rc_link\lib\nrf24l01\spi_manager\clean
 
 #=============================================================================
 # Directory level rules for directory pico-sdk
@@ -1642,12 +1725,12 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\all: pico-sdk\src\rp2_common\boot_stage2\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\all: nrf_rc_link\CMakeFiles\ELF2UF2Build.dir\all
 	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\depend
 	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92 "Built target nrf_rc_link"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96 "Built target nrf_rc_link"
 .PHONY : nrf_rc_link\CMakeFiles\nrf_rc_link.dir\all
 
 # Build rule for subdir invocation for target.
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles 82
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles 86
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles 0
 .PHONY : nrf_rc_link\CMakeFiles\nrf_rc_link.dir\rule

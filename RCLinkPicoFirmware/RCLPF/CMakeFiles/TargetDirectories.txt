@@ -169,3 +169,13 @@ C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/CMakeFiles/nr
 C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/CMakeFiles/ELF2UF2Build.dir
 C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/CMakeFiles/edit_cache.dir
 C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/CMakeFiles/rebuild_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/CMakeFiles/edit_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/CMakeFiles/rebuild_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/CMakeFiles/edit_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/CMakeFiles/rebuild_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/spi_manager/CMakeFiles/edit_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/spi_manager/CMakeFiles/rebuild_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/pin_manager/CMakeFiles/edit_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/pin_manager/CMakeFiles/rebuild_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/error_manager/CMakeFiles/edit_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/error_manager/CMakeFiles/rebuild_cache.dir

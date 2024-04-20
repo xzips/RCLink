@@ -144,6 +144,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "example_auto_set_url.cmake"
   "nrf_rc_link/CMakeLists.txt"
   "nrf_rc_link/elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
+  "nrf_rc_link/lib/CMakeLists.txt"
+  "nrf_rc_link/lib/nrf24l01/CMakeLists.txt"
+  "nrf_rc_link/lib/nrf24l01/error_manager/CMakeLists.txt"
+  "nrf_rc_link/lib/nrf24l01/pin_manager/CMakeLists.txt"
+  "nrf_rc_link/lib/nrf24l01/spi_manager/CMakeLists.txt"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake"
   "pico_extras_import_optional.cmake"
   "pico_sdk_import.cmake"
@@ -252,6 +257,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "nrf_rc_link/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch-info.txt"
   "nrf_rc_link/elf2uf2/tmp/ELF2UF2Build-cfgcmd.txt"
   "nrf_rc_link/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "nrf_rc_link/lib/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "nrf_rc_link/lib/nrf24l01/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "nrf_rc_link/lib/nrf24l01/spi_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "nrf_rc_link/lib/nrf24l01/pin_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "nrf_rc_link/lib/nrf24l01/error_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

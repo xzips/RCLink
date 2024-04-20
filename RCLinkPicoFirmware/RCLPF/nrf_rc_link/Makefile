@@ -1161,6 +1161,36 @@ C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.s:
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 .PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.s
 
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.obj: C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.obj
+
+# target to build an object file
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj
+
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.i: C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.i
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.i
+
+# target to preprocess a source file
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.i:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.i
+
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.s: C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.s
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.s
+
+# target to generate assembly for a file
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.s:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.s
+
 C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.obj: C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj
 .PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.obj
 
@@ -1971,6 +2001,96 @@ C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.s:
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 .PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.s
 
+lib\nrf24l01\nrf24_driver.obj: lib\nrf24l01\nrf24_driver.c.obj
+.PHONY : lib\nrf24l01\nrf24_driver.obj
+
+# target to build an object file
+lib\nrf24l01\nrf24_driver.c.obj:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\nrf24_driver.c.obj
+
+lib\nrf24l01\nrf24_driver.i: lib\nrf24l01\nrf24_driver.c.i
+.PHONY : lib\nrf24l01\nrf24_driver.i
+
+# target to preprocess a source file
+lib\nrf24l01\nrf24_driver.c.i:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\nrf24_driver.c.i
+
+lib\nrf24l01\nrf24_driver.s: lib\nrf24l01\nrf24_driver.c.s
+.PHONY : lib\nrf24l01\nrf24_driver.s
+
+# target to generate assembly for a file
+lib\nrf24l01\nrf24_driver.c.s:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\nrf24_driver.c.s
+
+lib\nrf24l01\pin_manager\pin_manager.obj: lib\nrf24l01\pin_manager\pin_manager.c.obj
+.PHONY : lib\nrf24l01\pin_manager\pin_manager.obj
+
+# target to build an object file
+lib\nrf24l01\pin_manager\pin_manager.c.obj:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\pin_manager\pin_manager.c.obj
+
+lib\nrf24l01\pin_manager\pin_manager.i: lib\nrf24l01\pin_manager\pin_manager.c.i
+.PHONY : lib\nrf24l01\pin_manager\pin_manager.i
+
+# target to preprocess a source file
+lib\nrf24l01\pin_manager\pin_manager.c.i:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\pin_manager\pin_manager.c.i
+
+lib\nrf24l01\pin_manager\pin_manager.s: lib\nrf24l01\pin_manager\pin_manager.c.s
+.PHONY : lib\nrf24l01\pin_manager\pin_manager.s
+
+# target to generate assembly for a file
+lib\nrf24l01\pin_manager\pin_manager.c.s:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\pin_manager\pin_manager.c.s
+
+lib\nrf24l01\spi_manager\spi_manager.obj: lib\nrf24l01\spi_manager\spi_manager.c.obj
+.PHONY : lib\nrf24l01\spi_manager\spi_manager.obj
+
+# target to build an object file
+lib\nrf24l01\spi_manager\spi_manager.c.obj:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\spi_manager\spi_manager.c.obj
+
+lib\nrf24l01\spi_manager\spi_manager.i: lib\nrf24l01\spi_manager\spi_manager.c.i
+.PHONY : lib\nrf24l01\spi_manager\spi_manager.i
+
+# target to preprocess a source file
+lib\nrf24l01\spi_manager\spi_manager.c.i:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\spi_manager\spi_manager.c.i
+
+lib\nrf24l01\spi_manager\spi_manager.s: lib\nrf24l01\spi_manager\spi_manager.c.s
+.PHONY : lib\nrf24l01\spi_manager\spi_manager.s
+
+# target to generate assembly for a file
+lib\nrf24l01\spi_manager\spi_manager.c.s:
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+.PHONY : lib\nrf24l01\spi_manager\spi_manager.c.s
+
 nrf_rc_link.obj: nrf_rc_link.c.obj
 .PHONY : nrf_rc_link.obj
 
@@ -2112,6 +2232,9 @@ help:
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.obj
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.i
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.s
+	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.obj
+	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.i
+	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.s
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.obj
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.i
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.s
@@ -2193,6 +2316,15 @@ help:
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s
+	@echo ... lib/nrf24l01/nrf24_driver.obj
+	@echo ... lib/nrf24l01/nrf24_driver.i
+	@echo ... lib/nrf24l01/nrf24_driver.s
+	@echo ... lib/nrf24l01/pin_manager/pin_manager.obj
+	@echo ... lib/nrf24l01/pin_manager/pin_manager.i
+	@echo ... lib/nrf24l01/pin_manager/pin_manager.s
+	@echo ... lib/nrf24l01/spi_manager/spi_manager.obj
+	@echo ... lib/nrf24l01/spi_manager/spi_manager.i
+	@echo ... lib/nrf24l01/spi_manager/spi_manager.s
 	@echo ... nrf_rc_link.obj
 	@echo ... nrf_rc_link.i
 	@echo ... nrf_rc_link.s

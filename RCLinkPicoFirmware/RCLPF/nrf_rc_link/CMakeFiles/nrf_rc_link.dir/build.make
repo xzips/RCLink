@@ -78,10 +78,70 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.s: cmake_force
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\nrf_rc_link.c -o CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.s
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
 
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\nrf24_driver.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj -MF CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj.d -o CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj -c C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\nrf24_driver.c
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.i"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\nrf24_driver.c > CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.s"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\nrf24_driver.c -o CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj -MF CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj.d -o CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj -c C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.c
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.i"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.c > CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.s"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.c -o CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj -MF CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj.d -o CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj -c C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.c
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.i"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.c > CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.s"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.c -o CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -101,7 +161,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -121,7 +181,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -141,7 +201,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_claim\claim.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -161,7 +221,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -181,7 +241,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -200,7 +260,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -220,7 +280,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/sem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/sem.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\sem.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -240,7 +300,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/lock_core.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/lock_core.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\lock_core.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -260,7 +320,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\mutex.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -280,7 +340,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\critical_section.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -300,7 +360,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_time\time.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -320,7 +380,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_time\timeout_helper.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -340,7 +400,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -360,7 +420,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/datetime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/datetime.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_util\datetime.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -380,7 +440,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_util\pheap.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -400,7 +460,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/queue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/queue.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c.obj -c C:\Users\aspen\Code\pico-sdk\src\common\pico_util\queue.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -420,7 +480,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\common\p
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -440,7 +500,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\clocks.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -460,7 +520,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -480,7 +540,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_vreg\vreg.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -500,7 +560,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -520,7 +580,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_xosc\xosc.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -539,7 +599,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_divider\divider.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_divider\divider.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_divider\divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_divider\divider.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_divider\divider.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -559,7 +619,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_runtime\runtime.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -579,7 +639,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_printf\printf.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -598,7 +658,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -618,7 +678,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -637,7 +697,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_divider\divider.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_divider\divider.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_divider\divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_divider\divider.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_divider\divider.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -656,7 +716,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_aeabi.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_aeabi.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_aeabi.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_aeabi.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -676,7 +736,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_init_rom.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -696,7 +756,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_math.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -715,7 +775,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -734,7 +794,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -753,7 +813,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_aeabi.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_aeabi.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_aeabi.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_aeabi.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -773,7 +833,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_init_rom.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -793,7 +853,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -812,7 +872,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -832,7 +892,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -851,7 +911,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -870,7 +930,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\crt0.S.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\crt0.S.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building ASM object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\crt0.S.obj   -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\crt0.S
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -890,7 +950,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR10B2~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -910,7 +970,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -930,7 +990,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\stdio.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -950,7 +1010,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -970,7 +1030,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -990,7 +1050,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1010,7 +1070,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1030,7 +1090,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_flash\flash.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1050,7 +1110,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1070,7 +1130,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1090,7 +1150,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1110,7 +1170,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd_control.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1130,7 +1190,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1150,7 +1210,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1170,7 +1230,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1190,7 +1250,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1210,7 +1270,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1230,7 +1290,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1250,7 +1310,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1270,7 +1330,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1290,7 +1350,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1310,7 +1370,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1330,7 +1390,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1350,7 +1410,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1370,7 +1430,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/tusb.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1390,7 +1450,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj: C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj -c C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1410,7 +1470,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
@@ -1427,9 +1487,32 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.s
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
 
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj -MF CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj.d -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj -c C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.i"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c > CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.i
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c -o CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.s
+	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
+
 # Object files for target nrf_rc_link
 nrf_rc_link_OBJECTS = \
 "CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj" \
+"CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj" \
+"CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj" \
+"CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj" \
 "CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj" \
 "CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj" \
 "CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj" \
@@ -1497,12 +1580,16 @@ nrf_rc_link_OBJECTS = \
 "CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj" \
 "CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj" \
 "CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj" \
-"CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj"
+"CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj" \
+"CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj"
 
 # External object files for target nrf_rc_link
 nrf_rc_link_EXTERNAL_OBJECTS =
 
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj
+nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj
+nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj
+nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj
@@ -1571,10 +1658,11 @@ nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\asp
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\tusb.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj
+nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make
 nrf_rc_link\nrf_rc_link.elf: pico-sdk\src\rp2_common\boot_stage2\bs2_default_padded_checksummed.S
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking CXX executable nrf_rc_link.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Linking CXX executable nrf_rc_link.elf"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR10B2~1.EXE -mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG -Wl,--build-id=none --specs=nosys.specs -Wl,--wrap=sprintf -Wl,--wrap=snprintf -Wl,--wrap=vsnprintf -Wl,--wrap=__clzsi2 -Wl,--wrap=__clzdi2 -Wl,--wrap=__ctzsi2 -Wl,--wrap=__ctzdi2 -Wl,--wrap=__popcountsi2 -Wl,--wrap=__popcountdi2 -Wl,--wrap=__clz -Wl,--wrap=__clzl -Wl,--wrap=__clzll -Wl,--wrap=__aeabi_idiv -Wl,--wrap=__aeabi_idivmod -Wl,--wrap=__aeabi_ldivmod -Wl,--wrap=__aeabi_uidiv -Wl,--wrap=__aeabi_uidivmod -Wl,--wrap=__aeabi_uldivmod -Wl,--wrap=__aeabi_dadd -Wl,--wrap=__aeabi_ddiv -Wl,--wrap=__aeabi_dmul -Wl,--wrap=__aeabi_drsub -Wl,--wrap=__aeabi_dsub -Wl,--wrap=__aeabi_cdcmpeq -Wl,--wrap=__aeabi_cdrcmple -Wl,--wrap=__aeabi_cdcmple -Wl,--wrap=__aeabi_dcmpeq -Wl,--wrap=__aeabi_dcmplt -Wl,--wrap=__aeabi_dcmple -Wl,--wrap=__aeabi_dcmpge -Wl,--wrap=__aeabi_dcmpgt -Wl,--wrap=__aeabi_dcmpun -Wl,--wrap=__aeabi_i2d -Wl,--wrap=__aeabi_l2d -Wl,--wrap=__aeabi_ui2d -Wl,--wrap=__aeabi_ul2d -Wl,--wrap=__aeabi_d2iz -Wl,--wrap=__aeabi_d2lz -Wl,--wrap=__aeabi_d2uiz -Wl,--wrap=__aeabi_d2ulz -Wl,--wrap=__aeabi_d2f -Wl,--wrap=sqrt -Wl,--wrap=cos -Wl,--wrap=sin -Wl,--wrap=tan -Wl,--wrap=atan2 -Wl,--wrap=exp -Wl,--wrap=log -Wl,--wrap=ldexp -Wl,--wrap=copysign -Wl,--wrap=trunc -Wl,--wrap=floor -Wl,--wrap=ceil -Wl,--wrap=round -Wl,--wrap=sincos -Wl,--wrap=asin -Wl,--wrap=acos -Wl,--wrap=atan -Wl,--wrap=sinh -Wl,--wrap=cosh -Wl,--wrap=tanh -Wl,--wrap=asinh -Wl,--wrap=acosh -Wl,--wrap=atanh -Wl,--wrap=exp2 -Wl,--wrap=log2 -Wl,--wrap=exp10 -Wl,--wrap=log10 -Wl,--wrap=pow -Wl,--wrap=powint -Wl,--wrap=hypot -Wl,--wrap=cbrt -Wl,--wrap=fmod -Wl,--wrap=drem -Wl,--wrap=remainder -Wl,--wrap=remquo -Wl,--wrap=expm1 -Wl,--wrap=log1p -Wl,--wrap=fma -Wl,--wrap=__aeabi_lmul -Wl,--wrap=__aeabi_fadd -Wl,--wrap=__aeabi_fdiv -Wl,--wrap=__aeabi_fmul -Wl,--wrap=__aeabi_frsub -Wl,--wrap=__aeabi_fsub -Wl,--wrap=__aeabi_cfcmpeq -Wl,--wrap=__aeabi_cfrcmple -Wl,--wrap=__aeabi_cfcmple -Wl,--wrap=__aeabi_fcmpeq -Wl,--wrap=__aeabi_fcmplt -Wl,--wrap=__aeabi_fcmple -Wl,--wrap=__aeabi_fcmpge -Wl,--wrap=__aeabi_fcmpgt -Wl,--wrap=__aeabi_fcmpun -Wl,--wrap=__aeabi_i2f -Wl,--wrap=__aeabi_l2f -Wl,--wrap=__aeabi_ui2f -Wl,--wrap=__aeabi_ul2f -Wl,--wrap=__aeabi_f2iz -Wl,--wrap=__aeabi_f2lz -Wl,--wrap=__aeabi_f2uiz -Wl,--wrap=__aeabi_f2ulz -Wl,--wrap=__aeabi_f2d -Wl,--wrap=sqrtf -Wl,--wrap=cosf -Wl,--wrap=sinf -Wl,--wrap=tanf -Wl,--wrap=atan2f -Wl,--wrap=expf -Wl,--wrap=logf -Wl,--wrap=ldexpf -Wl,--wrap=copysignf -Wl,--wrap=truncf -Wl,--wrap=floorf -Wl,--wrap=ceilf -Wl,--wrap=roundf -Wl,--wrap=sincosf -Wl,--wrap=asinf -Wl,--wrap=acosf -Wl,--wrap=atanf -Wl,--wrap=sinhf -Wl,--wrap=coshf -Wl,--wrap=tanhf -Wl,--wrap=asinhf -Wl,--wrap=acoshf -Wl,--wrap=atanhf -Wl,--wrap=exp2f -Wl,--wrap=log2f -Wl,--wrap=exp10f -Wl,--wrap=log10f -Wl,--wrap=powf -Wl,--wrap=powintf -Wl,--wrap=hypotf -Wl,--wrap=cbrtf -Wl,--wrap=fmodf -Wl,--wrap=dremf -Wl,--wrap=remainderf -Wl,--wrap=remquof -Wl,--wrap=expm1f -Wl,--wrap=log1pf -Wl,--wrap=fmaf -Wl,--wrap=malloc -Wl,--wrap=calloc -Wl,--wrap=realloc -Wl,--wrap=free -Wl,--wrap=memcpy -Wl,--wrap=memset -Wl,--wrap=__aeabi_memcpy -Wl,--wrap=__aeabi_memset -Wl,--wrap=__aeabi_memcpy4 -Wl,--wrap=__aeabi_memset4 -Wl,--wrap=__aeabi_memcpy8 -Wl,--wrap=__aeabi_memset8 -Wl,-Map=nrf_rc_link.elf.map -Wl,--script=C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/memmap_default.ld -Wl,-z,max-page-size=4096 -Wl,--gc-sections -Wl,--wrap=printf -Wl,--wrap=vprintf -Wl,--wrap=puts -Wl,--wrap=putchar -Wl,--wrap=getchar @CMakeFiles\nrf_rc_link.dir\objects1.rsp -o nrf_rc_link.elf  ..\pico-sdk\src\rp2_common\boot_stage2\bs2_default_padded_checksummed.S 
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF

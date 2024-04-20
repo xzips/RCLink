@@ -24,4 +24,4 @@ cd "C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\"
 
 
 :: Pause the script to view any output or errors
-:: pause
+pause

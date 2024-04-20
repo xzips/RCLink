@@ -71,6 +71,10 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "nrf_rc_link/lib/nrf24l01"
+  "nrf_rc_link/lib/nrf24l01/error_manager"
+  "nrf_rc_link/lib/nrf24l01/pin_manager"
+  "nrf_rc_link/lib/nrf24l01/spi_manager"
   "C:/Users/aspen/Code/pico-sdk/src/common/pico_stdlib/include"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/include"
   "C:/Users/aspen/Code/pico-sdk/src/common/pico_base/include"
@@ -116,6 +120,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/Users/aspen/Code/pico-sdk/lib/tinyusb/src/common"
   "C:/Users/aspen/Code/pico-sdk/lib/tinyusb/hw"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/include"
   )
 
 # The set of dependency files which are needed:
@@ -153,6 +158,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_uart/uart.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d"
@@ -176,6 +182,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
+  "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/nrf24_driver.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/nrf24_driver.c.obj.d"
+  "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/pin_manager/pin_manager.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/pin_manager/pin_manager.c.obj.d"
+  "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/lib/nrf24l01/spi_manager/spi_manager.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/lib/nrf24l01/spi_manager/spi_manager.c.obj.d"
   "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmware/RCLPF/nrf_rc_link/nrf_rc_link.c" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "nrf_rc_link/CMakeFiles/nrf_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   )

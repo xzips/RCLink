@@ -1660,6 +1660,48 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"
 
 
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\boards\include\boards\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\assert.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\config.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\error.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\types.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\clocks.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\resets.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\clocks.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\resets.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_clocks\include\hardware\clocks.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_resets\include\hardware\resets.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include\hardware\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: generated\pico_base\pico\config_autogen.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: generated\pico_base\pico\version.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_ansi.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_newlib_version.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\assert.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_default_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\ieeefp.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\cdefs.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\config.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\features.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stddef.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"
+
+
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj: C:\Users\aspen\Code\pico-sdk\src\boards\include\boards\pico.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
@@ -2860,6 +2902,137 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"
 
 
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\nrf24_driver.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\boards\include\boards\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\assert.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\config.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\error.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\types.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include\hardware\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: generated\pico_base\pico\config_autogen.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: generated\pico_base\pico\version.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\device_config.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\error_manager\error_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\nrf24_driver.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_ansi.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_newlib_version.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\assert.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_default_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\ieeefp.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\string.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\strings.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_locale.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\cdefs.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\config.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\features.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\lock.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\reent.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\string.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stddef.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"
+
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\boards\include\boards\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\assert.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\config.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\error.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\types.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\intctrl.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\io_bank0.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\m0plus.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\iobank0.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\include\hardware\irq.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: generated\pico_base\pico\config_autogen.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: generated\pico_base\pico\version.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: nrf_rc_link\lib\nrf24l01\error_manager\error_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_ansi.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_newlib_version.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\assert.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_default_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\ieeefp.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\cdefs.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\config.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\features.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stddef.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"
+
+
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.c
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\boards\include\boards\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\assert.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\config.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\error.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\types.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include\hardware\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: generated\pico_base\pico\config_autogen.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: generated\pico_base\pico\version.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: nrf_rc_link\lib\nrf24l01\error_manager\error_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_ansi.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_newlib_version.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\assert.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_default_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\ieeefp.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\cdefs.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\config.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\features.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stddef.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"
+
+
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: nrf_rc_link\nrf_rc_link.c
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\boards\include\boards\pico.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h
@@ -2898,17 +3071,20 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pi
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\m0plus.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\spi.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\timer.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\iobank0.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\spi.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\timer.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\uart.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\include\hardware\irq.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include\hardware\spi.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_sync\include\hardware\sync.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\include\hardware\timer.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\include\hardware\uart.h
@@ -2918,18 +3094,23 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pi
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include\tusb_config.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: generated\pico_base\pico\config_autogen.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: generated\pico_base\pico\version.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: nrf_rc_link\lib\nrf24l01\error_manager\error_manager.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: nrf_rc_link\lib\nrf24l01\nrf24_driver.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_ansi.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_newlib_version.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\alloca.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\assert.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_default_types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_endian.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\endian.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\ieeefp.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\stdlib.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdio.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdlib.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\string.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\strings.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
@@ -3064,9 +3245,13 @@ C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include\pico\sem.h:
 
 "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\times.h":
 
+C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\spi.c:
+
 "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h":
 
 C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h:
+
+C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\spi.h:
 
 C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src\device\usbd.h:
 
@@ -3121,6 +3306,8 @@ C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\struct
 C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\pll.h:
 
 "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\endian.h":
+
+nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.h:
 
 "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\string.h":
 
@@ -3336,11 +3523,17 @@ C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\struct
 
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_pll\pll.c:
 
+C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h:
+
+C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\spi.h:
+
+C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c:
+
+C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include\hardware\spi.h:
+
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\timer.c:
 
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\uart.c:
-
-C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h:
 
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c:
 
@@ -3365,8 +3558,6 @@ C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumerati
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\float_math.c:
 
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_float\include\pico\float.h:
-
-C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c:
 
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_malloc\include\pico\malloc.h:
 
@@ -3423,5 +3614,19 @@ C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\include\pico\unique_i
 C:\Users\aspen\Code\pico-sdk\src\common\pico_stdlib\include\pico\stdlib.h:
 
 C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c:
+
+nrf_rc_link\lib\nrf24l01\nrf24_driver.c:
+
+nrf_rc_link\lib\nrf24l01\device_config.h:
+
+nrf_rc_link\lib\nrf24l01\error_manager\error_manager.h:
+
+nrf_rc_link\lib\nrf24l01\nrf24_driver.h:
+
+nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.h:
+
+nrf_rc_link\lib\nrf24l01\pin_manager\pin_manager.c:
+
+nrf_rc_link\lib\nrf24l01\spi_manager\spi_manager.c:
 
 nrf_rc_link\nrf_rc_link.c:

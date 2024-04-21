@@ -1,3 +1,13 @@
 
 *.ipch
 *.db
+*.vsidx
+RCLink/.vs/RCLink/v17/.suo
+*.log
+*.obj
+*.tlog
+*.idb
+*.ilk
+*.pdb
+*.bin
+*.recipe

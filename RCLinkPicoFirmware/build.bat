@@ -15,7 +15,7 @@ cd "C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF"
 cmake -G "NMake Makefiles"
 
 :: Execute nmake to build the project
-nmake
+nmake /A
 
 :: Copy the .uf2 file back to the batch file's directory
 copy "nrf_rc_link\nrf_rc_link.uf2" "%BAT_DIR%"

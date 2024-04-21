@@ -10,7 +10,8 @@ if (TARGET tinyusb_device)
 	PRIVATE	
 	nrf24_driver 
 	pico_stdlib
-	hardware_spi	
+	hardware_spi
+        hardware_gpio
 	)
 
     # enable usb output, disable uart output

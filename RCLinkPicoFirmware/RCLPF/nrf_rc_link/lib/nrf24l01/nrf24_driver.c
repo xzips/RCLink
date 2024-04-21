@@ -20,6 +20,7 @@
 #include "device_config.h"
 #include "nrf24_driver.h"
 #include "pico/stdlib.h"
+#include <stdio.h>
 
 typedef enum device_mode_e
 {
@@ -206,6 +207,7 @@ fn_status_t nrf_driver_initialise(nrf_manager_t *user_config) {
 
   /** with a VDD of 1.9V or higher, nRF24L01+ enters the Power on reset state **/
 
+ 
   sleep_ms(100); // nRF24L01+ enters Power Down mode after 100ms
 
   /** NRF24L01 is now in Power Down mode. PWR_UP bit in the CONFIG register is unset (0) **/
@@ -235,6 +237,7 @@ fn_status_t nrf_driver_initialise(nrf_manager_t *user_config) {
       nrf_driver.address_width_bytes = ((config->address_width + 2) <= FIVE_BYTES) ? config->address_width + 2 : FIVE_BYTES;
     }
   }
+
 
   if (status == NRF_MNGR_OK)
   {
@@ -281,9 +284,11 @@ fn_status_t nrf_driver_initialise(nrf_manager_t *user_config) {
       },
     };
     
+
     // write the buffer to each register address
     for (size_t i = 0; i < 8; i++)
     {
+
       status = w_register(register_list[i].reg, register_list[i].buf, ONE_BYTE);
 
       // Crystal oscillator start up delay (Power Down to Standby-I state)
@@ -299,6 +304,7 @@ fn_status_t nrf_driver_initialise(nrf_manager_t *user_config) {
 
   // deinitialise SPI at function end
   spi_manager_deinit_spi(spi->instance); 
+
 
   return status;
 }
@@ -1142,6 +1148,7 @@ static fn_status_t validate_config(nrf_manager_t *user_config) {
  */
 static fn_status_t w_register(register_map_t reg, const void *buffer, size_t size) {
 
+
   uint8_t *buffer_ptr = (uint8_t *)buffer;
 
   // buffer_size + 1 (register address)
@@ -1159,10 +1166,14 @@ static fn_status_t w_register(register_map_t reg, const void *buffer, size_t siz
   for (size_t i = 0; i < size; i++) { tx_buffer[i + 1] = *(buffer_ptr + i); }
 
   spi_manager_t *spi = &(nrf_driver.user_spi);
-  
+
   csn_put_low(nrf_driver.user_pins.csn); // drive CSN pin LOW
+
+
   fn_status_t status = spi_manager_transfer(spi->instance, tx_buffer, rx_buffer, total_size);
+
   csn_put_high(nrf_driver.user_pins.csn); // drive CSN pin HIGH
+
 
   return status; // return error flag value
 }

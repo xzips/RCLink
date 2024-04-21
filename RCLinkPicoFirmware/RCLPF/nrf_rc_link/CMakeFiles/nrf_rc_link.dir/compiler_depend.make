@@ -2910,15 +2910,35 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\config.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\error.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\types.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_stdlib\include\pico\stdlib.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_time\include\pico\time.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\intctrl.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\io_bank0.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\m0plus.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\timer.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\iobank0.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\timer.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\uart.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_irq\include\hardware\irq.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include\hardware\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\include\hardware\timer.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_uart\include\hardware\uart.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio\include\pico\stdio.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: generated\pico_base\pico\config_autogen.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: generated\pico_base\pico\version.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\lib\nrf24l01\device_config.h
@@ -2930,22 +2950,36 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Prog
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_newlib_version.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\assert.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_default_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_endian.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\endian.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\ieeefp.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdio.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\string.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\strings.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_locale.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_pthreadtypes.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_sigset.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_timespec.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_timeval.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\cdefs.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\config.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\features.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\lock.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\reent.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\sched.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\select.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\stdio.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\string.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\timespec.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdarg.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stddef.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"
@@ -3003,14 +3037,18 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.ob
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\config.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\error.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_base\include\pico\types.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\common\pico_time\include\pico\time.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\timer.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\timer.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include\hardware\spi.h
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_timer\include\hardware\timer.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: generated\pico_base\pico\config_autogen.h
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: generated\pico_base\pico\version.h
@@ -3020,14 +3058,32 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.ob
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\_newlib_version.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\assert.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_default_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_endian.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\_types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\endian.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\ieeefp.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\machine\types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\newlib.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\stdio.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_intsup.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_pthreadtypes.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_sigset.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_stdint.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_timespec.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_timeval.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\_types.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\cdefs.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\config.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\features.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\lock.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\reent.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\sched.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\select.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\stdio.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\timespec.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\include\sys\types.h"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdarg.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stddef.h"
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj: "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h"

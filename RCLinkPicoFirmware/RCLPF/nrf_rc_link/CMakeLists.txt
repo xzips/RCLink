@@ -1,6 +1,6 @@
 if (TARGET tinyusb_device)
     add_executable(nrf_rc_link
-            nrf_rc_link.c
+            nrf_rc_link.cpp
             )
 
 

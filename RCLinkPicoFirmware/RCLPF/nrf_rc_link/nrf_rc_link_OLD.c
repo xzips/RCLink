@@ -174,7 +174,7 @@ int main(void)
     .address_width = AW_5_BYTES,
 
     // dynamic payloads: DYNPD_ENABLE, DYNPD_DISABLE
-    .dyn_payloads = DYNPD_ENABLE,
+    .dyn_payloads = DYNPD_DISABLE,
 
     // data rate: RF_DR_250KBPS, RF_DR_1MBPS, RF_DR_2MBPS
     .data_rate = RF_DR_1MBPS,
@@ -187,6 +187,11 @@ int main(void)
 
     // retransmission delay: ARD_250US, ARD_500US, ARD_750US, ARD_1000US
     .retr_delay = ARD_500US 
+
+    
+
+
+
   };
 
   // SPI baudrate
@@ -214,10 +219,7 @@ int main(void)
   // payload sent to receiver data pipe 1
   uint8_t payload_one[5] = "Hello";
 
-  typedef struct payload_two_s { uint8_t one; uint8_t two; } payload_two_t;
 
-  // payload sent to receiver data pipe 2
-  payload_two_t payload_two = { .one = 123, .two = 213 };
 
   // result of packet transmission
   fn_status_t success = 0;
@@ -230,7 +232,7 @@ int main(void)
   while (1) {
 
     // send to receiver's DATA_PIPE_0 address
-    my_nrf.tx_destination((uint8_t[]){0x37,0x37,0x37,0x37,0x37});
+    my_nrf.tx_destination((uint8_t[]){0x37, 0x37, 0x37, 0x37, 0x37});
 
     // time packet was sent
     time_sent = to_us_since_boot(get_absolute_time()); // time sent
@@ -252,51 +254,7 @@ int main(void)
 
     sleep_ms(3000);
 
-    // send to receiver's DATA_PIPE_1 address
-    my_nrf.tx_destination((uint8_t[]){0xC7,0xC7,0xC7,0xC7,0xC7});
-
-    // time packet was sent
-    time_sent = to_us_since_boot(get_absolute_time()); // time sent
-
-    // send packet to receiver's DATA_PIPE_1 address
-    success = my_nrf.send_packet(payload_one, sizeof(payload_one));
-    
-    // time auto-acknowledge was received
-    time_reply = to_us_since_boot(get_absolute_time()); // response time
-
-    if (success)
-    {
-      printf("\nPacket sent:- Response: %lluμS | Payload: %s\n", time_reply - time_sent, payload_one);
-
-    } else {
-
-      printf("\nPacket not sent:- Receiver not available.\n");
-    }
-
-    sleep_ms(3000);
-
-    // send to receiver's DATA_PIPE_2 address
-    my_nrf.tx_destination((uint8_t[]){0xC8,0xC7,0xC7,0xC7,0xC7});
-
-    // time packet was sent
-    time_sent = to_us_since_boot(get_absolute_time()); // time sent
-
-    // send packet to receiver's DATA_PIPE_2 address
-    success = my_nrf.send_packet(&payload_two, sizeof(payload_two));
-    
-    // time auto-acknowledge was received
-    time_reply = to_us_since_boot(get_absolute_time()); // response time
-
-    if (success)
-    {
-      printf("\nPacket sent:- Response: %lluμS | Payload: %d & %d\n",time_reply - time_sent, payload_two.one, payload_two.two);
-
-    } else {
-
-      printf("\nPacket not sent:- Receiver not available.\n");
-    }
-
-    sleep_ms(3000);
   }
+
   
 }

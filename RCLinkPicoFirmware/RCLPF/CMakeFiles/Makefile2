@@ -90,15 +90,33 @@ nrf_rc_link\clean: nrf_rc_link\lib\clean
 
 # Recursive "all" directory target.
 nrf_rc_link\lib\all: nrf_rc_link\lib\nrf24l01\all
+nrf_rc_link\lib\all: nrf_rc_link\lib\RF24\all
 .PHONY : nrf_rc_link\lib\all
 
 # Recursive "preinstall" directory target.
 nrf_rc_link\lib\preinstall: nrf_rc_link\lib\nrf24l01\preinstall
+nrf_rc_link\lib\preinstall: nrf_rc_link\lib\RF24\preinstall
 .PHONY : nrf_rc_link\lib\preinstall
 
 # Recursive "clean" directory target.
 nrf_rc_link\lib\clean: nrf_rc_link\lib\nrf24l01\clean
+nrf_rc_link\lib\clean: nrf_rc_link\lib\RF24\clean
 .PHONY : nrf_rc_link\lib\clean
+
+#=============================================================================
+# Directory level rules for directory nrf_rc_link\lib\RF24
+
+# Recursive "all" directory target.
+nrf_rc_link\lib\RF24\all:
+.PHONY : nrf_rc_link\lib\RF24\all
+
+# Recursive "preinstall" directory target.
+nrf_rc_link\lib\RF24\preinstall:
+.PHONY : nrf_rc_link\lib\RF24\preinstall
+
+# Recursive "clean" directory target.
+nrf_rc_link\lib\RF24\clean:
+.PHONY : nrf_rc_link\lib\RF24\clean
 
 #=============================================================================
 # Directory level rules for directory nrf_rc_link\lib\nrf24l01

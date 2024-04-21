@@ -2091,35 +2091,35 @@ lib\nrf24l01\spi_manager\spi_manager.c.s:
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
 .PHONY : lib\nrf24l01\spi_manager\spi_manager.c.s
 
-nrf_rc_link.obj: nrf_rc_link.c.obj
+nrf_rc_link.obj: nrf_rc_link.cpp.obj
 .PHONY : nrf_rc_link.obj
 
 # target to build an object file
-nrf_rc_link.c.obj:
+nrf_rc_link.cpp.obj:
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
-	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
-.PHONY : nrf_rc_link.c.obj
+.PHONY : nrf_rc_link.cpp.obj
 
-nrf_rc_link.i: nrf_rc_link.c.i
+nrf_rc_link.i: nrf_rc_link.cpp.i
 .PHONY : nrf_rc_link.i
 
 # target to preprocess a source file
-nrf_rc_link.c.i:
+nrf_rc_link.cpp.i:
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
-	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.i
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.i
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
-.PHONY : nrf_rc_link.c.i
+.PHONY : nrf_rc_link.cpp.i
 
-nrf_rc_link.s: nrf_rc_link.c.s
+nrf_rc_link.s: nrf_rc_link.cpp.s
 .PHONY : nrf_rc_link.s
 
 # target to generate assembly for a file
-nrf_rc_link.c.s:
+nrf_rc_link.cpp.s:
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
-	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.s
+	$(MAKE) $(MAKESILENT) -f nrf_rc_link\CMakeFiles\nrf_rc_link.dir\build.make /nologo -$(MAKEFLAGS) nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.s
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
-.PHONY : nrf_rc_link.c.s
+.PHONY : nrf_rc_link.cpp.s
 
 # Help Target
 help:

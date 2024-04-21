@@ -58,24 +58,24 @@ include nrf_rc_link\CMakeFiles\nrf_rc_link.dir\progress.make
 # Include the compile flags for this target's objects.
 include nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
 
-nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
-nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: nrf_rc_link\nrf_rc_link.c
-nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.obj"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj: nrf_rc_link\nrf_rc_link.cpp
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object nrf_rc_link/CMakeFiles/nrf_rc_link.dir/nrf_rc_link.cpp.obj"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
-	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj -MF CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj.d -o CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj -c C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\nrf_rc_link.c
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR10B2~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj -MF CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj.d -o CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj -c C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\nrf_rc_link.cpp
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
 
-nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.i"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nrf_rc_link.dir/nrf_rc_link.cpp.i"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
-	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\nrf_rc_link.c > CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.i
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR10B2~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\nrf_rc_link.cpp > CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.i
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
 
-nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/nrf_rc_link.dir/nrf_rc_link.c.s"
+nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nrf_rc_link.dir/nrf_rc_link.cpp.s"
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link
-	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\nrf_rc_link.c -o CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.s
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR10B2~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF\nrf_rc_link\nrf_rc_link.cpp -o CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.s
 	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmware\RCLPF
 
 nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\flags.make
@@ -1509,7 +1509,7 @@ nrf_rc_link\CMakeFiles\nrf_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_comm
 
 # Object files for target nrf_rc_link
 nrf_rc_link_OBJECTS = \
-"CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj" \
+"CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj" \
 "CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj" \
 "CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj" \
 "CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj" \
@@ -1586,7 +1586,7 @@ nrf_rc_link_OBJECTS = \
 # External object files for target nrf_rc_link
 nrf_rc_link_EXTERNAL_OBJECTS =
 
-nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.c.obj
+nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\nrf_rc_link.cpp.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\nrf24_driver.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\spi_manager\spi_manager.c.obj
 nrf_rc_link\nrf_rc_link.elf: nrf_rc_link\CMakeFiles\nrf_rc_link.dir\lib\nrf24l01\pin_manager\pin_manager.c.obj

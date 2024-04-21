@@ -145,6 +145,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "nrf_rc_link/CMakeLists.txt"
   "nrf_rc_link/elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
   "nrf_rc_link/lib/CMakeLists.txt"
+  "nrf_rc_link/lib/RF24/CMakeLists.txt"
+  "nrf_rc_link/lib/RF24/utility/rp2/CMakeLists.txt"
   "nrf_rc_link/lib/nrf24l01/CMakeLists.txt"
   "nrf_rc_link/lib/nrf24l01/error_manager/CMakeLists.txt"
   "nrf_rc_link/lib/nrf24l01/pin_manager/CMakeLists.txt"
@@ -262,6 +264,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "nrf_rc_link/lib/nrf24l01/spi_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
   "nrf_rc_link/lib/nrf24l01/pin_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
   "nrf_rc_link/lib/nrf24l01/error_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "nrf_rc_link/lib/RF24/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

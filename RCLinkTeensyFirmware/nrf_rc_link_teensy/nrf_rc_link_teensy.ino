@@ -1,21 +1,15 @@
-/*
- * See documentation at https://nRF24.github.io/RF24
- * See License information at root directory of this library
- * Author: Brendan Doherty (2bndy5)
- */
 
-/**
- * A simple example of sending data from 1 nRF24L01 transceiver to another.
- *
- * This example was written to be used on 2 devices acting as "nodes".
- * Use the Serial Monitor to change each node's behavior.
- */
 #include <SPI.h>
 #include "printf.h"
 #include "RF24.h"
+#include <Arduino.h>
 
 #define CE_PIN 0
 #define CSN_PIN 1
+
+
+#define LED_PIN 13
+
 // instantiate an object for the nRF24L01 transceiver
 RF24 radio(CE_PIN, CSN_PIN);
 
@@ -48,40 +42,70 @@ void clear_incoming_buffer()
 
 void setup() {
 
+  pinMode(LED_PIN, OUTPUT);
+
+
   Serial.begin(115200);
   while (!Serial) {
     // some boards need to wait to ensure access to serial over USB
   }
+  digitalWrite(LED_PIN, HIGH);   // set the LED on
 
   // initialize the transceiver on the SPI bus
   if (!radio.begin()) {
     Serial.println(F("radio hardware is not responding!!"));
-    while (1) {}  // hold in infinite loop
+
+    pinMode(LED_PIN, OUTPUT);
+    while (true) {
+      digitalWrite(LED_PIN, HIGH); 
+      delay(500);           
+      digitalWrite(LED_PIN, LOW); 
+      delay(500);
+      Serial.println(F("radio hardware is not responding, please reboot"));            
+    } 
+
   }
 
+  Serial.println(F("Radio begun"));    
 
-  // Set the PA Level low to try preventing power supply related problems
-  // because these examples are likely run with nodes in close proximity to
-  // each other.
-  radio.setPALevel(RF24_PA_LOW);  // RF24_PA_MAX is default.
-
-  // save on transmission time by setting the radio to only transmit the
-  // number of bytes we need to transmit a float
-  radio.setPayloadSize(32);  // float datatype occupies 4 bytes
-
-  // set the TX address of the RX node into the TX pipe
-  radio.openWritingPipe(address[radioNumber]);  // always uses pipe 0
-
-  // set the RX address of the TX node into a RX pipe
-  radio.openReadingPipe(1, address[!radioNumber]);  // using pipe 1
-
-  // additional setup specific to the node's role
-
-  radio.startListening();  // put radio in RX mode
+  //pinMode(LED_PIN, OUTPUT);
+  //digitalWrite(LED_PIN, HIGH); 
 
 
-  //printf_begin();             // needed only once for printing details
-  radio.printPrettyDetails(); // (larger) function that prints human readable data
+
+
+  radio.setPALevel(RF24_PA_LOW);
+
+
+  radio.setPayloadSize(32);
+
+  radio.openWritingPipe(address[radioNumber]);
+
+
+  radio.openReadingPipe(1, address[!radioNumber]);
+
+
+  Serial.println(F("Beginning listening"));    
+  radio.startListening();
+
+
+  printf_begin();
+  radio.printPrettyDetails();
+
+  Serial.println(F("Setting LED pin mode"));    
+  pinMode(LED_PIN, OUTPUT);
+
+  //flash 
+
+  for (int i = 0; i < 6; i++)
+  {
+      digitalWrite(LED_PIN, HIGH); 
+      delay(50);           
+      digitalWrite(LED_PIN, LOW); 
+      delay(50);
+  }
+
+  Serial.println(F("Radio hardware fully initialized, proceeding..."));    
 
 }  
 
@@ -89,6 +113,9 @@ bool connected = false;
 
 
 void loop() {
+
+  
+  digitalWrite(LED_PIN, HIGH); 
   radio.startListening();
   //sleep 130us
   delayMicroseconds(130);
@@ -105,8 +132,6 @@ void loop() {
       
       connected = true;
       Serial.println("Connected to remote tranciever");
-   
-
 
     }
   }
@@ -141,9 +166,9 @@ void loop() {
 
   clear_outgoing_buffer();
   //send a return message, this would in theory be telemtry and other information data, for now print the internal clock
-  //sprintf(rf_outgoing_buffer, "%ld", millis());
+  sprintf(rf_outgoing_buffer, "%ld", millis());
 
-  strcpy(rf_outgoing_buffer, "Hello from Teensy");
+  //strcpy(rf_outgoing_buffer, "Hello from Teensy");
 
   bool report = radio.write(&rf_outgoing_buffer, 32);
 
@@ -160,4 +185,4 @@ void loop() {
 
 
 
-}  // loop
+} 

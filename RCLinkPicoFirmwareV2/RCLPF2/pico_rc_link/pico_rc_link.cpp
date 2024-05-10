@@ -145,7 +145,7 @@ void loop()
     }
 
     if (to_ms_since_boot(get_absolute_time()) - timeout_start >= SERIAL_RECV_TIMEOUT_MS){
-        printf("Timeout waiting for serial data\n");
+        printf("Timeout waiting for serial data, sending NO_DATA\n");
         strcpy(rf_outgoing_buffer, "NO_DATA");
     }
 

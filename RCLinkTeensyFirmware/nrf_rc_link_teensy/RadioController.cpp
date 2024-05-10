@@ -4,6 +4,15 @@
 #include "RF24.h"
 
 
+
+uint8_t address[][6] = { "1Tnsy", "2Pico" };
+bool radioNumber = 1;
+bool radioConnected = false;
+uint8_t lastPipeIdx;
+char rf_outgoing_buffer[32];
+char rf_incoming_buffer[32];
+
+
 void rcon::clear_outgoing_buffer()
 {
     for (int i = 0; i < 32; i++) {
@@ -61,32 +70,46 @@ void rcon::radio_setup(RF24 &radio)
     radio.startListening();
 
 
-    printf_begin();
-    radio.printPrettyDetails();
+    //printf_begin();
+    //radio.printPrettyDetails();
 
-    pinMode(LED_PIN, OUTPUT);
 
-    //flash 
-    /*
-    for (int i = 0; i < 6; i++)
-    {
-        digitalWrite(LED_PIN, HIGH); 
-        delay(50);           
-        digitalWrite(LED_PIN, LOW); 
-        delay(50);
-    }
-    */
 
     if (SERIAL_DEBUG) {
-        Serial.println(F("Radio hardware fully initialized, proceeding..."));
+        Serial.println(F("Radio hardware fully initialized, proceeding"));
     }
+
+
+
 
 }
 
-rcon::radio_loop(RF24 &radio)
+
+
+
+
+
+
+
+rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 {
+
+    //check radio status before listening
+    
+    if (!radio.isChipConnected()) {
+        if (SERIAL_DEBUG) {
+            Serial.println("Radio hardware is not connected, retrying...");
+        }
+        return RadioLoopState::HARDWARE_NOT_RESPONDING;
+    }
+
+    
+ 
     radio.startListening();
-    delayMicroseconds(130);
+    //delayMicroseconds(130);
+
+
+
 
     if (!radioConnected){
         if (radio.available(&lastPipeIdx)) {
@@ -103,6 +126,7 @@ rcon::radio_loop(RF24 &radio)
 
         }
     }
+
 
     if (!radioConnected) return RadioLoopState::WAITING_FOR_CONNECTION;
 
@@ -132,7 +156,7 @@ rcon::radio_loop(RF24 &radio)
     delay(RETURN_MSG_DELAY);
 
     radio.stopListening();
-    delayMicroseconds(130);
+   // delayMicroseconds(130);
 
 
     /*
@@ -167,7 +191,14 @@ rcon::radio_loop(RF24 &radio)
 
 }
 
-rcon::print_radio_loop_state(RadioLoopState state)
+
+
+
+
+
+
+
+void rcon::print_radio_loop_state(RadioLoopState state)
 {
     switch (state)
     {
@@ -190,6 +221,12 @@ rcon::print_radio_loop_state(RadioLoopState state)
     case RadioLoopState::CONNECTED_IDLE:
         if (SERIAL_DEBUG) {
             Serial.println("Radio Loop State: CONNECTED_IDLE");
+        }
+        break;
+
+    case RadioLoopState::HARDWARE_NOT_RESPONDING:
+        if (SERIAL_DEBUG) {
+            Serial.println("Radio Loop State: HARDWARE_NOT_RESPONDING");
         }
         break;
 

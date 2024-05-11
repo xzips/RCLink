@@ -1,0 +1,5 @@
+Specific next steps:
+- [] get LCD connected and tested on teensy
+- [] always display status and time since last msg on screen, including the msg
+- [] figure out a good way to make a recieve queue to be processed
+- [] figure out a gooo way to make a send queue to be sent over time

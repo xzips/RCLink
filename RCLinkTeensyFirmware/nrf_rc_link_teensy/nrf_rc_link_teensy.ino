@@ -24,15 +24,15 @@ void setup() {
 
 void loop() {
 
-  startTime = micros();
+  //startTime = micros();
   rcon::RadioLoopState state = rcon::radio_loop(radio);
-  endTime = micros();
+  //endTime = micros();
 
-  elapsedTime = endTime - startTime;
+  //elapsedTime = endTime - startTime;
 
   if (state != rcon::RadioLoopState::CONNECTED_IDLE) {
     rcon::print_radio_loop_state(state);
-    Serial.println("Radio Loop Time: " + String(elapsedTime) + " microseconds");
+   // Serial.println("Radio Loop Time: " + String(elapsedTime) + " microseconds");
 
   }
 

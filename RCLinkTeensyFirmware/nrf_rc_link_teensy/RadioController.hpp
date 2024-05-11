@@ -4,7 +4,7 @@
 #define CE_PIN 0
 #define CSN_PIN 1
 #define SERIAL_DEBUG true
-#define RETURN_MSG_DELAY 0
+#define RETURN_MSG_DELAY_US 500
 #define LED_PIN 13
 
 

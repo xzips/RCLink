@@ -106,7 +106,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
     
  
     radio.startListening();
-    //delayMicroseconds(130);
+    delayMicroseconds(130);
 
 
 
@@ -153,10 +153,10 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
 
     //wait before sending a return message
-    delay(RETURN_MSG_DELAY);
+    delay_us(RETURN_MSG_DELAY_US);
 
     radio.stopListening();
-   // delayMicroseconds(130);
+    delayMicroseconds(130);
 
 
     /*

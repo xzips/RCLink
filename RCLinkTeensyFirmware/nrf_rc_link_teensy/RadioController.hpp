@@ -1,3 +1,6 @@
+#ifndef RADIO_CONTROLLER_HPP
+#define RADIO_CONTROLLER_HPP
+
 #include <SPI.h>
 #include "RF24.h"
 
@@ -10,6 +13,7 @@
 
 extern uint8_t address[][6];
 extern bool radioNumber;
+extern unsigned long last_packet_timestamp_millis;
 extern bool radioConnected;
 extern uint8_t lastPipeIdx;
 extern char rf_outgoing_buffer[32];
@@ -38,3 +42,5 @@ namespace rcon
 
 
 }
+
+#endif

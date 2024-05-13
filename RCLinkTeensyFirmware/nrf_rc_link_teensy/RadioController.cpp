@@ -2,7 +2,7 @@
 #include <SPI.h>
 #include "printf.h"
 #include "RF24.h"
-
+#include <Arduino.h>
 
 
 uint8_t address[][6] = { "1Tnsy", "2Pico" };
@@ -11,7 +11,7 @@ bool radioConnected = false;
 uint8_t lastPipeIdx;
 char rf_outgoing_buffer[32];
 char rf_incoming_buffer[32];
-
+unsigned long last_packet_timestamp_millis;
 
 void rcon::clear_outgoing_buffer()
 {
@@ -115,12 +115,32 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
         if (radio.available(&lastPipeIdx)) {
             uint8_t bytes = radio.getPayloadSize();
             radio.read(&rf_incoming_buffer, bytes);
+            last_packet_timestamp_millis = millis();
+
+            //send return
+            clear_outgoing_buffer();
+            sprintf(rf_outgoing_buffer, "CONNECTION_ACK");
+
+            radio.stopListening();
+            delayMicroseconds(130);
+
+            bool report = radio.write(&rf_outgoing_buffer, 32);
+
+
+            if (report) {
+                if (SERIAL_DEBUG) {
+                    Serial.println("Successfully sent connection ack to remote tranciever");
+                }
+            }
+            else {
+                if (SERIAL_DEBUG) {
+                    Serial.println("Connection ack transmission failed or timed out");
+                }
+                return RadioLoopState::DISCONNECTED_RETRYING;
+            }
+
 
             radioConnected = true;
-            
-            if (SERIAL_DEBUG) {
-                Serial.println("Connected to remote tranciever");
-            }
 
             return RadioLoopState::CONNECTED_IDLE;
 
@@ -135,13 +155,12 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
         uint8_t bytes = radio.getPayloadSize(); 
         radio.read(&rf_incoming_buffer, bytes); 
 
+        last_packet_timestamp_millis = millis();
+
         if (SERIAL_DEBUG) {
             Serial.print("Received: ");
             Serial.println(rf_incoming_buffer);
         }
-
-        //clear the incoming buffer
-        clear_incoming_buffer();
 
 
 
@@ -153,7 +172,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
 
     //wait before sending a return message
-    delay_us(RETURN_MSG_DELAY_US);
+    delayMicroseconds(RETURN_MSG_DELAY_US);
 
     radio.stopListening();
     delayMicroseconds(130);

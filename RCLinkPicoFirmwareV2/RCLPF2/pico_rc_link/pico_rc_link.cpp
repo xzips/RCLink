@@ -8,7 +8,7 @@ SPI spi;
 #include "pico/time.h"
 
 
-#define SERIAL_RECV_TIMEOUT_MS 100
+#define SERIAL_RECV_TIMEOUT_MS 300
 #define RF_RECV_TIMEOUT_MS 5000
 
 

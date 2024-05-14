@@ -10,6 +10,13 @@ SPI spi;
 
 #define SERIAL_RECV_TIMEOUT_MS 300
 #define RF_RECV_TIMEOUT_MS 5000
+#define DATA_LOOP_DELAY_MS 0
+
+
+//macro for printf_safe which calls printf only if the serial port is connected
+#define printf_safe(...) if (tud_cdc_connected()) {printf(__VA_ARGS__);}
+
+
 
 
 RF24 radio(6, 5);
@@ -41,6 +48,8 @@ void clear_incoming_buffer()
 
 bool setup()
 {
+
+
     //initialize the buffer and serial 
     clear_outgoing_buffer();
     clear_incoming_buffer();
@@ -61,7 +70,7 @@ bool setup()
 
     // initialize the transceiver on the SPI bus
     if (!radio.begin()) {
-        printf("radio hardware is not responding!!\n");
+        printf_safe("radio hardware is not responding!!\n");
         return false;
     }
 
@@ -89,6 +98,10 @@ bool setup()
 
 bool connected = false;
 
+
+
+
+
 void loop()
 {
 
@@ -105,14 +118,14 @@ void loop()
         bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
 
         if (report) {
-            printf("Successfully connected to remote tranciever\n");
+            //printf_safe("Successfully connected to remote tranciever\n");
             connected = true;
         }
         else {
-            printf("Connection request failed or timed out\n");
+            printf_safe("Connection request failed or timed out\n");
         }
 
-        sleep_ms(1000);
+        sleep_ms(100);
 
         return;
 
@@ -138,25 +151,55 @@ void loop()
 
             if (serial_recv_pos >= 32){
                 break;
-                printf("Serial buffer overflow\n");
+                printf_safe("Serial buffer overflow\n");
             }
 
         }
     }
 
+    /*
     if (to_ms_since_boot(get_absolute_time()) - timeout_start >= SERIAL_RECV_TIMEOUT_MS){
-        printf("Timeout waiting for serial data, sending NO_DATA\n");
+        printf_safe("Timeout waiting for serial data, sending NO_DATA\n");
         strcpy(rf_outgoing_buffer, "NO_DATA");
     }
+
+    if (!tud_cdc_available())
+    {
+        //serial not available, send PICO_NO_SERIAL
+        strcpy(rf_outgoing_buffer, "PICO_NO_SERIAL");
+    }*/
+
+    if (serial_recv_pos == 0) { // If no data has been read
+        if (!tud_cdc_available())
+        {
+            printf_safe("Serial not available, sending PICO_NO_SERIAL\n");
+            strcpy(rf_outgoing_buffer, "PICO_NO_SERIAL");
+        }
+
+        else
+        {
+            printf_safe("Timeout waiting for serial data, sending NO_DATA\n");
+            strcpy(rf_outgoing_buffer, "NO_DATA");
+        }
+    }
+    
+    else
+    {
+
+        rf_outgoing_buffer[serial_recv_pos] = '\0'; // Ensure null termination
+    }
+
+
+
 
     //send the data
     bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
 
     if (report) {
-        printf("Successfully sent data to remote tranciever\n");
+        //printf_safe("Successfully sent data to remote tranciever\n");
     }
     else {
-        printf("Data transmission failed or timed out\n");
+        printf_safe("Data transmission failed or timed out\n");
         connected = false;
         return;
     }
@@ -178,19 +221,23 @@ void loop()
     
 
             // print the size of the payload, the pipe number, payload's value
-            printf("Received %d bytes on pipe %d: %s\n", bytes, pipe, rf_incoming_buffer);
+            //printf_safe("Received %d bytes on pipe %d: %s\n", bytes, pipe, rf_incoming_buffer);
+            
+            //print payload
+            printf_safe("%s\n", rf_incoming_buffer);
+
             break;
         }
     }
 
     if (to_ms_since_boot(get_absolute_time()) - timeout_start >= RF_RECV_TIMEOUT_MS){
-        printf("Timeout waiting for RF data\n");
+        printf_safe("Timeout waiting for RF data\n");
         connected = false;
         return;
     }
 
     //now we return to the main loop and start the process over again after waiting for 500 ms
-    sleep_ms(500);
+    sleep_ms(DATA_LOOP_DELAY_MS);
 }
 
     

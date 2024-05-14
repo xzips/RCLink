@@ -2,8 +2,14 @@
 #include <U8g2lib.h>
 #include <SPI.h>
 #include <Wire.h>
+#include "OLEDController.hpp"
 
- U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0); 
+unsigned long last_update_time_millis;
+
+
+
+
+U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0); 
 
 namespace disp
 {
@@ -11,6 +17,7 @@ namespace disp
   void setup_display()
   {
     u8g2.begin();
+    last_update_time_millis = millis();
   }
 
   void add_text_to_display(String text, int x, int y)
@@ -64,6 +71,18 @@ namespace disp
     u8g2.drawStr(last_msg_pos_x, last_msg_pos_y, last_msg_str);
 
     u8g2.sendBuffer();  // transfer internal memory to the display
+  }
+
+
+  bool should_update_display()
+  {
+    unsigned long current_time = millis();
+    if (current_time - last_update_time_millis > OLED_UPDATE_INTERVAL_MS)
+    {
+      last_update_time_millis = current_time;
+      return true;
+    }
+    return false;
   }
 
 

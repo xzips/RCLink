@@ -26,25 +26,32 @@ void setup() {
 
 void loop() {
 
-  //startTime = micros();
+  
   rcon::RadioLoopState state = rcon::radio_loop(radio);
-  //endTime = micros();
-
-  //elapsedTime = endTime - startTime;
-
-  if (state != rcon::RadioLoopState::CONNECTED_IDLE) {
-    rcon::print_radio_loop_state(state);
-   // Serial.println("Radio Loop Time: " + String(elapsedTime) + " microseconds");
-
-  }
-
-  disp::update_stats_V1(radioConnected, millis() - last_packet_timestamp_millis, millis(), rf_incoming_buffer);
-
-
+  
 
   
 
-  delay(100);
+  if (state != rcon::RadioLoopState::CONNECTED_IDLE) {
+    //rcon::print_radio_loop_state(state);
+    
+
+  }
+
+  //startTime = micros();
+
+  if (disp::should_update_display()) {
+    disp::update_stats_V1(radioConnected, millis() - last_packet_timestamp_millis, millis(), rf_incoming_buffer);
+  }
+ 
+  
+  //endTime = micros();
+
+  //elapsedTime = endTime - startTime;
+  //Serial.println("OLED Update Time: " + String(elapsedTime) + " microseconds");
+  
+
+  //delay(5);
 
 
 } 

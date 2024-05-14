@@ -6,10 +6,10 @@
 
 #define CE_PIN 0
 #define CSN_PIN 1
-#define SERIAL_DEBUG true
-#define RETURN_MSG_DELAY_US 500
+#define SERIAL_DEBUG false
+#define RETURN_MSG_DELAY_US 50
 #define LED_PIN 13
-
+#define RF_RECV_TIMEOUT_MS 1000
 
 extern uint8_t address[][6];
 extern bool radioNumber;

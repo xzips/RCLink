@@ -103,6 +103,14 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
         return RadioLoopState::HARDWARE_NOT_RESPONDING;
     }
 
+    //check timeout for packet
+    if (radioConnected && (millis() - last_packet_timestamp_millis > RF_RECV_TIMEOUT_MS)) {
+        radioConnected = false;
+        return RadioLoopState::DISCONNECTED_RETRYING;
+    }
+
+    
+
     
  
     radio.startListening();

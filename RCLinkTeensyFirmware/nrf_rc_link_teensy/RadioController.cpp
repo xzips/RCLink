@@ -59,10 +59,14 @@ void rcon::radio_setup(RF24 &radio)
 
 
 
-    radio.setPALevel(RF24_PA_LOW);
+   //radio.setPALevel(RF24_PA_LOW);
 
+    radio.setPALevel(RF24_PA_HIGH, 0);// set power level high, and enable LNA
 
     radio.setPayloadSize(32);
+
+
+
     radio.openWritingPipe(address[radioNumber]);
     radio.openReadingPipe(1, address[!radioNumber]);
 

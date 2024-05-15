@@ -18,5 +18,13 @@
     <ClCompile Include="RCLink.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RadioCommunication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RadioCommunication.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

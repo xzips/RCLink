@@ -77,8 +77,10 @@ bool setup()
 
 
     radio.setPALevel(RF24_PA_LOW); // RF24_PA_MAX is default.
+    //radio.setPALevel(RF24_PA_HIGH, 1);//set to max power and enable LNA
 
     radio.setPayloadSize(sizeof(rf_outgoing_buffer)); // float datatype occupies 4 bytes
+   
 
     // set the TX address of the RX node into the TX pipe
     radio.openWritingPipe(address[radioNumber]); // always uses pipe 0

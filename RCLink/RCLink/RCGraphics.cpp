@@ -171,6 +171,16 @@ void ProcessControlInputs()
 
 void UpdateDrawConnectionStats(sf::RenderWindow& window)
 {
+	if (frameCounter % 60 == 0)
+	{
+		last_packet_count = packet_count;
+		packet_count = 0;
+
+		last_failed_packet_count = failed_packet_count;
+		failed_packet_count = 0;
+	}
+
+	
 
 	float outline_thickness = 3;
 	float edge_margin = 20;
@@ -247,12 +257,15 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 
 	window.draw(text);
 
+
+	
+
 	//draw packets/sec stat, for now placeholder of -1 p/s, goes directly below connection status text in green if > 0, otherwise red
-	text.setString(std::to_string(packet_count) + " p/s");
+	text.setString(std::to_string(last_packet_count) + " p/s");
 	textRect = text.getLocalBounds();
 	text.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
 
-	if (packet_count > 0)
+	if (last_packet_count > 0)
 	{
 		text.setFillColor(sf::Color(76, 175, 80));
 	}
@@ -267,9 +280,9 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 
 	//draw packet success rate, for now placeholder of -1%, goes directly below packets/sec text in green if > 0, otherwise red
 	float success_rate = 0;
-	if (packet_count > 0)
+	if (last_packet_count > 0)
 	{
-		success_rate = 1 - (float)failed_packet_count / (float)packet_count;
+		success_rate = 1 - (float) last_failed_packet_count / (float)last_packet_count;
 
 	}
 

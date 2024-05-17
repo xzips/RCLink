@@ -28,6 +28,9 @@ unsigned long last_success_packet_millis;
 unsigned long packet_count;
 unsigned long failed_packet_count;
 
+unsigned long last_packet_count;
+unsigned long last_failed_packet_count;
+
 
 std::mutex connection_status_mutex;
 ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;
@@ -52,6 +55,14 @@ unsigned long get_timestamp_ms()
 {
 	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
    
+}
+
+bool is_error(std::string msg_str)
+{
+    //if strncmp first 6 chars matches ERROR: then return true, else false
+	return msg_str.substr(0, 6) == "ERROR:";
+    
+    
 }
 
 
@@ -99,6 +110,8 @@ void serial_thread() {
                 char buf[512];
                 boost::system::error_code ec;
                 size_t len = serial_->read_some(buffer(buf), ec);
+                
+                
                 if (!ec && len > 0) {
                     lock_guard<mutex> lock(receive_mutex);
                     receive_queue.push_back(Message(string(buf, len), get_timestamp_ms()));
@@ -106,10 +119,21 @@ void serial_thread() {
 					//if we recieved the message "Initiate Connection Failed\n" we should back off and NOT send any messages (use strcmp to check the first characters up to end of "Initiate Connection Failed"
 
                     //msg = "Initiate Connection Failed\r\n"
-                    int strdiff = strncmp(receive_queue.back().msg.c_str(), "Initiate Connection Failed", 25);
+                    int strdiff1 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Initiate Connection Failed", 33);
+                    int strdiff2 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Transmission Failed", 26);
 
 
-					if (strdiff == 0) {
+             
+				
+
+
+					if (strdiff1 == 0 or strdiff2 == 0) {
+                        //lock connection status mutex
+                        lock_guard<mutex> lock2(connection_status_mutex);
+
+                        connection_status = ConnectionStatus::SERIAL_OK_NO_REMOTE;
+
+                  
                         continue;
 
                     }
@@ -131,8 +155,10 @@ void serial_thread() {
                         message = "QUEUE_EMPTY\n";
                     }
                     else {
-                        message = send_queue.back().msg + "\n";
-                        send_queue.pop_back();
+                        //message = send_queue.back().msg + "\n";
+                       // send_queue.pop_back();
+						message = send_queue.front().msg + "\n";
+						send_queue.erase(send_queue.begin());
                     }
                 }
                 write(*serial_, buffer(message.data(), message.size()), ec);

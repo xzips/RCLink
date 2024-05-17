@@ -67,6 +67,27 @@ int main() {
             if (msg == "Queue is empty" or msg == "Serial not connected") {
                 break;
             }
+
+            packet_count++;
+
+            if (!is_error(msg))
+            {
+                std::lock_guard<std::mutex> lock(connection_status_mutex);
+
+				connection_status = ConnectionStatus::CONNECTED;
+				last_success_packet_millis = get_timestamp_ms();
+                
+            }
+
+            else
+            {
+                failed_packet_count++;
+            }
+
+            
+
+            
+
             cout << "Received message: " << msg << endl;
         }
 

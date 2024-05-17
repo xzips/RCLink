@@ -16,6 +16,11 @@ void serial_thread();
 void push_msg(const std::string& msg);
 std::string pop_msg();
 
+
+bool is_error(std::string msg_str);
+
+
+
 std::string generate_6char_timestamp(unsigned long timestamp_millis);
 unsigned long get_timestamp_ms();
 
@@ -54,6 +59,9 @@ enum class ConnectionStatus
 extern unsigned long last_success_packet_millis;
 extern unsigned long packet_count;
 extern unsigned long failed_packet_count;
+
+extern unsigned long last_packet_count;
+extern unsigned long last_failed_packet_count;
 
 extern std::mutex connection_status_mutex;
 extern ConnectionStatus connection_status;

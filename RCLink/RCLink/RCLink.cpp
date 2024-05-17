@@ -3,34 +3,60 @@
 #include <string>
 #include <vector>
 #include <thread>
-
+#include "RCGraphics.hpp"
 #include <SFML/Graphics.hpp>
 
 
 
 using namespace std;
 
+
+
+void define_hardware()
+{
+    servoControllerVector.push_back(ServoController(15, 0, 270, 135, sf::Keyboard::W, sf::Keyboard::S, 10, 6, "Real Test Servo"));
+    servoControllerVector.push_back(ServoController(0,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder A"));
+    servoControllerVector.push_back(ServoController(4,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder B"));
+
+}
+
+
+
 int main() {
     //thread background(serial_thread);
 
+    LoadFont();
+
+    define_hardware();
 
 
+    sf::RenderWindow window(sf::VideoMode(1600, 1000), "RCLink Controller");
 
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "RCLink Controller");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    //set 60fps framerate limit
+    window.setFramerateLimit(60);
+
 
     while (window.isOpen())
     {
+
         sf::Event event;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
         }
 
         window.clear();
-        window.draw(shape);
+
+        ProcessControlInputs();
+
+        DrawServoControllers(servoControllerVector, window);
+
+        UpdateDrawConnectionStats(window);
+
+
+
         window.display();
     }
 

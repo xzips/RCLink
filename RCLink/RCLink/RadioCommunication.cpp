@@ -17,6 +17,13 @@ mutex receive_mutex;
 io_service io;
 serial_port* serial_ = nullptr;
 
+
+unsigned long last_success_packet_millis;
+unsigned long packet_count;
+unsigned long failed_packet_count;
+ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;
+
+
 void reset_serial() {
     if (serial_) {
         serial_->close();

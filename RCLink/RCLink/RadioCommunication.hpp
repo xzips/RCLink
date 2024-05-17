@@ -8,6 +8,8 @@
 #include "SFML/Graphics.hpp"
 #include <string>
 
+extern const int MAX_SEND_QUEUE_SIZE;
+
 
 // Function declarations
 void serial_thread();

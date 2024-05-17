@@ -36,6 +36,9 @@ void loop() {
 
   }
 
+
+
+/*
   if (state == rcon::RadioLoopState::RECIVED_SENT_DATA)
   {
     //if servo request, in format "SET_SERVO_07_090" //set serrvo 7 to 90 degrees
@@ -47,12 +50,14 @@ void loop() {
       int servo_num = atoi(servo_num_str);
       int angle = atoi(angle_str);
 
-      pwm::set_servo_angle(servo_num, angle);
+      //pwm::set_servo_angle(servo_num, angle);
     }
    
 
 
   }
+
+  */
 
 
 
@@ -64,7 +69,7 @@ void loop() {
  
 
   //servonum, degrees
-  pwm::set_servo_angle(15, 100);
+  //pwm::set_servo_angle(15, 100);
   
   //endTime = micros();
   //elapsedTime = endTime - startTime;

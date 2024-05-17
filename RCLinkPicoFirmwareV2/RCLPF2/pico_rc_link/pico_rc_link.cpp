@@ -8,9 +8,9 @@ SPI spi;
 #include "pico/time.h"
 
 
-#define SERIAL_RECV_TIMEOUT_MS 300
-#define RF_RECV_TIMEOUT_MS 5000
-#define DATA_LOOP_DELAY_MS 0
+#define SERIAL_RECV_TIMEOUT_MS 1000
+#define RF_RECV_TIMEOUT_MS 1000
+#define DATA_LOOP_DELAY_MS 50
 
 
 //macro for printf_safe which calls printf only if the serial port is connected
@@ -23,7 +23,6 @@ RF24 radio(6, 5);
 
 
 
-float payload = 0.0;
 
 //max dyn payload size is 32 bytes
 char rf_outgoing_buffer[32];
@@ -76,8 +75,8 @@ bool setup()
 
 
 
-    radio.setPALevel(RF24_PA_LOW); // RF24_PA_MAX is default.
-    //radio.setPALevel(RF24_PA_HIGH, 1);//set to max power and enable LNA
+    //radio.setPALevel(RF24_PA_LOW); // RF24_PA_MAX is default.
+    radio.setPALevel(RF24_PA_HIGH, 0);//set to max power and enable LNA
 
     radio.setPayloadSize(sizeof(rf_outgoing_buffer)); // float datatype occupies 4 bytes
    
@@ -128,6 +127,7 @@ void loop()
 
 
         }
+        
 
         sleep_ms(100);
 
@@ -199,11 +199,13 @@ void loop()
     //send the data
     bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
 
+    
+
     if (report) {
         //printf_safe("Successfully sent data to remote tranciever\n");
     }
     else {
-        printf_safe("Data transmission failed or timed out\n");
+        printf_safe("Transmission Failed\n");
         connected = false;
         return;
     }

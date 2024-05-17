@@ -15,6 +15,7 @@ vector<Message> display_recv_queue;//since these are processed instantly, we nee
 mutex send_mutex;
 mutex receive_mutex;
 
+extern const int MAX_SEND_QUEUE_SIZE = 128;
 
 std::atomic<bool> cleanupFlag(false);
 
@@ -108,11 +109,7 @@ void serial_thread() {
                     int strdiff = strncmp(receive_queue.back().msg.c_str(), "Initiate Connection Failed", 25);
 
 
-					if (strdiff == 0)
-                    {
-                        //sleep 100ms, continue
-						this_thread::sleep_for(std::chrono::milliseconds(10));
-						//std::cout << "Initiate Connection Failed\n";
+					if (strdiff == 0) {
                         continue;
 
                     }
@@ -189,13 +186,20 @@ void serial_thread() {
 void push_msg(const string& msg) {
     lock_guard<mutex> lock(send_mutex);
     send_queue.push_back(Message(msg, get_timestamp_ms()));
+
+	//if there are more than 100 messages in the queue we should remove the oldest message
+	if (send_queue.size() > MAX_SEND_QUEUE_SIZE)
+	{
+		send_queue.erase(send_queue.begin());
+	}
+
 }
 
 string pop_msg() {
     lock_guard<mutex> lock(receive_mutex);
     if (!receive_queue.empty()) {
         string msg = receive_queue.front().msg;
-		display_recv_queue.push_back(receive_queue.front());
+		display_recv_queue.insert(display_recv_queue.begin(), receive_queue.front());
         receive_queue.erase(receive_queue.begin());
 
            

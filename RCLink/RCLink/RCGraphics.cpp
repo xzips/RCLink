@@ -6,7 +6,7 @@
 
 std::vector<ServoController> servoControllerVector;
 sf::Font font;
-
+unsigned long frameCounter = 0;
 
 
 void LoadFont()
@@ -188,6 +188,12 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 	sf::Text text;
 	text.setFont(font);
 	text.setCharacterSize(20);
+
+
+	//lock connection_status_mutex
+	std::lock_guard<std::mutex> lock(connection_status_mutex);
+
+	
 	
 	//if connection status is connected, draw green text
 	if (connection_status == ConnectionStatus::CONNECTED)
@@ -231,6 +237,8 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 	{
 		text.setString("Uknown Connection Status");
 	}
+
+
 
 	//center the text near the top of the box
 	sf::FloatRect textRect = text.getLocalBounds();
@@ -294,4 +302,147 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 
 
 	
+}
+
+
+void DrawBufferVisualization(sf::RenderWindow& window)
+{
+	//draw box to hold buffer visualization, put it below the connection stats box, and make it go down 300px
+	float outline_thickness = 3;
+	float edge_margin = 20;
+
+	float box_width = 300;
+	
+	sf::RectangleShape box(sf::Vector2f(box_width, 450));
+	box.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin, outline_thickness + edge_margin + 110 + 20);
+	box.setOutlineThickness(outline_thickness);
+	box.setOutlineColor(sf::Color::White);
+
+	box.setFillColor(sf::Color::Transparent);
+	
+	window.draw(box);
+
+	//lock vector<string> send_queue vector<string> receive_queue buffers, copy them to local variables, then unlock
+	std::vector<Message> send_queue_copy;
+
+
+	{
+		std::lock_guard<std::mutex> lock(send_mutex);
+		send_queue_copy = send_queue;
+	}
+
+
+
+	//draw send queue, keeping in mind the #define SEND_BUFFER_LINES
+	sf::Text text;
+	text.setFont(font);
+	text.setCharacterSize(16);
+	text.setFillColor(sf::Color::White);
+	
+	//draw send queue title
+	text.setString("Send Queue");
+
+	//set position to be exactly that of the box, plus offset
+
+	int send_text_offset_x = 10;
+	int send_text_offset_y = 10;
+	
+	sf::FloatRect textRect = text.getLocalBounds();
+	text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y);
+
+	//underline text
+	sf::RectangleShape underline(sf::Vector2f(textRect.width, 2));
+	
+	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + textRect.height);
+	underline.setFillColor(sf::Color::White);
+	
+	window.draw(underline);
+
+
+	
+	window.draw(text);
+
+	text.setCharacterSize(10);
+	
+	
+	//draw send queue lines
+	for (int i = 0; i < SEND_BUFFER_LINES; i++)
+	{
+		if (i < send_queue_copy.size())
+		{
+			text.setString(send_queue_copy[i].msg);
+		}
+		else
+		{
+			text.setString("");
+		}
+
+		//set position
+		textRect = text.getLocalBounds();
+		text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y + 30 + i * 12);
+		
+		
+		
+		window.draw(text);
+	}
+
+	//do exactly the same for receive queue, but offset to the right
+	int receive_text_offset_x = 150;
+
+
+	
+	//draw receive queue title
+	text.setString("Receive Queue");
+	text.setCharacterSize(16);
+
+	textRect = text.getLocalBounds();
+	text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y);
+		
+	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + textRect.height);
+	
+	underline.setSize(sf::Vector2f(textRect.width, 2));
+
+	window.draw(underline);
+	
+	window.draw(text);
+
+	text.setCharacterSize(10);
+
+
+	//if the display_recv_queue is longer than the SEND_BUFFER_LINES, also erase extra entries to save memory
+	if (display_recv_queue.size() > SEND_BUFFER_LINES)
+	{
+		display_recv_queue.erase(display_recv_queue.begin() + SEND_BUFFER_LINES, display_recv_queue.end());
+	}
+	
+	//draw receive queue lines
+	
+	for (int i = 0; i < SEND_BUFFER_LINES; i++)
+	{
+		if (i < display_recv_queue.size())
+		{
+			text.setString(display_recv_queue[i].msg);
+		}
+		else
+		{
+			text.setString("");
+		}
+
+		//set position
+		textRect = text.getLocalBounds();
+		text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y + 30 + i * 12);
+
+		window.draw(text);
+	}
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
 }

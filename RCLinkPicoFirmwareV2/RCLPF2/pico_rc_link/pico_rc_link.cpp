@@ -124,7 +124,9 @@ void loop()
             connected = true;
         }
         else {
-            printf_safe("Connection request failed or timed out\n");
+            printf_safe("Initiate Connection Failed\n");
+
+
         }
 
         sleep_ms(100);

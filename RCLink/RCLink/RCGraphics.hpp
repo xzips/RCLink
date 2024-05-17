@@ -7,7 +7,13 @@
 #include <string>
 
 
+
+
+const int SEND_BUFFER_LINES = 32;
+
 extern std::vector<ServoController> servoControllerVector;
+
+extern unsigned long frameCounter;
 
 extern sf::Font font;
 
@@ -17,3 +23,5 @@ void LoadFont();
 void ProcessControlInputs();
 
 void UpdateDrawConnectionStats(sf::RenderWindow& window);
+
+void DrawBufferVisualization(sf::RenderWindow& window);

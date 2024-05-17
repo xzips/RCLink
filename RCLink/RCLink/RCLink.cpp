@@ -23,7 +23,7 @@ void define_hardware()
 
 
 int main() {
-    //thread background(serial_thread);
+    thread background(serial_thread);
 
     LoadFont();
 
@@ -55,35 +55,36 @@ int main() {
 
         UpdateDrawConnectionStats(window);
 
+        DrawBufferVisualization(window);
+
+		if (frameCounter % 5 == 0) {
+			push_msg("Hello from main loop");
+		}
 
 
-        window.display();
-    }
-
-
-    /*
-
-    int n = 0;
-    while (true) {
-        push_msg(std::string("n = ") + to_string(n));
-        n++;
-        this_thread::sleep_for(std::chrono::milliseconds(1000));
-
-        int n_msgs = 0;
         while (true) {
             string msg = pop_msg();
-            if (msg == "Queue is empty") {
+            if (msg == "Queue is empty" or msg == "Serial not connected") {
                 break;
             }
-            n_msgs += 1;
             cout << "Received message: " << msg << endl;
         }
 
-        cout << "Number of messages received (in 1s): " << n_msgs << endl;
+
+        window.display();
+
+        frameCounter++;
     }
 
-    */
+    
+    cleanupFlag.store(true);
 
-    //background.join();
+	//wait 50ms for the serial thread to finish
+	this_thread::sleep_for(std::chrono::milliseconds(50));
+    
+    background.join();
+    
+
+    
     return 0;
 }

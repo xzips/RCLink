@@ -6,17 +6,38 @@
 #include <mutex>
 #include <string>
 #include "SFML/Graphics.hpp"
+#include <string>
+
 
 // Function declarations
 void serial_thread();
 void push_msg(const std::string& msg);
 std::string pop_msg();
 
+std::string generate_6char_timestamp(unsigned long timestamp_millis);
+unsigned long get_timestamp_ms();
+
+struct Message
+{
+	std::string msg;
+	unsigned long timestamp;
+	Message(std::string msg, unsigned long timestamp) : msg(msg), timestamp(timestamp) {}
+
+};
+
 // Extern declarations for global variables
-extern std::vector<std::string> send_queue;
-extern std::vector<std::string> receive_queue;
+extern std::vector<Message> send_queue;
+extern std::vector<Message> receive_queue;
+extern std::vector<Message> display_recv_queue;
+
+extern std::atomic<bool> cleanupFlag;
+
 extern std::mutex send_mutex;
 extern std::mutex receive_mutex;
+
+
+
+
 extern boost::asio::io_service io;
 extern boost::asio::serial_port* serial_;
 
@@ -31,6 +52,8 @@ enum class ConnectionStatus
 extern unsigned long last_success_packet_millis;
 extern unsigned long packet_count;
 extern unsigned long failed_packet_count;
+
+extern std::mutex connection_status_mutex;
 extern ConnectionStatus connection_status;
 
 struct ServoController

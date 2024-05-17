@@ -3,15 +3,20 @@
 #include <boost/asio.hpp>
 #include <chrono>
 #include <thread>
+#include <string>
 
 using namespace boost::asio;
 using namespace std;
 
 // Global queues and their mutexes
-vector<string> send_queue;
-vector<string> receive_queue;
+vector<Message> send_queue;
+vector<Message> receive_queue;
+vector<Message> display_recv_queue;//since these are processed instantly, we need a separate vector to display them in gui
 mutex send_mutex;
 mutex receive_mutex;
+
+
+std::atomic<bool> cleanupFlag(false);
 
 // Serial port global
 io_service io;
@@ -21,7 +26,32 @@ serial_port* serial_ = nullptr;
 unsigned long last_success_packet_millis;
 unsigned long packet_count;
 unsigned long failed_packet_count;
+
+
+std::mutex connection_status_mutex;
 ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;
+
+
+
+std::string generate_6char_timestamp(unsigned long timestamp_millis)
+{
+
+    timestamp_millis = timestamp_millis % 1000000;
+    
+	std::string str = std::to_string(timestamp_millis);
+	while (str.length() < 6)
+	{
+		str = "0" + str;
+	}
+
+	return str;
+}
+
+unsigned long get_timestamp_ms()
+{
+	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+   
+}
 
 
 void reset_serial() {
@@ -40,17 +70,29 @@ bool initialize_serial() {
         serial_->set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::one));
         serial_->set_option(serial_port_base::parity(serial_port_base::parity::none));
         serial_->set_option(serial_port_base::flow_control(serial_port_base::flow_control::none));
+
+		//lock the connection status mutex
+		lock_guard<mutex> lock(connection_status_mutex);
+		connection_status = ConnectionStatus::SERIAL_OK_NO_REMOTE;
+
+
         return true;
     }
     catch (std::exception& e) {
         cerr << "Error initializing serial port: " << e.what() << endl;
+        
+        //lock the connection status mutex
+		lock_guard<mutex> lock(connection_status_mutex);
+        
+		connection_status = ConnectionStatus::DISCONNECTED;
+
         reset_serial();
         return false;
     }
 }
 
 void serial_thread() {
-    while (true) {
+    while (!cleanupFlag.load()) {
         if (serial_ && serial_->is_open()) {
             try {
                 char buf[512];
@@ -58,11 +100,31 @@ void serial_thread() {
                 size_t len = serial_->read_some(buffer(buf), ec);
                 if (!ec && len > 0) {
                     lock_guard<mutex> lock(receive_mutex);
-                    receive_queue.push_back(string(buf, len));
+                    receive_queue.push_back(Message(string(buf, len), get_timestamp_ms()));
+                    
+					//if we recieved the message "Initiate Connection Failed\n" we should back off and NOT send any messages (use strcmp to check the first characters up to end of "Initiate Connection Failed"
+
+                    //msg = "Initiate Connection Failed\r\n"
+                    int strdiff = strncmp(receive_queue.back().msg.c_str(), "Initiate Connection Failed", 25);
+
+
+					if (strdiff == 0)
+                    {
+                        //sleep 100ms, continue
+						this_thread::sleep_for(std::chrono::milliseconds(10));
+						//std::cout << "Initiate Connection Failed\n";
+                        continue;
+
+                    }
+
+                                        
                 }
                 else if (ec) {
                     cerr << "Read error: " << ec.message() << endl;
                     reset_serial();
+                    this_thread::sleep_for(std::chrono::milliseconds(200));
+                    continue;
+
                 }
 
                 string message;
@@ -72,7 +134,7 @@ void serial_thread() {
                         message = "QUEUE_EMPTY\n";
                     }
                     else {
-                        message = send_queue.back() + "\n";
+                        message = send_queue.back().msg + "\n";
                         send_queue.pop_back();
                     }
                 }
@@ -80,6 +142,11 @@ void serial_thread() {
                 if (ec) {
                     cerr << "Write error: " << ec.message() << endl;
                     reset_serial();
+                    this_thread::sleep_for(std::chrono::milliseconds(200));
+                    continue;
+                    
+
+                    
                 }
             }
             catch (std::exception& e) {
@@ -94,22 +161,45 @@ void serial_thread() {
             }
             else {
                 cout << "Waiting to reconnect..." << endl;
-                this_thread::sleep_for(std::chrono::seconds(1));  // Wait before retrying to avoid busy-waiting
+                this_thread::sleep_for(std::chrono::milliseconds(200));  // Wait before retrying to avoid busy-waiting
             }
         }
     }
+
+    //wait 30ms for anything else to be sent
+	this_thread::sleep_for(std::chrono::milliseconds(20));
+    
+
+    //perform cleanup of serial
+    reset_serial();
+
+
+    io.stop();
+
+
+
+    
+    
+    return;
+
+
+
 }
 
 void push_msg(const string& msg) {
     lock_guard<mutex> lock(send_mutex);
-    send_queue.push_back(msg);
+    send_queue.push_back(Message(msg, get_timestamp_ms()));
 }
 
 string pop_msg() {
     lock_guard<mutex> lock(receive_mutex);
     if (!receive_queue.empty()) {
-        string msg = receive_queue.front();
+        string msg = receive_queue.front().msg;
+		display_recv_queue.push_back(receive_queue.front());
         receive_queue.erase(receive_queue.begin());
+
+           
+
         return msg;
     }
     return serial_ && serial_->is_open() ? "Queue is empty" : "Serial not connected";

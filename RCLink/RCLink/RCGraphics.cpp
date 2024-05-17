@@ -390,7 +390,7 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 	int receive_text_offset_x = 180;
 
 	// Draw receive queue title
-	text.setString("Receive Queue");
+	text.setString("Receive Log");
 	text.setCharacterSize(16);
 	textRect = text.getLocalBounds();
 	text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y);

@@ -104,6 +104,8 @@ struct ServoController
 	{
 		curAngle = neutral_angle;
 	}
+	
+	std::string GetCommandSTR();
 
 
 };

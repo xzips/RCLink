@@ -36,6 +36,30 @@ std::mutex connection_status_mutex;
 ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;
 
 
+std::string ServoController::GetCommandSTR()
+{
+    //SET_SERVO_07_090 for example format
+
+	std::string servoNumStr = std::to_string(servoNum);
+    //pad
+	while (servoNumStr.length() < 2)
+	{
+		servoNumStr = "0" + servoNumStr;
+	}
+
+	std::string servoPosStr = std::to_string((int)curAngle);
+	//pad
+
+	while (servoPosStr.length() < 3)
+	{
+		servoPosStr = "0" + servoPosStr;
+	}
+
+	return "SET_SERVO_" + servoNumStr + "_" + servoPosStr;
+    
+}
+
+
 
 std::string generate_6char_timestamp(unsigned long timestamp_millis)
 {

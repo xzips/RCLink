@@ -57,7 +57,7 @@ int main() {
 
         DrawBufferVisualization(window);
 
-		if (frameCounter % 5 == 0) {
+		if (frameCounter % 20 == 0) {
 			//push_msg("Hello from main loop");
 
             std::string servoControlStr = servoControllerVector[0].GetCommandSTR();

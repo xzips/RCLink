@@ -13,3 +13,6 @@ RCLink/.vs/RCLink/v17/.suo
 *.recipe
 RCLinkPicoFirmwareV2/RCLPF2/build
 *.opendb
+*.db-shm
+*.db-wal
+*.exe

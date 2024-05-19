@@ -11,7 +11,8 @@ SPI spi;
 #define SERIAL_RECV_TIMEOUT_MS 1000
 #define RF_RECV_TIMEOUT_MS 1000
 #define DATA_LOOP_DELAY_MS 50
-
+#define SERIAL_PACKET_BUFFER_COUNT 4
+#define SERIAL_PACKET_BUFFER_SIZES
 
 //macro for printf_safe which calls printf only if the serial port is connected
 #define printf_safe(...) if (tud_cdc_connected()) {printf(__VA_ARGS__);}
@@ -109,7 +110,7 @@ void loop()
             connected = true;
         }
         else {
-            printf_safe("RF_ERROR: Initiate Connection Failed\n");
+            printf_safe("ERROR: Initiate Connection Failed\n");
 
 
         }

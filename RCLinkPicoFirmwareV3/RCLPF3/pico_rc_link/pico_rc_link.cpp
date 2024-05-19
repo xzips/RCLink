@@ -1,75 +1,121 @@
 #include "pico/stdlib.h"  // printf(), sleep_ms(), getchar_timeout_us(), to_us_since_boot(), get_absolute_time()
-#include "pico/bootrom.h" // reset_usb_boot()
 #include <tusb.h>         // tud_cdc_connected()
 #include <RF24.h>         // RF24 radio object
-SPI spi;
-
 #include <stdio.h>
 #include "pico/time.h"
-
+#include "pico/multicore.h" //mutexes and thread launching
 
 #define SERIAL_RECV_TIMEOUT_MS 1000
 #define RF_RECV_TIMEOUT_MS 1000
 #define DATA_LOOP_DELAY_MS 50
-#define SERIAL_PACKET_BUFFER_COUNT 4
-#define SERIAL_PACKET_BUFFER_SIZES
+#define SIZE_OF_BUFFER 4
+#define MAX_STRING_LENGTH 32
 
 //macro for printf_safe which calls printf only if the serial port is connected
 #define printf_safe(...) if (tud_cdc_connected()) {printf(__VA_ARGS__);}
 
 
+//PLAN for new code: rf24 and all radio goes in the main/normal/base thread, and serial goes in second thread
 
 
+
+/*Circular Buffer Code*/
+typedef struct {
+    char buffer[SIZE_OF_BUFFER][MAX_STRING_LENGTH];
+    int writeIndex;
+    int readIndex;
+    int bufferLength;
+} CircularBuffer;
+
+
+int push_circular(CircularBuffer *cb, const char *value) {
+    if (cb->bufferLength == SIZE_OF_BUFFER) {
+        return -1; // Buffer is full
+    }
+
+    strncpy(cb->buffer[cb->writeIndex], value, MAX_STRING_LENGTH - 1);
+    cb->buffer[cb->writeIndex][MAX_STRING_LENGTH - 1] = '\0'; // Ensure null-termination
+    cb->writeIndex = (cb->writeIndex + 1) % SIZE_OF_BUFFER;
+    cb->bufferLength++;
+
+    return 0;
+}
+
+int pop_circular(CircularBuffer *cb, char *output) {
+    if (cb->bufferLength == 0) {
+        return -1; // Buffer is empty
+    }
+
+    strncpy(output, cb->buffer[cb->readIndex], MAX_STRING_LENGTH - 1);
+    output[MAX_STRING_LENGTH - 1] = '\0'; // Ensure null-termination
+    cb->readIndex = (cb->readIndex + 1) % SIZE_OF_BUFFER;
+    cb->bufferLength--;
+
+    return 0;
+}
+
+
+
+/* Variables for core 0 only */
+SPI spi;
 RF24 radio(6, 5);
-
 bool connected = false;
 
+CircularBuffer outgoing_buffer;
+CircularBuffer incoming_buffer;
 
-//max dyn payload size is 32 bytes
-char rf_outgoing_buffer[32];
-char rf_incoming_buffer[32];
 
-void clear_outgoing_buffer()
+/*Mutexes*/
+auto_init_mutex(mutex_outgoing_buffer)
+auto_init_mutex(mutex_incoming_buffer)
+
+
+
+
+
+//returns true if success, false if buffer is full
+bool atomic_buffer_push(char **buffer, int *first, int *last, char *data)
 {
-    for (int i = 0; i < 32; i++) {
-        rf_outgoing_buffer[i] = 0;
-    }
-
-}
-
-void clear_incoming_buffer()
-{
-    for (int i = 0; i < 32; i++) {
-        rf_incoming_buffer[i] = 0;
-    }
-
-}
-
-
-bool setup()
-{
-
-    //initialize the buffer and serial 
-    clear_outgoing_buffer();
-    clear_incoming_buffer();
-    //initialize and setup the nrf24l01 radio
-    spi.begin(spi0, 2, 3, 4); // spi0 or spi1 bus, SCK, TX, RX
-
-
-    uint8_t address[][6] = {"1Tnsy", "2Pico"};
-    bool radioNumber = 0;
-
-    // wait here until the CDC ACM (serial port emulation) is connected
-    while (!tud_cdc_connected()) {
-        sleep_ms(10);
-    }
-
-    // initialize the transceiver on the SPI bus
-    if (!radio.begin()) {
-        printf_safe("ERROR: Radio Hardware Failure\n");
+    int next = (*last + 1) % PACKET_BUFFER_COUNT;
+    if (next == *first)
+    {
         return false;
     }
 
+    strcpy(buffer[*last], data);
+    *last = next;
+    return true;
+}
+
+
+void clear_all_buffers()
+{
+    for (int i = 0; i < PACKET_BUFFER_COUNT; i++)
+    {
+        for (int j = 0; j < PACKET_BUFFER_SIZES; j++)
+        {
+            rf_outgoing_buffer[i][j] = '\0';
+            rf_incoming_buffer[i][j] = '\0';
+        }
+    }
+}
+
+
+/* RF24 Radio Communication Thread */
+void core0_entry()
+{
+    spi.begin(spi0, 2, 3, 4); // spi0 or spi1 bus, SCK, TX, RX
+    uint8_t address[][6] = {"1Tnsy", "2Pico"};
+    bool radioNumber = 0;
+
+    // initialize the transceiver on the SPI bus
+    while (!radio.begin()) {
+        //printf_safe("ERROR: Radio Hardware Failure\n");
+        TODO
+
+    }
+
+    
     //radio.setPALevel(RF24_PA_LOW); // RF24_PA_MAX is default.
     radio.setPALevel(RF24_PA_HIGH, 0);//set to max power and enable LNA
 
@@ -81,8 +127,22 @@ bool setup()
 
     //radio.printPrettyDetails();
 
+    while (true)
+    {
+        ...
+    }
 
-    return true;
+
+}
+
+
+/* Serial Communication Thread */
+void core1_entry()
+{
+    // wait here until the CDC ACM (serial port emulation) is connected
+    while (!tud_cdc_connected()) {
+        sleep_ms(10);
+    }
 
 }
 
@@ -230,7 +290,8 @@ void loop()
 
 int main()
 {
-    stdio_init_all(); // init necessary IO for the RP2040
+    stdio_init_all();
+    clear_all_buffers();
 
     while (!setup()) { // if radio.begin() failed
         // hold program in infinite attempts to initialize radio
@@ -238,5 +299,10 @@ int main()
     while (true) {
         loop();
     }
+
+    multicore_launch_core1(core1_entry);
+
+    core0_entry();
+
     return 0; // we will never reach this
 }

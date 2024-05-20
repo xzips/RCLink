@@ -58,9 +58,9 @@ Discarded input sections
  .data          0x00000000        0x0 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
  .bss           0x00000000        0x0 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
  .text._Z13push_circularP14CircularBufferPKc
-                0x00000000       0x44 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x00000000       0x40 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
  .text._Z12pop_circularP14CircularBufferPc
-                0x00000000       0x44 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x00000000       0x40 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
  .text.exit._GLOBAL__sub_D_mutex_serial_outgoing_buffer
                 0x00000000       0x10 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
  .fini_array    0x00000000        0x4 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
@@ -757,8 +757,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .data          0x00000000        0x0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .bss           0x00000000        0x0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .text.__wrap___aeabi_idiv
-                0x00000000       0x50 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .text.divmod_s64s64_rem
                 0x00000000        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .text.divmod_u64u64_rem
@@ -1460,9 +1458,9 @@ Discarded input sections
                 0x00000000        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .bss.lockout_victim_initialized
                 0x00000000        0x2 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .text          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccMN81A8.o
- .data          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccMN81A8.o
- .bss           0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccMN81A8.o
+ .text          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccdou8Cl.o
+ .data          0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccdou8Cl.o
+ .bss           0x00000000        0x0 C:\Users\aspen\AppData\Local\Temp\ccdou8Cl.o
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-calloc.o)
@@ -1624,7 +1622,7 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\aspen\AppData\Local\Temp\ccMN81A8.o
+ .boot2         0x10000000      0x100 C:\Users\aspen\AppData\Local\Temp\ccdou8Cl.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -1690,300 +1688,308 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x100002bc       0x48 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .text._Z13core0_rf_loopv
-                0x10000304      0x310 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x10000304      0x2e8 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
                 0x10000304                core0_rf_loop()
  .text._Z11core0_entryv
-                0x10000614      0x13c CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x10000614                core0_entry()
+                0x100005ec      0x12c CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x100005ec                core0_entry()
  .text._Z17core1_serial_loopv
-                0x10000750      0x240 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x10000750                core1_serial_loop()
+                0x10000718      0x228 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x10000718                core1_serial_loop()
  .text._Z11core1_entryv
-                0x10000990       0x20 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x10000990                core1_entry()
+                0x10000940       0x20 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x10000940                core1_entry()
  .text.startup.main
-                0x100009b0       0x28 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x100009b0                main
+                0x10000960       0x28 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x10000960                main
  .text.startup._GLOBAL__sub_I_mutex_serial_outgoing_buffer
-                0x100009d8       0x24 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x10000988       0x24 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
  .text._ZN4RF2414write_registerEhPKhh
-                0x100009fc       0xec CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x100009fc                RF24::write_register(unsigned char, unsigned char const*, unsigned char)
+                0x100009ac       0xec CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x100009ac                RF24::write_register(unsigned char, unsigned char const*, unsigned char)
  .text._ZN4RF2413write_payloadEPKvhh
-                0x10000ae8      0x148 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10000ae8                RF24::write_payload(void const*, unsigned char, unsigned char)
+                0x10000a98      0x148 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10000a98                RF24::write_payload(void const*, unsigned char, unsigned char)
  .text._ZN4RF2412read_payloadEPvh
-                0x10000c30      0x144 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10000c30                RF24::read_payload(void*, unsigned char)
+                0x10000be0      0x144 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10000be0                RF24::read_payload(void*, unsigned char)
  .text._ZN4RF24C2Ehhm
-                0x10000d74       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10000d74                RF24::RF24(unsigned char, unsigned char, unsigned long)
-                0x10000d74                RF24::RF24(unsigned char, unsigned char, unsigned long)
+                0x10000d24       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10000d24                RF24::RF24(unsigned char, unsigned char, unsigned long)
+                0x10000d24                RF24::RF24(unsigned char, unsigned char, unsigned long)
  .text._ZN4RF2414setPayloadSizeEh
-                0x10000db0       0xa4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10000db0                RF24::setPayloadSize(unsigned char)
+                0x10000d60       0xa4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10000d60                RF24::setPayloadSize(unsigned char)
  .text._ZN4RF2414getPayloadSizeEv
-                0x10000e54        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10000e54                RF24::getPayloadSize()
+                0x10000e04        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10000e04                RF24::getPayloadSize()
  .text._ZN4RF2411_init_radioEv
-                0x10000e5c      0x6dc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10000e5c                RF24::_init_radio()
+                0x10000e0c      0x6dc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10000e0c                RF24::_init_radio()
  .text._ZN4RF245beginEv
-                0x10001538       0x6c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001538                RF24::begin()
+                0x100014e8       0x6c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x100014e8                RF24::begin()
  .text._ZN4RF2414startListeningEv
-                0x100015a4      0x218 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x100015a4                RF24::startListening()
+                0x10001554      0x218 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10001554                RF24::startListening()
  .text._ZN4RF2413stopListeningEv
-                0x100017bc      0x174 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x100017bc                RF24::stopListening()
+                0x1000176c      0x174 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x1000176c                RF24::stopListening()
  .text._ZN4RF245writeEPKvhb
-                0x10001930      0x15c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001930                RF24::write(void const*, unsigned char, bool)
+                0x100018e0      0x15c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x100018e0                RF24::write(void const*, unsigned char, bool)
  .text._ZN4RF245writeEPKvh
-                0x10001a8c        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001a8c                RF24::write(void const*, unsigned char)
+                0x10001a3c        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10001a3c                RF24::write(void const*, unsigned char)
  .text._ZN4RF249availableEPh
-                0x10001a98       0xb0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001a98                RF24::available(unsigned char*)
+                0x10001a48       0xb0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10001a48                RF24::available(unsigned char*)
  .text._ZN4RF244readEPvh
-                0x10001b48       0x5c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001b48                RF24::read(void*, unsigned char)
+                0x10001af8       0x5c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10001af8                RF24::read(void*, unsigned char)
  .text._ZN4RF2415openWritingPipeEPKh
-                0x10001ba4       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001ba4                RF24::openWritingPipe(unsigned char const*)
+                0x10001b54       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10001b54                RF24::openWritingPipe(unsigned char const*)
  .text._ZN4RF2415openReadingPipeEhPKh
-                0x10001bc4      0x17c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001bc4                RF24::openReadingPipe(unsigned char, unsigned char const*)
+                0x10001b74      0x17c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10001b74                RF24::openReadingPipe(unsigned char, unsigned char const*)
  .text._ZN4RF2410setPALevelEhb
-                0x10001d40       0xd0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
-                0x10001d40                RF24::setPALevel(unsigned char, bool)
+                0x10001cf0       0xd0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/RF24.cpp.obj
+                0x10001cf0                RF24::setPALevel(unsigned char, bool)
  .text._ZN4GPIO4openEii
-                0x10001e10       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/gpio.cpp.obj
-                0x10001e10                GPIO::open(int, int)
+                0x10001dc0       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/gpio.cpp.obj
+                0x10001dc0                GPIO::open(int, int)
  .text._ZN4GPIO5writeEii
-                0x10001e30       0x14 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/gpio.cpp.obj
-                0x10001e30                GPIO::write(int, int)
+                0x10001de0       0x14 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/gpio.cpp.obj
+                0x10001de0                GPIO::write(int, int)
  .text._ZN3SPID2Ev
-                0x10001e44        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001e44                SPI::~SPI()
-                0x10001e44                SPI::~SPI()
+                0x10001df4        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001df4                SPI::~SPI()
+                0x10001df4                SPI::~SPI()
  .text._ZN3SPID0Ev
-                0x10001e48       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001e48                SPI::~SPI()
+                0x10001df8       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001df8                SPI::~SPI()
  .text._ZN3SPIC2Ev
-                0x10001e58        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001e58                SPI::SPI()
-                0x10001e58                SPI::SPI()
+                0x10001e08        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001e08                SPI::SPI()
+                0x10001e08                SPI::SPI()
  .text._ZN3SPI5beginEP8spi_inst
-                0x10001e64       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001e64                SPI::begin(spi_inst*)
+                0x10001e14       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001e14                SPI::begin(spi_inst*)
  .text._ZN3SPI5beginEP8spi_insthhh
-                0x10001e84       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001e84                SPI::begin(spi_inst*, unsigned char, unsigned char, unsigned char)
+                0x10001e34       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001e34                SPI::begin(spi_inst*, unsigned char, unsigned char, unsigned char)
  .text._ZN3SPI8transferEh
-                0x10001ea8       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001ea8                SPI::transfer(unsigned char)
+                0x10001e58       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001e58                SPI::transfer(unsigned char)
  .text._ZN3SPI10transfernbEPKhPhm
-                0x10001ecc        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001ecc                SPI::transfernb(unsigned char const*, unsigned char*, unsigned long)
+                0x10001e7c        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001e7c                SPI::transfernb(unsigned char const*, unsigned char*, unsigned long)
  .text._ZN3SPI16beginTransactionEm
-                0x10001ed8       0x38 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001ed8                SPI::beginTransaction(unsigned long)
+                0x10001e88       0x38 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001e88                SPI::beginTransaction(unsigned long)
  .text._ZN3SPI14endTransactionEv
-                0x10001f10        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
-                0x10001f10                SPI::endTransaction()
+                0x10001ec0        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/spi.cpp.obj
+                0x10001ec0                SPI::endTransaction()
  .text.gpio_set_function
-                0x10001f1c       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001f1c                gpio_set_function
+                0x10001ecc       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001ecc                gpio_set_function
  .text.gpio_init
-                0x10001f4c       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001f4c                gpio_init
+                0x10001efc       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001efc                gpio_init
  .text.running_on_fpga
-                0x10001f88       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10001f88                running_on_fpga
+                0x10001f38       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10001f38                running_on_fpga
  .text.hw_claim_or_assert
-                0x10001f98       0x44 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001f98                hw_claim_or_assert
+                0x10001f48       0x44 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001f48                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x10001fdc       0x9c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001fdc                hw_claim_unused_from_range
+                0x10001f8c       0x9c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001f8c                hw_claim_unused_from_range
  .text.spin_locks_reset
-                0x10002078       0x1c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10002078                spin_locks_reset
+                0x10002028       0x1c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10002028                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10002094       0x18 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10002094                next_striped_spin_lock_num
+                0x10002044       0x18 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10002044                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x100020ac       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x100020ac                spin_lock_claim_unused
+                0x1000205c       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x1000205c                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x100020cc       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100020cc                irq_set_enabled
+                0x1000207c       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000207c                irq_set_enabled
  .text.irq_is_enabled
-                0x100020f0       0x18 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100020f0                irq_is_enabled
+                0x100020a0       0x18 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100020a0                irq_is_enabled
  .text.irq_set_pending
-                0x10002108       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002108                irq_set_pending
+                0x100020b8       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100020b8                irq_set_pending
  .text.irq_has_shared_handler
-                0x10002118       0x2c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002118                irq_has_shared_handler
+                0x100020c8       0x2c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100020c8                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x10002144       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002144                irq_get_vtable_handler
+                0x100020f4       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100020f4                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10002154       0x54 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002154                irq_set_exclusive_handler
+                0x10002104       0x54 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002104                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x100021a8      0x1e8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100021a8                irq_add_shared_handler
+                0x10002158      0x1e8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002158                irq_add_shared_handler
  .text.irq_remove_handler
-                0x10002390      0x1b0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002390                irq_remove_handler
+                0x10002340      0x1b0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002340                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10002540       0xb4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002540                irq_add_tail_to_free_list
+                0x100024f0       0xb4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100024f0                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x100025f4       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100025f4                irq_init_priorities
+                0x100025a4       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100025a4                irq_init_priorities
  .text.user_irq_claim_unused
-                0x10002618       0x28 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002618                user_irq_claim_unused
+                0x100025c8       0x28 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100025c8                user_irq_claim_unused
  .text.lock_init
-                0x10002640       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10002640                lock_init
+                0x100025f0       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x100025f0                lock_init
  .text.mutex_init
-                0x10002650       0x1c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10002650                mutex_init
+                0x10002600       0x1c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10002600                mutex_init
  .text.recursive_mutex_init
-                0x1000266c       0x1c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x1000266c                recursive_mutex_init
+                0x1000261c       0x1c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x1000261c                recursive_mutex_init
  .text.critical_section_init
-                0x10002688       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10002688                critical_section_init
+                0x10002638       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10002638                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x100026a8       0x14 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x100026a8                critical_section_init_with_lock_num
+                0x10002658       0x14 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10002658                critical_section_init_with_lock_num
  .text.timer_pool_entry_comparator
-                0x100026bc       0x34 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x100026bc                timer_pool_entry_comparator
+                0x1000266c       0x34 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000266c                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x100026f0       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x100026a0       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x10002720      0x100 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x100026d0      0x100 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10002820      0x1bc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x100027d0      0x1bc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x100029dc       0x6c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x100029dc                alarm_pool_init_default
+                0x1000298c       0x6c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000298c                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10002a48        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002a48                alarm_pool_get_default
+                0x100029f8        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x100029f8                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10002a50      0x178 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002a50                alarm_pool_add_alarm_at
+                0x10002a00      0x178 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002a00                alarm_pool_add_alarm_at
  .text.alarm_pool_core_num
-                0x10002bc8        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002bc8                alarm_pool_core_num
+                0x10002b78        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002b78                alarm_pool_core_num
  .text.sleep_until
-                0x10002bcc       0xc4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002bcc                sleep_until
+                0x10002b7c       0xc4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002b7c                sleep_until
  .text.sleep_us
-                0x10002c90       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002c90                sleep_us
+                0x10002c40       0x24 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002c40                sleep_us
  .text.sleep_ms
-                0x10002cb4       0x34 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002cb4                sleep_ms
+                0x10002c64       0x34 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002c64                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10002ce8       0xd4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002ce8                best_effort_wfe_or_timeout
+                0x10002c98       0xd4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002c98                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x10002dbc       0xbc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002d6c       0xbc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10002e78       0x18 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002e78                hardware_alarm_claim
+                0x10002e28       0x18 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002e28                hardware_alarm_claim
  .text.time_us_64
-                0x10002e90       0x14 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002e90                time_us_64
+                0x10002e40       0x14 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002e40                time_us_64
  .text.busy_wait_us
-                0x10002ea4       0x54 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002ea4                busy_wait_us
+                0x10002e54       0x54 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002e54                busy_wait_us
  .text.busy_wait_until
-                0x10002ef8       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002ef8                busy_wait_until
+                0x10002ea8       0x20 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002ea8                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x10002f18       0x8c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002f18                hardware_alarm_set_callback
+                0x10002ec8       0x8c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002ec8                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10002fa4       0xd4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002fa4                hardware_alarm_set_target
+                0x10002f54       0xd4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002f54                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10003078       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10003078                hardware_alarm_cancel
+                0x10003028       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10003028                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x100030b4       0x68 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10003064       0x68 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x1000311c       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000311c                ph_post_alloc_init
+                0x100030cc       0x3c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100030cc                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x10003158       0x90 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10003158                ph_merge_two_pass
+                0x10003108       0x90 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10003108                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x100031e8      0x100 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10003198      0x100 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x100032e8      0x104 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100032e8                ph_remove_head
+                0x10003298      0x104 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10003298                ph_remove_head
  .text.ph_remove_and_free_node
-                0x100033ec       0x7c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100033ec                ph_remove_and_free_node
+                0x1000339c       0x7c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000339c                ph_remove_and_free_node
  .text.clocks_init
-                0x10003468      0x2d0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10003468                clocks_init
+                0x10003418      0x2d0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10003418                clocks_init
  .text.clock_get_hz
-                0x10003738        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10003738                clock_get_hz
+                0x100036e8        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100036e8                clock_get_hz
  .text.pll_init
-                0x10003744       0xa0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x10003744                pll_init
+                0x100036f4       0xa0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x100036f4                pll_init
  .text.watchdog_start_tick
-                0x100037e4       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x100037e4                watchdog_start_tick
+                0x10003794       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10003794                watchdog_start_tick
  .text.watchdog_reboot
-                0x100037f4       0x98 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x100037f4                watchdog_reboot
+                0x100037a4       0x98 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x100037a4                watchdog_reboot
  .text.xosc_init
-                0x1000388c       0x28 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x1000388c                xosc_init
+                0x1000383c       0x28 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x1000383c                xosc_init
  .text.runtime_init
-                0x100038b4       0xf0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100038b4                runtime_init
- .text._exit    0x100039a4        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100039a4                _exit
- .text._sbrk    0x100039a8       0x34 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100039a8                _sbrk
- .text.exit     0x100039dc        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100039dc                exit
- .text.panic    0x100039e4       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100039e4                panic
+                0x10003864       0xf0 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003864                runtime_init
+ .text._exit    0x10003954        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003954                _exit
+ .text._sbrk    0x10003958       0x34 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003958                _sbrk
+ .text.exit     0x1000398c        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1000398c                exit
+ .text.panic    0x10003994       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003994                panic
  .text.hard_assertion_failure
-                0x10003a14        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10003a14                hard_assertion_failure
+                0x100039c4        0xc CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100039c4                hard_assertion_failure
  .text._out_char
-                0x10003a20       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100039d0       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.weak_raw_vprintf
-                0x10003a30       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10003a30                weak_raw_vprintf
- .text          0x10003a60       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x100039e0       0x30 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100039e0                weak_raw_vprintf
+ .text          0x10003a10       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10003a70       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003a70                rom_func_lookup
+                0x10003a20       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003a20                rom_func_lookup
  .text.rom_data_lookup
-                0x10003a80       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003a80                rom_data_lookup
+                0x10003a30       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003a30                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10003a90       0x44 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003a90                rom_funcs_lookup
+                0x10003a40       0x44 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003a40                rom_funcs_lookup
+ .text.__wrap___aeabi_idiv
+                0x10003a84       0x50 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003a84                __wrap___aeabi_idivmod
+                0x10003a84                divmod_s32s32
+                0x10003a84                div_s32s32
+                0x10003a84                __wrap___aeabi_idiv
+                0x10003a8c                divmod_s32s32_unsafe
+                0x10003ab8                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
                 0x10003ad4       0x4c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
                 0x10003ad4                __wrap___aeabi_uidiv
@@ -2663,7 +2669,7 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x20041000                __scratch_y_end__ = .
                 0x10008f3c                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x20001820      0xfdc
+.bss            0x20001820     0x105c
                 0x20001820                . = ALIGN (0x4)
                 0x20001820                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -2765,61 +2771,61 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x20002640       0x20 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
                 0x20002640                rf_outgoing_buffer
  .bss.serial_incoming_buffer
-                0x20002660       0x8c CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x20002660       0xcc CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
                 0x20002660                serial_incoming_buffer
  .bss.serial_incoming_tmp
-                0x200026ec       0x20 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x200026ec                serial_incoming_tmp
+                0x2000272c       0x20 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x2000272c                serial_incoming_tmp
  .bss.serial_outgoing_buffer
-                0x2000270c       0x8c CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x2000270c                serial_outgoing_buffer
+                0x2000274c       0xcc CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x2000274c                serial_outgoing_buffer
  .bss.serial_tmp_buffer
-                0x20002798       0x20 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x20002798                serial_tmp_buffer
+                0x20002818       0x20 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x20002818                serial_tmp_buffer
  .bss.sf_clz_func
-                0x200027b8        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x200027b8                sf_clz_func
+                0x20002838        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x20002838                sf_clz_func
  .bss.sleep_notifier
-                0x200027bc        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
- .bss.spi       0x200027c0        0x8 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x200027c0                spi
+                0x2000283c        0x4 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/common/pico_time/time.c.obj
+ .bss.spi       0x20002840        0x8 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x20002840                spi
  .bss.stdio_usb_mutex
-                0x200027c8        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x20002848        0x8 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.target_hi
-                0x200027d0       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x20002850       0x10 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.usbd_serial_str
-                0x200027e0       0x11 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x20002860       0x11 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .bss._app_driver_count
-                0x200027f1        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x20002871        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._sof_enable
-                0x200027f2        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x20002872        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.boot2_copyout_valid
-                0x200027f3        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .bss.claimed   0x200027f4        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x20002873        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .bss.claimed   0x20002874        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.connected
-                0x200027f5        0x1 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
-                0x200027f5                connected
+                0x20002875        0x1 CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj
+                0x20002875                connected
  .bss.irq_hander_chain_free_slot_head
-                0x200027f6        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .bss.itf_num   0x200027f7        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x20002876        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .bss.itf_num   0x20002877        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .bss.low_priority_irq_num
-                0x200027f8        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x20002878        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.one_shot_timer_pending
-                0x200027f9        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x20002879        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.timer_callbacks_pending
-                0x200027fa        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x2000287a        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.user_irq_claimed
-                0x200027fb        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x2000287b        0x1 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  *(COMMON)
-                0x200027fc                . = ALIGN (0x4)
-                0x200027fc                __bss_end__ = .
+                0x2000287c                . = ALIGN (0x4)
+                0x2000287c                __bss_end__ = .
 
-.heap           0x200027fc      0x800
-                0x200027fc                __end__ = .
-                0x200027fc                end = __end__
+.heap           0x2000287c      0x800
+                0x2000287c                __end__ = .
+                0x2000287c                end = __end__
  *(.heap*)
- .heap          0x200027fc      0x800 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x20002ffc                __HeapLimit = .
+ .heap          0x2000287c      0x800 CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x2000307c                __HeapLimit = .
 
 .stack1_dummy   0x20040000      0x800
  *(.stack1*)
@@ -2913,7 +2919,7 @@ LOAD CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/lib/tinyusb/src/co
 LOAD CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 LOAD CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 LOAD CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-LOAD C:\Users\aspen\AppData\Local\Temp\ccMN81A8.o
+LOAD C:\Users\aspen\AppData\Local\Temp\ccdou8Cl.o
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -3041,7 +3047,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000008aa       0x2c CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .ARM.attributes
-                0x000008d6       0x22 C:\Users\aspen\AppData\Local\Temp\ccMN81A8.o
+                0x000008d6       0x22 C:\Users\aspen\AppData\Local\Temp\ccdou8Cl.o
  .ARM.attributes
                 0x000008f8       0x1e c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes

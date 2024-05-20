@@ -27,9 +27,16 @@ void setup() {
 
 void loop() {
 
-  
+  startTime = micros();
+
+  //currently blocking!!
   rcon::RadioLoopState state = rcon::radio_loop(radio);
+
+  endTime = micros();
+  elapsedTime = endTime - startTime;
   
+  //Serial.println("RF24 radio_loop function: " + String(elapsedTime) + " microseconds");
+
 
   if (state != rcon::RadioLoopState::CONNECTED_IDLE) {
     //rcon::print_radio_loop_state(state);
@@ -61,7 +68,7 @@ void loop() {
 
 
 
-  //startTime = micros();
+  //
 
   
   if (disp::should_update_display()) {

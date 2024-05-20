@@ -7,9 +7,11 @@
 #define CE_PIN 0
 #define CSN_PIN 1
 #define SERIAL_DEBUG false
+
 #define RETURN_MSG_DELAY_US 50 //50
+
 #define LED_PIN 13
-#define RF_RECV_TIMEOUT_MS 1000
+#define RF_RECV_TIMEOUT_MS 100
 
 extern uint8_t address[][6];
 extern bool radioNumber;
@@ -36,6 +38,8 @@ namespace rcon
     void clear_outgoing_buffer();
     void clear_incoming_buffer();
     void radio_setup(RF24 &radio);
+
+
     RadioLoopState radio_loop(RF24 &radio);
     
 

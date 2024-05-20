@@ -368,7 +368,7 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 	text.setCharacterSize(10);
 
 	// Draw send queue lines
-	for (int i = 0; i < SEND_BUFFER_LINES; i++)
+	for (unsigned int i = 0; i < SEND_BUFFER_LINES; i++)
 	{
 		if (i < send_queue_copy.size())
 		{
@@ -402,7 +402,7 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 	text.setCharacterSize(10);
 
 	// Draw receive queue lines
-	for (int i = 0; i < SEND_BUFFER_LINES; i++)
+	for (unsigned int i = 0; i < SEND_BUFFER_LINES; i++)
 	{
 		if (i < display_recv_queue_copy.size())
 		{

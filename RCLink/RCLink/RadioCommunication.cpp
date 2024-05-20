@@ -77,7 +77,7 @@ std::string generate_6char_timestamp(unsigned long timestamp_millis)
 
 unsigned long get_timestamp_ms()
 {
-	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+	return (unsigned long)std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
    
 }
 
@@ -101,7 +101,7 @@ void reset_serial() {
 bool initialize_serial() {
     try {
         serial_ = new serial_port(io, "COM7");  // Adjust the port name depending on your OS and port number
-        serial_->set_option(serial_port_base::baud_rate(100000));
+        serial_->set_option(serial_port_base::baud_rate(1000000));
         serial_->set_option(serial_port_base::character_size(8));
         serial_->set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::one));
         serial_->set_option(serial_port_base::parity(serial_port_base::parity::none));
@@ -128,23 +128,30 @@ bool initialize_serial() {
 }
 
 void serial_thread() {
+    char buf[512];
+    boost::system::error_code ec;
+    
     while (!cleanupFlag.load()) {
         if (serial_ && serial_->is_open()) {
             try {
-                char buf[512];
-                boost::system::error_code ec;
+                
+                
                 size_t len = serial_->read_some(buffer(buf), ec);
                 
                 
                 if (!ec && len > 0) {
-                    lock_guard<mutex> lock(receive_mutex);
-                    receive_queue.push_back(Message(string(buf, len), get_timestamp_ms()));
+                    {
+                        lock_guard<mutex> lock(receive_mutex);
+                        receive_queue.push_back(Message(string(buf, len), get_timestamp_ms()));
+                    }
+                    
                     
 					//if we recieved the message "Initiate Connection Failed\n" we should back off and NOT send any messages (use strcmp to check the first characters up to end of "Initiate Connection Failed"
 
                     //msg = "Initiate Connection Failed\r\n"
                     int strdiff1 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Initiate Connection Failed", 33);
                     int strdiff2 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Transmission Failed", 26);
+                    
 
 
              
@@ -161,6 +168,8 @@ void serial_thread() {
                         continue;
 
                     }
+
+      
 
                                         
                 }
@@ -213,9 +222,7 @@ void serial_thread() {
         }
     }
 
-    //wait 30ms for anything else to be sent
-	this_thread::sleep_for(std::chrono::milliseconds(20));
-    
+
 
     //perform cleanup of serial
     reset_serial();

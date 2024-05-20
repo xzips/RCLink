@@ -6,14 +6,14 @@
 #include "pico/multicore.h"
 #include "pico/mutex.h" //mutexes and thread launching
 
-#define SERIAL_RECV_TIMEOUT_MS 1000
-#define RF_RECV_TIMEOUT_MS 1000
+#define SERIAL_RECV_TIMEOUT_MS 100
+#define RF_RECV_TIMEOUT_MS 100
 
 
-#define SERIAL_LOOP_DELAY_MS 0
-#define RF_LOOP_DELAY_MS 5
+#define SERIAL_LOOP_DELAY_MS 0 // 500packet/sec max speed
+#define RF_LOOP_DELAY_MS 0
 
-#define SIZE_OF_BUFFER 4
+#define SIZE_OF_BUFFER 6
 #define MAX_STRING_LENGTH 32
 
 //macro for printf_safe which calls printf only if the serial port is connected
@@ -355,6 +355,8 @@ void core1_entry()
 
 int main()
 {
+    //set_sys_clock_khz(250000, true);
+
     stdio_init_all();
 
     //initialize mutexes

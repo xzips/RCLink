@@ -164,6 +164,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
      //listen for the first incoming message
     if (radio.available(&lastPipeIdx)) {
+
         uint8_t bytes = radio.getPayloadSize(); 
         radio.read(&rf_incoming_buffer, bytes); 
 
@@ -173,9 +174,6 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
             Serial.print("Received: ");
             Serial.println(rf_incoming_buffer);
         }
-
-
-
     }
 
     else{
@@ -184,7 +182,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
 
     //wait before sending a return message
-    delayMicroseconds(RETURN_MSG_DELAY_US);
+    //delayMicroseconds(RETURN_MSG_DELAY_US);
 
     radio.stopListening();
     delayMicroseconds(130);
@@ -218,11 +216,12 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
         return RadioLoopState::DISCONNECTED_RETRYING;
     }
 
+    //radio.startListening();
+    //delayMicroseconds(130);
+
     
 
 }
-
-
 
 
 

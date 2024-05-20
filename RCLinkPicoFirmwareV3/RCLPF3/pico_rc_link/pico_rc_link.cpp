@@ -11,7 +11,7 @@
 
 
 #define SERIAL_LOOP_DELAY_MS 0 // 500packet/sec max speed
-#define RF_LOOP_DELAY_MS 0
+#define RF_LOOP_DELAY_MS 16
 
 #define SIZE_OF_BUFFER 6
 #define MAX_STRING_LENGTH 32

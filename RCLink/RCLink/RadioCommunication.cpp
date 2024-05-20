@@ -140,9 +140,20 @@ void serial_thread() {
                 
                 
                 if (!ec && len > 0) {
+                    
                     {
-                        lock_guard<mutex> lock(receive_mutex);
-                        receive_queue.push_back(Message(string(buf, len), get_timestamp_ms()));
+                        int strdiffz = strncmp(buf, "RECV_BUF_EMPTY", 14);
+
+						if (strdiffz != 0) {
+							//lock the receive queue mutex
+                            lock_guard<mutex> lock(receive_mutex);
+                            receive_queue.push_back(Message(string(buf, len), get_timestamp_ms()));
+						}
+
+                        else {
+                            continue;
+                        }
+                        
                     }
                     
                     

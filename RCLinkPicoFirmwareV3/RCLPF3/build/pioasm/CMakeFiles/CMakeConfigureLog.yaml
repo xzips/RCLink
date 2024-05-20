@@ -63,8 +63,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-kd1ge0"
-      binary: "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-kd1ge0"
+      source: "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-603mee"
+      binary: "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-603mee"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
@@ -72,28 +72,28 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-kd1ge0'
+        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-603mee'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_aee7e\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_aee7e.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_aee7e.dir\\build
-        Building CXX object CMakeFiles/cmTC_aee7e.dir/CMakeCXXCompilerABI.cpp.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_aee7e.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir=C:\\Users\\aspen\\Desktop\\RCLink\\RCLinkPicoFirmwareV3\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-kd1ge0 --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm557B.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_60d64\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_60d64.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_60d64.dir\\build
+        Building CXX object CMakeFiles/cmTC_60d64.dir/CMakeCXXCompilerABI.cpp.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_60d64.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir=C:\\Users\\aspen\\Desktop\\RCLink\\RCLinkPicoFirmwareV3\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-603mee --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm83D0.tmp
         CMakeCXXCompilerABI.cpp
-        Linking CXX executable cmTC_aee7e.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_aee7e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_aee7e.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm5609.tmp
+        Linking CXX executable cmTC_60d64.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_60d64.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_60d64.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm845E.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_aee7e.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_aee7e.dir/embed.manifest
+        Create CMakeFiles\\cmTC_60d64.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_60d64.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_aee7e.dir/manifest.res CMakeFiles\\cmTC_aee7e.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_60d64.dir/manifest.res CMakeFiles\\cmTC_60d64.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_aee7e.dir\\objects1.rsp /out:cmTC_aee7e.exe /implib:cmTC_aee7e.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLinkPicoFirmwareV3\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-kd1ge0\\cmTC_aee7e.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_aee7e.dir/intermediate.manifest CMakeFiles\\cmTC_aee7e.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_60d64.dir\\objects1.rsp /out:cmTC_60d64.exe /implib:cmTC_60d64.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLinkPicoFirmwareV3\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-603mee\\cmTC_60d64.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_60d64.dir/intermediate.manifest CMakeFiles\\cmTC_60d64.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_aee7e.dir/intermediate.manifest /out:CMakeFiles\\cmTC_aee7e.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_60d64.dir/intermediate.manifest /out:CMakeFiles\\cmTC_60d64.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_aee7e.dir/manifest.res CMakeFiles\\cmTC_aee7e.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_60d64.dir/manifest.res CMakeFiles\\cmTC_60d64.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_aee7e.dir\\objects1.rsp /out:cmTC_aee7e.exe /implib:cmTC_aee7e.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLinkPicoFirmwareV3\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-kd1ge0\\cmTC_aee7e.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_aee7e.dir/intermediate.manifest CMakeFiles\\cmTC_aee7e.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_60d64.dir\\objects1.rsp /out:cmTC_60d64.exe /implib:cmTC_60d64.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLinkPicoFirmwareV3\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-603mee\\cmTC_60d64.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_60d64.dir/intermediate.manifest CMakeFiles\\cmTC_60d64.dir/manifest.res
         
       exitCode: 0
 ...

@@ -427,7 +427,7 @@ Disassembly of section .text:
 100003fe:	1b45      	subs	r5, r0, r5
 10000400:	2d63      	cmp	r5, #99	; 0x63
 10000402:	d85b      	bhi.n	100004bc <_Z13core0_rf_loopv+0x1b8>
-10000404:	2000      	movs	r0, #0
+10000404:	2010      	movs	r0, #16
 10000406:	f002 fc2d 	bl	10002c64 <sleep_ms>
 1000040a:	e025      	b.n	10000458 <_Z13core0_rf_loopv+0x154>
 1000040c:	27c8      	movs	r7, #200	; 0xc8

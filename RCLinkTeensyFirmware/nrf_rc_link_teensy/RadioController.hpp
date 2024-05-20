@@ -6,7 +6,7 @@
 
 #define CE_PIN 0
 #define CSN_PIN 1
-#define SERIAL_DEBUG true
+#define SERIAL_DEBUG false
 #define RETURN_MSG_DELAY_US 50 //50
 #define LED_PIN 13
 #define RF_RECV_TIMEOUT_MS 1000

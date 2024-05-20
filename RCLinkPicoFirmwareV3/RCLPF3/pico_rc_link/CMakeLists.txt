@@ -29,6 +29,8 @@ foreach(example ${PROGRAMS_LIST})
         pico_stdlib
         hardware_spi
         hardware_gpio
+	pico_multicore
+	pico_unique_id
     )
 
     # specify USB port as default serial communication's interface (not UART RX/TX pins)

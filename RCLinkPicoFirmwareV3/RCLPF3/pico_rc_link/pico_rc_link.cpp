@@ -3,24 +3,36 @@
 #include <RF24.h>         // RF24 radio object
 #include <stdio.h>
 #include "pico/time.h"
-#include "pico/multicore.h" //mutexes and thread launching
+#include "pico/multicore.h"
+#include "pico/mutex.h" //mutexes and thread launching
 
 #define SERIAL_RECV_TIMEOUT_MS 1000
 #define RF_RECV_TIMEOUT_MS 1000
-#define DATA_LOOP_DELAY_MS 50
+
+
+#define SERIAL_LOOP_DELAY_MS 0
+#define RF_LOOP_DELAY_MS 5
+
 #define SIZE_OF_BUFFER 4
 #define MAX_STRING_LENGTH 32
 
 //macro for printf_safe which calls printf only if the serial port is connected
 #define printf_safe(...) if (tud_cdc_connected()) {printf(__VA_ARGS__);}
 
+/*Mutexes*/
+//auto_init_mutex(mutex_serial_outgoing_buffer)
+//auto_init_mutex(mutex_serial_incoming_buffer)
+
+
+mutex mutex_serial_outgoing_buffer;
+mutex mutex_serial_incoming_buffer;
 
 //PLAN for new code: rf24 and all radio goes in the main/normal/base thread, and serial goes in second thread
 
 
 
 /*Circular Buffer Code*/
-typedef struct {
+typedef struct  {
     char buffer[SIZE_OF_BUFFER][MAX_STRING_LENGTH];
     int writeIndex;
     int readIndex;
@@ -61,44 +73,130 @@ SPI spi;
 RF24 radio(6, 5);
 bool connected = false;
 
-CircularBuffer outgoing_buffer;
-CircularBuffer incoming_buffer;
+CircularBuffer serial_outgoing_buffer;
+CircularBuffer serial_incoming_buffer;
+
+char rf_outgoing_buffer[MAX_STRING_LENGTH];
+char rf_incoming_buffer[MAX_STRING_LENGTH];
+
+char serial_tmp_buffer[MAX_STRING_LENGTH];
 
 
-/*Mutexes*/
-auto_init_mutex(mutex_outgoing_buffer)
-auto_init_mutex(mutex_incoming_buffer)
+/*Variables for core 1 only*/
+
+char serial_incoming_tmp[MAX_STRING_LENGTH];
 
 
 
 
 
-//returns true if success, false if buffer is full
-bool atomic_buffer_push(char **buffer, int *first, int *last, char *data)
+void core0_rf_loop()
 {
-    int next = (*last + 1) % PACKET_BUFFER_COUNT;
-    if (next == *first)
-    {
-        return false;
+    radio.stopListening();
+    sleep_us(130);
+
+    //pico always starts transmission, and the other one probably isn't ready yet, so we need to wait for a response
+    if (!connected){
+
+        strcpy(rf_outgoing_buffer, "REQUEST_CONNECTION");
+
+        bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
+
+        
+        if (report) {
+            connected = true;
+        }
+        else {
+            //printf_safe("ERROR: Initiate Connection Failed\n");
+            mutex_enter_blocking(&mutex_serial_incoming_buffer);
+            push_circular(&serial_incoming_buffer, "ERROR: Initiate Connection Failed");
+            mutex_exit(&mutex_serial_incoming_buffer);
+        }
+
+    
+        sleep_ms(100);
+        return;
+
+    }  
+
+
+    //lock mutex and check if there is any data to pop
+    mutex_enter_blocking(&mutex_serial_outgoing_buffer);
+    char serial_outgoing_tmp[MAX_STRING_LENGTH];
+
+    if (pop_circular(&serial_outgoing_buffer, serial_outgoing_tmp) == 0){
+        strcpy(rf_outgoing_buffer, serial_outgoing_tmp);
+    }
+    else{
+        strcpy(rf_outgoing_buffer, "NO_DATA");
     }
 
-    strcpy(buffer[*last], data);
-    *last = next;
-    return true;
-}
+    mutex_exit(&mutex_serial_outgoing_buffer);
 
 
-void clear_all_buffers()
-{
-    for (int i = 0; i < PACKET_BUFFER_COUNT; i++)
-    {
-        for (int j = 0; j < PACKET_BUFFER_SIZES; j++)
-        {
-            rf_outgoing_buffer[i][j] = '\0';
-            rf_incoming_buffer[i][j] = '\0';
+    //send the data
+    bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
+
+    
+
+    if (report) {
+        //printf_safe("Successfully sent data to remote tranciever\n");
+    }
+    else {
+        //printf_safe("ERROR: Transmission Failed\n");
+        
+        mutex_enter_blocking(&mutex_serial_incoming_buffer);
+        push_circular(&serial_incoming_buffer, "ERROR: Transmission Failed");
+        mutex_exit(&mutex_serial_incoming_buffer);
+        
+        connected = false;
+        return;
+    }
+
+    //auto ack already done, now we wait for a payload to come in, so switch to RX mode and wait 130us so the other side has a chance to send their data
+    radio.startListening();
+    sleep_us(130);
+
+
+    uint8_t pipe;
+
+    long int timeout_start = to_ms_since_boot(get_absolute_time());
+
+
+    while (to_ms_since_boot(get_absolute_time()) - timeout_start < RF_RECV_TIMEOUT_MS){
+        if (radio.available(&pipe)) {               // is there a payload? get the pipe number that recieved it
+            uint8_t bytes = radio.getPayloadSize(); // get the size of the payload
+            radio.read(rf_incoming_buffer, bytes);            // fetch payload from FIFO
+
+
+            //printf_safe("%s\n", rf_incoming_buffer);
+
+            //lock mutex and push the data to the incoming buffer
+            mutex_enter_blocking(&mutex_serial_incoming_buffer);
+            push_circular(&serial_incoming_buffer, rf_incoming_buffer);
+            mutex_exit(&mutex_serial_incoming_buffer);
+
+
+            break;
         }
     }
+
+    if (to_ms_since_boot(get_absolute_time()) - timeout_start >= RF_RECV_TIMEOUT_MS){
+        //printf_safe("ERROR: RF Data Timeout\n");
+
+        mutex_enter_blocking(&mutex_serial_incoming_buffer);
+        push_circular(&serial_incoming_buffer, "ERROR: RF Data Timeout");
+        mutex_exit(&mutex_serial_incoming_buffer);
+
+        connected = false;
+        return;
+    }
+
+    sleep_ms(RF_LOOP_DELAY_MS);
 }
+
+    
+
 
 
 /* RF24 Radio Communication Thread */
@@ -111,9 +209,20 @@ void core0_entry()
     // initialize the transceiver on the SPI bus
     while (!radio.begin()) {
         //printf_safe("ERROR: Radio Hardware Failure\n");
-        TODO
+        
+        mutex_enter_blocking(&mutex_serial_incoming_buffer);
+        push_circular(&serial_incoming_buffer, "ERROR: Radio Hardware Failure");
+        mutex_exit(&mutex_serial_incoming_buffer);
+
+        sleep_ms(200);
 
     }
+
+    //if initialized, lock queue and pop all items to clear it
+    mutex_enter_blocking(&mutex_serial_outgoing_buffer);
+    while (pop_circular(&serial_outgoing_buffer, rf_outgoing_buffer) == 0);
+    mutex_exit(&mutex_serial_outgoing_buffer);
+
 
     
     //radio.setPALevel(RF24_PA_LOW); // RF24_PA_MAX is default.
@@ -129,9 +238,93 @@ void core0_entry()
 
     while (true)
     {
-        ...
+        core0_rf_loop();
     }
 
+
+}
+
+
+void core1_serial_loop()
+{
+
+    //send one item from the queue, lock
+    mutex_enter_blocking(&mutex_serial_incoming_buffer);
+    //pop to serial_tmp_buffer
+    if (pop_circular(&serial_incoming_buffer, serial_incoming_tmp) == 0){
+        strcpy(serial_tmp_buffer, serial_incoming_tmp);
+    }
+    else{
+        strcpy(serial_tmp_buffer, "RECV_BUF_EMPTY");
+    }
+
+    mutex_exit(&mutex_serial_incoming_buffer);
+
+    //send the data
+    printf_safe("%s\n", serial_tmp_buffer);
+
+    
+
+    long int timeout_start = to_ms_since_boot(get_absolute_time());
+    long int serial_recv_pos = 0;
+
+    while (to_ms_since_boot(get_absolute_time()) - timeout_start < SERIAL_RECV_TIMEOUT_MS)
+    {
+        if (tud_cdc_available()){
+            char inByte = getchar();
+            serial_tmp_buffer[serial_recv_pos] = inByte;
+
+            serial_recv_pos++;
+            if (inByte == '\n'){
+                serial_tmp_buffer[serial_recv_pos] = '\0';
+                break;
+            }
+            if (serial_recv_pos >= 32){
+                break;
+                //printf_safe("ERROR: Serial overflow\n");
+            }
+        }
+    }
+
+
+
+    if (serial_recv_pos == 0) { // If no data has been read
+
+        
+
+        if (!tud_cdc_available())
+        {
+            //printf_safe("ERROR: No Serial, sending PICO_NO_SERIAL\n");
+            //strcpy(rf_outgoing_buffer, "PICO_NO_SERIAL");
+
+            mutex_enter_blocking(&mutex_serial_outgoing_buffer);
+            push_circular(&serial_outgoing_buffer, "PICO_NO_SERIAL");
+            mutex_exit(&mutex_serial_outgoing_buffer);
+
+        }
+
+        else
+        {
+            printf_safe("ERROR: Serial Timeout\n");
+            //strcpy(rf_outgoing_buffer, "NO_DATA");
+
+            mutex_enter_blocking(&mutex_serial_outgoing_buffer);
+            push_circular(&serial_outgoing_buffer, "NO_DATA");
+            mutex_exit(&mutex_serial_outgoing_buffer);
+        }
+    }
+    
+    else
+    {
+        //rf_outgoing_buffer[serial_recv_pos] = '\0'; // Ensure null termination
+
+        mutex_enter_blocking(&mutex_serial_outgoing_buffer);
+        push_circular(&serial_outgoing_buffer, serial_tmp_buffer);
+        mutex_exit(&mutex_serial_outgoing_buffer);
+
+    }
+
+    sleep_ms(SERIAL_LOOP_DELAY_MS);
 
 }
 
@@ -144,146 +337,18 @@ void core1_entry()
         sleep_ms(10);
     }
 
+    while (true)
+    {
+        core1_serial_loop();
+    }
+    
+
 }
 
 
 
 
 
-void loop()
-{
-
-    //put the radio in TX mode
-    radio.stopListening();
-    sleep_us(130);
-
-    //pico always starts transmission, and the other one probably isn't ready yet, so we need to wait for a response
-
-    if (!connected){
-
-        strcpy(rf_outgoing_buffer, "REQUEST_CONNECTION");
-
-        bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
-
-        if (report) {
-            //printf_safe("Successfully connected to remote tranciever\n");
-            connected = true;
-        }
-        else {
-            printf_safe("ERROR: Initiate Connection Failed\n");
-
-
-        }
-        
-
-        sleep_ms(100);
-
-        return;
-
-    }  
-
-    //if we are connected, we can start sending data, check the serial buffer for data to send
-
-    long int timeout_start = to_ms_since_boot(get_absolute_time());
-
-    long int serial_recv_pos = 0;
-
-    while (to_ms_since_boot(get_absolute_time()) - timeout_start < SERIAL_RECV_TIMEOUT_MS)
-    {
-        if (tud_cdc_available()){
-            char inByte = getchar();
-            rf_outgoing_buffer[serial_recv_pos] = inByte;
-            serial_recv_pos++;
-            if (inByte == '\n'){
-                rf_outgoing_buffer[serial_recv_pos] = '\0';
-                
-                break;
-            }
-
-            if (serial_recv_pos >= 32){
-                break;
-                printf_safe("ERROR: Serial buffer overflow\n");
-            }
-
-        }
-    }
-
-
-
-    if (serial_recv_pos == 0) { // If no data has been read
-        if (!tud_cdc_available())
-        {
-            printf_safe("ERROR: No Serial, sending PICO_NO_SERIAL\n");
-            strcpy(rf_outgoing_buffer, "PICO_NO_SERIAL");
-        }
-
-        else
-        {
-            printf_safe("ERROR: Serial Timeout, sending NO_DATA\n");
-            strcpy(rf_outgoing_buffer, "NO_DATA");
-        }
-    }
-    
-    else
-    {
-
-        rf_outgoing_buffer[serial_recv_pos] = '\0'; // Ensure null termination
-    }
-
-
-
-
-    //send the data
-    bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
-
-    
-
-    if (report) {
-        //printf_safe("Successfully sent data to remote tranciever\n");
-    }
-    else {
-        printf_safe("ERROR: Transmission Failed\n");
-        connected = false;
-        return;
-    }
-
-    //auto ack already done, now we wait for a payload to come in, so switch to RX mode and wait 130us so the other side has a chance to send their data
-    radio.startListening();
-    sleep_us(130);
-
-
-    uint8_t pipe;
-
-    timeout_start = to_ms_since_boot(get_absolute_time());
-
-    while (to_ms_since_boot(get_absolute_time()) - timeout_start < RF_RECV_TIMEOUT_MS){
-        if (radio.available(&pipe)) {               // is there a payload? get the pipe number that recieved it
-            uint8_t bytes = radio.getPayloadSize(); // get the size of the payload
-            radio.read(rf_incoming_buffer, bytes);            // fetch payload from FIFO
-
-    
-
-            // print the size of the payload, the pipe number, payload's value
-            //printf_safe("Received %d bytes on pipe %d: %s\n", bytes, pipe, rf_incoming_buffer);
-            
-            //print payload
-            printf_safe("%s\n", rf_incoming_buffer);
-
-            break;
-        }
-    }
-
-    if (to_ms_since_boot(get_absolute_time()) - timeout_start >= RF_RECV_TIMEOUT_MS){
-        printf_safe("ERROR: RF Data Timeout\n");
-        connected = false;
-        return;
-    }
-
-    //now we return to the main loop and start the process over again after waiting for 500 ms
-    sleep_ms(DATA_LOOP_DELAY_MS);
-}
-
-    
 
 
 
@@ -291,14 +356,10 @@ void loop()
 int main()
 {
     stdio_init_all();
-    clear_all_buffers();
 
-    while (!setup()) { // if radio.begin() failed
-        // hold program in infinite attempts to initialize radio
-    }
-    while (true) {
-        loop();
-    }
+    //initialize mutexes
+    mutex_init(&mutex_serial_outgoing_buffer);
+    mutex_init(&mutex_serial_incoming_buffer);
 
     multicore_launch_core1(core1_entry);
 

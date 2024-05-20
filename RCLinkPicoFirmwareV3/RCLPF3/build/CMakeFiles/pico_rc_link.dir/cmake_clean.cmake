@@ -103,6 +103,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
   "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj.d"
   "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+  "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj"
+  "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj.d"
   "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
   "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj.d"
   "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"

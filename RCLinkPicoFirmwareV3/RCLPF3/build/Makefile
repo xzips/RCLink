@@ -1404,6 +1404,30 @@ C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S.obj
 .PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S.obj
 
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.obj: C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.obj
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.obj
+
+# target to build an object file
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.obj
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.obj
+
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.i: C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.i
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.i
+
+# target to preprocess a source file
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.i
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.i
+
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.s: C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.s
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.s
+
+# target to generate assembly for a file
+C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.s
+.PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\multicore.c.s
+
 C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.obj: C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.c.obj
 .PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_platform\platform.obj
 
@@ -1938,6 +1962,9 @@ help:
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj
+	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.obj
+	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.i
+	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.s
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.obj
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.i
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.s

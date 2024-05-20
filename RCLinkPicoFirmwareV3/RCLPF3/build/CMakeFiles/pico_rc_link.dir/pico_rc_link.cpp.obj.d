@@ -56,7 +56,6 @@ CMakeFiles\pico_rc_link.dir\pico_rc_link.cpp.obj: \
  C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/uart.h \
  C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dreq.h \
  C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h \
- C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_bootrom\include/pico/bootrom.h \
  C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/tusb.h \
  C:\Users\aspen\Code\pico-sdk\lib\tinyusb\src/common/tusb_common.h \
  c:\progra~2\gnuarm~1\102021~1.10\arm-none-eabi\include\string.h \
@@ -114,4 +113,6 @@ CMakeFiles\pico_rc_link.dir\pico_rc_link.cpp.obj: \
  C:\Users\aspen\Code\pico-sdk\src\rp2_common\hardware_spi\include/hardware/spi.h \
  C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/spi.h \
  C:\Users\aspen\Code\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/spi.h \
- c:\users\aspen\desktop\rclink\rclinkpicofirmwarev3\rclpf3\utility/rp2/gpio.h
+ c:\users\aspen\desktop\rclink\rclinkpicofirmwarev3\rclpf3\utility/rp2/gpio.h \
+ C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_multicore\include/pico/multicore.h \
+ C:\Users\aspen\Code\pico-sdk\src\common\pico_sync\include/pico/sync.h

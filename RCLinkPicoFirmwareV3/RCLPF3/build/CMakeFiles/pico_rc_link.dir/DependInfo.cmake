@@ -40,6 +40,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_MALLOC=1"
   "LIB_PICO_MEM_OPS=1"
   "LIB_PICO_MEM_OPS_PICO=1"
+  "LIB_PICO_MULTICORE=1"
   "LIB_PICO_PLATFORM=1"
   "LIB_PICO_PRINTF=1"
   "LIB_PICO_PRINTF_PICO=1"
@@ -117,6 +118,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/Users/aspen/Code/pico-sdk/lib/tinyusb/hw"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_spi/include"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/include"
   )
 
 # The set of dependency files which are needed:
@@ -168,6 +170,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_math.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_math.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj.d"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_platform/platform.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_printf/printf.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj.d"

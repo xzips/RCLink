@@ -38,7 +38,7 @@ void loop() {
 
 
 
-
+  /*
   if (state == rcon::RadioLoopState::RECIVED_SENT_DATA)
   {
     //if servo request, in format "SET_SERVO_07_090" //set serrvo 7 to 90 degrees
@@ -57,17 +57,18 @@ void loop() {
 
   }
 
-  
+  */
 
 
 
   //startTime = micros();
 
+  
   if (disp::should_update_display()) {
     disp::update_stats_V1(radioConnected, millis() - last_packet_timestamp_millis, millis(), rf_incoming_buffer);
   }
  
-
+  
   //servonum, degrees
   //pwm::set_servo_angle(15, 100);
   
@@ -76,7 +77,7 @@ void loop() {
   //Serial.println("OLED Update Time: " + String(elapsedTime) + " microseconds");
   
 
-  delay(50);
+  //delay(50);
 
 
 } 

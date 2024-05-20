@@ -17,6 +17,8 @@ void push_msg(const std::string& msg);
 std::string pop_msg();
 
 
+
+
 bool is_error(std::string msg_str);
 
 
@@ -111,5 +113,44 @@ struct ServoController
 	
 	std::string GetCommandSTR();
 
+
+};
+
+struct ThrottleController
+{
+	float cur_throttle;
+	int throttle_channel;
+	sf::Keyboard::Key increase_key;
+	sf::Keyboard::Key decrease_key;
+	float throttle_per_frame_pressed;
+	int pwm_neutral_duty;
+	int pwm_full_duty;
+
+	bool calibrating;
+	//mutex for calibrating
+	std::mutex calibrating_mutex;
+	std::mutex throttle_mutex;
+	
+	ThrottleController(
+		int throttle_channel,
+		sf::Keyboard::Key increase_key,
+		sf::Keyboard::Key decrease_key,
+		float throttle_per_frame_pressed,
+		int pwm_neutral_duty,
+		int pwm_full_duty)
+		:
+		throttle_channel(throttle_channel),
+		increase_key(increase_key),
+		decrease_key(decrease_key),
+		throttle_per_frame_pressed(throttle_per_frame_pressed),
+		pwm_neutral_duty(pwm_neutral_duty),
+		pwm_full_duty(pwm_full_duty)
+	{
+		cur_throttle = 0;
+		calibrating = false;
+	}
+
+	std::string GetCommandSTR();
+	
 
 };

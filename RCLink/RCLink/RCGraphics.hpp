@@ -12,6 +12,8 @@
 const int SEND_BUFFER_LINES = 32;
 
 extern std::vector<ServoController> servoControllerVector;
+extern ThrottleController throttleController;
+
 
 extern unsigned long frameCounter;
 
@@ -25,3 +27,9 @@ void ProcessControlInputs();
 void UpdateDrawConnectionStats(sf::RenderWindow& window);
 
 void DrawBufferVisualization(sf::RenderWindow& window);
+
+
+void UpdateDrawThrottleController(sf::RenderWindow& window);
+
+
+void CalibrateESC();;

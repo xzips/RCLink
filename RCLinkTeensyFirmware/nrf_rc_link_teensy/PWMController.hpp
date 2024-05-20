@@ -34,8 +34,7 @@ namespace pwm{
 
   void set_servo_angle(uint8_t servoNum, int angleDegrees);
 
-  int throttle2pulse_ESC(float throttle);
-  void set_esc_throttle(float throttle);
+  void setThrottle(int pulseWidth);
 
   void update_smooth_pwms();
   void add_smooth_pwm(uint8_t servo_num, int target_angle, int max_speed);
@@ -46,6 +45,7 @@ namespace pwm{
     float current_angle;
     float target_angle;
     float max_speed; // degrees per second
+    bool is_esc;
   };
 
   extern unsigned long last_pwm_update_millis;

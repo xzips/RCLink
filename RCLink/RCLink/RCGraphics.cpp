@@ -4,7 +4,9 @@
 #include <iostream>
 #include "RCGraphics.hpp"
 
+
 std::vector<ServoController> servoControllerVector;
+ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.02, 1500, 2000);
 sf::Font font;
 unsigned long frameCounter = 0;
 
@@ -90,6 +92,66 @@ void DrawServoControllers(std::vector<ServoController>& servoControllers, sf::Re
 
         first_box_x += box_width + box_spacing;
     }
+}
+
+void UpdateDrawThrottleController(sf::RenderWindow& window)
+{
+	//centered vertically on left side, draw a single box with throttle value
+	float box_width = 100;
+	float box_height = 150;
+
+	float box_outline_thickness = 3;
+	
+	float box_x_pos = 50;
+	float box_y_pos = (window.getSize().y - box_height) / 2;
+	
+	sf::RectangleShape box(sf::Vector2f(box_width, box_height));
+	box.setPosition(box_x_pos, box_y_pos);
+	box.setOutlineThickness(3);
+	box.setOutlineColor(sf::Color::White);
+	box.setFillColor(sf::Color::Transparent);
+	
+	window.draw(box);
+	
+	//already normalized 0 to 1
+
+	float throt;
+
+	{
+		//lock the throttle mutex
+		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
+		
+		throt = throttleController.cur_throttle;
+	}
+	
+
+	float line_y_pos = box_y_pos + box_height - (throt * (box_height - box_outline_thickness * 2)) - box_outline_thickness * 2;
+	
+	sf::RectangleShape line(sf::Vector2f(box_width, 5));
+	line.setPosition(box_x_pos, line_y_pos);
+	line.setFillColor(sf::Color(148, 225, 148)); // Light green color
+	
+	window.draw(line);
+	
+	sf::Text text;
+	text.setFont(font);
+	text.setString("Throttle");
+	text.setCharacterSize(16);
+	text.setFillColor(sf::Color::White);
+	
+	//get text bounds width to center text above box
+	sf::FloatRect textRect = text.getLocalBounds();
+	text.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
+	text.setPosition(box_x_pos + box_width / 2, box_y_pos - 20);
+	
+	window.draw(text);
+	
+	
+	
+	
+	
+
+
 }
 
 
@@ -206,6 +268,49 @@ void ProcessControlInputs()
 			}
 		}
 	}
+
+	
+	bool throttleControlAllowed = true;
+
+	//try and get mutex, if not possible, throttle control is not allowed
+	if (throttleController.calibrating_mutex.try_lock())
+	{
+		throttleControlAllowed = !throttleController.calibrating;
+		throttleController.calibrating_mutex.unlock();
+	}
+	else
+	{
+		throttleControlAllowed = false;
+	}
+
+	
+
+	if (!(sf::Keyboard::isKeyPressed(throttleController.increase_key) && sf::Keyboard::isKeyPressed(throttleController.decrease_key)))
+	{
+		//if increase key pressed, increase throttle
+		if (sf::Keyboard::isKeyPressed(throttleController.increase_key))
+		{
+			throttleController.cur_throttle += throttleController.throttle_per_frame_pressed;
+			if (throttleController.cur_throttle > 1)
+			{
+				throttleController.cur_throttle = 1;
+			}
+		}
+
+		//if decrease key pressed, decrease throttle
+		if (sf::Keyboard::isKeyPressed(throttleController.decrease_key))
+		{
+			throttleController.cur_throttle -= throttleController.throttle_per_frame_pressed;
+			if (throttleController.cur_throttle < 0)
+			{
+				throttleController.cur_throttle = 0;
+			}
+		}
+
+		
+		
+	}
+
 }
 
 
@@ -360,6 +465,64 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 
 
 	
+}
+
+
+void ESC_Cal_Thread()
+{
+	//set cur_throttle to 0 for 1 sec, to 1 for 1 sec, and back to 0 for 1 sec
+	//this will calibrate the ESC
+	//lock throttle controller mutex
+
+	{
+		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
+		throttleController.cur_throttle = 0;
+	}
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+
+	{
+		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
+		throttleController.cur_throttle = 1;
+	}
+
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+
+	{
+		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
+		throttleController.cur_throttle = 0;
+	}
+	
+
+	std::lock_guard<std::mutex> lock(throttleController.calibrating_mutex);
+	throttleController.calibrating = false;
+	
+	
+	
+	
+
+
+}
+
+
+void CalibrateESC()
+{
+	{
+		//lock mutex for throttle controller
+		std::lock_guard<std::mutex> lock(throttleController.calibrating_mutex);
+		if (throttleController.calibrating)
+		{
+			return;
+		}
+		
+		//set calibrating to true
+		throttleController.calibrating = true;
+	}
+
+
+	//launch a thread to calibrate the ESC
+	std::thread cal_thread(ESC_Cal_Thread);
+	cal_thread.detach();
+
 }
 
 

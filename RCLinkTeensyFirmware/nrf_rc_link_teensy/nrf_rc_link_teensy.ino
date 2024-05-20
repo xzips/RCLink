@@ -12,17 +12,7 @@ unsigned long elapsedTime;
 RF24 radio(CE_PIN, CSN_PIN);
 
 
-void setThrottle(int pulseWidth) {
-  int onTick = 0; // Always start pulse at the beginning of the cycle
-  int offTick = map(pulseWidth, 1500, 2000, 210 , 410); // Correct mapping based on 4096 ticks
-  pwm_driver.setPWM(4, onTick, offTick); // Assuming we're using channel 0 for the ESC
 
-  // Debugging output
-  Serial.print("Pulse Width: ");
-  Serial.print(pulseWidth);
-  Serial.print(" microseconds; Ticks: ");
-  Serial.println(offTick);
-}
 
 
 void setup() {
@@ -37,7 +27,7 @@ void setup() {
   
   pwm::add_smooth_pwm(15, 0, MS24_SPEED_DEG_PER_SEC);
 
-
+  /*
   delay(1000);  // Wait for 1 second
 
   setThrottle(1500);
@@ -66,7 +56,7 @@ void setup() {
   // Back to neutral
   setThrottle(1500);
 
-
+  */
   
   
 

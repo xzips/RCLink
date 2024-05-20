@@ -56,13 +56,19 @@ int main() {
 
         UpdateDrawConnectionStats(window);
 
+        UpdateDrawThrottleController(window);
+
         DrawBufferVisualization(window);
 
-		if (frameCounter % 3 == 0) {
+		if (frameCounter % 5 == 0) {
 			//push_msg("Hello from main loop");
 
             std::string servoControlStr = servoControllerVector[0].GetCommandSTR();
 			push_msg(servoControlStr);
+
+			std::string throttleControlStr = throttleController.GetCommandSTR();
+			push_msg(throttleControlStr);
+
             
 		}
         

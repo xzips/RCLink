@@ -70,6 +70,12 @@ namespace pwm {
   }
 
 
+  void setThrottle(int pulseWidth) {
+    int onTick = 0; // Always start pulse at the beginning of the cycle
+    int offTick = map(pulseWidth, 1500, 2000, 210 , 410); // Correct mapping based on 4096 ticks
+    pwm_driver.setPWM(4, onTick, offTick); // Assuming we're using channel 0 for the ESC
+  }
+
   void set_servo_angle(uint8_t servoNum, int angleDegrees)
   {
     int anglePulse = angle2pulse_MS24(angleDegrees);
@@ -104,12 +110,6 @@ namespace pwm {
 
       float angle_diff_step = smooth_pwm.max_speed * (elapsed_millis / 1000.0);
 
-      //print all vars
-      //Serial.println("Servo " + String(smooth_pwm.servo_num) + " angle_diff: " + String(angle_diff));
-      //Serial.println("Servo " + String(smooth_pwm.servo_num) + " angle_diff_abs: " + String(angle_diff_abs));
-      //Serial.println("Servo " + String(smooth_pwm.servo_num) + " angle_diff_sign: " + String(angle_diff_sign));
-      //Serial.println("Servo " + String(smooth_pwm.servo_num) + " angle_diff_step: " + String(angle_diff_step));
-
 
       if (angle_diff_abs <= angle_diff_step) {
         smooth_pwm.current_angle = smooth_pwm.target_angle;
@@ -117,11 +117,6 @@ namespace pwm {
       else {
         smooth_pwm.current_angle += angle_diff_sign * angle_diff_step;
       }
-
-      //print current angle
-
-      //Serial.println("Servo " + String(smooth_pwm.servo_num) + " current angle: " + String(smooth_pwm.current_angle));
-      //Serial.println("Servo " + String(smooth_pwm.servo_num) + " target angle: " + String(smooth_pwm.target_angle));
 
       
 

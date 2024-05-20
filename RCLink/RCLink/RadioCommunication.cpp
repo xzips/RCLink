@@ -59,6 +59,32 @@ std::string ServoController::GetCommandSTR()
     
 }
 
+std::string ThrottleController::GetCommandSTR()
+{
+    //SET_THROTTLE_XXXX
+
+    int mapped_throttle;
+
+    //get throttle_mutex
+    {
+        std::lock_guard<std::mutex> lock(throttle_mutex);
+        mapped_throttle = (cur_throttle) * (pwm_full_duty - pwm_neutral_duty) + pwm_neutral_duty;
+
+    }
+
+	std::string throttleStr = std::to_string((int)(mapped_throttle));
+	while (throttleStr.length() < 4)
+	{
+		throttleStr = "0" + throttleStr;
+	}
+
+	return "SET_THROTTLE_" + throttleStr;
+    
+
+
+}
+
+
 
 
 std::string generate_6char_timestamp(unsigned long timestamp_millis)

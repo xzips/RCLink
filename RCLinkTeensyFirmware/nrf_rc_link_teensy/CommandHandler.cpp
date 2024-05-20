@@ -23,6 +23,17 @@ namespace rcon
             pwm::update_smooth_pwm_target(servo_num, angle);
 
         }
+
+        /* THROTTLE CONTROL, "SET_THROTTLE_XXXX" where XXXX is the pulse width */
+        static const char* set_throttle_str = "w";
+        if (strncmp(command, set_throttle_str, strlen(set_throttle_str)) == 0)
+        {
+            char* throttle_str = command + strlen(set_throttle_str);
+            int throttle = atoi(throttle_str);
+
+            pwm::setThrottle(throttle);
+        }
+
         
 
 

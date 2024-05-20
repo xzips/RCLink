@@ -78,6 +78,7 @@ struct ServoController
 	std::string servo_name;
 	float angle_per_frame_pressed;
 	float angle_per_frame_released;
+	bool symmetric_response;
 
 	ServoController(
 		int servoNum,
@@ -88,7 +89,8 @@ struct ServoController
 		sf::Keyboard::Key decrease_key,
 		float angle_per_frame_pressed,
 		float angle_per_frame_released,
-		std::string servo_name)
+		std::string servo_name,
+		bool symmetric_response)
 		
 		:
 		
@@ -100,7 +102,9 @@ struct ServoController
 		decrease_key(decrease_key),
 		angle_per_frame_pressed(angle_per_frame_pressed),
 		angle_per_frame_released(angle_per_frame_released), 
-		servo_name(servo_name)
+		servo_name(servo_name),
+		symmetric_response(symmetric_response)
+			
 	{
 		curAngle = neutral_angle;
 	}

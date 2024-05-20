@@ -3,7 +3,7 @@
 #include "RadioController.hpp"
 #include "OLEDController.hpp"
 #include "PWMController.hpp"
-
+#include "CommandHandler.hpp"
 
 unsigned long startTime;
 unsigned long endTime;
@@ -11,6 +11,18 @@ unsigned long elapsedTime;
 
 RF24 radio(CE_PIN, CSN_PIN);
 
+
+void setThrottle(int pulseWidth) {
+  int onTick = 0; // Always start pulse at the beginning of the cycle
+  int offTick = map(pulseWidth, 1500, 2000, 210 , 410); // Correct mapping based on 4096 ticks
+  pwm_driver.setPWM(4, onTick, offTick); // Assuming we're using channel 0 for the ESC
+
+  // Debugging output
+  Serial.print("Pulse Width: ");
+  Serial.print(pulseWidth);
+  Serial.print(" microseconds; Ticks: ");
+  Serial.println(offTick);
+}
 
 
 void setup() {
@@ -20,12 +32,53 @@ void setup() {
 
   last_packet_timestamp_millis = millis();
 
+    
+  const int MS24_SPEED_DEG_PER_SEC = 180;
+  
+  pwm::add_smooth_pwm(15, 0, MS24_SPEED_DEG_PER_SEC);
+
+
+  delay(1000);  // Wait for 1 second
+
+  setThrottle(1500);
+  delay(1000);  // Wait for 1 second
+
+  // Set full throttle
+  setThrottle(2000);
+  delay(1000);  // Wait for 1 second
+
+  // Back to neutral
+  setThrottle(1500);
+  delay(3000);  // Wait for 1 second
+
+  //set it to 1700 for 3 seconds
+  setThrottle(1600);
+  delay(2000);
+  setThrottle(1700);
+  delay(2000); 
+  setThrottle(1800);
+  delay(2000); 
+  setThrottle(1900);
+  delay(2000); 
+  setThrottle(2000);
+  delay(8000);
+
+  // Back to neutral
+  setThrottle(1500);
+
+
+  
+  
+
 }  
 
 
 
 
 void loop() {
+
+
+
 
   startTime = micros();
 
@@ -45,46 +98,17 @@ void loop() {
 
 
 
-  /*
-  if (state == rcon::RadioLoopState::RECIVED_SENT_DATA)
-  {
-    //if servo request, in format "SET_SERVO_07_090" //set serrvo 7 to 90 degrees
-    static const char* set_servo_str = "SET_SERVO_";
-    if (strncmp(rf_incoming_buffer, set_servo_str, strlen(set_servo_str)) == 0)
-    {
-      char* servo_num_str = rf_incoming_buffer + strlen(set_servo_str);
-      char* angle_str = servo_num_str + 3;
-      int servo_num = atoi(servo_num_str);
-      int angle = atoi(angle_str);
 
-      pwm::set_servo_angle(servo_num, angle);
-    }
-   
-
-
-  }
-
-  */
+  rcon::HandleCommand(rf_incoming_buffer);
+  pwm::update_smooth_pwms();
 
 
 
-  //
 
-  
   if (disp::should_update_display()) {
     disp::update_stats_V1(radioConnected, millis() - last_packet_timestamp_millis, millis(), rf_incoming_buffer);
   }
  
-  
-  //servonum, degrees
-  //pwm::set_servo_angle(15, 100);
-  
-  //endTime = micros();
-  //elapsedTime = endTime - startTime;
-  //Serial.println("OLED Update Time: " + String(elapsedTime) + " microseconds");
-  
-
-  //delay(50);
 
 
 } 

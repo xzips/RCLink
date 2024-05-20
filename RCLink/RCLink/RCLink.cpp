@@ -14,9 +14,10 @@ using namespace std;
 
 void define_hardware()
 {
-    servoControllerVector.push_back(ServoController(15, 0, 270, 135, sf::Keyboard::W, sf::Keyboard::S, 10, 6, "Real Test Servo"));
-    servoControllerVector.push_back(ServoController(0,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder A"));
-    servoControllerVector.push_back(ServoController(4,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder B"));
+    //95
+    servoControllerVector.push_back(ServoController(15, 0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 10, 6, "Real Test Servo", true));
+    servoControllerVector.push_back(ServoController(0,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder A", false));
+    servoControllerVector.push_back(ServoController(4,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder B", false));
 
 }
 
@@ -57,7 +58,7 @@ int main() {
 
         DrawBufferVisualization(window);
 
-		if (frameCounter % 20 == 0) {
+		if (frameCounter % 3 == 0) {
 			//push_msg("Hello from main loop");
 
             std::string servoControlStr = servoControllerVector[0].GetCommandSTR();

@@ -1,6 +1,7 @@
 
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
+#include <vector>
 
 extern Adafruit_PWMServoDriver pwm_driver;
 
@@ -15,10 +16,44 @@ extern Adafruit_PWMServoDriver pwm_driver;
 #define PULSE_270  615   // 2500us
 
 
+const int PULSE_FULL_REVERSE = 205;  // Approx 1000 microseconds
+const int PULSE_FULL_THROTTLE = 410;  // Approx 2000 microseconds
+const int PULSE_NEUTRAL = 307;        // Approx 1500 microseconds
+
+
+
+#define SMOOTH_PWM_UPDATE_DELAY_MS 50
+
+
+
+
 namespace pwm{
-    void setup_pwm();
+  void setup_pwm();
 
   int angle2pulse_MS24(int angleDegrees);
-  void angle2pulse_ESC(int dutyCycle);
+
   void set_servo_angle(uint8_t servoNum, int angleDegrees);
+
+  int throttle2pulse_ESC(float throttle);
+  void set_esc_throttle(float throttle);
+
+  void update_smooth_pwms();
+  void add_smooth_pwm(uint8_t servo_num, int target_angle, int max_speed);
+  void update_smooth_pwm_target(uint8_t servo_num, int target_angle);
+
+  struct SmoothPWM {
+    uint8_t servo_num;
+    float current_angle;
+    float target_angle;
+    float max_speed; // degrees per second
+  };
+
+  extern unsigned long last_pwm_update_millis;
+
+  extern std::vector<SmoothPWM> smooth_pwms;
+
+
+
+
+
 }

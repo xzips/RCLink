@@ -99,70 +99,115 @@ void DrawServoControllers(std::vector<ServoController>& servoControllers, sf::Re
 
 void ProcessControlInputs()
 {
-
-	
-	//for each servo controller, check if the keys are pressed and update the servo angle
 	for (auto& servo : servoControllerVector)
 	{
-		
 		if (!(sf::Keyboard::isKeyPressed(servo.increase_key) && sf::Keyboard::isKeyPressed(servo.decrease_key)))
-			
 		{
-			//std::cout << "Both keys are not pressed" << std::endl;
-			
-			if (sf::Keyboard::isKeyPressed(servo.increase_key))
+			if (servo.symmetric_response)
 			{
-				servo.curAngle += servo.angle_per_frame_pressed;
-				if (servo.curAngle > servo.max_angle_cal)
-				{
-					servo.curAngle = servo.max_angle_cal;
-				}
-				
-			}
+				float wider_distance = std::max(servo.max_angle_cal - servo.neutral_angle, servo.neutral_angle - servo.min_angle_cal);
+				float slimmer_distance = std::min(servo.max_angle_cal - servo.neutral_angle, servo.neutral_angle - servo.min_angle_cal);
+				float wider_speed = servo.angle_per_frame_pressed;
+				float slimmer_speed = wider_speed * (slimmer_distance / wider_distance);
 
-			else if (sf::Keyboard::isKeyPressed(servo.decrease_key))
-			{
-				servo.curAngle -= servo.angle_per_frame_pressed;;
-				if (servo.curAngle < servo.min_angle_cal)
+				if (sf::Keyboard::isKeyPressed(servo.increase_key))
 				{
-					servo.curAngle = servo.min_angle_cal;
-				}
-				
-			}
-
-			else
-			{
-				//return to neutral position
-				if (servo.curAngle > servo.neutral_angle)
-				{
-					servo.curAngle -= servo.angle_per_frame_released;
-					if (servo.curAngle < servo.neutral_angle)
+					if (servo.curAngle >= servo.neutral_angle)
 					{
-						servo.curAngle = servo.neutral_angle;
+						servo.curAngle += wider_speed;
+					}
+					else
+					{
+						servo.curAngle += slimmer_speed;
+					}
+					if (servo.curAngle > servo.max_angle_cal)
+					{
+						servo.curAngle = servo.max_angle_cal;
 					}
 				}
-				else if (servo.curAngle < servo.neutral_angle)
+				else if (sf::Keyboard::isKeyPressed(servo.decrease_key))
 				{
-					servo.curAngle += servo.angle_per_frame_released;
+					if (servo.curAngle <= servo.neutral_angle)
+					{
+						servo.curAngle -= wider_speed;
+					}
+					else
+					{
+						servo.curAngle -= slimmer_speed;
+					}
+					if (servo.curAngle < servo.min_angle_cal)
+					{
+						servo.curAngle = servo.min_angle_cal;
+					}
+				}
+				else
+				{
 					if (servo.curAngle > servo.neutral_angle)
 					{
-						servo.curAngle = servo.neutral_angle;
+						if (servo.curAngle - servo.angle_per_frame_released > servo.neutral_angle)
+						{
+							servo.curAngle -= wider_speed;
+						}
+						else
+						{
+							servo.curAngle = servo.neutral_angle;
+						}
+					}
+					else if (servo.curAngle < servo.neutral_angle)
+					{
+						if (servo.curAngle + servo.angle_per_frame_released < servo.neutral_angle)
+						{
+							servo.curAngle += wider_speed;
+						}
+						else
+						{
+							servo.curAngle = servo.neutral_angle;
+						}
 					}
 				}
 			}
-
-
+			else
+			{
+				if (sf::Keyboard::isKeyPressed(servo.increase_key))
+				{
+					servo.curAngle += servo.angle_per_frame_pressed;
+					if (servo.curAngle > servo.max_angle_cal)
+					{
+						servo.curAngle = servo.max_angle_cal;
+					}
+				}
+				else if (sf::Keyboard::isKeyPressed(servo.decrease_key))
+				{
+					servo.curAngle -= servo.angle_per_frame_pressed;
+					if (servo.curAngle < servo.min_angle_cal)
+					{
+						servo.curAngle = servo.min_angle_cal;
+					}
+				}
+				else
+				{
+					if (servo.curAngle > servo.neutral_angle)
+					{
+						servo.curAngle -= servo.angle_per_frame_released;
+						if (servo.curAngle < servo.neutral_angle)
+						{
+							servo.curAngle = servo.neutral_angle;
+						}
+					}
+					else if (servo.curAngle < servo.neutral_angle)
+					{
+						servo.curAngle += servo.angle_per_frame_released;
+						if (servo.curAngle > servo.neutral_angle)
+						{
+							servo.curAngle = servo.neutral_angle;
+						}
+					}
+				}
+			}
 		}
-		
-
-
-		
-
-		
 	}
-
-
 }
+
 
 
 //unsigned long last_success_packet_millis;

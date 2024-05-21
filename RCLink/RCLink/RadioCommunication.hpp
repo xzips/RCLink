@@ -126,10 +126,7 @@ struct ThrottleController
 	int pwm_neutral_duty;
 	int pwm_full_duty;
 
-	bool calibrating;
-	//mutex for calibrating
-	std::mutex calibrating_mutex;
-	std::mutex throttle_mutex;
+	int calibration_state;
 	
 	ThrottleController(
 		int throttle_channel,
@@ -147,7 +144,9 @@ struct ThrottleController
 		pwm_full_duty(pwm_full_duty)
 	{
 		cur_throttle = 0;
-		calibrating = false;
+
+		//-1 indicates not calibrating right now, 0 means begin (should be setting pwm to 0), 1 means neutral, 2 means full, 3 means neutral again, then should be set back to -1
+		calibration_state = -1;
 	}
 
 	std::string GetCommandSTR();

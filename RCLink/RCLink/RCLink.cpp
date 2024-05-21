@@ -15,7 +15,7 @@ using namespace std;
 void define_hardware()
 {
     //95
-    servoControllerVector.push_back(ServoController(15, 0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 10, 6, "Real Test Servo", true));
+    servoControllerVector.push_back(ServoController(15, 0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 6, 4, "Real Test Servo", true));
     servoControllerVector.push_back(ServoController(0,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder A", false));
     servoControllerVector.push_back(ServoController(4,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder B", false));
 

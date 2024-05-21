@@ -6,10 +6,13 @@
 
 
 std::vector<ServoController> servoControllerVector;
-ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.02, 1500, 2000);
+ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.05, 1500, 2000);
 sf::Font font;
 unsigned long frameCounter = 0;
+long int escCalTimerMS;
 
+
+bool escCalibrateButtonPressed = false;
 
 void LoadFont()
 {
@@ -112,17 +115,17 @@ void UpdateDrawThrottleController(sf::RenderWindow& window)
 	box.setFillColor(sf::Color::Transparent);
 	
 	window.draw(box);
+
+
+
+
+
+
+
 	
 	//already normalized 0 to 1
-
-	float throt;
-
-	{
-		//lock the throttle mutex
-		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
-		
-		throt = throttleController.cur_throttle;
-	}
+	float throt = throttleController.cur_throttle;
+	
 	
 
 	float line_y_pos = box_y_pos + box_height - (throt * (box_height - box_outline_thickness * 2)) - box_outline_thickness * 2;
@@ -145,6 +148,139 @@ void UpdateDrawThrottleController(sf::RenderWindow& window)
 	text.setPosition(box_x_pos + box_width / 2, box_y_pos - 20);
 	
 	window.draw(text);
+
+
+	//draw a box above the text for the "Calibrate ESC" button
+	sf::RectangleShape calibrate_button(sf::Vector2f(box_width, 30));
+	calibrate_button.setPosition(box_x_pos, box_y_pos - 100);
+	calibrate_button.setOutlineThickness(3);
+	calibrate_button.setOutlineColor(sf::Color::White);
+	//dark grey fill
+	calibrate_button.setFillColor(sf::Color(16, 16, 16));
+	
+	if (throttleController.calibration_state != -1)
+	{
+		//set to red if calibrating
+		calibrate_button.setFillColor(sf::Color(75, 40, 40));
+	}
+
+	//if mouse hovering over, change color to slightly lighter
+	if (calibrate_button.getGlobalBounds().contains(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y) && throttleController.calibration_state == -1)
+	{
+		calibrate_button.setFillColor(sf::Color(30, 30, 30));
+
+		//if mouse clicked, change color to even lighter
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+		{
+			calibrate_button.setFillColor(sf::Color(40, 40, 75));
+		}
+	}
+
+	window.draw(calibrate_button);
+
+	//text for calibrate button
+	text.setString("Calibrate ESC");
+
+	//if calibration state not -1, change text to "Calibrating..."
+	if (throttleController.calibration_state != -1)
+	{
+		text.setString("Calibrating...");
+	}
+
+
+	text.setCharacterSize(12);
+	text.setFillColor(sf::Color::White);
+	textRect = text.getLocalBounds();
+	text.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
+
+	
+	
+	//draw text centered in the box
+	text.setPosition(box_x_pos + box_width / 2, box_y_pos - 100 + 15);
+	window.draw(text);
+	
+
+	
+	if (throttleController.calibration_state == -1)
+	{
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+		{
+			//if in bounds
+			if (calibrate_button.getGlobalBounds().contains(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y))
+			{
+				if (!escCalibrateButtonPressed)
+				{
+					escCalibrateButtonPressed = true;
+					std::cout << "Calibrate ESC button pressed" << std::endl;
+
+					throttleController.calibration_state = 0;
+
+					//current time ms
+					escCalTimerMS = get_timestamp_ms();
+
+				}
+			}
+			else
+			{
+				escCalibrateButtonPressed = false;
+			}
+		}
+
+		else
+		{
+			escCalibrateButtonPressed = false;
+		}
+	}
+
+	//now handle calibration control, basically just incrementing the cal state
+	if (throttleController.calibration_state != -1)
+	{
+		//in state 0 it's up to the get cmd string to send the pwm zeroing command
+
+		//if 1 second has passed, set state to 1 which is neutral pos
+		if (get_timestamp_ms() - escCalTimerMS > 1000)
+		{
+			throttleController.calibration_state = 1;
+			throttleController.cur_throttle = 0;
+		}
+
+		//if 2 seconds have passed, set state to 2 which is full throttle
+		if (get_timestamp_ms() - escCalTimerMS > 2000)
+		{
+			throttleController.calibration_state = 2;
+			throttleController.cur_throttle = 1;
+		}
+		
+		//if 3 seconds have passed, set state to 3 which is neutral pos
+		if (get_timestamp_ms() - escCalTimerMS > 3000)
+		{
+			throttleController.calibration_state = 3;
+			throttleController.cur_throttle = 0;
+		}
+
+		//once 4 seconds have passed, set state to -1 which is done
+		if (get_timestamp_ms() - escCalTimerMS > 4000)
+		{
+			throttleController.calibration_state = -1;
+		}
+
+		
+	}
+
+
+	
+
+
+
+
+	
+
+
+
+	
+	
+	
+	
 	
 	
 	
@@ -272,16 +408,11 @@ void ProcessControlInputs()
 	
 	bool throttleControlAllowed = true;
 
-	//try and get mutex, if not possible, throttle control is not allowed
-	if (throttleController.calibrating_mutex.try_lock())
-	{
-		throttleControlAllowed = !throttleController.calibrating;
-		throttleController.calibrating_mutex.unlock();
-	}
-	else
+	if (throttleController.calibration_state != -1)
 	{
 		throttleControlAllowed = false;
 	}
+
 
 	
 
@@ -468,62 +599,7 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 }
 
 
-void ESC_Cal_Thread()
-{
-	//set cur_throttle to 0 for 1 sec, to 1 for 1 sec, and back to 0 for 1 sec
-	//this will calibrate the ESC
-	//lock throttle controller mutex
 
-	{
-		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
-		throttleController.cur_throttle = 0;
-	}
-	std::this_thread::sleep_for(std::chrono::seconds(1));
-
-	{
-		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
-		throttleController.cur_throttle = 1;
-	}
-
-	std::this_thread::sleep_for(std::chrono::seconds(1));
-
-	{
-		std::lock_guard<std::mutex> lock(throttleController.throttle_mutex);
-		throttleController.cur_throttle = 0;
-	}
-	
-
-	std::lock_guard<std::mutex> lock(throttleController.calibrating_mutex);
-	throttleController.calibrating = false;
-	
-	
-	
-	
-
-
-}
-
-
-void CalibrateESC()
-{
-	{
-		//lock mutex for throttle controller
-		std::lock_guard<std::mutex> lock(throttleController.calibrating_mutex);
-		if (throttleController.calibrating)
-		{
-			return;
-		}
-		
-		//set calibrating to true
-		throttleController.calibrating = true;
-	}
-
-
-	//launch a thread to calibrate the ESC
-	std::thread cal_thread(ESC_Cal_Thread);
-	cal_thread.detach();
-
-}
 
 
 void DrawBufferVisualization(sf::RenderWindow& window)

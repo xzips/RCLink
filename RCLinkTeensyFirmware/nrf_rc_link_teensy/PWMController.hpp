@@ -24,7 +24,7 @@ const int PULSE_NEUTRAL = 307;        // Approx 1500 microseconds
 
 #define SMOOTH_PWM_UPDATE_DELAY_MS 50
 
-
+#define ESC_CHANNEL 4
 
 
 namespace pwm{
@@ -37,7 +37,7 @@ namespace pwm{
   void setThrottle(int pulseWidth);
 
   void update_smooth_pwms();
-  void add_smooth_pwm(uint8_t servo_num, int target_angle, int max_speed);
+  void add_smooth_pwm(uint8_t servo_num, int default_angle, int target_angle, int max_speed, bool is_esc = false);
   void update_smooth_pwm_target(uint8_t servo_num, int target_angle);
 
   struct SmoothPWM {

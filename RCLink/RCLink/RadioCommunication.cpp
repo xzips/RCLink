@@ -61,16 +61,20 @@ std::string ServoController::GetCommandSTR()
 
 std::string ThrottleController::GetCommandSTR()
 {
+    //if calibration state is 0, we need to instead send SET_PWM_XX_XXXX_XXXX for CH 04, 0000, 0000
+	if (calibration_state == 0)
+	{
+		std::string channelStr = std::to_string(throttle_channel);
+	
+	    return "SET_PWM_" + channelStr + "_0000_0000";
+	}
+    
+    
     //SET_THROTTLE_XXXX
 
-    int mapped_throttle;
+    int mapped_throttle = (cur_throttle) * (pwm_full_duty - pwm_neutral_duty) + pwm_neutral_duty;
 
-    //get throttle_mutex
-    {
-        std::lock_guard<std::mutex> lock(throttle_mutex);
-        mapped_throttle = (cur_throttle) * (pwm_full_duty - pwm_neutral_duty) + pwm_neutral_duty;
-
-    }
+    
 
 	std::string throttleStr = std::to_string((int)(mapped_throttle));
 	while (throttleStr.length() < 4)

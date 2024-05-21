@@ -17,6 +17,10 @@ extern ThrottleController throttleController;
 
 extern unsigned long frameCounter;
 
+
+extern bool escCalibrateButtonPressed;
+extern long int escCalTimerMS;
+
 extern sf::Font font;
 
 void DrawServoControllers(std::vector<ServoController>& servoControllers, sf::RenderWindow& window);
@@ -31,5 +35,3 @@ void DrawBufferVisualization(sf::RenderWindow& window);
 
 void UpdateDrawThrottleController(sf::RenderWindow& window);
 
-
-void CalibrateESC();;

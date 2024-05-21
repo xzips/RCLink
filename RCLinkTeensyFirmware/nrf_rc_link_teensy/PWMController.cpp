@@ -40,40 +40,13 @@ namespace pwm {
     return (int)pulse;
   }
 
-  
-  int throttle2pulse_ESC(float throttle) {
-    // Constrain the throttle value to ensure it's between -1.0 (full reverse) and 1.0 (full throttle)
-    throttle = constrain(throttle, -1.0, 1.0);
-    
-    int pulseWidth;
-    if (throttle >= 0) {
-      // Map the throttle from 0 to 1.0 to neutral to full throttle pulse width
-      pulseWidth = map(throttle * 100, 0, 100, PULSE_NEUTRAL, PULSE_FULL_THROTTLE);
-    } else {
-      // Map the throttle from -1.0 to 0 to full reverse to neutral pulse width
-      pulseWidth = map(throttle * 100, -100, 0, PULSE_FULL_REVERSE, PULSE_NEUTRAL);
-    }
-    
-    return pulseWidth;
-  }
 
-    void set_esc_throttle(float throttle)
-    {
-    int pulseWidth = throttle2pulse_ESC(throttle);
-    Serial.print("Setting ESC throttle to ");
-    Serial.print(throttle, 3);
-    Serial.print(", Pulse Width: ");
-    Serial.println(pulseWidth);
-
-    // Assuming the ESC is connected to slot 4 of the PCA9685
-    pwm_driver.setPWM(4, 0, pulseWidth);
-  }
-
+   
 
   void setThrottle(int pulseWidth) {
     int onTick = 0; // Always start pulse at the beginning of the cycle
     int offTick = map(pulseWidth, 1500, 2000, 210 , 410); // Correct mapping based on 4096 ticks
-    pwm_driver.setPWM(4, onTick, offTick); // Assuming we're using channel 0 for the ESC
+    pwm_driver.setPWM(ESC_CHANNEL, onTick, offTick); // Assuming we're using channel 0 for the ESC
   }
 
   void set_servo_angle(uint8_t servoNum, int angleDegrees)
@@ -119,20 +92,29 @@ namespace pwm {
       }
 
       
-
-      set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);
+      if (smooth_pwm.is_esc)
+      {
+        setThrottle((int)smooth_pwm.current_angle);
+      }
+      else
+      {
+        set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);
+      }
+      
+      //set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);
 
     }
 
   }
 
-  void add_smooth_pwm(uint8_t servo_num, int target_angle, int max_speed)
+  void add_smooth_pwm(uint8_t servo_num, int default_angle, int target_angle, int max_speed, bool is_esc)
   {
     SmoothPWM smooth_pwm;
     smooth_pwm.servo_num = servo_num;
     smooth_pwm.current_angle = 135;
     smooth_pwm.target_angle = target_angle;
     smooth_pwm.max_speed = max_speed;
+    smooth_pwm.is_esc = is_esc;
 
     smooth_pwms.push_back(smooth_pwm);
   }

@@ -15,6 +15,8 @@ vector<Message> display_recv_queue;//since these are processed instantly, we nee
 mutex send_mutex;
 mutex receive_mutex;
 
+
+
 extern const int MAX_SEND_QUEUE_SIZE = 128;
 
 std::atomic<bool> cleanupFlag(false);
@@ -31,6 +33,10 @@ unsigned long failed_packet_count;
 unsigned long last_packet_count;
 unsigned long last_failed_packet_count;
 
+
+float yaw_orientation = 0.0f;
+float pitch_orientation = 0.0f;
+float roll_orientation = 10.0f;
 
 std::mutex connection_status_mutex;
 ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;
@@ -72,7 +78,7 @@ std::string ThrottleController::GetCommandSTR()
     
     //SET_THROTTLE_XXXX
 
-    int mapped_throttle = (cur_throttle) * (pwm_full_duty - pwm_neutral_duty) + pwm_neutral_duty;
+    int mapped_throttle = (int)((cur_throttle) * (pwm_full_duty - pwm_neutral_duty) + pwm_neutral_duty);
 
     
 

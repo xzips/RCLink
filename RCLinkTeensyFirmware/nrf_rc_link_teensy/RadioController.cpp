@@ -3,7 +3,7 @@
 #include "printf.h"
 #include "RF24.h"
 #include <Arduino.h>
-
+#include <vector>
 
 uint8_t address[][6] = { "1Tnsy", "2Pico" };
 bool radioNumber = 1;
@@ -12,6 +12,8 @@ uint8_t lastPipeIdx;
 char rf_outgoing_buffer[32];
 char rf_incoming_buffer[32];
 unsigned long last_packet_timestamp_millis;
+std::vector<std::string> send_queue;
+
 
 void rcon::clear_outgoing_buffer()
 {
@@ -97,6 +99,17 @@ void rcon::radio_setup(RF24 &radio)
 
 rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 {
+
+
+    //if send queue vector longer than max size, pop the first element
+    while (send_queue.size() > MAX_SEND_QUEUE_SIZE) {
+        send_queue.erase(send_queue.begin());
+    }
+    
+
+    
+
+
 
     //check radio status before listening
     
@@ -195,8 +208,15 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
     clear_outgoing_buffer();
 
-    //send a return message, this would in theory be telemtry and other information data, for now print the internal clock
-    sprintf(rf_outgoing_buffer, "%ld", millis());
+
+    if (send_queue.size() == 0) {
+
+        sprintf(rf_outgoing_buffer, "%ld", millis());
+    }
+    else {
+        sprintf(rf_outgoing_buffer, send_queue[0].c_str());
+        send_queue.erase(send_queue.begin());
+    }
 
     bool report = radio.write(&rf_outgoing_buffer, 32);
 

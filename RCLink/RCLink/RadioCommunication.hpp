@@ -44,7 +44,9 @@ extern std::atomic<bool> cleanupFlag;
 extern std::mutex send_mutex;
 extern std::mutex receive_mutex;
 
-
+extern float yaw_orientation;
+extern float pitch_orientation;
+extern float roll_orientation;
 
 
 extern boost::asio::io_service io;
@@ -115,6 +117,8 @@ struct ServoController
 
 
 };
+
+
 
 struct ThrottleController
 {

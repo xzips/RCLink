@@ -3,10 +3,14 @@
 
 #include <SPI.h>
 #include "RF24.h"
+#include <vector>
+#include <string>
 
 #define CE_PIN 0
 #define CSN_PIN 1
 #define SERIAL_DEBUG false
+
+#define MAX_SEND_QUEUE_SIZE 6
 
 #define RETURN_MSG_DELAY_US 50 //50
 
@@ -21,6 +25,7 @@ extern uint8_t lastPipeIdx;
 extern char rf_outgoing_buffer[32];
 extern char rf_incoming_buffer[32];
 
+extern std::vector<std::string> send_queue;
 
 namespace rcon
 {

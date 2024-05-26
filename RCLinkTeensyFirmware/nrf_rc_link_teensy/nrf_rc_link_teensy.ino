@@ -4,6 +4,10 @@
 #include "OLEDController.hpp"
 #include "PWMController.hpp"
 #include "CommandHandler.hpp"
+#include "MPU6050_6Axis_MotionApps612.h"
+#include "IMUController.hpp"
+
+
 
 unsigned long startTime;
 unsigned long endTime;
@@ -14,11 +18,11 @@ RF24 radio(CE_PIN, CSN_PIN);
 
 
 
-
 void setup() {
   rcon::radio_setup(radio);
   disp::setup_display();
   pwm::setup_pwm();
+  imu::imu_setup();
 
   last_packet_timestamp_millis = millis();
 
@@ -26,42 +30,9 @@ void setup() {
   const int MS24_SPEED_DEG_PER_SEC = 180;
   
   pwm::add_smooth_pwm(15, 135, 135, MS24_SPEED_DEG_PER_SEC);
-
-
   pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
 
-/*
-  pwm_driver.setPWM(4, 0, 0);
-  
-  delay(1000);  // Wait for 1 second
 
-  pwm::setThrottle(1500);
-  delay(1000);  // Wait for 1 second
-
-  // Set full throttle
-  pwm::setThrottle(2000);
-  delay(1000);  // Wait for 1 second
-
-  // Back to neutral
-  pwm::setThrottle(1500);
-  delay(3000);  // Wait for 1 second
-
-  //set it to 1700 for 3 seconds
-  pwm::setThrottle(1600);
-  delay(2000);
-  pwm::setThrottle(1700);
-  delay(2000); 
-  pwm::setThrottle(1800);
-  delay(2000); 
-  pwm::setThrottle(1900);
-  delay(2000); 
-  pwm::setThrottle(2000);
-  delay(5000);
-
-  // Back to neutral
-  pwm::setThrottle(1500);
-*/
-  
   
   
 
@@ -85,6 +56,9 @@ void loop() {
   
   //Serial.println("RF24 radio_loop function: " + String(elapsedTime) + " microseconds");
 
+  
+  imu::update_rotation_ypr();
+  imu::time_conditional_send_ypr();
 
   if (state != rcon::RadioLoopState::CONNECTED_IDLE) {
     //rcon::print_radio_loop_state(state);

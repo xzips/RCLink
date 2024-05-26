@@ -24,12 +24,18 @@
     <ClCompile Include="RCGraphics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Quick3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RadioCommunication.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RCGraphics.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Quick3D.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

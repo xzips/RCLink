@@ -96,6 +96,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\boost_1_82_0;C:\SFML\include</AdditionalIncludeDirectories>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,11 +136,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Quick3D.cpp" />
     <ClCompile Include="RadioCommunication.cpp" />
     <ClCompile Include="RCGraphics.cpp" />
     <ClCompile Include="RCLink.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Quick3D.hpp" />
     <ClInclude Include="RadioCommunication.hpp" />
     <ClInclude Include="RCGraphics.hpp" />
   </ItemGroup>

@@ -3,16 +3,35 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "RCGraphics.hpp"
-
+#include "Quick3D.hpp"
 
 std::vector<ServoController> servoControllerVector;
-ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.05, 1500, 2000);
+ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.05f, 1500, 2000);
 sf::Font font;
 unsigned long frameCounter = 0;
 long int escCalTimerMS;
 
+//std::vector<q3d::SVF> models;
+std::vector<q3d::TM> models;
+
+
 
 bool escCalibrateButtonPressed = false;
+
+
+ServoController* GetServoControllerByName(std::string name)
+{
+	for (auto& servo : servoControllerVector)
+	{
+		if (servo.servo_name == name)
+		{
+			return &servo;
+		}
+	}
+	return nullptr;
+
+}
+
 
 void LoadFont()
 {
@@ -703,4 +722,76 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 		text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y + 30 + i * 12);
 		window.draw(text);
 	}
+}
+
+
+
+void DrawAttitudeIndicator(sf::RenderWindow& window)
+{
+	float outline_thickness = 3;
+	float width = 160;
+	float height = 160;
+	float top_margin = 20;
+
+	// Centered at the top of the screen
+	sf::RectangleShape box(sf::Vector2f(width, height));
+	box.setPosition(window.getSize().x / 2 - width / 2, top_margin + outline_thickness);
+	box.setOutlineThickness(outline_thickness);
+	box.setOutlineColor(sf::Color::White);
+	box.setFillColor(sf::Color::Black); // Fill with black
+
+	window.draw(box);
+
+	// Draw a white circle in the middle of the box
+	sf::CircleShape circle(width / 2);
+	circle.setFillColor(sf::Color::White);
+	circle.setPosition(window.getSize().x / 2 - width / 2, top_margin + outline_thickness);
+
+	window.draw(circle);
+
+	// Calculate the horizon line offset due to roll
+	float horizon_offset = (width / 2) * std::tan(roll_orientation * 3.14159265 / 180);
+
+	// Create the sky polygon
+	sf::VertexArray sky(sf::Quads, 4);
+	sky[0].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness);
+	sky[1].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness);
+	sky[2].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness + height / 2 + horizon_offset);
+	sky[3].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness + height / 2 - horizon_offset);
+	for (int i = 0; i < 4; ++i)
+	{
+		sky[i].color = sf::Color(33, 150, 243);
+	}
+
+	// Create the ground polygon
+	sf::VertexArray ground(sf::Quads, 4);
+	ground[0].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness + height / 2 - horizon_offset);
+	ground[1].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness + height / 2 + horizon_offset);
+	ground[2].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness + height);
+	ground[3].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness + height);
+	for (int i = 0; i < 4; ++i)
+	{
+		ground[i].color = sf::Color(165, 140, 0); // Brown color
+	}
+
+	// Draw the horizon line, rotated by the roll orientation
+	sf::RectangleShape horizon(sf::Vector2f(width, outline_thickness));
+	horizon.setFillColor(sf::Color::White);
+	horizon.setOrigin(width / 2, outline_thickness / 2);
+	horizon.setPosition(window.getSize().x / 2, top_margin + outline_thickness + height / 2);
+	horizon.setRotation(roll_orientation);
+
+
+
+
+
+	// Draw the sky and ground polygons with blend mode multiply
+	window.draw(sky);
+	window.draw(ground);
+	window.draw(horizon);
+
+
+
+
+	
 }

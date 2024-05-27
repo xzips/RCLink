@@ -81,14 +81,21 @@ int main() {
     thread background(serial_thread);
 
     LoadFont();
+    LoadTextures();
 
     define_hardware();
 
+
     load_models();
 
+    roll_orientation = 20;
+    pitch_orientation = 20;
     
+    sf::ContextSettings settings;
+    settings.antialiasingLevel = 8;
 
-    sf::RenderWindow window(sf::VideoMode(1600, 1000), "RCLink Controller");
+    //sf::RenderWindow window(sf::VideoMode(800, 600), "SFML shapes", sf::Style::Default, settings);
+    sf::RenderWindow window(sf::VideoMode(1600, 1000), "RCLink Controller", sf::Style::Default, settings);
 
     //set 60fps framerate limit
     window.setFramerateLimit(60);
@@ -130,6 +137,8 @@ int main() {
 		//q3d::VertexTransformUpdateTM(models[1]);
 
         update_model_rotations();
+
+        
 
 
 

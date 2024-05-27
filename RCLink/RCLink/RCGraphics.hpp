@@ -14,6 +14,7 @@ const int SEND_BUFFER_LINES = 32;
 extern std::vector<ServoController> servoControllerVector;
 extern ThrottleController throttleController;
 
+extern std::vector<sf::Texture*> textures;
 
 extern unsigned long frameCounter;
 
@@ -27,7 +28,7 @@ extern sf::Font font;
 
 void DrawServoControllers(std::vector<ServoController>& servoControllers, sf::RenderWindow& window);
 void LoadFont();
-
+void LoadTextures();
 
 ServoController* GetServoControllerByName(std::string name);
 

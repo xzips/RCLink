@@ -4,6 +4,11 @@
 #include <iostream>
 #include "RCGraphics.hpp"
 #include "Quick3D.hpp"
+#include <cmath>
+#include <vector>
+#include <iomanip>
+#include <sstream>
+#include <string>
 
 std::vector<ServoController> servoControllerVector;
 ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.05f, 1500, 2000);
@@ -14,7 +19,7 @@ long int escCalTimerMS;
 //std::vector<q3d::SVF> models;
 std::vector<q3d::TM> models;
 
-
+std::vector<sf::Texture*> textures;
 
 bool escCalibrateButtonPressed = false;
 
@@ -726,72 +731,184 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 
 
 
+
+void LoadTextures()
+{
+	//C:\Users\aspen\Desktop\RCLink\RCLink\Textures\Final
+	//  HorizonGroundWide.png, AngleMarksLayer.png,, StaticScopeLayer.png
+
+	std::string base_texture_path = "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Textures\\Final\\";
+
+	std::string horiz_tex_path = base_texture_path + "HorizonGroundWide.png";
+	std::string angle_tex_path = base_texture_path + "AngleMarksLayer.png";
+	std::string static_tex_path = base_texture_path + "StaticScopeLayer.png";
+	
+
+	//push back to textures vetor of pointers to textures
+	textures.push_back(new sf::Texture());
+	textures.push_back(new sf::Texture());
+	textures.push_back(new sf::Texture());
+
+	//load the texture from file
+	textures[0]->loadFromFile(horiz_tex_path);
+	textures[1]->loadFromFile(angle_tex_path);
+	textures[2]->loadFromFile(static_tex_path);
+
+	textures[0]->setSmooth(true);
+	textures[1]->setSmooth(true);
+	textures[2]->setSmooth(true);
+	
+	
+	
+	
+
+}
+
 void DrawAttitudeIndicator(sf::RenderWindow& window)
 {
-	float outline_thickness = 3;
-	float width = 160;
-	float height = 160;
-	float top_margin = 20;
+	//height and width
+	float indicator_size = 240;
+	float top_margin = 10;
 
-	// Centered at the top of the screen
-	sf::RectangleShape box(sf::Vector2f(width, height));
-	box.setPosition(window.getSize().x / 2 - width / 2, top_margin + outline_thickness);
-	box.setOutlineThickness(outline_thickness);
-	box.setOutlineColor(sf::Color::White);
-	box.setFillColor(sf::Color::Black); // Fill with black
-
-	window.draw(box);
-
-	// Draw a white circle in the middle of the box
-	sf::CircleShape circle(width / 2);
-	circle.setFillColor(sf::Color::White);
-	circle.setPosition(window.getSize().x / 2 - width / 2, top_margin + outline_thickness);
-
-	window.draw(circle);
-
-	// Calculate the horizon line offset due to roll
-	float horizon_offset = (width / 2) * std::tan(roll_orientation * 3.14159265 / 180);
-
-	// Create the sky polygon
-	sf::VertexArray sky(sf::Quads, 4);
-	sky[0].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness);
-	sky[1].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness);
-	sky[2].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness + height / 2 + horizon_offset);
-	sky[3].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness + height / 2 - horizon_offset);
-	for (int i = 0; i < 4; ++i)
-	{
-		sky[i].color = sf::Color(33, 150, 243);
-	}
-
-	// Create the ground polygon
-	sf::VertexArray ground(sf::Quads, 4);
-	ground[0].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness + height / 2 - horizon_offset);
-	ground[1].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness + height / 2 + horizon_offset);
-	ground[2].position = sf::Vector2f(window.getSize().x / 2 + width / 2, top_margin + outline_thickness + height);
-	ground[3].position = sf::Vector2f(window.getSize().x / 2 - width / 2, top_margin + outline_thickness + height);
-	for (int i = 0; i < 4; ++i)
-	{
-		ground[i].color = sf::Color(165, 140, 0); // Brown color
-	}
-
-	// Draw the horizon line, rotated by the roll orientation
-	sf::RectangleShape horizon(sf::Vector2f(width, outline_thickness));
-	horizon.setFillColor(sf::Color::White);
-	horizon.setOrigin(width / 2, outline_thickness / 2);
-	horizon.setPosition(window.getSize().x / 2, top_margin + outline_thickness + height / 2);
-	horizon.setRotation(roll_orientation);
-
-
-
-
-
-	// Draw the sky and ground polygons with blend mode multiply
-	window.draw(sky);
-	window.draw(ground);
-	window.draw(horizon);
-
-
+	// Static scope layer
+	sf::Sprite static_scope;
+	static_scope.setTexture(*textures[2]);
+	static_scope.setPosition(window.getSize().x / 2 - indicator_size / 2, top_margin);
+	static_scope.setScale(indicator_size / static_scope.getTexture()->getSize().x, indicator_size / static_scope.getTexture()->getSize().y);
 
 
 	
+	// Horizon
+	sf::Sprite horizon;
+	horizon.setTexture(*textures[0]);
+	horizon.setScale(indicator_size / static_scope.getTexture()->getSize().x, indicator_size / static_scope.getTexture()->getSize().y);
+
+	float pixels_per_pitch_degree = 146.f / 20.f;
+	float pitch_offset = pitch_orientation * pixels_per_pitch_degree;
+
+
+
+	sf::Vector2f base_origin = sf::Vector2f(horizon.getTexture()->getSize().x / 2, horizon.getTexture()->getSize().y / 2);
+
+	
+	
+	base_origin.y -= pitch_offset;
+
+
+	horizon.setOrigin(base_origin);
+	
+	
+	horizon.setRotation(roll_orientation);
+
+	
+	sf::Vector2f base_position = sf::Vector2f(window.getSize().x / 2, top_margin + indicator_size / 2);
+
+	horizon.setPosition(base_position);
+	
+
+
+
+
+
+	//create rendertexture of the size of the window
+	sf::RenderTexture render_texture;
+	render_texture.create(window.getSize().x, window.getSize().y);
+
+	//clear the rendertexture
+	render_texture.clear(sf::Color::Transparent);
+	
+	//draw a white circle in the static scope position of size indicator size
+	sf::CircleShape circle(indicator_size / 2);
+	circle.setFillColor(sf::Color::White);
+	circle.setOrigin(indicator_size / 2, indicator_size / 2);
+	circle.setPosition(window.getSize().x / 2, top_margin + indicator_size / 2);
+	render_texture.draw(circle);
+
+	//draw on the horizon sprite with multiply mode
+	render_texture.draw(horizon, sf::BlendMultiply);
+	
+	
+	//now draw that rendertexutre onto the window
+	render_texture.display();
+	sf::Sprite sprite(render_texture.getTexture());
+	window.draw(sprite);
+	
+
+
+	//draw the angle marks
+	sf::Sprite angle_marks;
+	angle_marks.setTexture(*textures[1]);
+
+	
+	angle_marks.setPosition(window.getSize().x / 2 - indicator_size / 2, top_margin);
+	angle_marks.setScale(indicator_size / angle_marks.getTexture()->getSize().x,indicator_size / angle_marks.getTexture()->getSize().x);
+	
+
+	window.draw(angle_marks);
+	// Draw static scope
+	window.draw(static_scope);
+
+	//at the top center of the indicator draw the roll value
+	sf::Text roll_text;
+	roll_text.setFont(font);
+	roll_text.setCharacterSize(20);
+	roll_text.setFillColor(sf::Color::White);
+
+
+
+	std::stringstream stream;
+
+	// Set fixed floating-point notation and precision
+	stream << std::fixed << std::setprecision(1) << roll_orientation;
+	
+	std::string roll_string = stream.str();
+
+
+	roll_text.setString(roll_string);
+	roll_text.setPosition(window.getSize().x / 2 - roll_text.getLocalBounds().width / 2, top_margin - 6);
+	window.draw(roll_text);
+
+
+	//on the right side of the scope draw the pitch value
+	sf::Text pitch_text;
+	pitch_text.setFont(font);
+	pitch_text.setCharacterSize(20);
+	pitch_text.setFillColor(sf::Color::White);
+	
+	stream.str(std::string());
+	stream.clear();
+	stream << std::fixed << std::setprecision(1) << pitch_orientation;
+	std::string pitch_string = stream.str();
+	pitch_text.setString(pitch_string);
+	pitch_text.setPosition(window.getSize().x / 2 + indicator_size / 2 + 10, top_margin + indicator_size / 2 - pitch_text.getLocalBounds().height / 2);	
+	window.draw(pitch_text);
+	
+
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

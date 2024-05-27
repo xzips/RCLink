@@ -36,7 +36,7 @@ unsigned long last_failed_packet_count;
 
 float yaw_orientation = 0.0f;
 float pitch_orientation = 0.0f;
-float roll_orientation = 10.0f;
+float roll_orientation = 0.0f;
 
 std::mutex connection_status_mutex;
 ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;

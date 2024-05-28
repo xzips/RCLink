@@ -16,3 +16,4 @@ RCLinkPicoFirmwareV2/RCLPF2/build
 *.db-shm
 *.db-wal
 *.exe
+*.d

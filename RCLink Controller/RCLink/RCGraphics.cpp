@@ -776,7 +776,7 @@ void LoadTextures()
 	//C:\Users\aspen\Desktop\RCLink\RCLink\Textures\Final
 	//  HorizonGroundWide.png, AngleMarksLayer.png,, StaticScopeLayer.png
 
-	std::string base_texture_path = "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Textures\\Final\\";
+	std::string base_texture_path = "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\Textures\\Final\\";
 
 	std::string horiz_tex_path = base_texture_path + "HorizonGroundWide.png";
 	std::string angle_tex_path = base_texture_path + "AngleMarksLayer.png";

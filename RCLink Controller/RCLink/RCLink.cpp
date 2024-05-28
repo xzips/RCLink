@@ -33,7 +33,7 @@ void load_models()
     //C:\Users\aspen\Desktop\RCLink\RCLink\Models\Cambered Wing 1.obj
 	//q3d::SVF model;
     q3d::TM left_elev_model;
-	q3d::LoadTriangleMeshOBJ(left_elev_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\LeftElevator.obj");
+	q3d::LoadTriangleMeshOBJ(left_elev_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\Models\\LeftElevator.obj");
 	
     
    
@@ -45,7 +45,7 @@ void load_models()
 
 
     q3d::TM right_elev_model;
-    q3d::LoadTriangleMeshOBJ(right_elev_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\RightElevator.obj");
+    q3d::LoadTriangleMeshOBJ(right_elev_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\Models\\RightElevator.obj");
     
     
 	q3d::SetPositionTM(right_elev_model, 12, 20, 100.0f);
@@ -58,7 +58,7 @@ void load_models()
     
 	//load LeftAileron and RightAileron models
 	q3d::TM left_aileron_model;
-	q3d::LoadTriangleMeshOBJ(left_aileron_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\LeftAileron.obj");
+	q3d::LoadTriangleMeshOBJ(left_aileron_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\Models\\LeftAileron.obj");
 	q3d::SetPositionTM(left_aileron_model, -20, -20, 130.0f);
 	q3d::SetScaleTM(left_aileron_model, 5);
 	q3d::VertexTransformUpdateTM(left_aileron_model);
@@ -66,7 +66,7 @@ void load_models()
 	models.push_back(left_aileron_model);
     
 	q3d::TM right_aileron_model;
-	q3d::LoadTriangleMeshOBJ(right_aileron_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\RightAileron.obj");
+	q3d::LoadTriangleMeshOBJ(right_aileron_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\Models\\RightAileron.obj");
     
 	q3d::SetPositionTM(right_aileron_model, 20, -20, 130.0f);
 	q3d::SetScaleTM(right_aileron_model, 5);
@@ -76,7 +76,7 @@ void load_models()
     
     //load rudder
 	q3d::TM rudder_model;
-	q3d::LoadTriangleMeshOBJ(rudder_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\Rudder.obj");
+	q3d::LoadTriangleMeshOBJ(rudder_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\Models\\Rudder.obj");
 
     //for all the verts subtract 0.5 z
 	q3d::OffsetOriginalCoords(rudder_model, 0, 0, 0.2);

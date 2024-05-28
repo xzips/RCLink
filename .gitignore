@@ -4,7 +4,6 @@
 *.vsidx
 RCLink/.vs/RCLink/v17/.suo
 *.log
-*.obj
 *.tlog
 *.idb
 *.ilk
@@ -16,3 +15,4 @@ RCLinkPicoFirmwareV2/RCLPF2/build
 *.db-shm
 *.db-wal
 *.d
+RCLink Pico USB Tranciever/RCLPF3/build

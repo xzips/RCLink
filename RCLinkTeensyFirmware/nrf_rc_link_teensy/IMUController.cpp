@@ -17,7 +17,15 @@ MPU6050 mpu;
 namespace imu
 {
 
-    bool blinkState = false;
+
+    const int iAx = 0;
+    const int iAy = 1;
+    const int iAz = 2;
+    const int iGx = 3;
+    const int iGy = 4;
+    const int iGz = 5;
+
+
 
     // MPU control/status vars
     bool dmpReady = false;  // set true if DMP init was successful
@@ -47,6 +55,25 @@ namespace imu
     }
 
 
+    void imu_calibrate(){
+
+
+        dmpReady = false;
+        mpu.setDMPEnabled(false);
+
+        mpu.CalibrateAccel(6);
+        mpu.CalibrateGyro(6);
+
+        mpu.setDMPEnabled(true);
+
+        mpuIntStatus = mpu.getIntStatus();
+
+        dmpReady = true;
+
+    }
+
+    
+
     void imu_setup() {
 
         last_imu_comm_update_millis = millis();
@@ -75,8 +102,10 @@ namespace imu
             // Calibration Time: generate offsets and calibrate our MPU6050
             mpu.CalibrateAccel(6);
             mpu.CalibrateGyro(6);
-            Serial.println();
-            mpu.PrintActiveOffsets();
+
+
+            //Serial.println();
+            //mpu.PrintActiveOffsets();
 
             mpu.setDMPEnabled(true);
 

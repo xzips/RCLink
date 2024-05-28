@@ -15,12 +15,12 @@ using namespace std;
 void define_hardware()
 {
     //95
-    servoControllerVector.push_back(ServoController(15, 0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 6, 4, "Left Elevator", true));
+    servoControllerVector.push_back(ServoController(15, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Left Elevator", false));
     
-    servoControllerVector.push_back(ServoController(0,  0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 6, 4, "Right Elevator", true));
+    servoControllerVector.push_back(ServoController(0,  25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Right Elevator", false));
     
-    servoControllerVector.push_back(ServoController(1,  90, 180, 135, sf::Keyboard::Q, sf::Keyboard::E, 6, 4, "Left Aileron", false));
-    servoControllerVector.push_back(ServoController(2,  90, 180, 135, sf::Keyboard::E, sf::Keyboard::Q, 6, 4, "Right Aileron", false));
+    servoControllerVector.push_back(ServoController(1,  90, 180, 135, sf::Keyboard::Q, sf::Keyboard::E, 3, 2, "Left Aileron", false));
+    servoControllerVector.push_back(ServoController(2,  90, 180, 135, sf::Keyboard::E, sf::Keyboard::Q, 3, 2, "Right Aileron", false));
 
 	servoControllerVector.push_back(ServoController(3, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false));
 

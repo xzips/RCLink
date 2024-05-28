@@ -1,10 +1,15 @@
 #include "CommandHandler.hpp"
 #include <Arduino.h>
 #include "PWMController.hpp"
-//#include <cstring>
+#include "IMUController.hpp"
 
 namespace rcon
 {
+
+    void doReboot() {
+        SCB_AIRCR = 0x05FA0004;
+    }
+
     void HandleCommand(char* command)
     {
         
@@ -61,6 +66,14 @@ namespace rcon
 
         }
 
+
+        /*IMU_CALIBRATE*/
+        static const char* calibrate_str = "REBOOT";
+        if (strncmp(command, calibrate_str, strlen(calibrate_str)) == 0)
+        {
+            doReboot();
+
+        }
 
 
 

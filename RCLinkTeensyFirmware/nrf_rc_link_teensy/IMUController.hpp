@@ -16,6 +16,8 @@ namespace imu
 
     void time_conditional_send_ypr();
 
+    void imu_calibrate();
+
     extern unsigned long last_imu_comm_update_millis;
 
 

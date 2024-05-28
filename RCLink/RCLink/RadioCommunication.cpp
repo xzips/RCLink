@@ -200,7 +200,7 @@ void serial_thread() {
                     int strdiff2 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Transmission Failed", 26);
                     
 
-
+                        
              
 				
 
@@ -295,7 +295,7 @@ void push_msg(const string& msg) {
     send_queue.push_back(Message(msg, get_timestamp_ms()));
 
 	//if there are more than 100 messages in the queue we should remove the oldest message
-	if (send_queue.size() > MAX_SEND_QUEUE_SIZE)
+	while (send_queue.size() > MAX_SEND_QUEUE_SIZE)
 	{
 		send_queue.erase(send_queue.begin());
 	}
@@ -333,6 +333,18 @@ void HandleIncomingMessage(std::string msg)
     //just in case, check if msg begins with ERROR:, if so return
 	if (msg.find("ERROR:") == 0)
 	{
+		return;
+	}
+    
+
+	if (msg.find("CONNECTION_ACK") == 0)
+	{
+		//clear send buffer, lock mutex
+		lock_guard<mutex> lock(send_mutex);
+		send_queue.clear();
+		//set connection status to connected
+		lock_guard<mutex> lock2(connection_status_mutex);
+		connection_status = ConnectionStatus::CONNECTED;
 		return;
 	}
     

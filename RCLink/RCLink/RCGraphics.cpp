@@ -25,7 +25,7 @@ bool escCalibrateButtonPressed = false;
 
 
 //create rendertexture of the size of the window
-sf::RenderTexture render_texture;
+sf::RenderTexture* render_texture;// = sf::RenderTexture();
 
 
 
@@ -59,8 +59,8 @@ void LoadFont()
 void DrawServoControllers(std::vector<ServoController>& servoControllers, sf::RenderWindow& window)
 {
 
-    float box_width = 100;
-    float box_height = 150;
+    float box_width = 100; //60
+    float box_height = 150; //80
     float box_spacing = 75;
 
 	float box_outline_thickness = 3;
@@ -634,111 +634,6 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 
 
 
-void DrawBufferVisualization_SLOW(sf::RenderWindow& window)
-{
-	// Draw box to hold buffer visualization, put it below the connection stats box, and make it go down 300px
-	float outline_thickness = 3;
-	float edge_margin = 20;
-	float box_width = 380;
-
-	sf::RectangleShape box(sf::Vector2f(box_width, 450));
-	box.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin, outline_thickness + edge_margin + 110 + 20);
-	box.setOutlineThickness(outline_thickness);
-	box.setOutlineColor(sf::Color::White);
-	box.setFillColor(sf::Color::Transparent);
-
-	window.draw(box);
-
-	// Lock send_queue and receive_queue, copy them to local variables, then unlock
-	std::vector<Message> send_queue_copy;
-	{
-		std::lock_guard<std::mutex> lock(send_mutex);
-		send_queue_copy = send_queue;
-	}
-
-	std::vector<Message> display_recv_queue_copy;
-	{
-		display_recv_queue_copy = display_recv_queue;
-	}
-
-	// Draw send queue
-	sf::Text text;
-	text.setFont(font);
-	text.setCharacterSize(16);
-	text.setFillColor(sf::Color::White);
-
-	// Draw send queue title
-	text.setString("Send Queue");
-	int send_text_offset_x = 10;
-	int send_text_offset_y = 10;
-	sf::FloatRect textRectSendQueue = text.getLocalBounds();
-	text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y);
-
-	// Underline text
-	sf::RectangleShape underline(sf::Vector2f(textRectSendQueue.width, 2));
-	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + textRectSendQueue.height);
-	underline.setFillColor(sf::Color::White);
-	window.draw(underline);
-	window.draw(text);
-
-	text.setCharacterSize(10);
-
-	sf::FloatRect recv_text_rect = text.getLocalBounds();
-
-	// Draw send queue lines
-	for (unsigned int i = 0; i < SEND_BUFFER_LINES; i++)
-	{
-		if (i < send_queue_copy.size())
-		{
-			std::string timestamp = generate_6char_timestamp(send_queue_copy[i].timestamp);
-			text.setString(timestamp + ": " + send_queue_copy[i].msg);
-		}
-		else
-		{
-			text.setString("");
-		}
-
-		// Set position
-		text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y + 30 + i * 12);
-		window.draw(text);
-	}
-
-	// Do the same for receive queue, but offset to the right
-	int receive_text_offset_x = 180;
-
-	// Draw receive queue title
-	text.setString("Receive Log");
-	text.setCharacterSize(16);
-	//textRect = text.getLocalBounds();
-	text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y);
-	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + recv_text_rect.height);
-	underline.setSize(sf::Vector2f(recv_text_rect.width, 2));
-	window.draw(underline);
-	window.draw(text);
-
-	text.setCharacterSize(10);
-
-	// Draw receive queue lines
-	for (unsigned int i = 0; i < SEND_BUFFER_LINES; i++)
-	{
-		if (i < display_recv_queue_copy.size())
-		{
-			std::string timestamp = generate_6char_timestamp(display_recv_queue_copy[i].timestamp);
-			text.setString(timestamp + ": " + display_recv_queue_copy[i].msg);
-		}
-		else
-		{
-			text.setString("");
-		}
-
-		// Set position
-		//textRect = text.getLocalBounds();
-		text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y + 30 + i * 12);
-		window.draw(text);
-	}
-}
-
-
 
 void DrawBufferVisualization(sf::RenderWindow& window)
 {
@@ -785,8 +680,19 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 
 	// Concatenate send queue messages
 	std::string send_queue_text;
+	
+	int num_messages = 0;
 	for (const auto& message : send_queue_copy) {
-		send_queue_text += generate_6char_timestamp(message.timestamp) + ": " + message.msg + "";
+		send_queue_text += generate_6char_timestamp(message.timestamp) + ": " + message.msg + "\n";
+		
+		num_messages++;
+		if (num_messages > SEND_BUFFER_LINES)
+		{
+			break;
+		}
+
+		
+
 	}
 
 
@@ -900,9 +806,19 @@ void LoadTextures()
 
 void SetupAttitudeDrawing(sf::RenderWindow& window)
 {
-
-	render_texture.create(window.getSize().x, window.getSize().y);
+	render_texture = new sf::RenderTexture();
+	
+	render_texture->create(window.getSize().x, window.getSize().y);
 }
+
+
+
+#define IMU_CAL_PRESS_TIME 1000
+
+bool calibrateImuClicked = false;
+std::chrono::steady_clock::time_point calibrateImuClickedTime = std::chrono::steady_clock::now();
+
+bool imuCalibratingState = false;
 
 void DrawAttitudeIndicator(sf::RenderWindow& window)
 {
@@ -955,22 +871,22 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 
 
 	//clear the rendertexture
-	render_texture.clear(sf::Color::Transparent);
+	render_texture->clear(sf::Color::Transparent);
 	
 	//draw a white circle in the static scope position of size indicator size
 	sf::CircleShape circle(indicator_size / 2);
 	circle.setFillColor(sf::Color::White);
 	circle.setOrigin(indicator_size / 2, indicator_size / 2);
 	circle.setPosition(window.getSize().x / 2, top_margin + indicator_size / 2);
-	render_texture.draw(circle);
+	render_texture->draw(circle);
 
 	//draw on the horizon sprite with multiply mode
-	render_texture.draw(horizon, sf::BlendMultiply);
+	render_texture->draw(horizon, sf::BlendMultiply);
 	
 	
 	//now draw that rendertexutre onto the window
-	render_texture.display();
-	sf::Sprite sprite(render_texture.getTexture());
+	render_texture->display();
+	sf::Sprite sprite(render_texture->getTexture());
 	window.draw(sprite);
 	
 
@@ -980,9 +896,16 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 	angle_marks.setTexture(*textures[1]);
 
 	
-	angle_marks.setPosition(window.getSize().x / 2 - indicator_size / 2, top_margin);
+	//angle_marks.setPosition(window.getSize().x / 2 - indicator_size / 2, top_margin);
 	angle_marks.setScale(indicator_size / angle_marks.getTexture()->getSize().x,indicator_size / angle_marks.getTexture()->getSize().x);
 	
+	//set origin
+	angle_marks.setOrigin(angle_marks.getTexture()->getSize().x / 2, angle_marks.getTexture()->getSize().y / 2);
+	angle_marks.setPosition(window.getSize().x / 2, top_margin + indicator_size / 2);
+
+
+	//set rotation
+	angle_marks.setRotation(roll_orientation);
 
 	window.draw(angle_marks);
 	// Draw static scope
@@ -1022,8 +945,129 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 	pitch_text.setString(pitch_string);
 	pitch_text.setPosition(window.getSize().x / 2 + indicator_size / 2 + 10, top_margin + indicator_size / 2 - pitch_text.getLocalBounds().height / 2);	
 	window.draw(pitch_text);
+
+
+
+	//draw button on the top right side of the scope for calibrating the imu
+	sf::RectangleShape calibrate_button(sf::Vector2f(100, 30));
+	
+	
+	//dark grey fill
+	calibrate_button.setFillColor(sf::Color(16, 16, 16));
+
+	//if button is hovered, change color
+	if (calibrate_button.getGlobalBounds().contains(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y))
+	{
+		calibrate_button.setFillColor(sf::Color(32, 32, 32));
+	}
+	
+	
+	//white outline
+	calibrate_button.setOutlineColor(sf::Color::White);
+	calibrate_button.setOutlineThickness(2);
+
+	calibrate_button.setPosition(window.getSize().x / 2 + indicator_size/2, 20);
 	
 
+	
+
+	
+
+	bool mouseIn = calibrate_button.getGlobalBounds().contains(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y);
+
+
+
+	std::string calibrate_text = "Reboot MCU";
+	
+
+	auto c = std::chrono::high_resolution_clock::now();
+	if (mouseIn && sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+	{
+
+		
+		if (calibrateImuClicked == false)
+		{
+			//set timer
+			calibrateImuClickedTime = c;
+		}
+		
+		calibrateImuClicked = true;
+
+		//if the timer is greater than the time limit, calibrate the imu
+		if (std::chrono::duration_cast<std::chrono::milliseconds>(c - calibrateImuClickedTime).count() > 1000 && calibrateImuClicked == true && !imuCalibratingState)
+		{
+			//calibrateImuClicked = false;
+			
+			/* PERFORM CALIBRATION */
+			imuCalibratingState = true;
+
+			//send singular calibration command
+			push_msg("REBOOT");
+			
+		}
+
+		//also set the text to a countdown of the time left before calibration
+		calibrate_text = std::to_string(IMU_CAL_PRESS_TIME - std::chrono::duration_cast<std::chrono::milliseconds>(c - calibrateImuClickedTime).count());
+	
+
+
+
+	
+
+	}
+	else
+	{
+		calibrateImuClicked = false;
+	}
+
+	
+	//if imuCalibratingState is true, and the time since press is imu cal press time + 3000ms, then set imuCalibratingState to false 
+	if (imuCalibratingState && std::chrono::duration_cast<std::chrono::milliseconds>(c - calibrateImuClickedTime).count() > IMU_CAL_PRESS_TIME + 3000)
+	{
+		imuCalibratingState = false;
+	}
+
+
+
+	//if mouse hovering over, change color to slightly lighter
+	if (mouseIn)
+	{
+		calibrate_button.setFillColor(sf::Color(30, 30, 30));
+
+		//if mouse clicked, change color to even lighter
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+		{
+			calibrate_button.setFillColor(sf::Color(40, 40, 75));
+
+		}
+	}
+
+	//if in calibrating state, set text to calibrating and disable button and set color to red
+	if (imuCalibratingState)
+	{
+		calibrate_text = "Rebooting...";
+		calibrate_button.setFillColor(sf::Color(75, 40, 40));
+
+	}
+
+
+
+	
+
+	
+	//draw
+	window.draw(calibrate_button);
+
+
+	//draw text
+	sf::Text calibrate_text_sfml;
+	calibrate_text_sfml.setFont(font);
+	calibrate_text_sfml.setCharacterSize(15);
+	calibrate_text_sfml.setFillColor(sf::Color::White);
+	calibrate_text_sfml.setString(calibrate_text);
+	calibrate_text_sfml.setPosition(calibrate_button.getPosition().x + calibrate_button.getSize().x / 2 - calibrate_text_sfml.getLocalBounds().width / 2, calibrate_button.getPosition().y + calibrate_button.getSize().y / 2 - calibrate_text_sfml.getLocalBounds().height / 2-4);
+	window.draw(calibrate_text_sfml);
+	
 	
 	
 }

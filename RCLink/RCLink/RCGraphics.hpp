@@ -9,7 +9,7 @@
 
 
 
-const int SEND_BUFFER_LINES = 32;
+const int SEND_BUFFER_LINES = 28;
 
 extern std::vector<ServoController> servoControllerVector;
 extern ThrottleController throttleController;
@@ -37,6 +37,8 @@ void ProcessControlInputs();
 void UpdateDrawConnectionStats(sf::RenderWindow& window);
 
 void DrawBufferVisualization(sf::RenderWindow& window);
+
+void SetupAttitudeDrawing(sf::RenderWindow& window);
 
 
 void UpdateDrawThrottleController(sf::RenderWindow& window);

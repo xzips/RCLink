@@ -71,7 +71,7 @@ namespace q3d
 
 	void DrawTM(sf::RenderWindow& window, TM& tm);
 
-
+	void OffsetOriginalCoords(TM& tm, float x, float y, float z);
 	
 	void SetPositionTM(TM& tm, float x, float y, float z);
 	void SetScaleTM(TM& tm, float scale);

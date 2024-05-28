@@ -24,6 +24,12 @@ std::vector<sf::Texture*> textures;
 bool escCalibrateButtonPressed = false;
 
 
+//create rendertexture of the size of the window
+sf::RenderTexture render_texture;
+
+
+
+
 ServoController* GetServoControllerByName(std::string name)
 {
 	for (auto& servo : servoControllerVector)
@@ -46,6 +52,8 @@ void LoadFont()
 		std::cout << "Error loading font" << std::endl;
         exit(1);
 	}
+
+
 }
 
 void DrawServoControllers(std::vector<ServoController>& servoControllers, sf::RenderWindow& window)
@@ -626,7 +634,7 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 
 
 
-void DrawBufferVisualization(sf::RenderWindow& window)
+void DrawBufferVisualization_SLOW(sf::RenderWindow& window)
 {
 	// Draw box to hold buffer visualization, put it below the connection stats box, and make it go down 300px
 	float outline_thickness = 3;
@@ -663,17 +671,19 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 	text.setString("Send Queue");
 	int send_text_offset_x = 10;
 	int send_text_offset_y = 10;
-	sf::FloatRect textRect = text.getLocalBounds();
+	sf::FloatRect textRectSendQueue = text.getLocalBounds();
 	text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y);
 
 	// Underline text
-	sf::RectangleShape underline(sf::Vector2f(textRect.width, 2));
-	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + textRect.height);
+	sf::RectangleShape underline(sf::Vector2f(textRectSendQueue.width, 2));
+	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + textRectSendQueue.height);
 	underline.setFillColor(sf::Color::White);
 	window.draw(underline);
 	window.draw(text);
 
 	text.setCharacterSize(10);
+
+	sf::FloatRect recv_text_rect = text.getLocalBounds();
 
 	// Draw send queue lines
 	for (unsigned int i = 0; i < SEND_BUFFER_LINES; i++)
@@ -689,7 +699,6 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 		}
 
 		// Set position
-		textRect = text.getLocalBounds();
 		text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + send_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y + 30 + i * 12);
 		window.draw(text);
 	}
@@ -700,10 +709,10 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 	// Draw receive queue title
 	text.setString("Receive Log");
 	text.setCharacterSize(16);
-	textRect = text.getLocalBounds();
+	//textRect = text.getLocalBounds();
 	text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y);
-	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + textRect.height);
-	underline.setSize(sf::Vector2f(textRect.width, 2));
+	underline.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 26 + send_text_offset_y + recv_text_rect.height);
+	underline.setSize(sf::Vector2f(recv_text_rect.width, 2));
 	window.draw(underline);
 	window.draw(text);
 
@@ -723,11 +732,135 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 		}
 
 		// Set position
-		textRect = text.getLocalBounds();
+		//textRect = text.getLocalBounds();
 		text.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin + receive_text_offset_x, outline_thickness + edge_margin + 110 + 20 + send_text_offset_y + 30 + i * 12);
 		window.draw(text);
 	}
 }
+
+
+
+void DrawBufferVisualization(sf::RenderWindow& window)
+{
+
+
+
+	//use chrono to measure runtime
+	//auto start = std::chrono::high_resolution_clock::now();
+
+
+
+
+
+	// Draw box to hold buffer visualization
+	float outline_thickness = 3;
+	float edge_margin = 20;
+	float box_width = 380;
+
+	sf::RectangleShape box(sf::Vector2f(box_width, 450));
+	box.setPosition(window.getSize().x - box_width - outline_thickness - edge_margin, outline_thickness + edge_margin + 110 + 20);
+	box.setOutlineThickness(outline_thickness);
+	box.setOutlineColor(sf::Color::White);
+	box.setFillColor(sf::Color::Transparent);
+	window.draw(box);
+
+
+
+	// Lock send_queue and receive_queue, copy them to local variables, then unlock
+	std::vector<Message> send_queue_copy;
+	{
+		std::lock_guard<std::mutex> lock(send_mutex);
+		send_queue_copy = send_queue;
+	}
+
+
+
+
+
+	// Preparing text objects
+	sf::Text text;
+	text.setFont(font);
+	text.setCharacterSize(10);
+	text.setFillColor(sf::Color::White);
+
+	// Concatenate send queue messages
+	std::string send_queue_text;
+	for (const auto& message : send_queue_copy) {
+		send_queue_text += generate_6char_timestamp(message.timestamp) + ": " + message.msg + "";
+	}
+
+
+	// Draw send queue title and concatenated text
+	text.setCharacterSize(16);
+	text.setString("Send Queue");
+	text.setPosition(box.getPosition().x + 10, box.getPosition().y + 10);
+	window.draw(text);
+
+	//draw underline for send queue text
+	sf::FloatRect textRectSendQueue = text.getLocalBounds();
+	sf::RectangleShape underline(sf::Vector2f(textRectSendQueue.width, 3));
+	underline.setPosition(box.getPosition().x + 10, box.getPosition().y + 16 + textRectSendQueue.height);
+	underline.setFillColor(sf::Color::White);
+	window.draw(underline);
+	
+	
+	
+	text.setCharacterSize(10);
+	text.setString(send_queue_text);
+	text.setPosition(box.getPosition().x + 10, box.getPosition().y + 40);
+	window.draw(text);
+
+
+
+	
+
+
+	//pop elements from the front of the receive queue until its < SEND_BUFFER_LINES
+	while (display_recv_queue.size() > SEND_BUFFER_LINES) {
+		display_recv_queue.pop_back();
+	}
+
+
+	// Concatenate receive queue messages
+	std::string receive_queue_text;
+	for (const auto& message : display_recv_queue) {
+		receive_queue_text += generate_6char_timestamp(message.timestamp) + ": " + message.msg + "";
+	}
+
+
+	//print number of messages
+	//std::cout << "Number of messages in recv queue: " << display_recv_queue_copy.size() << std::endl;
+
+	// Draw receive queue title and concatenated text
+	text.setCharacterSize(16);
+	text.setString("Receive Log");
+	text.setPosition(box.getPosition().x + 180, box.getPosition().y + 10);
+	window.draw(text);
+
+	//draw recv log underline
+	sf::FloatRect textRectRecvLog = text.getLocalBounds();
+	sf::RectangleShape underline2(sf::Vector2f(textRectRecvLog.width, 3));
+	underline2.setPosition(box.getPosition().x + 180, box.getPosition().y + 16 + textRectRecvLog.height);
+	underline2.setFillColor(sf::Color::White);
+	window.draw(underline2);
+	
+
+
+	text.setCharacterSize(10);
+	text.setString(receive_queue_text);
+	text.setPosition(box.getPosition().x + 180, box.getPosition().y + 40);
+	window.draw(text);
+
+
+
+
+	//auto end = std::chrono::high_resolution_clock::now();
+	//std::chrono::duration<double> elapsed_seconds = end - start;
+	//std::cout << "Elapsed time: " << elapsed_seconds.count() << "s\n";
+
+
+}
+
 
 
 
@@ -764,12 +897,22 @@ void LoadTextures()
 
 }
 
+
+void SetupAttitudeDrawing(sf::RenderWindow& window)
+{
+
+	render_texture.create(window.getSize().x, window.getSize().y);
+}
+
 void DrawAttitudeIndicator(sf::RenderWindow& window)
 {
 	//height and width
 	float indicator_size = 240;
-	float top_margin = 10;
+	float top_margin = 30;
 
+	float horizon_extra_scale = 1.5f;
+
+	
 	// Static scope layer
 	sf::Sprite static_scope;
 	static_scope.setTexture(*textures[2]);
@@ -781,10 +924,10 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 	// Horizon
 	sf::Sprite horizon;
 	horizon.setTexture(*textures[0]);
-	horizon.setScale(indicator_size / static_scope.getTexture()->getSize().x, indicator_size / static_scope.getTexture()->getSize().y);
+	horizon.setScale(horizon_extra_scale * indicator_size / static_scope.getTexture()->getSize().x, horizon_extra_scale * indicator_size / static_scope.getTexture()->getSize().y);
 
 	float pixels_per_pitch_degree = 146.f / 20.f;
-	float pitch_offset = pitch_orientation * pixels_per_pitch_degree;
+	float pitch_offset = pitch_orientation * pixels_per_pitch_degree * horizon_extra_scale;
 
 
 
@@ -810,9 +953,6 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 
 
 
-	//create rendertexture of the size of the window
-	sf::RenderTexture render_texture;
-	render_texture.create(window.getSize().x, window.getSize().y);
 
 	//clear the rendertexture
 	render_texture.clear(sf::Color::Transparent);
@@ -865,7 +1005,7 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 
 
 	roll_text.setString(roll_string);
-	roll_text.setPosition(window.getSize().x / 2 - roll_text.getLocalBounds().width / 2, top_margin - 6);
+	roll_text.setPosition(window.getSize().x / 2 - roll_text.getLocalBounds().width / 2, top_margin - 25);
 	window.draw(roll_text);
 
 

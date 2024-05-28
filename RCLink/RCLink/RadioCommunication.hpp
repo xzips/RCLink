@@ -16,8 +16,7 @@ void serial_thread();
 void push_msg(const std::string& msg);
 std::string pop_msg();
 
-
-
+void HandleIncomingMessage(std::string msg);
 
 bool is_error(std::string msg_str);
 

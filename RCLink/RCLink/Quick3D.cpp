@@ -115,11 +115,13 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
             float x, y, z;
             ss >> x >> y >> z;
             vertices.emplace_back(x, y, z);
-        } else if (prefix == "vn") {
+        }
+        else if (prefix == "vn") {
             float nx, ny, nz;
             ss >> nx >> ny >> nz;
             normals.emplace_back(nx, ny, nz);
-        } else if (prefix == "f") {
+        }
+        else if (prefix == "f") {
             std::string v1_str, v2_str, v3_str;
             ss >> v1_str >> v2_str >> v3_str;
 
@@ -128,10 +130,10 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
                 if (pos1 != std::string::npos) {
                     unsigned int v_idx = std::stoi(str.substr(0, pos1));
                     unsigned int vn_idx = std::stoi(str.substr(pos1 + 2));
-                    return {v_idx, vn_idx};
+                    return { v_idx, vn_idx };
                 }
-                return {std::stoi(str), 0}; // No normal index provided
-            };
+                return { std::stoi(str), 0 }; // No normal index provided
+                };
 
             auto [v1, vn1] = parseVertexIndex(v1_str);
             auto [v2, vn2] = parseVertexIndex(v2_str);
@@ -166,7 +168,8 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
                 triangle.nx = (normals[vn1 - 1].x + normals[vn2 - 1].x + normals[vn3 - 1].x) / 3;
                 triangle.ny = (normals[vn1 - 1].y + normals[vn2 - 1].y + normals[vn3 - 1].y) / 3;
                 triangle.nz = (normals[vn1 - 1].z + normals[vn2 - 1].z + normals[vn3 - 1].z) / 3;
-            } else {
+            }
+            else {
                 triangle.nx = triangle.ny = triangle.nz = 0; // Default normal if not provided
             }
 
@@ -183,36 +186,36 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
 
     file.close();
 
-	//finally we want to center model around 0, 0, 0, so comptte the average of all vertices and subtract that from all vertices
-	float avgX = 0;
-	float avgY = 0;
-	float avgZ = 0;
-    
-	for (const Triangle& triangle : tm.triangles)
-	{
-		avgX += (triangle.ox1 + triangle.ox2 + triangle.ox3) / 3;
-		avgY += (triangle.oy1 + triangle.oy2 + triangle.oy3) / 3;
-		avgZ += (triangle.oz1 + triangle.oz2 + triangle.oz3) / 3;
-	}
+    //finally we want to center model around 0, 0, 0, so comptte the average of all vertices and subtract that from all vertices
+    float avgX = 0;
+    float avgY = 0;
+    float avgZ = 0;
 
-	avgX /= tm.triangles.size();
-	avgY /= tm.triangles.size();
-	avgZ /= tm.triangles.size();
+    for (const Triangle& triangle : tm.triangles)
+    {
+        avgX += (triangle.ox1 + triangle.ox2 + triangle.ox3) / 3;
+        avgY += (triangle.oy1 + triangle.oy2 + triangle.oy3) / 3;
+        avgZ += (triangle.oz1 + triangle.oz2 + triangle.oz3) / 3;
+    }
 
-	for (Triangle& triangle : tm.triangles)
-	{
-		triangle.ox1 = triangle.ox1 - avgX;
-		triangle.oy1 = triangle.oy1 - avgY;
-		triangle.oz1 = triangle.oz1 - avgZ;
+    avgX /= tm.triangles.size();
+    avgY /= tm.triangles.size();
+    avgZ /= tm.triangles.size();
 
-		triangle.ox2 = triangle.ox2 - avgX;
-		triangle.oy2 = triangle.oy2 - avgY;
-		triangle.oz2 = triangle.oz2 - avgZ;
+    for (Triangle& triangle : tm.triangles)
+    {
+        triangle.ox1 = triangle.ox1 - avgX;
+        triangle.oy1 = triangle.oy1 - avgY;
+        triangle.oz1 = triangle.oz1 - avgZ;
 
-		triangle.ox3 = triangle.ox3 - avgX;
-		triangle.oy3 = triangle.oy3 - avgY;
-		triangle.oz3 = triangle.oz3 - avgZ;
-	}
+        triangle.ox2 = triangle.ox2 - avgX;
+        triangle.oy2 = triangle.oy2 - avgY;
+        triangle.oz2 = triangle.oz2 - avgZ;
+
+        triangle.ox3 = triangle.ox3 - avgX;
+        triangle.oy3 = triangle.oy3 - avgY;
+        triangle.oz3 = triangle.oz3 - avgZ;
+    }
 
     float maxdepth = -std::numeric_limits<float>::max();
 
@@ -233,20 +236,19 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
 
     int len = tm.triangles.size();
 
-	//set color property of each triangle
-	for (int i = 0; i < len; i++)
-	{
-		//tm.triangles[i].color = LerpColors((tm.triangles[i].z1 - mindepth) / (maxdepth - mindepth), sf::Color::Red, sf::Color::Green);
-		tm.triangles[i].color = TriLerp((tm.triangles[i].z1 - mindepth) / (maxdepth - mindepth));
-	}
-    
-
-    
-
-    
-
+    //set color property of each triangle
+    for (int i = 0; i < len; i++)
+    {
+        //tm.triangles[i].color = LerpColors((tm.triangles[i].z1 - mindepth) / (maxdepth - mindepth), sf::Color::Red, sf::Color::Green);
+        tm.triangles[i].color = TriLerp((tm.triangles[i].z1 - mindepth) / (maxdepth - mindepth));
+    }
 
 }
+
+
+    
+
+
 
 
 
@@ -355,7 +357,7 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
 
 
     
-    void DrawTM(sf::RenderWindow& window, TM& tm)
+    void DrawTMSLOW(sf::RenderWindow& window, TM& tm)
     {
         // Define the perspective projection parameters
         float fov = 90.0f;
@@ -364,7 +366,10 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
         float height = static_cast<float>(window.getSize().y);
 
 
-		
+        sf::Vector2f p1;
+        sf::Vector2f p2;
+        sf::Vector2f p3;
+
         
 
 
@@ -375,9 +380,9 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
             sf::Color col = triangle.color;
 
             // Project each vertex of the triangle
-            sf::Vector2f p1 = ProjectVertex(sf::Vector3f(triangle.x1, triangle.y1, triangle.z1), fov, aspectRatio, width, height);
-            sf::Vector2f p2 = ProjectVertex(sf::Vector3f(triangle.x2, triangle.y2, triangle.z2), fov, aspectRatio, width, height);
-            sf::Vector2f p3 = ProjectVertex(sf::Vector3f(triangle.x3, triangle.y3, triangle.z3), fov, aspectRatio, width, height);
+            p1 = ProjectVertex(sf::Vector3f(triangle.x1, triangle.y1, triangle.z1), fov, aspectRatio, width, height);
+            p2 = ProjectVertex(sf::Vector3f(triangle.x2, triangle.y2, triangle.z2), fov, aspectRatio, width, height);
+            p3 = ProjectVertex(sf::Vector3f(triangle.x3, triangle.y3, triangle.z3), fov, aspectRatio, width, height);
 
             // Draw lines between the vertices of the triangle
             sf::Vertex line1[] = { sf::Vertex(p1, col), sf::Vertex(p2, col) };
@@ -389,6 +394,36 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
             window.draw(line3, 2, sf::Lines);
             
         }
+    }
+
+    void DrawTM(sf::RenderWindow& window, TM& tm)
+    {
+        float fov = 90.0f;
+        float aspectRatio = window.getSize().x / static_cast<float>(window.getSize().y);
+        float width = static_cast<float>(window.getSize().x);
+        float height = static_cast<float>(window.getSize().y);
+
+        // Pre-calculate the number of vertices needed
+        size_t totalVertices = tm.triangles.size() * 6; // 3 lines per triangle, 2 vertices per line
+        sf::VertexArray lines(sf::Lines, totalVertices);
+
+        size_t currentIndex = 0;
+        for (const auto& triangle : tm.triangles)
+        {
+            sf::Color col = triangle.color;
+            sf::Vector2f p1 = ProjectVertex(sf::Vector3f(triangle.x1, triangle.y1, triangle.z1), fov, aspectRatio, width, height);
+            sf::Vector2f p2 = ProjectVertex(sf::Vector3f(triangle.x2, triangle.y2, triangle.z2), fov, aspectRatio, width, height);
+            sf::Vector2f p3 = ProjectVertex(sf::Vector3f(triangle.x3, triangle.y3, triangle.z3), fov, aspectRatio, width, height);
+
+            lines[currentIndex++] = sf::Vertex(p1, col);
+            lines[currentIndex++] = sf::Vertex(p2, col);
+            lines[currentIndex++] = sf::Vertex(p2, col);
+            lines[currentIndex++] = sf::Vertex(p3, col);
+            lines[currentIndex++] = sf::Vertex(p3, col);
+            lines[currentIndex++] = sf::Vertex(p1, col);
+        }
+
+        window.draw(lines);
     }
 
 
@@ -505,6 +540,29 @@ void LoadTriangleMeshOBJ(TM& tm, const char* filename) {
             triangle.z3 += tm.z;
         }
 
+
+    }
+
+
+
+    void OffsetOriginalCoords(TM& tm, float x, float y, float z)
+    {
+        for (auto& t : tm.triangles)
+        {
+			t.ox1 += x;
+			t.oy1 += y;
+			t.oz1 += z;
+
+			t.ox2 += x;
+			t.oy2 += y;
+			t.oz2 += z;
+
+			t.ox3 += x;
+			t.oy3 += y;
+			t.oz3 += z;
+
+        }
+        
 
     }
 

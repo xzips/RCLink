@@ -229,6 +229,7 @@ void serial_thread() {
                 }
 
                 string message;
+                
                 {
                     lock_guard<mutex> lock(send_mutex);
                     if (send_queue.empty()) {
@@ -241,6 +242,8 @@ void serial_thread() {
 						send_queue.erase(send_queue.begin());
                     }
                 }
+
+                
                 write(*serial_, buffer(message.data(), message.size()), ec);
                 if (ec) {
                     cerr << "Write error: " << ec.message() << endl;
@@ -318,4 +321,58 @@ void cleanup_queues() {
     lock_guard<mutex> lock2(receive_mutex);
     send_queue.clear();
     receive_queue.clear();
+}
+
+
+
+
+
+
+void HandleIncomingMessage(std::string msg)
+{
+    //just in case, check if msg begins with ERROR:, if so return
+	if (msg.find("ERROR:") == 0)
+	{
+		return;
+	}
+    
+	//if message is a yaw pitch rotation update, it will match: YPR_XXXXX_XXXXX_XXXXX where each XXXXX is an int value possibly including a negative sign as the first character
+	if (msg.find("YPR_") == 0)
+	{
+		//parse the message
+		std::string ypr = msg.substr(4);
+		std::string yaw = ypr.substr(0, ypr.find_first_of('_'));
+		ypr = ypr.substr(ypr.find_first_of('_') + 1);
+		std::string pitch = ypr.substr(0, ypr.find_first_of('_'));
+		ypr = ypr.substr(ypr.find_first_of('_') + 1);
+		std::string roll = ypr;
+
+		//convert the strings to doubles
+		double yaw_d = std::stod(yaw)/100.f;
+		double pitch_d = std::stod(pitch)/100.f;
+		double roll_d = std::stod(roll)/100.f;
+        
+
+		//update the yaw pitch roll values
+		yaw_orientation = yaw_d;
+		pitch_orientation = pitch_d;
+		roll_orientation = roll_d;
+
+
+        /*corrections for the sensor placement*/
+
+        //swap pitch and roll!
+		double temp = pitch_orientation;
+		pitch_orientation = roll_orientation;
+		roll_orientation = temp;
+
+        //negate pitch
+		pitch_orientation = -pitch_orientation;
+        
+
+		return;
+	}
+
+	
+
 }

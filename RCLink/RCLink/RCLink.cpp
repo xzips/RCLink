@@ -15,9 +15,16 @@ using namespace std;
 void define_hardware()
 {
     //95
-    servoControllerVector.push_back(ServoController(15, 0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 6, 4, "Real Test Servo", true));
-    servoControllerVector.push_back(ServoController(0,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 6, 4, "Virtual Placeholder A", false));
-    servoControllerVector.push_back(ServoController(4,  0, 270, 135, sf::Keyboard::A, sf::Keyboard::D, 10, 6, "Virtual Placeholder B", false));
+    servoControllerVector.push_back(ServoController(15, 0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 6, 4, "Left Elevator", true));
+    
+    servoControllerVector.push_back(ServoController(0,  0, 270, 95, sf::Keyboard::W, sf::Keyboard::S, 6, 4, "Right Elevator", true));
+    
+    servoControllerVector.push_back(ServoController(1,  90, 180, 135, sf::Keyboard::Q, sf::Keyboard::E, 6, 4, "Left Aileron", false));
+    servoControllerVector.push_back(ServoController(2,  90, 180, 135, sf::Keyboard::E, sf::Keyboard::Q, 6, 4, "Right Aileron", false));
+
+	servoControllerVector.push_back(ServoController(3, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false));
+
+    
 
 }
 
@@ -30,8 +37,8 @@ void load_models()
 	
     
    
-    q3d::SetPositionTM(left_elev_model, -20, 20, 100.0f);
-    q3d::SetScaleTM(left_elev_model, 6);
+    q3d::SetPositionTM(left_elev_model, -12, 20, 100.0f);
+    q3d::SetScaleTM(left_elev_model, 4);
 	q3d::VertexTransformUpdateTM(left_elev_model);
 
 	models.push_back(left_elev_model);
@@ -41,39 +48,109 @@ void load_models()
     q3d::LoadTriangleMeshOBJ(right_elev_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\RightElevator.obj");
     
     
-	q3d::SetPositionTM(right_elev_model, 20, 20, 100.0f);
-	q3d::SetScaleTM(right_elev_model, 6);
+	q3d::SetPositionTM(right_elev_model, 12, 20, 100.0f);
+	q3d::SetScaleTM(right_elev_model, 4);
 	q3d::VertexTransformUpdateTM(right_elev_model);
 
     models.push_back(right_elev_model);
-    
 
+
+    
+	//load LeftAileron and RightAileron models
+	q3d::TM left_aileron_model;
+	q3d::LoadTriangleMeshOBJ(left_aileron_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\LeftAileron.obj");
+	q3d::SetPositionTM(left_aileron_model, -20, -20, 130.0f);
+	q3d::SetScaleTM(left_aileron_model, 5);
+	q3d::VertexTransformUpdateTM(left_aileron_model);
+    
+	models.push_back(left_aileron_model);
+    
+	q3d::TM right_aileron_model;
+	q3d::LoadTriangleMeshOBJ(right_aileron_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\RightAileron.obj");
+    
+	q3d::SetPositionTM(right_aileron_model, 20, -20, 130.0f);
+	q3d::SetScaleTM(right_aileron_model, 5);
+	q3d::VertexTransformUpdateTM(right_aileron_model);
+    
+	models.push_back(right_aileron_model);
+    
+    //load rudder
+	q3d::TM rudder_model;
+	q3d::LoadTriangleMeshOBJ(rudder_model, "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink\\Models\\Rudder.obj");
+
+    //for all the verts subtract 0.5 z
+	q3d::OffsetOriginalCoords(rudder_model, 0, 0, 0.2);
+
+
+	q3d::SetPositionTM(rudder_model, 0, 30, 100.f);
+	q3d::SetScaleTM(rudder_model, 8);
+	q3d::VertexTransformUpdateTM(rudder_model);
+
+	models.push_back(rudder_model);
+    
 }
 
 void update_model_rotations()
 {
 
 
-	ServoController* left_elev_servo = GetServoControllerByName("Real Test Servo");
+	ServoController* left_elev_servo = GetServoControllerByName("Left Elevator");
 
 	if (left_elev_servo != nullptr)
 	{
-		q3d::SetRotationTM(models[0], (-left_elev_servo->curAngle -80 +370)* 3.14159f / 180.f , 0, 0);
+		q3d::SetRotationTM(models[0], (-left_elev_servo->curAngle + 300)* 3.14159f / 180.f , 0, 0);
 	}
     q3d::VertexTransformUpdateTM(models[0]);
     
 
 
     
-	ServoController* right_elev_servo = GetServoControllerByName("Virtual Placeholder A");
+	ServoController* right_elev_servo = GetServoControllerByName("Right Elevator");
    
     if (right_elev_servo != nullptr)
     {
-        q3d::SetRotationTM(models[1], (-right_elev_servo->curAngle +330) * 3.14159f / 180.f, 0, 0);
+        //+330
+        q3d::SetRotationTM(models[1], (-right_elev_servo->curAngle + 300) * 3.14159f / 180.f, 0, 0);
     }
 
     
     q3d::VertexTransformUpdateTM(models[1]);
+
+
+	ServoController* left_aileron_servo = GetServoControllerByName("Left Aileron");
+    
+	if (left_aileron_servo != nullptr)
+	{
+		q3d::SetRotationTM(models[2], (left_aileron_servo->curAngle + 80) * 3.14159f / 180.f, 0, 0);
+	}
+
+	q3d::VertexTransformUpdateTM(models[2]);
+
+	ServoController* right_aileron_servo = GetServoControllerByName("Right Aileron");
+
+	if (right_aileron_servo != nullptr)
+	{
+		q3d::SetRotationTM(models[3], (right_aileron_servo->curAngle + 80) * 3.14159f / 180.f, 0, 0);
+	}
+
+	q3d::VertexTransformUpdateTM(models[3]);
+
+
+	ServoController* rudder_servo = GetServoControllerByName("Rudder");
+    
+	if (rudder_servo != nullptr)
+	{
+		q3d::SetRotationTM(models[4], 0, (rudder_servo->curAngle + 90) * 3.14159f / 180.f, 0);
+	}
+
+	q3d::VertexTransformUpdateTM(models[4]);
+
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -84,6 +161,7 @@ int main() {
     LoadTextures();
 
     define_hardware();
+
 
 
     load_models();
@@ -97,6 +175,7 @@ int main() {
     //sf::RenderWindow window(sf::VideoMode(800, 600), "SFML shapes", sf::Style::Default, settings);
     sf::RenderWindow window(sf::VideoMode(1600, 1000), "RCLink Controller", sf::Style::Default, settings);
 
+    SetupAttitudeDrawing(window);
     //set 60fps framerate limit
     window.setFramerateLimit(60);
 
@@ -124,7 +203,14 @@ int main() {
 
         UpdateDrawThrottleController(window);
 
+
+        
+
         DrawBufferVisualization(window);
+
+
+
+
 
         DrawAttitudeIndicator(window);
 
@@ -176,11 +262,15 @@ int main() {
 
             if (!is_error(msg))
             {
-                std::lock_guard<std::mutex> lock(connection_status_mutex);
+                {
+                    std::lock_guard<std::mutex> lock(connection_status_mutex);
 
-				connection_status = ConnectionStatus::CONNECTED;
-				last_success_packet_millis = get_timestamp_ms();
+			        connection_status = ConnectionStatus::CONNECTED;
+			        last_success_packet_millis = get_timestamp_ms();
+                }
                 
+
+                HandleIncomingMessage(msg);
             }
 
             else
@@ -188,11 +278,12 @@ int main() {
                 failed_packet_count++;
             }
 
-            
-
-            
 
             //cout << "Received message: " << msg << endl;
+
+            
+
+            
         }
 
 

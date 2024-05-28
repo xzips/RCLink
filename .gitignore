@@ -15,5 +15,4 @@ RCLinkPicoFirmwareV2/RCLPF2/build
 *.opendb
 *.db-shm
 *.db-wal
-*.exe
 *.d

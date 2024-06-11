@@ -117,6 +117,9 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
         if (SERIAL_DEBUG) {
             Serial.println("Radio hardware is not connected, retrying...");
         }
+
+    
+
         return RadioLoopState::HARDWARE_NOT_RESPONDING;
     }
 

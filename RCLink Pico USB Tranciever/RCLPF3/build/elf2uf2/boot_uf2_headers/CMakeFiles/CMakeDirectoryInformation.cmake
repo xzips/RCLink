@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "C:/Users/aspen/Code/pico-sdk/src/common/boot_uf2")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/elf2uf2")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2")
 
 
 # The C and CXX include file regular expressions for this directory.

@@ -9,7 +9,7 @@ del "%BAT_DIR%nrf_rc_link.uf2" 2> nul
 call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
 :: Change to the specific project directory
-cd "C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3"
+cd "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3"
 
 :: Remove and recreate the build directory
 if exist build rmdir /s /q build

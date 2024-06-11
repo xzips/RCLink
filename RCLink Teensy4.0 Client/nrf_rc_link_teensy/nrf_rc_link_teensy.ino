@@ -32,7 +32,8 @@ void setup() {
   pwm::add_smooth_pwm(15, 135, 135, MS24_SPEED_DEG_PER_SEC);
   pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
 
-
+  //setup pin 12 for output, used for oscilloscope-based debugging of timings
+  //pinMode(12, OUTPUT);
   
   
 
@@ -48,8 +49,16 @@ void loop() {
 
   startTime = micros();
 
+
+
+
+
+
   //currently blocking!!
   rcon::RadioLoopState state = rcon::radio_loop(radio);
+
+  //pull pin 12 high
+  digitalWrite(12, HIGH);
 
   endTime = micros();
   elapsedTime = endTime - startTime;

@@ -13,8 +13,11 @@
 #define SERIAL_LOOP_DELAY_MS 0 // 500packet/sec max speed
 #define RF_LOOP_DELAY_MS 16
 
-#define SIZE_OF_BUFFER 6
+#define SIZE_OF_BUFFER 2
 #define MAX_STRING_LENGTH 32
+
+#define CORE0_DEBUG_PIN 0
+#define CORE1_DEBUG_PIN 1
 
 //macro for printf_safe which calls printf only if the serial port is connected
 #define printf_safe(...) if (tud_cdc_connected()) {printf(__VA_ARGS__);}
@@ -92,8 +95,16 @@ char serial_incoming_tmp[MAX_STRING_LENGTH];
 
 void core0_rf_loop()
 {
+    //do a pattern of setting gpiuo pin to high then low for exactly 150us
+
     radio.stopListening();
-    sleep_us(130);
+    //sleep_us(130);
+
+    gpio_put(CORE0_DEBUG_PIN, 1);
+    sleep_us(150);
+    gpio_put(CORE0_DEBUG_PIN, 0);
+    sleep_us(10);
+
 
     //pico always starts transmission, and the other one probably isn't ready yet, so we need to wait for a response
     if (!connected){
@@ -133,10 +144,15 @@ void core0_rf_loop()
 
     mutex_exit(&mutex_serial_outgoing_buffer);
 
+    //set the core 0 debug pin to high when transmitting
+    gpio_put(CORE0_DEBUG_PIN, 1);
 
     //send the data
     bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
 
+
+    //set debug pin to low after transmission
+    gpio_put(CORE0_DEBUG_PIN, 0);
     
 
     if (report) {
@@ -153,6 +169,8 @@ void core0_rf_loop()
         return;
     }
 
+
+
     //auto ack already done, now we wait for a payload to come in, so switch to RX mode and wait 130us so the other side has a chance to send their data
     radio.startListening();
     sleep_us(130);
@@ -162,6 +180,8 @@ void core0_rf_loop()
 
     long int timeout_start = to_ms_since_boot(get_absolute_time());
 
+
+    
 
     while (to_ms_since_boot(get_absolute_time()) - timeout_start < RF_RECV_TIMEOUT_MS){
         if (radio.available(&pipe)) {               // is there a payload? get the pipe number that recieved it
@@ -181,6 +201,9 @@ void core0_rf_loop()
         }
     }
 
+    //set debug pin to high after receiving
+    gpio_put(CORE0_DEBUG_PIN, 1);
+
     if (to_ms_since_boot(get_absolute_time()) - timeout_start >= RF_RECV_TIMEOUT_MS){
         //printf_safe("ERROR: RF Data Timeout\n");
 
@@ -190,9 +213,17 @@ void core0_rf_loop()
 
         connected = false;
         return;
+
+
     }
 
+    
+    //set debug pin to low after receiving
+    gpio_put(CORE0_DEBUG_PIN, 0);
+
     sleep_ms(RF_LOOP_DELAY_MS);
+
+
 }
 
     
@@ -236,6 +267,11 @@ void core0_entry()
 
     //radio.printPrettyDetails();
 
+    //set the debug pin
+    gpio_init(CORE0_DEBUG_PIN);
+    gpio_set_dir(CORE0_DEBUG_PIN, GPIO_OUT);
+
+
     while (true)
     {
         core0_rf_loop();
@@ -247,6 +283,8 @@ void core0_entry()
 
 void core1_serial_loop()
 {
+
+
 
     //send one item from the queue, lock
     mutex_enter_blocking(&mutex_serial_incoming_buffer);
@@ -332,10 +370,16 @@ void core1_serial_loop()
 /* Serial Communication Thread */
 void core1_entry()
 {
+    //set the debug pin
+    gpio_init(CORE1_DEBUG_PIN);
+
+
     // wait here until the CDC ACM (serial port emulation) is connected
     while (!tud_cdc_connected()) {
         sleep_ms(10);
     }
+
+
 
     while (true)
     {

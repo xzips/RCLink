@@ -8,7 +8,7 @@
 
 #define CE_PIN 0
 #define CSN_PIN 1
-#define SERIAL_DEBUG false
+#define SERIAL_DEBUG true
 
 #define MAX_SEND_QUEUE_SIZE 6
 

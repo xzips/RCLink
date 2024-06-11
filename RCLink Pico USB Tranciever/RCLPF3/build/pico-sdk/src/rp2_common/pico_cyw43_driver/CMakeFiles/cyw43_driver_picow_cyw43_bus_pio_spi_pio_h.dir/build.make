@@ -42,10 +42,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\pico_rc_link
+CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build
+CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build"
 
 # Utility rule file for cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.
 
@@ -56,14 +56,14 @@ include pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_
 include pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\progress.make
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h: pico-sdk\src\rp2_common\pico_cyw43_driver\cyw43_bus_pio_spi.pio.h
-	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver
-	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\cyw43_bus_pio_spi.pio.h: C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_cyw43_driver\cyw43_bus_pio_spi.pio
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating cyw43_bus_pio_spi.pio.h"
-	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver
-	..\..\..\..\pioasm\pioasm.exe -o c-sdk C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.pio C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.pio.h
-	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating cyw43_bus_pio_spi.pio.h"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	..\..\..\..\pioasm\pioasm.exe -o c-sdk C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.pio "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.pio.h"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
 
 cyw43_driver_picow_cyw43_bus_pio_spi_pio_h: pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
 cyw43_driver_picow_cyw43_bus_pio_spi_pio_h: pico-sdk\src\rp2_common\pico_cyw43_driver\cyw43_bus_pio_spi.pio.h
@@ -75,12 +75,12 @@ pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bu
 .PHONY : pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\clean:
-	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
 	$(CMAKE_COMMAND) -P CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\cmake_clean.cmake
-	cd C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
 .PHONY : pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\clean
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\pico_rc_link C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_cyw43_driver C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver C:\Users\aspen\Desktop\RCLink\RCLinkPicoFirmwareV3\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link" C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_cyw43_driver "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir\depend
 

@@ -213,16 +213,16 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/aspen/Code/pico-sdk/tools/CMakeLists.txt"
   "C:/Users/aspen/Code/pico-sdk/tools/FindELF2UF2.cmake"
   "C:/Users/aspen/Code/pico-sdk/tools/FindPioasm.cmake"
-  "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/CMakeLists.txt"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/CMakeLists.txt"
   "CMakeFiles/3.27.4/CMakeASMCompiler.cmake"
   "CMakeFiles/3.27.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.27.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.4/CMakeSystem.cmake"
   "elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake"
-  "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/cmake/pico_sdk_import.cmake"
-  "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/pico_rc_link/CMakeLists.txt"
-  "C:/Users/aspen/Desktop/RCLink/RCLinkPicoFirmwareV3/RCLPF3/utility/rp2/CMakeLists.txt"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/cmake/pico_sdk_import.cmake"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/pico_rc_link/CMakeLists.txt"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/utility/rp2/CMakeLists.txt"
   )
 
 # The corresponding makefile is:

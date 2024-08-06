@@ -6,9 +6,9 @@
 #include <vector>
 #include <string>
 
-#define CE_PIN 0
-#define CSN_PIN 1
-#define SERIAL_DEBUG true
+#define CE_PIN 14
+#define CSN_PIN 10
+#define SERIAL_DEBUG false
 
 #define MAX_SEND_QUEUE_SIZE 6
 

@@ -139,7 +139,7 @@ bool initialize_serial() {
 
         //COM7 for desktop, COM5 for laptop
 
-        serial_ = new serial_port(io, "COM7");  // Adjust the port name depending on your OS and port number
+        serial_ = new serial_port(io, "COM5");  // Adjust the port name depending on your OS and port number
         serial_->set_option(serial_port_base::baud_rate(1000000));
         serial_->set_option(serial_port_base::character_size(8));
         serial_->set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::one));
@@ -382,8 +382,10 @@ void HandleIncomingMessage(std::string msg)
 		roll_orientation = temp;
 
         //negate pitch
-		pitch_orientation = -pitch_orientation;
+		//pitch_orientation = pitch_orientation;
         
+        //negate roll
+		roll_orientation = roll_orientation;
 
 		return;
 	}

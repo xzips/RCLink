@@ -17,7 +17,7 @@ mutex receive_mutex;
 
 
 
-extern const int MAX_SEND_QUEUE_SIZE = 128;
+extern const int MAX_SEND_QUEUE_SIZE = 16;
 
 std::atomic<bool> cleanupFlag(false);
 
@@ -166,132 +166,113 @@ bool initialize_serial() {
     }
 }
 
+
+
 void serial_thread() {
-    char buf[512];
+    string accumulated_data;
     boost::system::error_code ec;
-    
+
     while (!cleanupFlag.load()) {
         if (serial_ && serial_->is_open()) {
             try {
-                
-                
+                char buf[512];
                 size_t len = serial_->read_some(buffer(buf), ec);
-                
-                
-                if (!ec && len > 0) {
-                    
-                    {
-                        int strdiffz = strncmp(buf, "RECV_BUF_EMPTY", 14);
 
-						if (strdiffz != 0) {
-							//lock the receive queue mutex
+                if (!ec && len > 0) {
+                    accumulated_data.append(buf, len);
+
+                    // Check if \r\n is present in the accumulated data
+                    size_t pos;
+                    while ((pos = accumulated_data.find("\r\n")) != string::npos) {
+                        string message = accumulated_data.substr(0, pos + 2); // Include \r\n in the message
+                        accumulated_data.erase(0, pos + 2); // Remove processed message from buffer
+
+                        // Process the message
+                        int strdiffz = strncmp(message.c_str(), "RECV_BUF_EMPTY", 14);
+
+                        if (strdiffz != 0) {
                             lock_guard<mutex> lock(receive_mutex);
-                            receive_queue.push_back(Message(string(buf, len), get_timestamp_ms()));
+                            receive_queue.push_back(Message(message, get_timestamp_ms()));
+                        }
+
+						//check if recieve queue is empty, dont comp just set to empty
+
+						if (receive_queue.empty()) {
+							lock_guard<mutex> lock(connection_status_mutex);
+							connection_status = ConnectionStatus::SERIAL_OK_NO_REMOTE;
+							continue;
 						}
 
-                        else {
+                        int strdiff1 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Initiate Connection Failed", 33);
+                        int strdiff2 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Transmission Failed", 26);
+
+                        if (strdiff1 == 0 or strdiff2 == 0) {
+                            lock_guard<mutex> lock2(connection_status_mutex);
+                            connection_status = ConnectionStatus::SERIAL_OK_NO_REMOTE;
                             continue;
                         }
-                        
                     }
-                    
-                    
-					//if we recieved the message "Initiate Connection Failed\n" we should back off and NOT send any messages (use strcmp to check the first characters up to end of "Initiate Connection Failed"
-
-                    //msg = "Initiate Connection Failed\r\n"
-                    int strdiff1 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Initiate Connection Failed", 33);
-                    int strdiff2 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Transmission Failed", 26);
-                    
-
-                        
-             
-				
-
-
-					if (strdiff1 == 0 or strdiff2 == 0) {
-                        //lock connection status mutex
-                        lock_guard<mutex> lock2(connection_status_mutex);
-
-                        connection_status = ConnectionStatus::SERIAL_OK_NO_REMOTE;
-
-                  
-                        continue;
-
-                    }
-
-      
-
-                                        
                 }
                 else if (ec) {
                     cerr << "Read error: " << ec.message() << endl;
                     reset_serial();
+                    
+                    //io.stop();
+                   // return;
+
                     this_thread::sleep_for(std::chrono::milliseconds(200));
                     continue;
-
                 }
 
                 string message;
-                
                 {
                     lock_guard<mutex> lock(send_mutex);
                     if (send_queue.empty()) {
                         message = "QUEUE_EMPTY\n";
                     }
                     else {
-                        //message = send_queue.back().msg + "\n";
-                       // send_queue.pop_back();
-						message = send_queue.front().msg + "\n";
-						send_queue.erase(send_queue.begin());
+                        message = send_queue.front().msg + "\n";
+                        send_queue.erase(send_queue.begin());
                     }
                 }
 
-                
                 write(*serial_, buffer(message.data(), message.size()), ec);
                 if (ec) {
                     cerr << "Write error: " << ec.message() << endl;
                     reset_serial();
-                    this_thread::sleep_for(std::chrono::milliseconds(200));
+                    //io.stop();
+                    //return;
+                   this_thread::sleep_for(std::chrono::milliseconds(200));
                     continue;
-                    
-
-                    
                 }
             }
             catch (std::exception& e) {
                 cerr << "Error in serial_thread: " << e.what() << endl;
                 reset_serial();
+                return;
             }
         }
         else {
-            // Serial not connected, try to reconnect
             if (initialize_serial()) {
                 cout << "Serial port reconnected" << endl;
+                //wait 10ms
+				this_thread::sleep_for(std::chrono::milliseconds(10));
             }
             else {
                 cout << "Waiting to reconnect..." << endl;
-                this_thread::sleep_for(std::chrono::milliseconds(200));  // Wait before retrying to avoid busy-waiting
+                this_thread::sleep_for(std::chrono::milliseconds(200));
             }
         }
     }
 
-
-
-    //perform cleanup of serial
     reset_serial();
-
-
     io.stop();
-
-
-
-    
-    
     return;
-
-
-
 }
+
+
+
+
 
 void push_msg(const string& msg) {
     lock_guard<mutex> lock(send_mutex);

@@ -1,6 +1,6 @@
 
 //how often to send data to the computer
-#define IMU_COMM_UPDATE_DELAY 100
+#define IMU_COMM_UPDATE_DELAY 50
 
 
 namespace imu

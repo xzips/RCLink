@@ -1,3 +1,6 @@
+#define TUD_OPT_HIGH_SPEED 1
+
+
 #include "pico/stdlib.h"  // printf(), sleep_ms(), getchar_timeout_us(), to_us_since_boot(), get_absolute_time()
 #include <tusb.h>         // tud_cdc_connected()
 #include <RF24.h>         // RF24 radio object
@@ -6,14 +9,14 @@
 #include "pico/multicore.h"
 #include "pico/mutex.h" //mutexes and thread launching
 
-#define SERIAL_RECV_TIMEOUT_MS 100
-#define RF_RECV_TIMEOUT_MS 100
+#define SERIAL_RECV_TIMEOUT_MS 30
+#define RF_RECV_TIMEOUT_MS 30
 
 
 #define SERIAL_LOOP_DELAY_MS 0 // 500packet/sec max speed
-#define RF_LOOP_DELAY_MS 16
+#define RF_LOOP_DELAY_MS 6
 
-#define SIZE_OF_BUFFER 2
+#define SIZE_OF_BUFFER 3
 #define MAX_STRING_LENGTH 32
 
 #define CORE0_DEBUG_PIN 0

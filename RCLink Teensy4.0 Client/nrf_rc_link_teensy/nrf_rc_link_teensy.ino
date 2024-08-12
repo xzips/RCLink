@@ -28,7 +28,8 @@ void setup() {
 
     
   const int MS24_SPEED_DEG_PER_SEC = 180;
-  
+
+pwm::add_smooth_pwm(5, 135, 135, MS24_SPEED_DEG_PER_SEC);
   pwm::add_smooth_pwm(15, 135, 135, MS24_SPEED_DEG_PER_SEC);
   pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
 

@@ -10,12 +10,12 @@
 #define CSN_PIN 10
 #define SERIAL_DEBUG false
 
-#define MAX_SEND_QUEUE_SIZE 6
+#define MAX_SEND_QUEUE_SIZE 3
 
-#define RETURN_MSG_DELAY_US 50 //50
+#define RETURN_MSG_DELAY_US 6 //50
 
 #define LED_PIN 13
-#define RF_RECV_TIMEOUT_MS 100
+#define RF_RECV_TIMEOUT_MS 40
 
 extern uint8_t address[][6];
 extern bool radioNumber;

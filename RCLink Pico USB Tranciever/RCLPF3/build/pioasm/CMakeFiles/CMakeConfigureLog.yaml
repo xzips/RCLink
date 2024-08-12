@@ -63,8 +63,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-esxljz"
-      binary: "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-esxljz"
+      source: "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-in49ez"
+      binary: "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-in49ez"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
@@ -72,28 +72,28 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-esxljz'
+        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/CMakeScratch/TryCompile-in49ez'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_6c2b2\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_6c2b2.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_6c2b2.dir\\build
-        Building CXX object CMakeFiles/cmTC_6c2b2.dir/CMakeCXXCompilerABI.cpp.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_6c2b2.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico USB Tranciever\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-esxljz" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm30BB.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_9d7cf\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_9d7cf.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_9d7cf.dir\\build
+        Building CXX object CMakeFiles/cmTC_9d7cf.dir/CMakeCXXCompilerABI.cpp.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_9d7cf.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico USB Tranciever\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-in49ez" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nmA821.tmp
         CMakeCXXCompilerABI.cpp
-        Linking CXX executable cmTC_6c2b2.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_6c2b2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_6c2b2.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm3148.tmp
+        Linking CXX executable cmTC_9d7cf.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_9d7cf.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_9d7cf.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nmA8BF.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_6c2b2.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_6c2b2.dir/embed.manifest
+        Create CMakeFiles\\cmTC_9d7cf.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_9d7cf.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_6c2b2.dir/manifest.res CMakeFiles\\cmTC_6c2b2.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_9d7cf.dir/manifest.res CMakeFiles\\cmTC_9d7cf.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_6c2b2.dir\\objects1.rsp /out:cmTC_6c2b2.exe /implib:cmTC_6c2b2.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico USB Tranciever\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-esxljz\\cmTC_6c2b2.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_6c2b2.dir/intermediate.manifest CMakeFiles\\cmTC_6c2b2.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_9d7cf.dir\\objects1.rsp /out:cmTC_9d7cf.exe /implib:cmTC_9d7cf.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico USB Tranciever\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-in49ez\\cmTC_9d7cf.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_9d7cf.dir/intermediate.manifest CMakeFiles\\cmTC_9d7cf.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_6c2b2.dir/intermediate.manifest /out:CMakeFiles\\cmTC_6c2b2.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_9d7cf.dir/intermediate.manifest /out:CMakeFiles\\cmTC_9d7cf.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_6c2b2.dir/manifest.res CMakeFiles\\cmTC_6c2b2.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_9d7cf.dir/manifest.res CMakeFiles\\cmTC_9d7cf.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_6c2b2.dir\\objects1.rsp /out:cmTC_6c2b2.exe /implib:cmTC_6c2b2.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico USB Tranciever\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-esxljz\\cmTC_6c2b2.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_6c2b2.dir/intermediate.manifest CMakeFiles\\cmTC_6c2b2.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_9d7cf.dir\\objects1.rsp /out:cmTC_9d7cf.exe /implib:cmTC_9d7cf.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico USB Tranciever\\RCLPF3\\build\\pioasm\\CMakeFiles\\CMakeScratch\\TryCompile-in49ez\\cmTC_9d7cf.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_9d7cf.dir/intermediate.manifest CMakeFiles\\cmTC_9d7cf.dir/manifest.res
         
       exitCode: 0
 ...

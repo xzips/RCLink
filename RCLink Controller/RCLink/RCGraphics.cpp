@@ -11,7 +11,7 @@
 #include <string>
 
 std::vector<ServoController> servoControllerVector;
-ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.05f, 1500, 2000);
+ThrottleController throttleController(8, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.05f, 1500, 2000);
 sf::Font font;
 unsigned long frameCounter = 0;
 long int escCalTimerMS;
@@ -731,6 +731,14 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 	std::string receive_queue_text;
 	for (const auto& message : display_recv_queue) {
 		receive_queue_text += generate_6char_timestamp(message.timestamp) + ": " + message.msg + "";
+
+		//if message contains more than one \n
+		if (std::count(message.msg.begin(), message.msg.end(), '\n') > 1)
+		{
+			std::cout << "Message contains more than one newline character" << std::endl; 
+		}
+
+		
 	}
 
 

@@ -24,6 +24,7 @@ void define_hardware()
 
 	servoControllerVector.push_back(ServoController(3, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false));
 
+	servoControllerVector.push_back(ServoController(5, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Front Wheel", false));
     
 
 }
@@ -224,7 +225,6 @@ int main() {
 
         update_model_rotations();
 
-        
 
 
 
@@ -238,11 +238,23 @@ int main() {
 		}
         
 
-		if (frameCounter % 5 == 0) {
+
+        /*
+        00000000000000000000000000000000
+        MS_4_N-XXX-M-XXX-L-XXXK-XXX-PXXX
+
+        multi servo number 3 and then num-angle
+        
+        */
+
+		if (frameCounter % 10 == 0) {
 			//push_msg("Hello from main loop");
 
             std::string servoControlStr = servoControllerVector[0].GetCommandSTR();
-			push_msg(servoControlStr);
+            //push_msg(servoControlStr);
+
+            servoControlStr = servoControllerVector[5].GetCommandSTR();
+            push_msg(servoControlStr);
 
 			std::string throttleControlStr = throttleController.GetCommandSTR();
 			push_msg(throttleControlStr);

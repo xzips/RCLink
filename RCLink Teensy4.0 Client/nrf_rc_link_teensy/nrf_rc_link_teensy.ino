@@ -29,8 +29,17 @@ void setup() {
     
   const int MS24_SPEED_DEG_PER_SEC = 180;
 
-pwm::add_smooth_pwm(5, 135, 135, MS24_SPEED_DEG_PER_SEC);
-  pwm::add_smooth_pwm(15, 135, 135, MS24_SPEED_DEG_PER_SEC);
+  pwm::add_smooth_pwm(1, 135, 135, MS24_SPEED_DEG_PER_SEC);
+  pwm::add_smooth_pwm(2, 135, 135, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(5, 90, 90, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(8, 95, 95, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(9, 90, 90, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(10, 95, 95, MS24_SPEED_DEG_PER_SEC);
+
   pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
 
   //setup pin 12 for output, used for oscilloscope-based debugging of timings
@@ -77,9 +86,18 @@ void loop() {
 
 
 
-
-  rcon::HandleCommand(rf_incoming_buffer);
-  pwm::update_smooth_pwms();
+  if (!incomingBufferProcessed)
+  {
+    rcon::HandleCommand(rf_incoming_buffer);
+    incomingBufferProcessed = true;
+  }
+  
+  
+  if (pwm::should_update_pwm)
+  {
+    pwm::update_smooth_pwms();
+  }
+  
 
 
 

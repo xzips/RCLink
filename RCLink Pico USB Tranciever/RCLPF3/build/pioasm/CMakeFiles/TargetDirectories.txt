@@ -1,3 +1,0 @@
-C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/pioasm.dir
-C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/edit_cache.dir
-C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm/CMakeFiles/rebuild_cache.dir

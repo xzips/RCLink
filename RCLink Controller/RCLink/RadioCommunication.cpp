@@ -65,6 +65,31 @@ std::string ServoController::GetCommandSTR()
     
 }
 
+
+std::string ServoController::GetCompactCommandSTR()
+{
+    //should return NNXXX where NN is the servo number padded with
+	//a leading zero if necessary, and XXX is the angle padded with leading zeros if necessary
+	std::string servoNumStr = std::to_string(servoNum);
+	//pad
+	while (servoNumStr.length() < 2)
+	{
+		servoNumStr = "0" + servoNumStr;
+	}
+    
+	std::string servoPosStr = std::to_string((int)curAngle);
+    
+	//pad
+	while (servoPosStr.length() < 3)
+	{
+		servoPosStr = "0" + servoPosStr;
+	}
+
+	return servoNumStr + servoPosStr;
+
+}
+
+
 std::string ThrottleController::GetCommandSTR()
 {
     //if calibration state is 0, we need to instead send SET_PWM_XX_XXXX_XXXX for CH 04, 0000, 0000

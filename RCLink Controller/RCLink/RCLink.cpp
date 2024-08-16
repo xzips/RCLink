@@ -14,17 +14,18 @@ using namespace std;
 
 void define_hardware()
 {
-    //95
-    servoControllerVector.push_back(ServoController(15, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Left Elevator", false));
-    
-    servoControllerVector.push_back(ServoController(0,  25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Right Elevator", false));
     
     servoControllerVector.push_back(ServoController(1,  90, 180, 135, sf::Keyboard::Q, sf::Keyboard::E, 3, 2, "Left Aileron", false));
     servoControllerVector.push_back(ServoController(2,  90, 180, 135, sf::Keyboard::E, sf::Keyboard::Q, 3, 2, "Right Aileron", false));
 
-	servoControllerVector.push_back(ServoController(3, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false));
-
 	servoControllerVector.push_back(ServoController(5, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Front Wheel", false));
+    //95
+    servoControllerVector.push_back(ServoController(8, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Left Elevator", false));
+    
+	servoControllerVector.push_back(ServoController(9, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false));
+
+    servoControllerVector.push_back(ServoController(10,  25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Right Elevator", false));
+
     
 
 }
@@ -155,6 +156,59 @@ void update_model_rotations()
 }
 
 
+void SendAllServos()
+{
+	size_t i = 0;
+
+    if (servoControllerVector.size() >= 5)
+    {
+
+        for (i = 0; i < servoControllerVector.size() - 5; i += 5)
+        {
+            std::string command = "S5";
+            command += servoControllerVector[i].GetCompactCommandSTR() + "-";
+			command += servoControllerVector[i + 1].GetCompactCommandSTR() + "-";
+			command += servoControllerVector[i + 2].GetCompactCommandSTR() + "-";
+			command += servoControllerVector[i + 3].GetCompactCommandSTR() + "-";
+            command += servoControllerVector[i + 4].GetCompactCommandSTR();
+            
+            push_msg(command);
+
+			//std::cout << command << std::endl;
+
+        }
+
+
+    }
+
+    //push remainder, pad with 00000
+
+	if (i < servoControllerVector.size())
+	{
+		std::string command = "S5";
+		for (size_t j = i; j < servoControllerVector.size(); j++)
+		{
+			command += servoControllerVector[j].GetCompactCommandSTR() + "-";
+		}
+
+		for (size_t j = servoControllerVector.size() % 5; j < 5; j++)
+		{
+			command += "99999-";
+		}
+
+		//REMOVE LAST DASH
+		command.pop_back();
+
+		push_msg(command);
+
+		//std::cout << command << std::endl;
+	}
+    
+
+
+}
+
+
 int main() {
     thread background(serial_thread);
 
@@ -180,7 +234,7 @@ int main() {
     //set 60fps framerate limit
     window.setFramerateLimit(60);
 
-
+    
     float angle = 0;
 
     while (window.isOpen())
@@ -241,8 +295,9 @@ int main() {
 
         /*
         00000000000000000000000000000000
-        MS_4_N-XXX-M-XXX-L-XXXK-XXX-PXXX
-
+        MS4NNXXX-MMXXX-LLXXX-KKXXX-PPXXX
+        MS415095000950113502135
+        
         multi servo number 3 and then num-angle
         
         */
@@ -250,11 +305,7 @@ int main() {
 		if (frameCounter % 10 == 0) {
 			//push_msg("Hello from main loop");
 
-            std::string servoControlStr = servoControllerVector[0].GetCommandSTR();
-            //push_msg(servoControlStr);
-
-            servoControlStr = servoControllerVector[5].GetCommandSTR();
-            push_msg(servoControlStr);
+            SendAllServos();
 
 			std::string throttleControlStr = throttleController.GetCommandSTR();
 			push_msg(throttleControlStr);

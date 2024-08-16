@@ -2,6 +2,8 @@
 #include <Arduino.h>
 #include "PWMController.hpp"
 #include "IMUController.hpp"
+#include <string>
+#include "RadioController.hpp"
 
 namespace rcon
 {
@@ -12,7 +14,59 @@ namespace rcon
 
     void HandleCommand(char* command)
     {
+        Serial.println(command);
         
+        //static const char* 
+
+
+        /* MULTI SERVO CONTROL*/
+        //command looks like: MS4NNXXX-MMXXX-LLXXX-KKXXX-PPXXX
+        //MS401135-02135-05090-08025
+       // MS4NNXXX-MMXXX-LLXXX-KKXXX-PPXXX
+        //i.e. servo number and then angle, separated by a dash, always exactly 4 servos
+
+        static const char* multi_servo_str = "S5";
+
+        if (strncmp(command, multi_servo_str, strlen(multi_servo_str)) == 0)
+        {
+
+            std::string command_str(command);
+
+            //Serial.println(command_str.c_str());
+
+            if (command_str.length() < 31)
+            {
+                return;
+            }
+
+         
+            for (int i = 0; i < 5; i++)
+            {
+
+                int physical_servo_num = atoi (command_str.substr(2 + i * 6, 2).c_str());
+
+                if (physical_servo_num == 99)
+                {
+                  continue;
+                }
+
+                int angle = atoi(command_str.substr(4 + i * 6, 3).c_str());
+
+
+                if (SERIAL_DEBUG)
+                {
+                    //Serial.println("Multi Set Servo Did: Servo: " + String(physical_servo_num) + " Angle: " + String(angle));
+                }
+
+
+
+               
+
+                pwm::update_smooth_pwm_target(physical_servo_num, angle);
+            }
+
+        }
+
         
         /* SERVO CONTROL */
         static const char* set_servo_str = "SET_SERVO_";

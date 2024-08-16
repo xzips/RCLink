@@ -8,12 +8,41 @@
 
 Adafruit_PWMServoDriver pwm_driver = Adafruit_PWMServoDriver();
 
+unsigned long last_smooth_pwm_call;
+
+#define SMOOTH_PWM_UPDATE_DELAY_MS 50
+
+
 
 
 namespace pwm {
+  
+
 
   unsigned long last_pwm_update_millis;
   std::vector<SmoothPWM> smooth_pwms;
+
+
+
+  bool should_update_pwm()
+  {
+    unsigned long current_millis = millis();
+    unsigned long elapsed_millis = current_millis - last_pwm_update_millis;
+
+
+
+    if (elapsed_millis >= SMOOTH_PWM_UPDATE_DELAY_MS)
+    {
+      last_smooth_pwm_call = current_millis;
+      return true;
+
+
+    }
+
+    return false;
+
+  }
+
 
   void setup_pwm() {
 
@@ -84,6 +113,8 @@ namespace pwm {
       float angle_diff_step = smooth_pwm.max_speed * (elapsed_millis / 1000.0);
 
 
+
+
       if (angle_diff_abs <= angle_diff_step) {
         smooth_pwm.current_angle = smooth_pwm.target_angle;
       }
@@ -111,7 +142,7 @@ namespace pwm {
   {
     SmoothPWM smooth_pwm;
     smooth_pwm.servo_num = servo_num;
-    smooth_pwm.current_angle = 135;
+    smooth_pwm.current_angle = default_angle;
     smooth_pwm.target_angle = target_angle;
     smooth_pwm.max_speed = max_speed;
     smooth_pwm.is_esc = is_esc;

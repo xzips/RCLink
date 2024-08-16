@@ -114,6 +114,8 @@ struct ServoController
 	
 	std::string GetCommandSTR();
 
+	std::string GetCompactCommandSTR();
+
 
 };
 

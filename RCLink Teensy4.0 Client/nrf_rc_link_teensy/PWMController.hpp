@@ -30,6 +30,8 @@ const int PULSE_NEUTRAL = 307;        // Approx 1500 microseconds
 namespace pwm{
   void setup_pwm();
 
+  bool should_update_pwm();
+
   int angle2pulse_MS24(int angleDegrees);
 
   void set_servo_angle(uint8_t servoNum, int angleDegrees);

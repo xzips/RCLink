@@ -316,7 +316,7 @@ void core1_serial_loop()
             serial_tmp_buffer[serial_recv_pos] = inByte;
 
             serial_recv_pos++;
-            if (inByte == '\n'){
+            if (inByte == '\n' || inByte == '\r'){
                 serial_tmp_buffer[serial_recv_pos] = '\0';
                 break;
             }

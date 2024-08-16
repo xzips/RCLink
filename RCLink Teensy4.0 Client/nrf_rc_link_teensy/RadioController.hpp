@@ -8,7 +8,7 @@
 
 #define CE_PIN 14
 #define CSN_PIN 10
-#define SERIAL_DEBUG false
+#define SERIAL_DEBUG true
 
 #define MAX_SEND_QUEUE_SIZE 3
 
@@ -24,6 +24,9 @@ extern bool radioConnected;
 extern uint8_t lastPipeIdx;
 extern char rf_outgoing_buffer[32];
 extern char rf_incoming_buffer[32];
+extern bool incomingBufferProcessed;
+
+
 
 extern std::vector<std::string> send_queue;
 

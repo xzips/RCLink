@@ -14,6 +14,7 @@ char rf_incoming_buffer[32];
 unsigned long last_packet_timestamp_millis;
 std::vector<std::string> send_queue;
 
+bool incomingBufferProcessed = false;
 
 void rcon::clear_outgoing_buffer()
 {
@@ -101,6 +102,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 {
 
 
+    
     //if send queue vector longer than max size, pop the first element
     while (send_queue.size() > MAX_SEND_QUEUE_SIZE) {
         send_queue.erase(send_queue.begin());
@@ -186,10 +188,13 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
         last_packet_timestamp_millis = millis();
 
-        if (SERIAL_DEBUG) {
-            Serial.print("Received: ");
-            Serial.println(rf_incoming_buffer);
-        }
+        incomingBufferProcessed = false;
+
+
+        //if (SERIAL_DEBUG) {
+        //    Serial.print("Received: ");
+        //    Serial.println(rf_incoming_buffer);
+        //}
     }
 
     else{
@@ -225,7 +230,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
     if (report) {
         if (SERIAL_DEBUG) {
-            Serial.println("Successfully sent data to remote tranciever");
+            //Serial.println("Successfully sent data to remote tranciever");
         }
         return RadioLoopState::RECIVED_SENT_DATA;
     }

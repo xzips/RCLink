@@ -18,7 +18,7 @@ void define_hardware()
     servoControllerVector.push_back(ServoController(1,  90, 180, 135, sf::Keyboard::Q, sf::Keyboard::E, 3, 2, "Left Aileron", false, true));
     servoControllerVector.push_back(ServoController(2,  90, 180, 135, sf::Keyboard::E, sf::Keyboard::Q, 3, 2, "Right Aileron", false, false));
 
-	servoControllerVector.push_back(ServoController(5, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Front Wheel", false, false));
+	servoControllerVector.push_back(ServoController(5, 90, 130, 110, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Front Wheel", false, false));
     //95
     servoControllerVector.push_back(ServoController(8, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Left Elevator", false, false));
     

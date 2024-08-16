@@ -40,7 +40,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 615,
+          "DockedWidth": 644,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -51,7 +51,7 @@
               "RelativeDocumentMoniker": "RCLink\\RadioCommunication.cpp",
               "ToolTip": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.cpp",
               "RelativeToolTip": "RCLink\\RadioCommunication.cpp",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAAE8AAAAFAAAA",
+              "ViewState": "AQIAAIEBAAAAAAAAAAAtwJMBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-18T23:17:53.556Z",
               "EditorCaption": ""
@@ -98,7 +98,7 @@
           ]
         },
         {
-          "DockedWidth": 1115,
+          "DockedWidth": 1086,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -109,7 +109,7 @@
               "RelativeDocumentMoniker": "RCLink\\RCLink.cpp",
               "ToolTip": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCLink.cpp",
               "RelativeToolTip": "RCLink\\RCLink.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAJ0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-18T23:17:52.174Z",
               "IsPinned": true,

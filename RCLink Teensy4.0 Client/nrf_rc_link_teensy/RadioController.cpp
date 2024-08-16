@@ -41,6 +41,7 @@ void rcon::radio_setup(RF24 &radio)
     }
 
 
+ 
     // initialize the transceiver on the SPI bus
     if (!radio.begin()) {
         if (SERIAL_DEBUG) {
@@ -61,6 +62,7 @@ void rcon::radio_setup(RF24 &radio)
     }
 
 
+    radio.setChannel(118); // 2.518 GHz
 
     //radio.setPALevel(RF24_PA_LOW);
 

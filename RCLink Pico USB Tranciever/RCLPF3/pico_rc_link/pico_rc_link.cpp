@@ -10,11 +10,11 @@
 #include "pico/mutex.h" //mutexes and thread launching
 
 #define SERIAL_RECV_TIMEOUT_MS 250
-#define RF_RECV_TIMEOUT_MS 10
+#define RF_RECV_TIMEOUT_MS 15
 
 
-#define SERIAL_LOOP_DELAY_MS 0 // 500packet/sec max speed
-#define RF_LOOP_DELAY_MS 6
+#define SERIAL_LOOP_DELAY_MS 5 // 500packet/sec max speed
+#define RF_LOOP_DELAY_MS 3
 
 #define SIZE_OF_BUFFER 3
 #define MAX_STRING_LENGTH 32
@@ -240,6 +240,9 @@ void core0_entry()
     uint8_t address[][6] = {"1Tnsy", "2Pico"};
     bool radioNumber = 0;
 
+
+    
+
     // initialize the transceiver on the SPI bus
     while (!radio.begin()) {
         //printf_safe("ERROR: Radio Hardware Failure\n");
@@ -251,6 +254,8 @@ void core0_entry()
         sleep_ms(200);
 
     }
+
+    radio.setChannel(118); // 2.518 GHz
 
     //if initialized, lock queue and pop all items to clear it
     mutex_enter_blocking(&mutex_serial_outgoing_buffer);
@@ -338,7 +343,7 @@ void core1_serial_loop()
     }
 
     //echo back the data
-    printf_safe("ECHO:\n", serial_tmp_buffer);
+    //printf_safe("ECHO:\n", serial_tmp_buffer);
 
 
 

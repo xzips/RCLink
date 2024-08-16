@@ -93,7 +93,7 @@ void loop() {
   }
   
   
-  if (pwm::should_update_pwm)
+  if (pwm::should_update_pwm())
   {
     pwm::update_smooth_pwms();
   }

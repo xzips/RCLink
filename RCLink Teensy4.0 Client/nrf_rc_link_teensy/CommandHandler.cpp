@@ -14,7 +14,7 @@ namespace rcon
 
     void HandleCommand(char* command)
     {
-        Serial.println(command);
+        //Serial.println(command);
         
         //static const char* 
 

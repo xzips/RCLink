@@ -70,6 +70,15 @@ std::string ServoController::GetCompactCommandSTR()
 {
     //should return NNXXX where NN is the servo number padded with
 	//a leading zero if necessary, and XXX is the angle padded with leading zeros if necessary
+
+    int flippedAngle = (int)curAngle;
+
+    if (inverted)
+    {
+        flippedAngle = max_angle_cal + (min_angle_cal - flippedAngle);
+
+    }
+
 	std::string servoNumStr = std::to_string(servoNum);
 	//pad
 	while (servoNumStr.length() < 2)
@@ -77,7 +86,7 @@ std::string ServoController::GetCompactCommandSTR()
 		servoNumStr = "0" + servoNumStr;
 	}
     
-	std::string servoPosStr = std::to_string((int)curAngle);
+	std::string servoPosStr = std::to_string((int)flippedAngle);
     
 	//pad
 	while (servoPosStr.length() < 3)
@@ -215,10 +224,16 @@ void serial_thread() {
                         // Process the message
                         int strdiffz = strncmp(message.c_str(), "RECV_BUF_EMPTY", 14);
 
+                        //int strdiffz1 = strncmp(message.c_str(), "ECHO", 4);
+
+
+                        
                         if (strdiffz != 0) {
                             lock_guard<mutex> lock(receive_mutex);
                             receive_queue.push_back(Message(message, get_timestamp_ms()));
                         }
+
+						std::cout << "Received: " << message << std::endl;
 
 						//check if recieve queue is empty, dont comp just set to empty
 
@@ -250,6 +265,7 @@ void serial_thread() {
                 }
 
                 string message;
+                
                 {
                     lock_guard<mutex> lock(send_mutex);
                     if (send_queue.empty()) {
@@ -262,6 +278,10 @@ void serial_thread() {
                 }
 
                 write(*serial_, buffer(message.data(), message.size()), ec);
+
+				std::cout << "Sent: " << message << std::endl;
+                
+                
                 if (ec) {
                     cerr << "Write error: " << ec.message() << endl;
                     reset_serial();
@@ -281,7 +301,7 @@ void serial_thread() {
             if (initialize_serial()) {
                 cout << "Serial port reconnected" << endl;
                 //wait 10ms
-				this_thread::sleep_for(std::chrono::milliseconds(10));
+				this_thread::sleep_for(std::chrono::milliseconds(20));
             }
             else {
                 cout << "Waiting to reconnect..." << endl;

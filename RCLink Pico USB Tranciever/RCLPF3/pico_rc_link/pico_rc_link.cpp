@@ -9,8 +9,8 @@
 #include "pico/multicore.h"
 #include "pico/mutex.h" //mutexes and thread launching
 
-#define SERIAL_RECV_TIMEOUT_MS 30
-#define RF_RECV_TIMEOUT_MS 30
+#define SERIAL_RECV_TIMEOUT_MS 250
+#define RF_RECV_TIMEOUT_MS 10
 
 
 #define SERIAL_LOOP_DELAY_MS 0 // 500packet/sec max speed
@@ -288,6 +288,10 @@ void core1_serial_loop()
 {
 
 
+    //clear serial bnuffer
+    for (int i = 0; i < MAX_STRING_LENGTH; i++){
+        serial_tmp_buffer[i] = '\0';
+    }
 
     //send one item from the queue, lock
     mutex_enter_blocking(&mutex_serial_incoming_buffer);
@@ -309,6 +313,12 @@ void core1_serial_loop()
     long int timeout_start = to_ms_since_boot(get_absolute_time());
     long int serial_recv_pos = 0;
 
+
+    //clear serial bnuffer
+    for (int i = 0; i < MAX_STRING_LENGTH; i++){
+        serial_tmp_buffer[i] = '\0';
+    }
+
     while (to_ms_since_boot(get_absolute_time()) - timeout_start < SERIAL_RECV_TIMEOUT_MS)
     {
         if (tud_cdc_available()){
@@ -326,6 +336,9 @@ void core1_serial_loop()
             }
         }
     }
+
+    //echo back the data
+    printf_safe("ECHO:\n", serial_tmp_buffer);
 
 
 

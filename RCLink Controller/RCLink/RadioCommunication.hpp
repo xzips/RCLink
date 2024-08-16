@@ -82,6 +82,7 @@ struct ServoController
 	float angle_per_frame_pressed;
 	float angle_per_frame_released;
 	bool symmetric_response;
+	bool inverted;
 
 	ServoController(
 		int servoNum,
@@ -93,7 +94,8 @@ struct ServoController
 		float angle_per_frame_pressed,
 		float angle_per_frame_released,
 		std::string servo_name,
-		bool symmetric_response)
+		bool symmetric_response,
+		bool inverted)
 		
 		:
 		
@@ -106,7 +108,8 @@ struct ServoController
 		angle_per_frame_pressed(angle_per_frame_pressed),
 		angle_per_frame_released(angle_per_frame_released), 
 		servo_name(servo_name),
-		symmetric_response(symmetric_response)
+		symmetric_response(symmetric_response),
+		inverted(inverted)
 			
 	{
 		curAngle = neutral_angle;

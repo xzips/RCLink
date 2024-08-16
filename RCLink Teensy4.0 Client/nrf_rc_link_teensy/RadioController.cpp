@@ -191,10 +191,10 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
         incomingBufferProcessed = false;
 
 
-        //if (SERIAL_DEBUG) {
-        //    Serial.print("Received: ");
-        //    Serial.println(rf_incoming_buffer);
-        //}
+        if (SERIAL_DEBUG) {
+            Serial.print("Received: ");
+            Serial.println(rf_incoming_buffer);
+        }
     }
 
     else{

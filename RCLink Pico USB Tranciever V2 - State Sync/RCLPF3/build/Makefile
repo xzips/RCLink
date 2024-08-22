@@ -46,10 +46,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link"
+CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build"
+CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -76,9 +76,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -1700,77 +1700,77 @@ C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.s
 .PHONY : C_\Users\aspen\Code\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.s
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.obj: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.obj
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.obj
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.obj: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.obj
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.obj
 
 # target to build an object file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.obj
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.obj
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.obj
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.obj
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.i: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.i
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.i
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.i: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.i
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.i
 
 # target to preprocess a source file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.i
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.i
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.i
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.i
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.s: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.s
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.s
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.s: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.s
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.s
 
 # target to generate assembly for a file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.s
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\RF24.cpp.s
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.s
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\RF24.cpp.s
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.obj: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.obj
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.obj
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.obj: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.obj
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.obj
 
 # target to build an object file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.obj
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.obj
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.obj
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.obj
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.i: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.i
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.i
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.i: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.i
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.i
 
 # target to preprocess a source file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.i
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.i
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.i
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.i
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.s: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.s
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.s
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.s: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.s
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.s
 
 # target to generate assembly for a file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.s
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\gpio.cpp.s
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.s
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\gpio.cpp.s
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.obj: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.obj
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.obj
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.obj: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.obj
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.obj
 
 # target to build an object file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.obj
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.obj
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.obj
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.obj
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.i: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.i
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.i
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.i: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.i
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.i
 
 # target to preprocess a source file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.i
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.i
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.i
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.i
 
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.s: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.s
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.s
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.s: C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.s
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.s
 
 # target to generate assembly for a file
-C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.s
-.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever\RCLPF3\utility\rp2\spi.cpp.s
+C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pico_rc_link.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\pico_rc_link.dir\C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.s
+.PHONY : C_\Users\aspen\Desktop\RCLink\RCLink_Pico_USB_Tranciever_V2_-_State_Sync\RCLPF3\utility\rp2\spi.cpp.s
 
 pico_rc_link.obj: pico_rc_link.cpp.obj
 .PHONY : pico_rc_link.obj
@@ -1999,15 +1999,15 @@ help:
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
 	@echo ... C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/RF24.obj
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/RF24.i
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/RF24.s
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/gpio.obj
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/gpio.i
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/gpio.s
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/spi.obj
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/spi.i
-	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/spi.s
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/RF24.obj
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/RF24.i
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/RF24.s
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/gpio.obj
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/gpio.i
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/gpio.s
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/spi.obj
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/spi.i
+	@echo ... C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/spi.s
 	@echo ... pico_rc_link.obj
 	@echo ... pico_rc_link.i
 	@echo ... pico_rc_link.s

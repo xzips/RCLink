@@ -25,7 +25,12 @@ struct TelemetryState
     int16_t Roll;
     int16_t Yaw;
     uint16_t BatteryVoltage; // in millivolts
+	uint64_t remoteTimestamp; // in milliseconds
 };
+
+
+extern ControllerState controllerState;
+extern TelemetryState telemetryState;
 
 // Macros
 #define BASE64_ENCODE_OUTPUT_SIZE(n) (((n + 2) / 3) * 4)

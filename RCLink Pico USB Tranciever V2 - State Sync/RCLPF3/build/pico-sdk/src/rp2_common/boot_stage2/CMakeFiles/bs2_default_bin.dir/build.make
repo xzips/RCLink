@@ -42,10 +42,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link"
+CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build"
+CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build"
 
 # Utility rule file for bs2_default_bin.
 
@@ -56,14 +56,14 @@ include pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\compi
 include pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\progress.make
 
 pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin: pico-sdk\src\rp2_common\boot_stage2\bs2_default.bin
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\BOOT_S~1
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\BOOT_S~1
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\boot_stage2\bs2_default.bin: pico-sdk\src\rp2_common\boot_stage2\bs2_default.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\BOOT_S~1
-	echo >nul && "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin\arm-none-eabi-objcopy.exe" -Obinary "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\BOOT_S~1
+	echo >nul && "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin\arm-none-eabi-objcopy.exe" -Obinary "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 bs2_default_bin: pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin
 bs2_default_bin: pico-sdk\src\rp2_common\boot_stage2\bs2_default.bin
@@ -75,12 +75,12 @@ pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\build: bs2_de
 .PHONY : pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\build
 
 pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\clean:
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\BOOT_S~1
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\BOOT_S~1
 	$(CMAKE_COMMAND) -P CMakeFiles\bs2_default_bin.dir\cmake_clean.cmake
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 .PHONY : pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\clean
 
 pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link" C:\Users\aspen\Code\pico-sdk\src\rp2_common\boot_stage2 "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\pico-sdk\src\rp2_common\boot_stage2" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link" C:\Users\aspen\Code\pico-sdk\src\rp2_common\boot_stage2 "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\pico-sdk\src\rp2_common\boot_stage2" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\depend
 

@@ -15,7 +15,7 @@
 #define RETURN_MSG_DELAY_US 5 //50
 
 #define LED_PIN 13
-#define RF_RECV_TIMEOUT_MS 10
+#define RF_RECV_TIMEOUT_MS 25
 
 extern uint8_t address[][6];
 extern bool radioNumber;

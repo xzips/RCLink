@@ -42,10 +42,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link"
+CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build"
+CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build"
 
 # Utility rule file for PioasmBuild.
 
@@ -56,8 +56,8 @@ include pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\com
 include pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\progress.make
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild: pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-install
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-mkdir
@@ -67,64 +67,64 @@ pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete: pico-
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-configure
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-build
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Completed 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild-complete"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-done"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Completed 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild-complete"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-done"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-build: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pioasm
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pioasm
 	$(MAKE)
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-configure: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\tmp\PioasmBuild-cfgcmd.txt
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-configure: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\tmp\PioasmBuild-cache-Release.cmake
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-configure: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pioasm
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MAKE_PROGRAM:FILEPATH=nmake "-GNMake Makefiles" "-CC:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-cache-Release.cmake" -S C:/Users/aspen/Code/pico-sdk/tools/pioasm -B "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pioasm"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pioasm
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MAKE_PROGRAM:FILEPATH=nmake "-GNMake Makefiles" "-CC:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-cache-Release.cmake" -S C:/Users/aspen/Code/pico-sdk/tools/pioasm -B "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pioasm"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-download: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-source_dirinfo.txt
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-download: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-install: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pioasm
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pioasm
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir= -P "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir= -P "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-patch: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-patch-info.txt
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-patch: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-update: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-update-info.txt
 pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-update: pico-sdk\src\rp2_common\pico_cyw43_driver\pioasm\src\PioasmBuild-stamp\PioasmBuild-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'PioasmBuild'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'PioasmBuild'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 PioasmBuild: pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild
 PioasmBuild: pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild-complete
@@ -143,12 +143,12 @@ pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\build: Pioa
 .PHONY : pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\build
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\clean:
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\pico-sdk\src\RP2_CO~1\PICO_C~1
 	$(CMAKE_COMMAND) -P CMakeFiles\PioasmBuild.dir\cmake_clean.cmake
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 .PHONY : pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\clean
 
 pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link" C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_cyw43_driver "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link" C:\Users\aspen\Code\pico-sdk\src\rp2_common\pico_cyw43_driver "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\PioasmBuild.dir\depend
 

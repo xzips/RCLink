@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/tools/cmake_install.cmake")
-  include("C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/cmake_install.cmake")
-  include("C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/docs/cmake_install.cmake")
+  include("C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/tools/cmake_install.cmake")
+  include("C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/cmake_install.cmake")
+  include("C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/docs/cmake_install.cmake")
 
 endif()
 

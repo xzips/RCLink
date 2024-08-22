@@ -66,6 +66,7 @@ bool EncodeDecodeTest(bool silent)
 	ts.Roll = 124;
 	ts.Yaw = 125;
 	ts.BatteryVoltage = 126;
+	ts.remoteTimestamp = 124901241242;
 
 	encode_TelemetryState(&ts, buf);
 
@@ -85,6 +86,8 @@ bool EncodeDecodeTest(bool silent)
         std::cout << ts2.Roll << std::endl;
         std::cout << ts2.Yaw << std::endl;
         std::cout << ts2.BatteryVoltage << std::endl;
+		std::cout << ts2.remoteTimestamp << std::endl;
+        
     }
 
 
@@ -92,7 +95,8 @@ bool EncodeDecodeTest(bool silent)
 	if (ts.Pitch == ts2.Pitch &&
 		ts.Roll == ts2.Roll &&
 		ts.Yaw == ts2.Yaw &&
-		ts.BatteryVoltage == ts2.BatteryVoltage)
+		ts.BatteryVoltage == ts2.BatteryVoltage&&
+        ts.remoteTimestamp == ts2.remoteTimestamp)
 	{
 		return true;
 	}
@@ -149,25 +153,34 @@ bool base64_to_bytes(const char* base64_input, uint8_t* output, size_t* output_l
     size_t i, j;
     uint8_t buffer[4];
 
+    // Input length must be a multiple of 4
     if (input_length % 4 != 0) {
         return false; // Input length is not a multiple of 4
     }
+
+    // Adjust the length for padding characters
+    size_t actual_length = input_length;
+    if (base64_input[input_length - 1] == '=') actual_length--;
+    if (base64_input[input_length - 2] == '=') actual_length--;
 
     *output_length = 0;
     for (i = 0; i < input_length; i += 4) {
         memset(buffer, 0, 4);
         for (j = 0; j < 4; j++) {
-            buffer[j] = get_base64_value(base64_input[i + j]);
-            if (buffer[j] == 255) return false; // Invalid base64 character
+            if (base64_input[i + j] == '=') {
+                buffer[j] = 0;
+            }
+            else {
+                buffer[j] = get_base64_value(base64_input[i + j]);
+                if (buffer[j] == 255) {
+                    return false; // Invalid base64 character
+                }
+            }
         }
         output[(*output_length)++] = (buffer[0] << 2) | (buffer[1] >> 4);
-        output[(*output_length)++] = (buffer[1] << 4) | (buffer[2] >> 2);
-        output[(*output_length)++] = (buffer[2] << 6) | buffer[3];
+        if (i + 2 < actual_length) output[(*output_length)++] = (buffer[1] << 4) | (buffer[2] >> 2);
+        if (i + 3 < actual_length) output[(*output_length)++] = (buffer[2] << 6) | buffer[3];
     }
-
-    // Handle padding
-    if (base64_input[input_length - 1] == '=') (*output_length)--;
-    if (base64_input[input_length - 2] == '=') (*output_length)--;
 
     return true;
 }
@@ -217,20 +230,21 @@ bool decode_ControllerState(const char* base64_input, struct ControllerState* st
 
 // Encode TelemetryState to base64
 void encode_TelemetryState(const struct TelemetryState* state, char* base64_output) {
-    uint8_t buffer[8]; // Manually calculated size based on struct fields
+    uint8_t buffer[16]; // Manually calculated size based on struct fields
 
     // Manual serialization
     memcpy(&buffer[0], &state->Pitch, sizeof(state->Pitch));
     memcpy(&buffer[2], &state->Roll, sizeof(state->Roll));
     memcpy(&buffer[4], &state->Yaw, sizeof(state->Yaw));
     memcpy(&buffer[6], &state->BatteryVoltage, sizeof(state->BatteryVoltage));
+	memcpy(&buffer[8], &state->remoteTimestamp, sizeof(state->remoteTimestamp));
 
     bytes2base64(buffer, sizeof(buffer), base64_output);
 }
 
 // Decode base64 to TelemetryState
 bool decode_TelemetryState(const char* base64_input, struct TelemetryState* state) {
-    uint8_t buffer[8]; // Manually calculated size based on struct fields
+    uint8_t buffer[16]; // Manually calculated size based on struct fields
     size_t output_length = 0;
 
     if (!base64_to_bytes(base64_input, buffer, &output_length)) {
@@ -246,6 +260,7 @@ bool decode_TelemetryState(const char* base64_input, struct TelemetryState* stat
     memcpy(&state->Roll, &buffer[2], sizeof(state->Roll));
     memcpy(&state->Yaw, &buffer[4], sizeof(state->Yaw));
     memcpy(&state->BatteryVoltage, &buffer[6], sizeof(state->BatteryVoltage));
+	memcpy(&state->remoteTimestamp, &buffer[8], sizeof(state->remoteTimestamp));
 
     return true;
 }

@@ -42,10 +42,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link"
+CMAKE_SOURCE_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build"
+CMAKE_BINARY_DIR = "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build"
 
 # Utility rule file for ELF2UF2Build.
 
@@ -65,53 +65,53 @@ CMakeFiles\ELF2UF2Build-complete: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-pa
 CMakeFiles\ELF2UF2Build-complete: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-configure
 CMakeFiles\ELF2UF2Build-complete: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-build
 CMakeFiles\ELF2UF2Build-complete: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Completed 'ELF2UF2Build'"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/ELF2UF2Build-complete"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-done"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Completed 'ELF2UF2Build'"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/ELF2UF2Build-complete"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-done"
 
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-build: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'ELF2UF2Build'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\elf2uf2
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'ELF2UF2Build'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\elf2uf2
 	$(MAKE)
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-configure: elf2uf2\tmp\ELF2UF2Build-cfgcmd.txt
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-configure: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'ELF2UF2Build'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\elf2uf2
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MAKE_PROGRAM:FILEPATH=nmake "-GNMake Makefiles" -S C:/Users/aspen/Code/pico-sdk/tools/elf2uf2 -B "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'ELF2UF2Build'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\elf2uf2
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MAKE_PROGRAM:FILEPATH=nmake "-GNMake Makefiles" -S C:/Users/aspen/Code/pico-sdk/tools/elf2uf2 -B "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-download: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-source_dirinfo.txt
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-download: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'ELF2UF2Build'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'ELF2UF2Build'"
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download"
 
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-install: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'ELF2UF2Build'"
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build\elf2uf2
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'ELF2UF2Build'"
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build\elf2uf2
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	cd C:\Users\aspen\Desktop\RCLink\RCLINK~1\RCLPF3\build
+	cd C:\Users\aspen\Desktop\RCLink\RCLINK~2\RCLPF3\build
 
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'ELF2UF2Build'"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir= -P "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'ELF2UF2Build'"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir= -P "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir"
 
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-patch: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-patch-info.txt
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-patch: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'ELF2UF2Build'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'ELF2UF2Build'"
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch"
 
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-update: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-update-info.txt
 elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-update: elf2uf2\src\ELF2UF2Build-stamp\ELF2UF2Build-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'ELF2UF2Build'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'ELF2UF2Build'"
 	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update"
+	echo >nul && "C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update"
 
 ELF2UF2Build: CMakeFiles\ELF2UF2Build
 ELF2UF2Build: CMakeFiles\ELF2UF2Build-complete
@@ -134,6 +134,6 @@ CMakeFiles\ELF2UF2Build.dir\clean:
 .PHONY : CMakeFiles\ELF2UF2Build.dir\clean
 
 CMakeFiles\ELF2UF2Build.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\pico_rc_link" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever\RCLPF3\build\CMakeFiles\ELF2UF2Build.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\pico_rc_link" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build" "C:\Users\aspen\Desktop\RCLink\RCLink Pico USB Tranciever V2 - State Sync\RCLPF3\build\CMakeFiles\ELF2UF2Build.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles\ELF2UF2Build.dir\depend
 

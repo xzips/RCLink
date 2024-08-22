@@ -20,10 +20,10 @@ void define_hardware()
 
 	servoControllerVector.push_back(ServoController(5, 90, 130, 110, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Front Wheel", false, false));
     //95
-    servoControllerVector.push_back(ServoController(8, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Left Elevator", false, false));
+    servoControllerVector.push_back(ServoController(8, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 0, "Left Elevator", false, false));
     
     //servoControllerVector.push_back(ServoController(10,  25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Right Elevator", false));
-    servoControllerVector.push_back(ServoController(10, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Right Elevator", false, true));
+    servoControllerVector.push_back(ServoController(10, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 0, "Right Elevator", false, true));
 	servoControllerVector.push_back(ServoController(9, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false, false));
 
 
@@ -215,8 +215,10 @@ void SendAllServos()
 
 int main() {
     
-   // bool encoderDecoderStatus = EncodeDecodeTest(false);
+    //bool encoderDecoderStatus = EncodeDecodeTest(false);
 
+	//std::cout << "Encoder Decoder Test: " << encoderDecoderStatus << std::endl;
+    
     //exit(-1);
 
 
@@ -312,13 +314,13 @@ int main() {
         
         */
 
-		if (frameCounter % 10 == 0) {
+		if (frameCounter % 5 == 0) {
 			//push_msg("Hello from main loop");
 
             SendAllServos();
 
-			std::string throttleControlStr = throttleController.GetCommandSTR();
-			push_msg(throttleControlStr);
+			//std::string throttleControlStr = throttleController.GetCommandSTR();
+			//push_msg(throttleControlStr);
 
             
 		}

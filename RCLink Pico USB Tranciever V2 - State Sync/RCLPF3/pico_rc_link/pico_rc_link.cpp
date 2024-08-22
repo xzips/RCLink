@@ -10,67 +10,31 @@
 #include "pico/mutex.h" //mutexes and thread launching
 
 #define SERIAL_RECV_TIMEOUT_MS 250
-#define RF_RECV_TIMEOUT_MS 15
+#define RF_RECV_TIMEOUT_MS 50
 
 
 #define SERIAL_LOOP_DELAY_MS 5 // 500packet/sec max speed
-#define RF_LOOP_DELAY_MS 3
+#define RF_LOOP_DELAY_MS 5
 
-#define SIZE_OF_BUFFER 3
+
 #define MAX_STRING_LENGTH 32
 
-#define CORE0_DEBUG_PIN 0
-#define CORE1_DEBUG_PIN 1
 
 //macro for printf_safe which calls printf only if the serial port is connected
 #define printf_safe(...) if (tud_cdc_connected()) {printf(__VA_ARGS__);}
 
-/*Mutexes*/
-//auto_init_mutex(mutex_serial_outgoing_buffer)
-//auto_init_mutex(mutex_serial_incoming_buffer)
+
+mutex telemetry_mutex;
+mutex controller_mutex;
 
 
-mutex mutex_serial_outgoing_buffer;
-mutex mutex_serial_incoming_buffer;
-
-//PLAN for new code: rf24 and all radio goes in the main/normal/base thread, and serial goes in second thread
-
+//synced by rf24 and serial threads respectively
+char telemetryState[32];
+char controllerState[32];
 
 
-/*Circular Buffer Code*/
-typedef struct  {
-    char buffer[SIZE_OF_BUFFER][MAX_STRING_LENGTH];
-    int writeIndex;
-    int readIndex;
-    int bufferLength;
-} CircularBuffer;
+#define DEBUG_LED_PIN 25
 
-
-int push_circular(CircularBuffer *cb, const char *value) {
-    if (cb->bufferLength == SIZE_OF_BUFFER) {
-        return -1; // Buffer is full
-    }
-
-    strncpy(cb->buffer[cb->writeIndex], value, MAX_STRING_LENGTH - 1);
-    cb->buffer[cb->writeIndex][MAX_STRING_LENGTH - 1] = '\0'; // Ensure null-termination
-    cb->writeIndex = (cb->writeIndex + 1) % SIZE_OF_BUFFER;
-    cb->bufferLength++;
-
-    return 0;
-}
-
-int pop_circular(CircularBuffer *cb, char *output) {
-    if (cb->bufferLength == 0) {
-        return -1; // Buffer is empty
-    }
-
-    strncpy(output, cb->buffer[cb->readIndex], MAX_STRING_LENGTH - 1);
-    output[MAX_STRING_LENGTH - 1] = '\0'; // Ensure null-termination
-    cb->readIndex = (cb->readIndex + 1) % SIZE_OF_BUFFER;
-    cb->bufferLength--;
-
-    return 0;
-}
 
 
 
@@ -79,8 +43,7 @@ SPI spi;
 RF24 radio(6, 5);
 bool connected = false;
 
-CircularBuffer serial_outgoing_buffer;
-CircularBuffer serial_incoming_buffer;
+
 
 char rf_outgoing_buffer[MAX_STRING_LENGTH];
 char rf_incoming_buffer[MAX_STRING_LENGTH];
@@ -103,9 +66,9 @@ void core0_rf_loop()
     radio.stopListening();
     //sleep_us(130);
 
-    gpio_put(CORE0_DEBUG_PIN, 1);
+    gpio_put(DEBUG_LED_PIN, 1);
     sleep_us(150);
-    gpio_put(CORE0_DEBUG_PIN, 0);
+    gpio_put(DEBUG_LED_PIN, 0);
     sleep_us(10);
 
 
@@ -122,40 +85,28 @@ void core0_rf_loop()
         }
         else {
             //printf_safe("ERROR: Initiate Connection Failed\n");
-            mutex_enter_blocking(&mutex_serial_incoming_buffer);
-            push_circular(&serial_incoming_buffer, "ERROR: Initiate Connection Failed");
-            mutex_exit(&mutex_serial_incoming_buffer);
+            mutex_enter_blocking(&telemetry_mutex);
+            strcpy(telemetryState, "ERROR: Initiate Con. Failed");
+            mutex_exit(&telemetry_mutex);
         }
-
-    
         sleep_ms(100);
         return;
 
     }  
 
 
-    //lock mutex and check if there is any data to pop
-    mutex_enter_blocking(&mutex_serial_outgoing_buffer);
-    char serial_outgoing_tmp[MAX_STRING_LENGTH];
 
-    if (pop_circular(&serial_outgoing_buffer, serial_outgoing_tmp) == 0){
-        strcpy(rf_outgoing_buffer, serial_outgoing_tmp);
-    }
-    else{
-        strcpy(rf_outgoing_buffer, "NO_DATA");
-    }
+    mutex_enter_blocking(&controller_mutex);
+    strcpy(rf_outgoing_buffer, controllerState);
+    mutex_exit(&controller_mutex);
 
-    mutex_exit(&mutex_serial_outgoing_buffer);
 
-    //set the core 0 debug pin to high when transmitting
-    gpio_put(CORE0_DEBUG_PIN, 1);
+
 
     //send the data
-    bool report = radio.write(rf_outgoing_buffer, sizeof(rf_outgoing_buffer));
+    bool report = radio.write(rf_outgoing_buffer, sizeof(controllerState));
 
 
-    //set debug pin to low after transmission
-    gpio_put(CORE0_DEBUG_PIN, 0);
     
 
     if (report) {
@@ -164,9 +115,9 @@ void core0_rf_loop()
     else {
         //printf_safe("ERROR: Transmission Failed\n");
         
-        mutex_enter_blocking(&mutex_serial_incoming_buffer);
-        push_circular(&serial_incoming_buffer, "ERROR: Transmission Failed");
-        mutex_exit(&mutex_serial_incoming_buffer);
+        mutex_enter_blocking(&telemetry_mutex);
+        strcpy(telemetryState, "ERROR: Transmission Failed");
+        mutex_exit(&telemetry_mutex);
         
         connected = false;
         return;
@@ -195,9 +146,9 @@ void core0_rf_loop()
             //printf_safe("%s\n", rf_incoming_buffer);
 
             //lock mutex and push the data to the incoming buffer
-            mutex_enter_blocking(&mutex_serial_incoming_buffer);
-            push_circular(&serial_incoming_buffer, rf_incoming_buffer);
-            mutex_exit(&mutex_serial_incoming_buffer);
+            mutex_enter_blocking(&telemetry_mutex);
+            strcpy(telemetryState, rf_incoming_buffer);
+            mutex_exit(&telemetry_mutex);
 
 
             break;
@@ -205,14 +156,14 @@ void core0_rf_loop()
     }
 
     //set debug pin to high after receiving
-    gpio_put(CORE0_DEBUG_PIN, 1);
+    gpio_put(DEBUG_LED_PIN, 1);
 
     if (to_ms_since_boot(get_absolute_time()) - timeout_start >= RF_RECV_TIMEOUT_MS){
         //printf_safe("ERROR: RF Data Timeout\n");
 
-        mutex_enter_blocking(&mutex_serial_incoming_buffer);
-        push_circular(&serial_incoming_buffer, "ERROR: RF Data Timeout");
-        mutex_exit(&mutex_serial_incoming_buffer);
+        mutex_enter_blocking(&telemetry_mutex);
+        strcpy(telemetryState, "ERROR: RF Data Timeout");
+        mutex_exit(&telemetry_mutex);
 
         connected = false;
         return;
@@ -220,9 +171,11 @@ void core0_rf_loop()
 
     }
 
+    gpio_put(DEBUG_LED_PIN, 0);
+
+
+
     
-    //set debug pin to low after receiving
-    gpio_put(CORE0_DEBUG_PIN, 0);
 
     sleep_ms(RF_LOOP_DELAY_MS);
 
@@ -241,15 +194,15 @@ void core0_entry()
     bool radioNumber = 0;
 
 
-    
+    strcpy(controllerState, "NO_LINK");
 
     // initialize the transceiver on the SPI bus
     while (!radio.begin()) {
         //printf_safe("ERROR: Radio Hardware Failure\n");
         
-        mutex_enter_blocking(&mutex_serial_incoming_buffer);
-        push_circular(&serial_incoming_buffer, "ERROR: Radio Hardware Failure");
-        mutex_exit(&mutex_serial_incoming_buffer);
+        mutex_enter_blocking(&telemetry_mutex);
+        strcpy(telemetryState, "ERROR: Radio Hardware Failure");
+        mutex_exit(&telemetry_mutex);
 
         sleep_ms(200);
 
@@ -257,10 +210,7 @@ void core0_entry()
 
     radio.setChannel(118); // 2.518 GHz
 
-    //if initialized, lock queue and pop all items to clear it
-    mutex_enter_blocking(&mutex_serial_outgoing_buffer);
-    while (pop_circular(&serial_outgoing_buffer, rf_outgoing_buffer) == 0);
-    mutex_exit(&mutex_serial_outgoing_buffer);
+
 
 
     
@@ -276,8 +226,8 @@ void core0_entry()
     //radio.printPrettyDetails();
 
     //set the debug pin
-    gpio_init(CORE0_DEBUG_PIN);
-    gpio_set_dir(CORE0_DEBUG_PIN, GPIO_OUT);
+    gpio_init(DEBUG_LED_PIN);
+    gpio_set_dir(DEBUG_LED_PIN, GPIO_OUT);
 
 
     while (true)
@@ -299,16 +249,11 @@ void core1_serial_loop()
     }
 
     //send one item from the queue, lock
-    mutex_enter_blocking(&mutex_serial_incoming_buffer);
-    //pop to serial_tmp_buffer
-    if (pop_circular(&serial_incoming_buffer, serial_incoming_tmp) == 0){
-        strcpy(serial_tmp_buffer, serial_incoming_tmp);
-    }
-    else{
-        strcpy(serial_tmp_buffer, "RECV_BUF_EMPTY");
-    }
+    mutex_enter_blocking(&telemetry_mutex);
+    strcpy(serial_tmp_buffer, telemetryState);
+    mutex_exit(&telemetry_mutex);
 
-    mutex_exit(&mutex_serial_incoming_buffer);
+    
 
     //send the data
     printf_safe("%s\n", serial_tmp_buffer);
@@ -353,12 +298,11 @@ void core1_serial_loop()
 
         if (!tud_cdc_available())
         {
-            //printf_safe("ERROR: No Serial, sending PICO_NO_SERIAL\n");
-            //strcpy(rf_outgoing_buffer, "PICO_NO_SERIAL");
+            mutex_enter_blocking(&controller_mutex);
+      
+            strcpy(controllerState, "PICO_NO_SERIAL");
 
-            mutex_enter_blocking(&mutex_serial_outgoing_buffer);
-            push_circular(&serial_outgoing_buffer, "PICO_NO_SERIAL");
-            mutex_exit(&mutex_serial_outgoing_buffer);
+            mutex_exit(&controller_mutex);
 
         }
 
@@ -367,9 +311,11 @@ void core1_serial_loop()
             printf_safe("ERROR: Serial Timeout\n");
             //strcpy(rf_outgoing_buffer, "NO_DATA");
 
-            mutex_enter_blocking(&mutex_serial_outgoing_buffer);
-            push_circular(&serial_outgoing_buffer, "NO_DATA");
-            mutex_exit(&mutex_serial_outgoing_buffer);
+            mutex_enter_blocking(&controller_mutex);
+  
+            strcpy(controllerState, "PICO_SERIAL_ERROR");
+
+            mutex_exit(&controller_mutex);
         }
     }
     
@@ -377,9 +323,10 @@ void core1_serial_loop()
     {
         //rf_outgoing_buffer[serial_recv_pos] = '\0'; // Ensure null termination
 
-        mutex_enter_blocking(&mutex_serial_outgoing_buffer);
-        push_circular(&serial_outgoing_buffer, serial_tmp_buffer);
-        mutex_exit(&mutex_serial_outgoing_buffer);
+        mutex_enter_blocking(&controller_mutex);
+        //push_circular(&serial_outgoing_buffer, serial_tmp_buffer);
+        strcpy(controllerState, serial_tmp_buffer);
+        mutex_exit(&controller_mutex);
 
     }
 
@@ -391,8 +338,6 @@ void core1_serial_loop()
 /* Serial Communication Thread */
 void core1_entry()
 {
-    //set the debug pin
-    gpio_init(CORE1_DEBUG_PIN);
 
 
     // wait here until the CDC ACM (serial port emulation) is connected
@@ -425,8 +370,8 @@ int main()
     stdio_init_all();
 
     //initialize mutexes
-    mutex_init(&mutex_serial_outgoing_buffer);
-    mutex_init(&mutex_serial_incoming_buffer);
+    mutex_init(&controller_mutex);
+    mutex_init(&telemetry_mutex);
 
     multicore_launch_core1(core1_entry);
 

@@ -8,17 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_divider/divider.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
-  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_divider/divider.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+  "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S" "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -71,7 +71,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/utility/rp2/../.."
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/utility/rp2/../.."
   "C:/Users/aspen/Code/pico-sdk/src/common/pico_stdlib/include"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/hardware_gpio/include"
   "C:/Users/aspen/Code/pico-sdk/src/common/pico_base/include"
@@ -182,10 +182,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
   "C:/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Code/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
-  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/RF24.cpp" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/RF24.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/RF24.cpp.obj.d"
-  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/utility/rp2/gpio.cpp" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/gpio.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/gpio.cpp.obj.d"
-  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/utility/rp2/spi.cpp" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/spi.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever/RCLPF3/utility/rp2/spi.cpp.obj.d"
-  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/pico_rc_link/pico_rc_link.cpp" "CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj.d"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/RF24.cpp" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/RF24.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/RF24.cpp.obj.d"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/utility/rp2/gpio.cpp" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/gpio.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/gpio.cpp.obj.d"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/utility/rp2/spi.cpp" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/spi.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/C_/Users/aspen/Desktop/RCLink/RCLink_Pico_USB_Tranciever_V2_-_State_Sync/RCLPF3/utility/rp2/spi.cpp.obj.d"
+  "C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/pico_rc_link/pico_rc_link.cpp" "CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj" "gcc" "CMakeFiles/pico_rc_link.dir/pico_rc_link.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

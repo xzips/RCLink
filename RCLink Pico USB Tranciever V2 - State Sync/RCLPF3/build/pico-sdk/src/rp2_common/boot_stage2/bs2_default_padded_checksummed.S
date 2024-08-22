@@ -1,4 +1,4 @@
-// Padded and checksummed version of: C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever/RCLPF3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: C:/Users/aspen/Desktop/RCLink/RCLink Pico USB Tranciever V2 - State Sync/RCLPF3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

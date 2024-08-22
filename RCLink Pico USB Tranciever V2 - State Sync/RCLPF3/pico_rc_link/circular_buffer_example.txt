@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <string.h>
+
+#define SIZE_OF_BUFFER 4
+#define MAX_STRING_LENGTH 32
+
+typedef struct {
+    char buffer[SIZE_OF_BUFFER][MAX_STRING_LENGTH];
+    int writeIndex;
+    int readIndex;
+    int bufferLength;
+} CircularBuffer;
+
+// Function prototypes
+int push(CircularBuffer *cb, const char *value);
+int pop(CircularBuffer *cb, char *output);
+
+int main(void) {
+    CircularBuffer cb = { .writeIndex = 0, .readIndex = 0, .bufferLength = 0 };
+    char output[MAX_STRING_LENGTH];
+
+    // Example usage
+    push(&cb, "Hello");
+    push(&cb, "World");
+    push(&cb, "Circular");
+    push(&cb, "Extra");
+
+    while (pop(&cb, output) == 0) {
+        printf("Popped value: %s\n", output);
+    }
+    
+    push(&cb, "New!");
+    push(&cb, "New 2!");
+    
+    if (pop(&cb, output) == 0) {
+        printf("Popped value: %s\n", output);
+    }
+    
+    push(&cb, "Hello");
+    push(&cb, "World");
+    push(&cb, "Circular");
+    push(&cb, "Buffer");
+    
+    push(&cb, "Extra");
+
+    while (pop(&cb, output) == 0) {
+        printf("Popped value: %s\n", output);
+    }
+
+    return 0;
+}
+
+// Function to push a string into the circular buffer
+int push(CircularBuffer *cb, const char *value) {
+    if (cb->bufferLength == SIZE_OF_BUFFER) {
+        return -1; // Buffer is full
+    }
+
+    strncpy(cb->buffer[cb->writeIndex], value, MAX_STRING_LENGTH - 1);
+    cb->buffer[cb->writeIndex][MAX_STRING_LENGTH - 1] = '\0'; // Ensure null-termination
+    cb->writeIndex = (cb->writeIndex + 1) % SIZE_OF_BUFFER;
+    cb->bufferLength++;
+
+    return 0;
+}
+
+// Function to pop a string from the circular buffer
+int pop(CircularBuffer *cb, char *output) {
+    if (cb->bufferLength == 0) {
+        return -1; // Buffer is empty
+    }
+
+    strncpy(output, cb->buffer[cb->readIndex], MAX_STRING_LENGTH - 1);
+    output[MAX_STRING_LENGTH - 1] = '\0'; // Ensure null-termination
+    cb->readIndex = (cb->readIndex + 1) % SIZE_OF_BUFFER;
+    cb->bufferLength--;
+
+    return 0;
+}

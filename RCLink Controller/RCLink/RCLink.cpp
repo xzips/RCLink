@@ -210,7 +210,16 @@ void SendAllServos()
 }
 
 
+#include "StateSync.hpp"
+
+
 int main() {
+    
+   // bool encoderDecoderStatus = EncodeDecodeTest(false);
+
+    //exit(-1);
+
+
     thread background(serial_thread);
 
     LoadFont();

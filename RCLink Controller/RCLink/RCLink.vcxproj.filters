@@ -27,6 +27,9 @@
     <ClCompile Include="Quick3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StateSync.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RadioCommunication.hpp">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Quick3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StateSync.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

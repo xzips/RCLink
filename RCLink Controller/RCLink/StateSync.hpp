@@ -9,23 +9,23 @@
 // Structures
 struct ControllerState
 {
-    uint16_t LeftAileron;
-    uint16_t RightAileron;
-    uint16_t FrontWheel;
-    uint16_t LeftElevator;
-    uint16_t RightElevator;
-    uint16_t Rudder;
-    uint16_t Throttle;
-    bool MCUReset;
+    uint16_t LeftAileron = 0;
+	uint16_t RightAileron = 0;
+	uint16_t FrontWheel = 0;
+	uint16_t LeftElevator = 0;
+	uint16_t RightElevator = 0;
+	uint16_t Rudder = 0;
+	uint16_t Throttle = 0;
+	bool MCUReset = false;
 };
 
 struct TelemetryState
 {
-    int16_t Pitch;
-    int16_t Roll;
-    int16_t Yaw;
-    uint16_t BatteryVoltage; // in millivolts
-	uint64_t remoteTimestamp; // in milliseconds
+	int16_t Pitch = 0;
+	int16_t Roll = 0;
+	int16_t Yaw = 0;
+    uint16_t BatteryVoltage = 0; // in millivolts
+	uint64_t remoteTimestamp 0; // in milliseconds
 };
 
 

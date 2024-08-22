@@ -26,10 +26,9 @@ void define_hardware()
     servoControllerVector.push_back(ServoController(10, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 0, "Right Elevator", false, true));
 	servoControllerVector.push_back(ServoController(9, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false, false));
 
-
-    
-
 }
+
+
 
 void load_models()
 {
@@ -212,6 +211,21 @@ void SendAllServos()
 
 #include "StateSync.hpp"
 
+
+
+void UpdateControllerState()
+{
+	controllerState.FrontWheel = GetServoControllerByName("Front Wheel")->curAngle;
+	controllerState.LeftElevator = GetServoControllerByName("Left Elevator")->curAngle;
+	controllerState.RightElevator = GetServoControllerByName("Right Elevator")->curAngle;
+	controllerState.LeftAileron = GetServoControllerByName("Left Aileron")->curAngle;
+	controllerState.RightAileron = GetServoControllerByName("Right Aileron")->curAngle;
+	controllerState.Rudder = GetServoControllerByName("Rudder")->curAngle;
+	controllerState.Throttle = GetServoControllerByName("Throttle")->curAngle;
+
+	//controllerState.MCUReset = false;//need to implement this
+
+}
 
 int main() {
     

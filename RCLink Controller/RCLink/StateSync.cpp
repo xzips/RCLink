@@ -1,6 +1,10 @@
 #include "StateSync.hpp"
 #include <iostream>
 
+ControllerState controllerState;
+TelemetryState telemetryState;
+
+
 bool EncodeDecodeTest(bool silent)
 {
     ControllerState cs;

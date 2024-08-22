@@ -4,20 +4,25 @@
 #include <chrono>
 #include <thread>
 #include <string>
+#include "StateSync.hpp"
+
 
 using namespace boost::asio;
 using namespace std;
 
 // Global queues and their mutexes
-vector<Message> send_queue;
-vector<Message> receive_queue;
-vector<Message> display_recv_queue;//since these are processed instantly, we need a separate vector to display them in gui
-mutex send_mutex;
-mutex receive_mutex;
+//vector<Message> send_queue;
+//vector<Message> receive_queue;
+//vector<Message> display_recv_queue;//since these are processed instantly, we need a separate vector to display them in gui
+
+std::mutex controller_mutex;
+std::mutex telemetry_mutex;
+std::mutex last_incoming_message_mutex;
+std::mutex last_outgoing_message_mutex;
 
 
 
-extern const int MAX_SEND_QUEUE_SIZE = 16;
+//extern const int MAX_SEND_QUEUE_SIZE = 16;
 
 std::atomic<bool> cleanupFlag(false);
 
@@ -42,61 +47,6 @@ std::mutex connection_status_mutex;
 ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;
 
 
-std::string ServoController::GetCommandSTR()
-{
-    //SET_SERVO_07_090 for example format
-
-	std::string servoNumStr = std::to_string(servoNum);
-    //pad
-	while (servoNumStr.length() < 2)
-	{
-		servoNumStr = "0" + servoNumStr;
-	}
-
-	std::string servoPosStr = std::to_string((int)curAngle);
-	//pad
-
-	while (servoPosStr.length() < 3)
-	{
-		servoPosStr = "0" + servoPosStr;
-	}
-
-	return "SET_SERVO_" + servoNumStr + "_" + servoPosStr;
-    
-}
-
-
-std::string ServoController::GetCompactCommandSTR()
-{
-    //should return NNXXX where NN is the servo number padded with
-	//a leading zero if necessary, and XXX is the angle padded with leading zeros if necessary
-
-    int flippedAngle = (int)curAngle;
-
-    if (inverted)
-    {
-        flippedAngle = max_angle_cal + (min_angle_cal - flippedAngle);
-
-    }
-
-	std::string servoNumStr = std::to_string(servoNum);
-	//pad
-	while (servoNumStr.length() < 2)
-	{
-		servoNumStr = "0" + servoNumStr;
-	}
-    
-	std::string servoPosStr = std::to_string((int)flippedAngle);
-    
-	//pad
-	while (servoPosStr.length() < 3)
-	{
-		servoPosStr = "0" + servoPosStr;
-	}
-
-	return servoNumStr + servoPosStr;
-
-}
 
 
 std::string ThrottleController::GetCommandSTR()
@@ -127,6 +77,15 @@ std::string ThrottleController::GetCommandSTR()
 
 
 }
+
+
+uint16_t ThrottleController::GetMappedThrottle()
+{
+	return (uint16_t)((cur_throttle) * (pwm_full_duty - pwm_neutral_duty) + pwm_neutral_duty);
+}
+
+Message last_incoming_message;
+Message last_outgoing_message;
 
 
 
@@ -206,6 +165,8 @@ void serial_thread() {
     string accumulated_data;
     boost::system::error_code ec;
 
+    char transcode_buf[32];
+    
     while (!cleanupFlag.load()) {
         if (serial_ && serial_->is_open()) {
             try {
@@ -221,36 +182,49 @@ void serial_thread() {
                         string message = accumulated_data.substr(0, pos + 2); // Include \r\n in the message
                         accumulated_data.erase(0, pos + 2); // Remove processed message from buffer
 
-                        // Process the message
-                        int strdiffz = strncmp(message.c_str(), "RECV_BUF_EMPTY", 14);
+     
+						//strip any \n from the message
+						message.erase(std::remove(message.begin(), message.end(), '\n'), message.end());
 
-                        //int strdiffz1 = strncmp(message.c_str(), "ECHO", 4);
+						//strip and remove any \r from the message
+						message.erase(std::remove(message.begin(), message.end(), '\r'), message.end());
+                       
+                        
+
+						//std::cout << "Received: " << message << std::endl;
 
 
                         
-                        if (strdiffz != 0) {
-                            lock_guard<mutex> lock(receive_mutex);
-                            receive_queue.push_back(Message(message, get_timestamp_ms()));
-                        }
-
-						std::cout << "Received: " << message << std::endl;
-
-						//check if recieve queue is empty, dont comp just set to empty
-
-						if (receive_queue.empty()) {
-							lock_guard<mutex> lock(connection_status_mutex);
-							connection_status = ConnectionStatus::SERIAL_OK_NO_REMOTE;
-							continue;
-						}
-
-                        int strdiff1 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Initiate Connection Failed", 33);
-                        int strdiff2 = strncmp(receive_queue.back().msg.c_str(), "ERROR: Transmission Failed", 26);
+                        int strdiff1 = strncmp(message.c_str(), "ERROR: Initiate Con. Failed", 33);
+                        int strdiff2 = strncmp(message.c_str(), "ERROR: Transmission Failed", 26);
 
                         if (strdiff1 == 0 or strdiff2 == 0) {
                             lock_guard<mutex> lock2(connection_status_mutex);
                             connection_status = ConnectionStatus::SERIAL_OK_NO_REMOTE;
                             continue;
                         }
+
+
+
+						bool telemetryDecodedSuccess = decode_TelemetryState(message.c_str(), &telemetryState);
+                        
+                        {
+                            lock_guard<mutex> lock3(last_incoming_message_mutex);
+                        
+                            last_incoming_message = message;
+
+                            if (!telemetryDecodedSuccess)
+                            {
+							    last_incoming_message.msg += std::string(" (Decoding Error)");
+								std::cout << "Decoding Error: " << message << std::endl;
+                                continue;
+                            }
+
+                        }
+
+
+
+                        
                     }
                 }
                 else if (ec) {
@@ -267,19 +241,17 @@ void serial_thread() {
                 string message;
                 
                 {
-                    lock_guard<mutex> lock(send_mutex);
-                    if (send_queue.empty()) {
-                        message = "QUEUE_EMPTY\n";
-                    }
-                    else {
-                        message = send_queue.front().msg + "\n";
-                        send_queue.erase(send_queue.begin());
-                    }
+                    lock_guard<mutex> lock(controller_mutex);
+               
+					encode_ControllerState(&controllerState, transcode_buf);
+
                 }
+
+				message = std::string(transcode_buf) + "\n";
 
                 write(*serial_, buffer(message.data(), message.size()), ec);
 
-				std::cout << "Sent: " << message << std::endl;
+				//std::cout << "Sent: " << message << std::endl;
                 
                 
                 if (ec) {
@@ -319,103 +291,61 @@ void serial_thread() {
 
 
 
-void push_msg(const string& msg) {
-    lock_guard<mutex> lock(send_mutex);
-    send_queue.push_back(Message(msg, get_timestamp_ms()));
-
-	//if there are more than 100 messages in the queue we should remove the oldest message
-	while (send_queue.size() > MAX_SEND_QUEUE_SIZE)
-	{
-		send_queue.erase(send_queue.begin());
-	}
-
-}
-
-string pop_msg() {
-    lock_guard<mutex> lock(receive_mutex);
-    if (!receive_queue.empty()) {
-        string msg = receive_queue.front().msg;
-		display_recv_queue.insert(display_recv_queue.begin(), receive_queue.front());
-        receive_queue.erase(receive_queue.begin());
-
-           
-
-        return msg;
-    }
-    return serial_ && serial_->is_open() ? "Queue is empty" : "Serial not connected";
-}
-
-void cleanup_queues() {
-    lock_guard<mutex> lock1(send_mutex);
-    lock_guard<mutex> lock2(receive_mutex);
-    send_queue.clear();
-    receive_queue.clear();
-}
 
 
 
 
-
-
-void HandleIncomingMessage(std::string msg)
+void UpdateMainThreadTelemetryVariables()
 {
-    //just in case, check if msg begins with ERROR:, if so return
-	if (msg.find("ERROR:") == 0)
-	{
-		return;
-	}
+
     
 
-	if (msg.find("CONNECTION_ACK") == 0)
-	{
-		//clear send buffer, lock mutex
-		lock_guard<mutex> lock(send_mutex);
-		send_queue.clear();
-		//set connection status to connected
-		lock_guard<mutex> lock2(connection_status_mutex);
-		connection_status = ConnectionStatus::CONNECTED;
-		return;
-	}
+    {
+		//lock last_incoming_message_mutex
+		lock_guard<mutex> lock(last_incoming_message_mutex);
+        
+        if (last_incoming_message.msg.find("CONNECTION_ACK") == 0)
+        {
+
+            //set connection status to connected
+            lock_guard<mutex> lock2(connection_status_mutex);
+            connection_status = ConnectionStatus::CONNECTED;
+            return;
+        }
+    }
+
     
-	//if message is a yaw pitch rotation update, it will match: YPR_XXXXX_XXXXX_XXXXX where each XXXXX is an int value possibly including a negative sign as the first character
-	if (msg.find("YPR_") == 0)
-	{
-		//parse the message
-		std::string ypr = msg.substr(4);
-		std::string yaw = ypr.substr(0, ypr.find_first_of('_'));
-		ypr = ypr.substr(ypr.find_first_of('_') + 1);
-		std::string pitch = ypr.substr(0, ypr.find_first_of('_'));
-		ypr = ypr.substr(ypr.find_first_of('_') + 1);
-		std::string roll = ypr;
-
-		//convert the strings to doubles
-		double yaw_d = std::stod(yaw)/100.f;
-		double pitch_d = std::stod(pitch)/100.f;
-		double roll_d = std::stod(roll)/100.f;
-        
-
-		//update the yaw pitch roll values
-		yaw_orientation = yaw_d;
-		pitch_orientation = pitch_d;
-		roll_orientation = roll_d;
-
-
-        /*corrections for the sensor placement*/
-
-        //swap pitch and roll!
-		double temp = pitch_orientation;
-		pitch_orientation = roll_orientation;
-		roll_orientation = temp;
-
-        //negate pitch
-		//pitch_orientation = pitch_orientation;
-        
-        //negate roll
-		roll_orientation = roll_orientation;
-
-		return;
-	}
-
 	
 
+    
+
+    {
+        //lock telemetry mutex
+		lock_guard<mutex> lock(telemetry_mutex);
+
+        //update the yaw pitch roll values
+        yaw_orientation = telemetryState.Yaw / 100.f;
+		pitch_orientation = telemetryState.Pitch /100.f;
+		roll_orientation = telemetryState.Roll/ 100.f;
+
+    }
+
+        
+
+    //swap pitch and roll!
+	double temp = pitch_orientation;
+	pitch_orientation = roll_orientation;
+	roll_orientation = temp;
+
+    //negate pitch
+	//pitch_orientation = pitch_orientation;
+        
+    //negate roll
+	roll_orientation = roll_orientation;
+
+	return;
+	
+
+	
+   
 }

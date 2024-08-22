@@ -36,7 +36,7 @@ void ProcessControlInputs();
 
 void UpdateDrawConnectionStats(sf::RenderWindow& window);
 
-void DrawBufferVisualization(sf::RenderWindow& window);
+//void DrawBufferVisualization(sf::RenderWindow& window);
 
 void SetupAttitudeDrawing(sf::RenderWindow& window);
 

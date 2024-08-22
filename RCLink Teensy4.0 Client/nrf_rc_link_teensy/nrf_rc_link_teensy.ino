@@ -77,7 +77,9 @@ void loop() {
 
   
   imu::update_rotation_ypr();
-  imu::time_conditional_send_ypr();
+  imu::UpdateYPRTelemetry();
+
+
 
   if (state != rcon::RadioLoopState::CONNECTED_IDLE) {
     //rcon::print_radio_loop_state(state);

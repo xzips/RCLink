@@ -10,9 +10,7 @@
 #define CSN_PIN 10
 #define SERIAL_DEBUG false
 
-#define MAX_SEND_QUEUE_SIZE 3
-
-#define RETURN_MSG_DELAY_US 5 //50
+#define RETURN_MSG_DELAY_US 3 //50
 
 #define LED_PIN 13
 #define RF_RECV_TIMEOUT_MS 25
@@ -27,8 +25,6 @@ extern char rf_incoming_buffer[32];
 extern bool incomingBufferProcessed;
 
 
-
-extern std::vector<std::string> send_queue;
 
 namespace rcon
 {

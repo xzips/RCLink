@@ -8,15 +8,13 @@
 #include "SFML/Graphics.hpp"
 #include <string>
 
-extern const int MAX_SEND_QUEUE_SIZE;
+//extern const int MAX_SEND_QUEUE_SIZE;
 
 
 // Function declarations
 void serial_thread();
-void push_msg(const std::string& msg);
-std::string pop_msg();
 
-void HandleIncomingMessage(std::string msg);
+void UpdateMainThreadTelemetryVariables();
 
 bool is_error(std::string msg_str);
 
@@ -29,19 +27,29 @@ struct Message
 {
 	std::string msg;
 	unsigned long timestamp;
-	Message(std::string msg, unsigned long timestamp) : msg(msg), timestamp(timestamp) {}
+	Message(std::string msg = "") : msg(msg)
+	{
+		timestamp = get_timestamp_ms();
+	}
 
 };
 
-// Extern declarations for global variables
-extern std::vector<Message> send_queue;
-extern std::vector<Message> receive_queue;
-extern std::vector<Message> display_recv_queue;
+
+extern Message last_incoming_message;
+extern Message last_outgoing_message;
+
+
+
 
 extern std::atomic<bool> cleanupFlag;
 
-extern std::mutex send_mutex;
-extern std::mutex receive_mutex;
+//extern std::mutex send_mutex;
+//extern std::mutex receive_mutex;
+
+extern std::mutex controller_mutex;
+extern std::mutex telemetry_mutex;
+extern std::mutex last_incoming_message_mutex;
+extern std::mutex last_outgoing_message_mutex;
 
 extern float yaw_orientation;
 extern float pitch_orientation;
@@ -115,10 +123,27 @@ struct ServoController
 		curAngle = neutral_angle;
 	}
 	
+
+	float GetPhysicalAngle()
+	{
+
+		int flippedAngle = (int)curAngle;
+
+		if (inverted)
+		{
+			flippedAngle = max_angle_cal + (min_angle_cal - flippedAngle);
+
+		}
+
+		return flippedAngle;
+
+	
+
+	}
+
 	std::string GetCommandSTR();
 
 	std::string GetCompactCommandSTR();
-
 
 };
 
@@ -159,5 +184,6 @@ struct ThrottleController
 
 	std::string GetCommandSTR();
 	
+	uint16_t GetMappedThrottle();
 
 };

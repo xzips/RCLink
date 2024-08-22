@@ -14,7 +14,7 @@ namespace imu
     //void get_acceleration_xyz(float *x, float *y, float *z);
     void update_rotation_ypr();
 
-    void time_conditional_send_ypr();
+    void UpdateYPRTelemetry();
 
     void imu_calibrate();
 

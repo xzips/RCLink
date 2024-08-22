@@ -156,57 +156,6 @@ void update_model_rotations()
 }
 
 
-void SendAllServos()
-{
-	size_t i = 0;
-
-    if (servoControllerVector.size() >= 5)
-    {
-
-        for (i = 0; i < servoControllerVector.size() - 5; i += 5)
-        {
-            std::string command = "S5";
-            command += servoControllerVector[i].GetCompactCommandSTR() + "-";
-			command += servoControllerVector[i + 1].GetCompactCommandSTR() + "-";
-			command += servoControllerVector[i + 2].GetCompactCommandSTR() + "-";
-			command += servoControllerVector[i + 3].GetCompactCommandSTR() + "-";
-            command += servoControllerVector[i + 4].GetCompactCommandSTR();
-            
-            push_msg(command);
-
-			//std::cout << command << std::endl;
-
-        }
-
-
-    }
-
-    //push remainder, pad with 00000
-
-	if (i < servoControllerVector.size())
-	{
-		std::string command = "S5";
-		for (size_t j = i; j < servoControllerVector.size(); j++)
-		{
-			command += servoControllerVector[j].GetCompactCommandSTR() + "-";
-		}
-
-		for (size_t j = servoControllerVector.size() % 5; j < 5; j++)
-		{
-			command += "99999-";
-		}
-
-		//REMOVE LAST DASH
-		command.pop_back();
-
-		push_msg(command);
-
-		//std::cout << command << std::endl;
-	}
-    
-
-
-}
 
 
 #include "StateSync.hpp"
@@ -215,13 +164,13 @@ void SendAllServos()
 
 void UpdateControllerState()
 {
-	controllerState.FrontWheel = GetServoControllerByName("Front Wheel")->curAngle;
-	controllerState.LeftElevator = GetServoControllerByName("Left Elevator")->curAngle;
-	controllerState.RightElevator = GetServoControllerByName("Right Elevator")->curAngle;
-	controllerState.LeftAileron = GetServoControllerByName("Left Aileron")->curAngle;
-	controllerState.RightAileron = GetServoControllerByName("Right Aileron")->curAngle;
-	controllerState.Rudder = GetServoControllerByName("Rudder")->curAngle;
-	controllerState.Throttle = GetServoControllerByName("Throttle")->curAngle;
+	controllerState.FrontWheel = GetServoControllerByName("Front Wheel")->GetPhysicalAngle();
+	controllerState.LeftElevator = GetServoControllerByName("Left Elevator")->GetPhysicalAngle();
+	controllerState.RightElevator = GetServoControllerByName("Right Elevator")->GetPhysicalAngle();
+	controllerState.LeftAileron = GetServoControllerByName("Left Aileron")->GetPhysicalAngle();
+	controllerState.RightAileron = GetServoControllerByName("Right Aileron")->GetPhysicalAngle();
+	controllerState.Rudder = GetServoControllerByName("Rudder")->GetPhysicalAngle();
+    controllerState.Throttle = throttleController.GetMappedThrottle();
 
 	//controllerState.MCUReset = false;//need to implement this
 
@@ -284,13 +233,22 @@ int main() {
 
         UpdateDrawThrottleController(window);
 
+        
+        {
+			//muttex for controller state
+			std::lock_guard<std::mutex> lock(controller_mutex);
+
+
+            UpdateControllerState();
+
+        }
 
         
 
-        DrawBufferVisualization(window);
+        //DrawBufferVisualization(window);
 
 
-
+        UpdateMainThreadTelemetryVariables();
 
 
         DrawAttitudeIndicator(window);
@@ -331,7 +289,7 @@ int main() {
 		if (frameCounter % 5 == 0) {
 			//push_msg("Hello from main loop");
 
-            SendAllServos();
+            //SendAllServos();
 
 			//std::string throttleControlStr = throttleController.GetCommandSTR();
 			//push_msg(throttleControlStr);
@@ -341,15 +299,10 @@ int main() {
         
 
 
-        while (true) {
-            string msg = pop_msg();
-            if (msg == "Queue is empty" or msg == "Serial not connected") {
-                break;
-            }
+        {
+            std::lock_guard<std::mutex> lock1(last_incoming_message_mutex);
 
-            packet_count++;
-
-            if (!is_error(msg))
+            if (!is_error(last_incoming_message.msg))
             {
                 {
                     std::lock_guard<std::mutex> lock(connection_status_mutex);
@@ -359,7 +312,7 @@ int main() {
                 }
                 
 
-                HandleIncomingMessage(msg);
+                //HandleIncomingMessage(msg);
             }
 
             else
@@ -368,12 +321,11 @@ int main() {
             }
 
 
-            //cout << "Received message: " << msg << endl;
-
-            
-
             
         }
+
+            
+        
 
 
         window.display();

@@ -3,6 +3,7 @@
 #include "MPU6050_6Axis_MotionApps612.h"
 #include "RadioController.hpp"
 #include "IMUController.hpp"
+#include "StateSync.hpp"
 
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 #include "Wire.h"
@@ -165,32 +166,36 @@ namespace imu
 
     unsigned long last_imu_comm_update_millis;
 
-    void time_conditional_send_ypr()
+
+/*
+
+struct TelemetryState
+{
+	int16_t Pitch = 0;
+	int16_t Roll = 0;
+	int16_t Yaw = 0;
+    uint16_t BatteryVoltage = 0; // in millivolts
+	uint64_t remoteTimestamp = 0; // in milliseconds
+};
+
+*/
+    void UpdateYPRTelemetry()
     {
-        unsigned long current_millis = millis();
-        unsigned long elapsed_millis = current_millis - last_imu_comm_update_millis;
-
-        if (elapsed_millis < IMU_COMM_UPDATE_DELAY) return;
-
-        last_imu_comm_update_millis = current_millis;
-
-        //prepare string, keep in mind it must be max 32 bytes
-        //format as: YPR_XXXXX_XXXXX_XXXXX where XXX is the value of the ypr times 100 rounded to the nearest integer, padded with zeros if necessary
-        //e.g. YPR_00000_00000_00000
 
         int y = (int)(ypr[0] * 180 / M_PI * 100);
         int p = (int)(ypr[1] * 180 / M_PI * 100);
         int r = (int)(ypr[2] * 180 / M_PI * 100);
 
-        char ypr_str[32];
-        sprintf(ypr_str, "YPR_%05d_%05d_%05d", y, p, r);
 
-        send_queue.push_back(ypr_str);
+        telemetryState.Pitch = p;
+        telemetryState.Roll = r;
+        telemetryState.Yaw = y;
+
 
     }
 
-
 }
+
 
 
 

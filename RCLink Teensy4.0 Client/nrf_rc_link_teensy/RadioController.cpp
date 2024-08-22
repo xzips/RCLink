@@ -4,6 +4,8 @@
 #include "RF24.h"
 #include <Arduino.h>
 #include <vector>
+#include "StateSync.hpp"
+
 
 uint8_t address[][6] = { "1Tnsy", "2Pico" };
 bool radioNumber = 1;
@@ -12,7 +14,7 @@ uint8_t lastPipeIdx;
 char rf_outgoing_buffer[32];
 char rf_incoming_buffer[32];
 unsigned long last_packet_timestamp_millis;
-std::vector<std::string> send_queue;
+
 
 bool incomingBufferProcessed = false;
 
@@ -105,11 +107,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
 
 
     
-    //if send queue vector longer than max size, pop the first element
-    while (send_queue.size() > MAX_SEND_QUEUE_SIZE) {
-        send_queue.erase(send_queue.begin());
-    }
-    
+
 
     
 
@@ -219,6 +217,7 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
     clear_outgoing_buffer();
 
 
+/*
     if (send_queue.size() == 0) {
 
         sprintf(rf_outgoing_buffer, "%ld", millis());
@@ -227,6 +226,13 @@ rcon::RadioLoopState rcon::radio_loop(RF24 &radio)
         sprintf(rf_outgoing_buffer, send_queue[0].c_str());
         send_queue.erase(send_queue.begin());
     }
+*/
+
+    telemetryState.remoteTimestamp = millis();
+
+
+    encode_TelemetryState(&telemetryState, rf_outgoing_buffer);
+
 
     bool report = radio.write(&rf_outgoing_buffer, 32);
 

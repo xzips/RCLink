@@ -373,7 +373,7 @@ Disassembly of section .text:
 10000384:	0092      	lsls	r2, r2, #2
 10000386:	f003 fae1 	bl	1000394c <__wrap___aeabi_uldivmod>
 1000038a:	1b40      	subs	r0, r0, r5
-1000038c:	2831      	cmp	r0, #49	; 0x31
+1000038c:	2818      	cmp	r0, #24
 1000038e:	d812      	bhi.n	100003b6 <_Z13core0_rf_loopv+0xb2>
 10000390:	466b      	mov	r3, sp
 10000392:	0020      	movs	r0, r4
@@ -389,7 +389,7 @@ Disassembly of section .text:
 100003aa:	0089      	lsls	r1, r1, #2
 100003ac:	f003 fa90 	bl	100038d0 <__wrap___aeabi_uidiv>
 100003b0:	1b40      	subs	r0, r0, r5
-100003b2:	2831      	cmp	r0, #49	; 0x31
+100003b2:	2818      	cmp	r0, #24
 100003b4:	d9ec      	bls.n	10000390 <_Z13core0_rf_loopv+0x8c>
 100003b6:	23d0      	movs	r3, #208	; 0xd0
 100003b8:	2280      	movs	r2, #128	; 0x80
@@ -404,13 +404,13 @@ Disassembly of section .text:
 100003cc:	0092      	lsls	r2, r2, #2
 100003ce:	f003 fabd 	bl	1000394c <__wrap___aeabi_uldivmod>
 100003d2:	1b45      	subs	r5, r0, r5
-100003d4:	2d31      	cmp	r5, #49	; 0x31
+100003d4:	2d18      	cmp	r5, #24
 100003d6:	d841      	bhi.n	1000045c <_Z13core0_rf_loopv+0x158>
 100003d8:	23d0      	movs	r3, #208	; 0xd0
 100003da:	2280      	movs	r2, #128	; 0x80
 100003dc:	061b      	lsls	r3, r3, #24
 100003de:	0492      	lsls	r2, r2, #18
-100003e0:	2005      	movs	r0, #5
+100003e0:	2003      	movs	r0, #3
 100003e2:	619a      	str	r2, [r3, #24]
 100003e4:	f002 fb64 	bl	10002ab0 <sleep_ms>
 100003e8:	e012      	b.n	10000410 <_Z13core0_rf_loopv+0x10c>
@@ -463,7 +463,7 @@ Disassembly of section .text:
 10000450:	0089      	lsls	r1, r1, #2
 10000452:	f003 fa3d 	bl	100038d0 <__wrap___aeabi_uidiv>
 10000456:	1b45      	subs	r5, r0, r5
-10000458:	2d31      	cmp	r5, #49	; 0x31
+10000458:	2d18      	cmp	r5, #24
 1000045a:	d9bd      	bls.n	100003d8 <_Z13core0_rf_loopv+0xd4>
 1000045c:	4c22      	ldr	r4, [pc, #136]	; (100004e8 <_Z13core0_rf_loopv+0x1e4>)
 1000045e:	0020      	movs	r0, r4
@@ -656,7 +656,7 @@ Disassembly of section .text:
 10000632:	0092      	lsls	r2, r2, #2
 10000634:	f003 f98a 	bl	1000394c <__wrap___aeabi_uldivmod>
 10000638:	1b00      	subs	r0, r0, r4
-1000063a:	28f9      	cmp	r0, #249	; 0xf9
+1000063a:	2863      	cmp	r0, #99	; 0x63
 1000063c:	d80f      	bhi.n	1000065e <_Z17core1_serial_loopv+0x82>
 1000063e:	2000      	movs	r0, #0
 10000640:	f005 f9f6 	bl	10005a30 <tud_cdc_n_available>
@@ -669,7 +669,7 @@ Disassembly of section .text:
 10000652:	0089      	lsls	r1, r1, #2
 10000654:	f003 f93c 	bl	100038d0 <__wrap___aeabi_uidiv>
 10000658:	1b00      	subs	r0, r0, r4
-1000065a:	28f9      	cmp	r0, #249	; 0xf9
+1000065a:	2863      	cmp	r0, #99	; 0x63
 1000065c:	d9ef      	bls.n	1000063e <_Z17core1_serial_loopv+0x62>
 1000065e:	2e00      	cmp	r6, #0
 10000660:	d120      	bne.n	100006a4 <_Z17core1_serial_loopv+0xc8>
@@ -710,7 +710,7 @@ Disassembly of section .text:
 100006b0:	f006 fb76 	bl	10006da0 <strcpy>
 100006b4:	0020      	movs	r0, r4
 100006b6:	f006 fce7 	bl	10007088 <__mutex_exit_veneer>
-100006ba:	2005      	movs	r0, #5
+100006ba:	2003      	movs	r0, #3
 100006bc:	f002 f9f8 	bl	10002ab0 <sleep_ms>
 100006c0:	bd70      	pop	{r4, r5, r6, pc}
 100006c2:	21fa      	movs	r1, #250	; 0xfa

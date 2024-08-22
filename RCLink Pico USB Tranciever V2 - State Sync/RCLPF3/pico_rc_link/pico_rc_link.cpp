@@ -9,12 +9,12 @@
 #include "pico/multicore.h"
 #include "pico/mutex.h" //mutexes and thread launching
 
-#define SERIAL_RECV_TIMEOUT_MS 250
-#define RF_RECV_TIMEOUT_MS 50
+#define SERIAL_RECV_TIMEOUT_MS 100
+#define RF_RECV_TIMEOUT_MS 25
 
 
-#define SERIAL_LOOP_DELAY_MS 5 // 500packet/sec max speed
-#define RF_LOOP_DELAY_MS 5
+#define SERIAL_LOOP_DELAY_MS 3 // 500packet/sec max speed
+#define RF_LOOP_DELAY_MS 3
 
 
 #define MAX_STRING_LENGTH 32

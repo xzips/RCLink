@@ -10,8 +10,10 @@
 #include <sstream>
 #include <string>
 
+#include "StateSync.hpp"
+
 std::vector<ServoController> servoControllerVector;
-ThrottleController throttleController(8, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.05f, 1500, 2000);
+ThrottleController throttleController(4, sf::Keyboard::LShift, sf::Keyboard::LControl, 0.02f, 1500, 2000);
 sf::Font font;
 unsigned long frameCounter = 0;
 long int escCalTimerMS;
@@ -633,7 +635,7 @@ void UpdateDrawConnectionStats(sf::RenderWindow& window)
 
 
 
-
+/*
 
 void DrawBufferVisualization(sf::RenderWindow& window)
 {
@@ -775,7 +777,7 @@ void DrawBufferVisualization(sf::RenderWindow& window)
 
 }
 
-
+*/
 
 
 
@@ -1010,7 +1012,10 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 			imuCalibratingState = true;
 
 			//send singular calibration command
-			push_msg("REBOOT");
+			//push_msg("REBOOT");
+
+			//controllerState.MCUReset = true;
+
 			
 		}
 
@@ -1030,7 +1035,7 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 
 	
 	//if imuCalibratingState is true, and the time since press is imu cal press time + 3000ms, then set imuCalibratingState to false 
-	if (imuCalibratingState && std::chrono::duration_cast<std::chrono::milliseconds>(c - calibrateImuClickedTime).count() > IMU_CAL_PRESS_TIME + 3000)
+	if (imuCalibratingState && std::chrono::duration_cast<std::chrono::milliseconds>(c - calibrateImuClickedTime).count() > IMU_CAL_PRESS_TIME + 500)
 	{
 		imuCalibratingState = false;
 	}
@@ -1055,7 +1060,13 @@ void DrawAttitudeIndicator(sf::RenderWindow& window)
 	{
 		calibrate_text = "Rebooting...";
 		calibrate_button.setFillColor(sf::Color(75, 40, 40));
+		controllerState.MCUReset = true;
 
+	}
+
+	else
+	{
+		controllerState.MCUReset = false;
 	}
 
 

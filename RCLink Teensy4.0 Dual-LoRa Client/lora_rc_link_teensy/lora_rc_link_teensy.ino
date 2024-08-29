@@ -1,55 +1,113 @@
-#include <SPI.h>
-#include "LoRa.h"
+#include <Arduino.h>
+#include "RF24.h"
+#include "RadioController.hpp"
+#include "OLEDController.hpp"
+#include "PWMController.hpp"
+#include "CommandHandler.hpp"
+#include "MPU6050_6Axis_MotionApps612.h"
+#include "IMUController.hpp"
+
+
+
+unsigned long startTime;
+unsigned long endTime;
+unsigned long elapsedTime;
+
+
+
+
 
 void setup() {
-  Serial.begin(9600);
-  while (!Serial);
+  rcon::radio_setup();
+  disp::setup_display();
+  //pwm::setup_pwm();
+  imu::imu_setup();
 
-  //Serial.println("LoRa Receiver");
+  last_packet_timestamp_millis = millis();
 
-  SPI.begin();
+    
+  const int MS24_SPEED_DEG_PER_SEC = 180;
 
 
-  //test spi pins
+  /*
+  pwm::add_smooth_pwm(1, 135, 135, MS24_SPEED_DEG_PER_SEC);
+  pwm::add_smooth_pwm(2, 135, 135, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(5, 90, 90, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(8, 95, 95, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(9, 90, 90, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(10, 95, 95, MS24_SPEED_DEG_PER_SEC);
+
+  pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
+  */
 
   
+  
 
-  //ss, reset, dio
-  LoRa1.setPins(9, 7, 5);
-
-  LoRa2.setPins(8, 6, 4);
+}  
 
 
 
-
-  if (!LoRa1.begin(446E6)) {
-    Serial.println("Starting LoRa 1 failed!");
-    while (1);
-  }
-
-  if (!LoRa2.begin(446E6)) {
-    Serial.println("Starting LoRa 2 failed!");
-    while (1);
-  }
-
-
-
-}
 
 void loop() {
-  // try to parse packet
-  int packetSize = LoRa1.parsePacket();
-  if (packetSize) {
-    // received a packet
-    Serial.print("Received packet '");
 
-    // read packet
-    while (LoRa1.available()) {
-      Serial.print((char)LoRa1.read());
-    }
 
-    // print RSSI of packet
-    Serial.print("' with RSSI ");
-    Serial.println(LoRa1.packetRssi());
+
+
+  startTime = micros();
+
+
+
+
+
+
+  //currently blocking!!
+  rcon::RadioLoopState state = rcon::radio_loop();
+
+  //pull pin 12 high
+  digitalWrite(12, HIGH);
+
+  endTime = micros();
+  elapsedTime = endTime - startTime;
+  
+  //Serial.println("RF24 radio_loop function: " + String(elapsedTime) + " microseconds");
+
+  
+  imu::update_rotation_ypr();
+  imu::UpdateYPRTelemetry();
+
+
+
+  if (state != rcon::RadioLoopState::CONNECTED_IDLE) {
+    //rcon::print_radio_loop_state(state);
+
   }
-}
+
+
+
+  if (!incomingBufferProcessed)
+  {
+    rcon::HandleCommand(rf_incoming_buffer);
+    incomingBufferProcessed = true;
+  }
+  
+  
+  if (pwm::should_update_pwm())
+  {
+    pwm::update_smooth_pwms();
+  }
+  
+
+
+
+
+  if (disp::should_update_display()) {
+    disp::update_stats_V1(radioConnected, millis() - last_packet_timestamp_millis, millis(), rf_incoming_buffer);
+  }
+ 
+
+
+} 

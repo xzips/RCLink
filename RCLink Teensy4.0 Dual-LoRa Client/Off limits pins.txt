@@ -1,0 +1,3 @@
+//this is just a list of pins that are off-limits when wiring up the LoRa
+// (to keep track of stuff before redesigning the PCB
+

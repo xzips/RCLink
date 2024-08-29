@@ -1,0 +1,3 @@
+C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/pioasm/CMakeFiles/pioasm.dir
+C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/pioasm/CMakeFiles/edit_cache.dir
+C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/pioasm/CMakeFiles/rebuild_cache.dir

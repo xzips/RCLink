@@ -20,7 +20,7 @@ unsigned long elapsedTime;
 void setup() {
   rcon::radio_setup();
   disp::setup_display();
-  //pwm::setup_pwm();
+  pwm::setup_pwm();
   imu::imu_setup();
 
   last_packet_timestamp_millis = millis();
@@ -29,7 +29,7 @@ void setup() {
   const int MS24_SPEED_DEG_PER_SEC = 180;
 
 
-  /*
+  
   pwm::add_smooth_pwm(1, 135, 135, MS24_SPEED_DEG_PER_SEC);
   pwm::add_smooth_pwm(2, 135, 135, MS24_SPEED_DEG_PER_SEC);
 
@@ -42,7 +42,7 @@ void setup() {
   pwm::add_smooth_pwm(10, 95, 95, MS24_SPEED_DEG_PER_SEC);
 
   pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
-  */
+  
 
   
   

@@ -33,17 +33,26 @@ void rcon::radio_setup() {
 
     SPI.begin();
 
+
+
     // Set pins for both LoRa modules (ss, reset, dio)
     LoRa1.setPins(9, 7, 5);
     LoRa2.setPins(8, 6, 4);
 
+
+
+
+    //lora 1 is reading
     // Initialize LoRa modules
-    if (!LoRa1.begin(444E6) || !LoRa2.begin(446E6)) {
+    if (!LoRa1.begin(438E6) || !LoRa2.begin(439E6)) {
         if (SERIAL_DEBUG) {
             Serial.println(F("LoRa hardware is not responding!!!"));
         }
 
         pinMode(LED_PIN, OUTPUT);
+        
+        pinMode(TX_TIMING_DEBUG_PIN, OUTPUT);
+
         while (true) {
             digitalWrite(LED_PIN, HIGH);
             delay(500);
@@ -54,6 +63,28 @@ void rcon::radio_setup() {
             }
         }
     }
+
+
+    LoRa1.setFrequency(438E6);
+
+    LoRa2.setFrequency(439E6);
+
+      //500khz
+    LoRa1.setSignalBandwidth( 500E3 );
+    LoRa2.setSignalBandwidth( 500E3 );
+
+    //LoRa1.setSyncWord( 91231);
+    //LoRa2.setSyncWord( 42233);
+
+    
+    LoRa1.setSpreadingFactor(7);
+    LoRa2.setSpreadingFactor(7);
+
+        //enable crc
+    LoRa1.enableCrc();
+    LoRa2.enableCrc();
+
+
 
     if (SERIAL_DEBUG) {
         Serial.println(F("LoRa hardware fully initialized, proceeding"));
@@ -67,6 +98,7 @@ rcon::RadioLoopState rcon::radio_loop() {
         return RadioLoopState::DISCONNECTED_RETRYING;
     }
 
+    
     int packetSize = LoRa1.parsePacket();
     if (packetSize) {
         // Read the incoming packet
@@ -85,13 +117,32 @@ rcon::RadioLoopState rcon::radio_loop() {
             Serial.println(rf_incoming_buffer);
         }
 
+        int rssi = LoRa1.packetRssi();
+        float snr = LoRa1.packetSnr();
+        long freqErr = LoRa1.packetFrequencyError();
+
+        //if (SERIAL_DEBUG) {
+            //print on one line
+            Serial.print("RSSI: ");
+            Serial.print(rssi);
+            Serial.print(" SNR: ");
+            Serial.print(snr);
+            Serial.print(" FreqErr: ");
+            Serial.println(freqErr);
+            
+       // }
+
+        
+
       
     }
 
+    
+  
   //last_tx_timestamp_millis and RF_TX_PERIOD_MS
     if ( (millis() - last_tx_timestamp_millis) > RF_TX_PERIOD_MS) {
 
-        Serial.println("Sending TX");
+        //Serial.println("Sending TX");
 
         last_tx_timestamp_millis = millis();
 
@@ -100,9 +151,20 @@ rcon::RadioLoopState rcon::radio_loop() {
         telemetryState.remoteTimestamp = millis();
         encode_TelemetryState(&telemetryState, rf_outgoing_buffer);
 
+
+        //pull pin 2 high
+        digitalWrite(TX_TIMING_DEBUG_PIN, HIGH);
+
+
+        Serial.print("Sending: ");
+        Serial.println(rf_outgoing_buffer);
+
         LoRa2.beginPacket();
         LoRa2.print(rf_outgoing_buffer);
         LoRa2.endPacket();
+
+        //pull pin 2 low
+        digitalWrite(TX_TIMING_DEBUG_PIN, LOW);
 
         if (SERIAL_DEBUG) {
             Serial.println("Successfully sent data to remote transceiver");
@@ -110,7 +172,7 @@ rcon::RadioLoopState rcon::radio_loop() {
         return RadioLoopState::RECIVED_SENT_DATA;
 
     }
-
+  
   // If no packet is received, return the appropriate state
     return radioConnected ? RadioLoopState::CONNECTED_IDLE : RadioLoopState::WAITING_FOR_CONNECTION;
 }

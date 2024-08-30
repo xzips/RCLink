@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\RCLink.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\RadioCommunication.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\RadioCommunication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\RadioCommunication.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\Quick3D.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\Quick3D.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCGraphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCGraphics.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\RCGraphics.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\Quick3D.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\Quick3D.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\StateSync.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -45,37 +45,38 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 931,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 660,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RadioCommunication.hpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.hpp",
               "RelativeDocumentMoniker": "RCLink\\RadioCommunication.hpp",
               "ToolTip": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.hpp",
               "RelativeToolTip": "RCLink\\RadioCommunication.hpp",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-20T18:56:15.578Z"
+              "WhenOpened": "2024-05-20T18:56:15.578Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RadioCommunication.cpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.cpp",
               "RelativeDocumentMoniker": "RCLink\\RadioCommunication.cpp",
               "ToolTip": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.cpp",
               "RelativeToolTip": "RCLink\\RadioCommunication.cpp",
-              "ViewState": "AQIAAKkAAAAAAAAAAAAIwMYAAABbAAAA",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAcwKgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-18T23:17:53.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Quick3D.hpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\Quick3D.hpp",
               "RelativeDocumentMoniker": "RCLink\\Quick3D.hpp",
@@ -83,11 +84,12 @@
               "RelativeToolTip": "RCLink\\Quick3D.hpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-24T02:49:15.23Z"
+              "WhenOpened": "2024-05-24T02:49:15.23Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "RCGraphics.hpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCGraphics.hpp",
               "RelativeDocumentMoniker": "RCLink\\RCGraphics.hpp",
@@ -100,7 +102,7 @@
           ]
         },
         {
-          "DockedWidth": 799,
+          "DockedWidth": 1070,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -111,7 +113,7 @@
               "RelativeDocumentMoniker": "RCLink\\RCLink.cpp",
               "ToolTip": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCLink.cpp",
               "RelativeToolTip": "RCLink\\RCLink.cpp",
-              "ViewState": "AQIAALQAAAAAAAAAAAAYwNEAAAAhAAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAYwMgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-18T23:17:52.174Z",
               "IsPinned": true,
@@ -132,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "StateSync.cpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\StateSync.cpp",
               "RelativeDocumentMoniker": "RCLink\\StateSync.cpp",
@@ -145,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RCGraphics.cpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCGraphics.cpp",
               "RelativeDocumentMoniker": "RCLink\\RCGraphics.cpp",

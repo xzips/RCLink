@@ -10,9 +10,12 @@
 #define RF_RECV_TIMEOUT_MS 1000
 
 #define SERIAL_LOOP_DELAY_MS 5
-#define RF_LOOP_DELAY_MS 1000
+#define RF_LOOP_DELAY_MS 25
 
 #define MAX_STRING_LENGTH 32
+
+#define DEBUG_RX_PIN 11
+#define DEBUG_GENERIC_PIN 1
 
 #define DEBUG_LED_PIN 25
 
@@ -39,8 +42,16 @@ char serial_tmp_buffer[MAX_STRING_LENGTH];
 uint64_t last_packet_time = 0;
 uint64_t last_send_time = 0;
 
+bool rxPacketWaiting = false;
+
+void onPacketRecieved(int packetSize) {
+    printf("Packet Recieved\n");
+    rxPacketWaiting = true;
+}
+
 void core0_rf_loop() {
 
+    
     // Check if the connection should be marked as lost due to timeout
     if (to_ms_since_boot(get_absolute_time()) - last_packet_time >= RF_RECV_TIMEOUT_MS) {
         connected = false;
@@ -64,61 +75,116 @@ void core0_rf_loop() {
         mutex_enter_blocking(&controller_mutex);
         strcpy(rf_outgoing_buffer, controllerState);
         mutex_exit(&controller_mutex);
-
+        gpio_put(DEBUG_LED_PIN, 1);
         LoRa1.beginPacket();
         LoRa1.print(rf_outgoing_buffer);
         LoRa1.endPacket();
+        gpio_put(DEBUG_LED_PIN, 0);
 
         last_send_time = to_ms_since_boot(get_absolute_time());
     }
+    
 
-    // Check if a packet is available to be received
-    int packetSize = LoRa2.parsePacket();
-    if (packetSize) {
+    //check if dio0 is high
+    if(true){
+        //printf("DIO0 is high\n");
 
+        if (rxPacketWaiting) {
+            rxPacketWaiting = false;
 
+            gpio_put(DEBUG_GENERIC_PIN, 1);
+            sleep_us(2000);
+            gpio_put(DEBUG_GENERIC_PIN, 0);
 
-        int i = 0;
-        while (LoRa2.available() && i < MAX_STRING_LENGTH - 1) {
-            rf_incoming_buffer[i++] = LoRa2.read();
         }
-        rf_incoming_buffer[i] = '\0';
 
-        gpio_put(DEBUG_LED_PIN, 1);
-        sleep_us(800);
-        gpio_put(DEBUG_LED_PIN, 0);
-        sleep_us(10);
 
-        mutex_enter_blocking(&telemetry_mutex);
-        strcpy(telemetryState, rf_incoming_buffer);
-        mutex_exit(&telemetry_mutex);
+        // Check if a packet is available to be received
+        int packetSize = LoRa2.parsePacket();
+        if (packetSize) {
 
-        // Mark the connection as active and update the last packet time
-        connected = true;
-        last_packet_time = to_ms_since_boot(get_absolute_time());
+            //pull DEBUG_RX_PIN high
+            gpio_put(DEBUG_RX_PIN, 1);
+            sleep_us(2000);
+            gpio_put(DEBUG_RX_PIN, 0);
+
+
+            int i = 0;
+            while (LoRa2.available() && i < MAX_STRING_LENGTH - 1) {
+                gpio_put(DEBUG_RX_PIN, 1);
+                rf_incoming_buffer[i++] = LoRa2.read();
+                gpio_put(DEBUG_RX_PIN, 0);
+            }
+
+
+
+            rf_incoming_buffer[i] = '\0';
+            gpio_put(DEBUG_RX_PIN, 1);
+            gpio_put(DEBUG_LED_PIN, 1);
+            sleep_us(2000);
+            gpio_put(DEBUG_LED_PIN, 0);
+            gpio_put(DEBUG_RX_PIN, 0);
+
+            mutex_enter_blocking(&telemetry_mutex);
+            strcpy(telemetryState, rf_incoming_buffer);
+            mutex_exit(&telemetry_mutex);
+
+            // Mark the connection as active and update the last packet time
+            connected = true;
+            last_packet_time = to_ms_since_boot(get_absolute_time());
+        }
+
     }
 
+
     // Small delay to avoid maxing out CPU usage
-    sleep_ms(5);
+    sleep_ms(1);
 }
 
 
 void core0_entry() {
     LoRa1.setPins(8, 9, 7, 8);
     LoRa2.setPins(3, 4, 2, 3);
+    
+    LoRa1.setSPIFrequency(8E6);
+    LoRa2.setSPIFrequency(8E6);
 
-    if (!LoRa1.begin(444E6) || !LoRa2.begin(446E6)) {
+
+    //setup DEBUG_RX_PIN as output
+
+
+    if (!LoRa1.begin(438E6) || !LoRa2.begin(439E6)) {
         mutex_enter_blocking(&telemetry_mutex);
         strcpy(telemetryState, "ERROR: Radio Hardware Failure");
         mutex_exit(&telemetry_mutex);
         while (1);
     }
 
-    //LoRa1.setSpreadingFactor(7);
-    //LoRa2.setSpreadingFactor(7);
+        //500khz
+    LoRa1.setSignalBandwidth( 500E3 );
+    LoRa2.setSignalBandwidth( 500E3 );
+
+
+        //enable crc
+    LoRa1.enableCrc();
+    LoRa2.enableCrc();
+
+    //LoRa1.setSyncWord( 91231);
+    //LoRa2.setSyncWord( 42233);
+
+    
+
+    LoRa1.setSpreadingFactor(7);
+    LoRa2.setSpreadingFactor(7);
+
+    //LoRa2.onReceive(onPacketRecieved);
 
     gpio_init(DEBUG_LED_PIN);
+    gpio_init(DEBUG_RX_PIN);
+    gpio_init(DEBUG_GENERIC_PIN);
+    gpio_set_dir(DEBUG_RX_PIN, GPIO_OUT);
     gpio_set_dir(DEBUG_LED_PIN, GPIO_OUT);
+    gpio_set_dir(DEBUG_GENERIC_PIN, GPIO_OUT);
 
     strcpy(controllerState, "NO_LINK");
 

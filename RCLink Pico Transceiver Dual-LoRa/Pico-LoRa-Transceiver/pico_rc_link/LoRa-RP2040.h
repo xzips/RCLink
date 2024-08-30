@@ -100,6 +100,9 @@ public:
   void dumpRegisters();
 
   int _pin_cs;
+  int _ss;
+  int _reset;
+  int _dio0;
 private:
   void explicitHeaderMode();
   void implicitHeaderMode();
@@ -121,9 +124,7 @@ private:
 private:
   // SPISettings _spiSettings;
   spi_inst_t *_spi;
-  int _ss;
-  int _reset;
-  int _dio0;
+
   long _frequency;
   int _packetIndex;
   int _implicitHeaderMode;

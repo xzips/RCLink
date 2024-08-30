@@ -100,7 +100,7 @@ int LoRaClass::begin(long frequency)
 
 
   // start SPI
-  spi_init(SPI_PORT, 12500);
+  spi_init(SPI_PORT, 8000000);
   gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
   gpio_set_function(PIN_SCK, GPIO_FUNC_SPI);
   gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
@@ -751,9 +751,9 @@ void LoRaClass::onDio0Rise(uint gpio, uint32_t events) {
 
     printf("Handeling a DIO0 rise\n");
     
-    if (gpio == LoRa1._pin_cs) {
+    if (gpio == LoRa1._dio0) {
         LoRa1.handleDio0Rise(); // Handle interrupt for the first LoRa module
-    } else if (gpio == LoRa2._pin_cs) {
+    } else if (gpio == LoRa2._dio0) {
         LoRa2.handleDio0Rise(); // Handle interrupt for the second LoRa module
     }
 }

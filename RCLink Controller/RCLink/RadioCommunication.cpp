@@ -206,7 +206,8 @@ void serial_thread() {
 
 
 
-						bool telemetryDecodedSuccess = decode_TelemetryState(message.c_str(), &telemetryState);
+						//bool telemetryDecodedSuccess = decode_TelemetryState(message.c_str(), &telemetryState);
+						bool telemetryDecodedSuccess = decode(message, telemetryState);
                         
                         {
                             lock_guard<mutex> lock3(last_incoming_message_mutex);
@@ -243,11 +244,12 @@ void serial_thread() {
                 {
                     lock_guard<mutex> lock(controller_mutex);
                
-					encode_ControllerState(&controllerState, transcode_buf);
+					//encode_ControllerState(&controllerState, transcode_buf);
+					message = encode(controllerState) + "\n";
 
                 }
 
-				message = std::string(transcode_buf) + "\n";
+				//message = std::string(transcode_buf) + "\n";
 
                 write(*serial_, buffer(message.data(), message.size()), ec);
 

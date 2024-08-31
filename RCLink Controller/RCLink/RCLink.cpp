@@ -184,7 +184,7 @@ void UpdateControllerState()
 
     controllerState.jitter_test_byte = (uint8_t)sinVal;
 
-    std::cout << (int)controllerState.jitter_test_byte << std::endl;
+    //std::cout << (int)controllerState.jitter_test_byte << std::endl;
 
 }
 

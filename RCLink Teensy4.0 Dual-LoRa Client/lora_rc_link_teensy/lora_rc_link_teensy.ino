@@ -7,7 +7,7 @@
 #include "MPU6050_6Axis_MotionApps612.h"
 #include "IMUController.hpp"
 
-
+#include "SPI.h"
 
 unsigned long startTime;
 unsigned long endTime;
@@ -45,7 +45,7 @@ void setup() {
   
 
   Wire.setClock(400000);
-  
+
 
 }  
 

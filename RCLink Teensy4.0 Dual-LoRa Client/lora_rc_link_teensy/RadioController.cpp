@@ -46,6 +46,8 @@ void rcon::radio_setup() {
     LoRa1.setPins(9, 7, 5);
     LoRa2.setPins(8, 6, 4);
 
+    LoRa1.setTxPower(20);
+    LoRa2.setTxPower(20);
 
 
 
@@ -127,9 +129,9 @@ rcon::RadioLoopState rcon::radio_loop() {
         if (SERIAL_DEBUG) {
             Serial.print("Received: ");
             Serial.println(rf_incoming_buffer);
-            packets_in_last_sec += 1; 
         }
 
+        packets_in_last_sec += 1; 
         rssi = LoRa1.packetRssi();
         snr = LoRa1.packetSnr();
         freqErr = LoRa1.packetFrequencyError();

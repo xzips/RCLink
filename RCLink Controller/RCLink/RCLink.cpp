@@ -26,6 +26,7 @@ void define_hardware()
     servoControllerVector.push_back(ServoController(10, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 0, "Right Elevator", false, true));
 	servoControllerVector.push_back(ServoController(9, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false, false));
 
+
 }
 
 
@@ -171,8 +172,19 @@ void UpdateControllerState()
 	controllerState.RightAileron = GetServoControllerByName("Right Aileron")->GetPhysicalAngle();
 	controllerState.Rudder = GetServoControllerByName("Rudder")->GetPhysicalAngle();
     controllerState.Throttle = throttleController.GetMappedThrottle();
+    
+    
+    uint64_t time_since_start = get_timestamp_ms() - controller_start_time;
+    
+    
+    controllerState.ControllerTimestamp = time_since_start;
+    
+    //sin of time since start, normalized 0-255
+	float sinVal = sin(time_since_start / 400.0f) * 127.5f + 127.5f;
 
-	//controllerState.MCUReset = false;//need to implement this
+    controllerState.jitter_test_byte = (uint8_t)sinVal;
+
+    std::cout << (int)controllerState.jitter_test_byte << std::endl;
 
 }
 

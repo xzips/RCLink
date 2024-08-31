@@ -46,7 +46,7 @@ float roll_orientation = 0.0f;
 std::mutex connection_status_mutex;
 ConnectionStatus connection_status = ConnectionStatus::DISCONNECTED;
 
-
+uint64_t controller_start_time = get_timestamp_ms();
 
 
 std::string ThrottleController::GetCommandSTR()
@@ -104,9 +104,9 @@ std::string generate_6char_timestamp(unsigned long timestamp_millis)
 	return str;
 }
 
-unsigned long get_timestamp_ms()
+uint64_t get_timestamp_ms()
 {
-	return (unsigned long)std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+	return (uint64_t)std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
    
 }
 

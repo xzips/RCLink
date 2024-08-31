@@ -44,7 +44,7 @@ void setup() {
   pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
   
 
-  
+  Wire.setClock(400000);
   
 
 }  

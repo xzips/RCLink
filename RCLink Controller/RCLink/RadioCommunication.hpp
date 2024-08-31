@@ -21,7 +21,7 @@ bool is_error(std::string msg_str);
 
 
 std::string generate_6char_timestamp(unsigned long timestamp_millis);
-unsigned long get_timestamp_ms();
+uint64_t get_timestamp_ms();
 
 struct Message
 {
@@ -65,6 +65,8 @@ enum class ConnectionStatus
 	DISCONNECTED,
 	SERIAL_OK_NO_REMOTE
 };
+
+extern uint64_t controller_start_time;
 
 //timestamp of last successful packet in milliseconds
 extern unsigned long last_success_packet_millis;

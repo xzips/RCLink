@@ -6,7 +6,8 @@
 
 unsigned long last_update_time_millis;
 
-
+#include "RadioController.hpp"
+#include "StateSync.hpp"
 
 
 //U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0); 
@@ -53,6 +54,15 @@ namespace disp
     int last_msg_pos_x = 0;
     int last_msg_pos_y = 32;
 
+    int rssi_pos_x = 0;
+    int rssi_pos_y = 40;
+
+    int snr_pos_x = 0;
+    int snr_pos_y = 48;
+
+    int freqErr_pos_x = 0;
+    int freqErr_pos_y = 56;
+
     const char* connected_str = connected ? "Connected" : "Disconnected";
 
     u8g2.setFont(u8g2_font_tinytim_tr  );  // set a smaller font for more text
@@ -74,9 +84,36 @@ namespace disp
     sprintf(last_msg_str, "LM: %s", last_msg_recvd);
 
 
+    //rssi, snr, freqErr
+    char rssi_str[32];
+    sprintf(rssi_str, "RSSI: %d", rssi);
+    u8g2.drawStr(rssi_pos_x, rssi_pos_y, rssi_str);
+
+    //char snr_str[32];
+    //sprintf(snr_str, "SNR: %f", snr);
+    //u8g2.drawStr(snr_pos_x, snr_pos_y, snr_str);
+
+    char pps_str[32];
+    sprintf(pps_str, "PPS: %d", prev_packets_in_last_sec);
+    u8g2.drawStr(snr_pos_x, snr_pos_y, pps_str);
+
+    char freqErr_str[32];
+    sprintf(freqErr_str, "FreqErr: %d", freqErr);
+    u8g2.drawStr(freqErr_pos_x, freqErr_pos_y, freqErr_str);
+
 
     u8g2.setFont(u8g2_font_u8glib_4_hr);  // set a smaller font for more text
     u8g2.drawStr(last_msg_pos_x, last_msg_pos_y, last_msg_str);
+
+    uint8_t jtb = controllerState.jitter_test_byte;
+
+    //Serial.println(controllerState.jitter_test_byte);
+
+    int jitter_test_byte_pos_x = jtb / 2;
+    int jitter_test_byte_pos_y = 56;
+
+    //draw as box with height 8
+    u8g2.drawBox(jitter_test_byte_pos_x - 2, jitter_test_byte_pos_y, 4, 8);
 
     
 

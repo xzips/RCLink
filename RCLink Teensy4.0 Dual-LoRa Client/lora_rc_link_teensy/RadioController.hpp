@@ -12,12 +12,21 @@
 #define RF_RECV_TIMEOUT_MS 1000
 #define RF_TX_PERIOD_MS 100
 
+
 extern unsigned long last_packet_timestamp_millis;
 extern unsigned long last_tx_timestamp_millis;
 extern bool radioConnected;
-extern char rf_outgoing_buffer[32];
-extern char rf_incoming_buffer[32];
+extern char rf_outgoing_buffer[64];
+extern char rf_incoming_buffer[64];
 extern bool incomingBufferProcessed;
+
+extern unsigned long last_packet_count_check_timestamp_millis;
+extern int packets_in_last_sec;
+extern int prev_packets_in_last_sec;
+
+extern int rssi;
+extern float snr;
+extern int freqErr;
 
 namespace rcon
 {

@@ -7,11 +7,18 @@
 
 bool radioConnected = false;
 unsigned long last_packet_timestamp_millis = millis();
-char rf_outgoing_buffer[32];
-char rf_incoming_buffer[32];
+char rf_outgoing_buffer[64];
+char rf_incoming_buffer[64];
 bool incomingBufferProcessed = false;
 unsigned long last_tx_timestamp_millis = millis();
 
+unsigned long last_packet_count_check_timestamp_millis = millis();
+int packets_in_last_sec = 0;
+int prev_packets_in_last_sec = 0;
+
+int rssi;
+float snr;
+int freqErr;
 
 void rcon::clear_outgoing_buffer() {
     for (int i = 0; i < 32; i++) {
@@ -65,17 +72,15 @@ void rcon::radio_setup() {
     }
 
 
-    LoRa1.setFrequency(438E6);
-
-    LoRa2.setFrequency(439E6);
 
       //500khz
     LoRa1.setSignalBandwidth( 500E3 );
     LoRa2.setSignalBandwidth( 500E3 );
 
-    //LoRa1.setSyncWord( 91231);
-    //LoRa2.setSyncWord( 42233);
+    LoRa1.setSyncWord( 0xAF);
+    LoRa2.setSyncWord( 0xAB);
 
+    
     
     LoRa1.setSpreadingFactor(7);
     LoRa2.setSpreadingFactor(7);
@@ -92,6 +97,13 @@ void rcon::radio_setup() {
 }
 
 rcon::RadioLoopState rcon::radio_loop() {
+
+    if (millis() - last_packet_count_check_timestamp_millis > 1000) {
+        last_packet_count_check_timestamp_millis = millis();
+        prev_packets_in_last_sec = packets_in_last_sec;
+        packets_in_last_sec = 0;
+    }
+
     // Check if the connection should be marked as lost due to timeout
     if (radioConnected && (millis() - last_packet_timestamp_millis > RF_RECV_TIMEOUT_MS)) {
         radioConnected = false;
@@ -115,22 +127,16 @@ rcon::RadioLoopState rcon::radio_loop() {
         if (SERIAL_DEBUG) {
             Serial.print("Received: ");
             Serial.println(rf_incoming_buffer);
+            packets_in_last_sec += 1; 
         }
 
-        int rssi = LoRa1.packetRssi();
-        float snr = LoRa1.packetSnr();
-        long freqErr = LoRa1.packetFrequencyError();
+        rssi = LoRa1.packetRssi();
+        snr = LoRa1.packetSnr();
+        freqErr = LoRa1.packetFrequencyError();
 
-        //if (SERIAL_DEBUG) {
-            //print on one line
-            Serial.print("RSSI: ");
-            Serial.print(rssi);
-            Serial.print(" SNR: ");
-            Serial.print(snr);
-            Serial.print(" FreqErr: ");
-            Serial.println(freqErr);
-            
-       // }
+
+
+
 
         
 
@@ -156,8 +162,8 @@ rcon::RadioLoopState rcon::radio_loop() {
         digitalWrite(TX_TIMING_DEBUG_PIN, HIGH);
 
 
-        Serial.print("Sending: ");
-        Serial.println(rf_outgoing_buffer);
+        //Serial.print("Sending: ");
+        //Serial.println(rf_outgoing_buffer);
 
         LoRa2.beginPacket();
         LoRa2.print(rf_outgoing_buffer);

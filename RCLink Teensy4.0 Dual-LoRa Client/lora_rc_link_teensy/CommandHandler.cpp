@@ -48,6 +48,17 @@ namespace rcon
             return;
         }
 
+        if (controllerState.network_ID == 0xa87c)
+        {
+            controllerState = receivedState;
+        }
+
+        else
+        {
+            Serial.println("Network ID mismatch, ignoring packet");
+            return;
+        }
+
         
 
         // Update PWM outputs based on the received state
@@ -63,6 +74,9 @@ namespace rcon
         if (receivedState.MCUReset) {
             doReboot();
         }
+
+
+
     }
 }
 

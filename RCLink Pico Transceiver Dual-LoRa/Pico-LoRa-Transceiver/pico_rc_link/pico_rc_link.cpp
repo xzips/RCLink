@@ -12,7 +12,7 @@
 #define SERIAL_LOOP_DELAY_MS 5
 #define RF_LOOP_DELAY_MS 25
 
-#define MAX_STRING_LENGTH 32
+#define MAX_STRING_LENGTH 64
 
 #define DEBUG_RX_PIN 11
 #define DEBUG_GENERIC_PIN 1
@@ -169,8 +169,8 @@ void core0_entry() {
     LoRa1.enableCrc();
     LoRa2.enableCrc();
 
-    //LoRa1.setSyncWord( 91231);
-    //LoRa2.setSyncWord( 42233);
+    LoRa1.setSyncWord( 0xAF);
+    LoRa2.setSyncWord( 0xAB);
 
     
 

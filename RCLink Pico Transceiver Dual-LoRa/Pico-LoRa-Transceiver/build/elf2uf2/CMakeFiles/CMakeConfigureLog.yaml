@@ -109,8 +109,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-2a6vg1"
-      binary: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-2a6vg1"
+      source: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-ynkxtc"
+      binary: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-ynkxtc"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -119,28 +119,28 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-2a6vg1'
+        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-ynkxtc'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_c0a23\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_c0a23.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_c0a23.dir\\build
-        Building C object CMakeFiles/cmTC_c0a23.dir/CMakeCCompilerABI.c.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_c0a23.dir\\CMakeCCompilerABI.c.obj.d --working-dir="C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-2a6vg1" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm2CB1.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_2323a\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_2323a.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_2323a.dir\\build
+        Building C object CMakeFiles/cmTC_2323a.dir/CMakeCCompilerABI.c.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_2323a.dir\\CMakeCCompilerABI.c.obj.d --working-dir="C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-ynkxtc" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm4F2.tmp
         CMakeCCompilerABI.c
-        Linking C executable cmTC_c0a23.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c0a23.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_c0a23.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm2E58.tmp
+        Linking C executable cmTC_2323a.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_2323a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_2323a.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm58F.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_c0a23.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_c0a23.dir/embed.manifest
+        Create CMakeFiles\\cmTC_2323a.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_2323a.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_c0a23.dir/manifest.res CMakeFiles\\cmTC_c0a23.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_2323a.dir/manifest.res CMakeFiles\\cmTC_2323a.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_c0a23.dir\\objects1.rsp /out:cmTC_c0a23.exe /implib:cmTC_c0a23.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-2a6vg1\\cmTC_c0a23.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c0a23.dir/intermediate.manifest CMakeFiles\\cmTC_c0a23.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_2323a.dir\\objects1.rsp /out:cmTC_2323a.exe /implib:cmTC_2323a.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-ynkxtc\\cmTC_2323a.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_2323a.dir/intermediate.manifest CMakeFiles\\cmTC_2323a.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_c0a23.dir/intermediate.manifest /out:CMakeFiles\\cmTC_c0a23.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_2323a.dir/intermediate.manifest /out:CMakeFiles\\cmTC_2323a.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_c0a23.dir/manifest.res CMakeFiles\\cmTC_c0a23.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_2323a.dir/manifest.res CMakeFiles\\cmTC_2323a.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_c0a23.dir\\objects1.rsp /out:cmTC_c0a23.exe /implib:cmTC_c0a23.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-2a6vg1\\cmTC_c0a23.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c0a23.dir/intermediate.manifest CMakeFiles\\cmTC_c0a23.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_2323a.dir\\objects1.rsp /out:cmTC_2323a.exe /implib:cmTC_2323a.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-ynkxtc\\cmTC_2323a.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_2323a.dir/intermediate.manifest CMakeFiles\\cmTC_2323a.dir/manifest.res
         
       exitCode: 0
   -
@@ -152,8 +152,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-zx8mbe"
-      binary: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-zx8mbe"
+      source: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-dw380z"
+      binary: "C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-dw380z"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -162,28 +162,28 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-zx8mbe'
+        Change Dir: 'C:/Users/aspen/Desktop/RCLink/RCLink Pico Transceiver Dual-LoRa/Pico-LoRa-Transceiver/build/elf2uf2/CMakeFiles/CMakeScratch/TryCompile-dw380z'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_94bf2\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_94bf2.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_94bf2.dir\\build
-        Building CXX object CMakeFiles/cmTC_94bf2.dir/CMakeCXXCompilerABI.cpp.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_94bf2.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-zx8mbe" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm3106.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_ce53d\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX86\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_ce53d.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_ce53d.dir\\build
+        Building CXX object CMakeFiles/cmTC_ce53d.dir/CMakeCXXCompilerABI.cpp.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_ce53d.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-dw380z" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm80F.tmp
         CMakeCXXCompilerABI.cpp
-        Linking CXX executable cmTC_94bf2.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_94bf2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_94bf2.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm31A4.tmp
+        Linking CXX executable cmTC_ce53d.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ce53d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_ce53d.dir\\objects1.rsp @C:\\Users\\aspen\\AppData\\Local\\Temp\\nm8AC.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_94bf2.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_94bf2.dir/embed.manifest
+        Create CMakeFiles\\cmTC_ce53d.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_ce53d.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_94bf2.dir/manifest.res CMakeFiles\\cmTC_94bf2.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_ce53d.dir/manifest.res CMakeFiles\\cmTC_ce53d.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_94bf2.dir\\objects1.rsp /out:cmTC_94bf2.exe /implib:cmTC_94bf2.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-zx8mbe\\cmTC_94bf2.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_94bf2.dir/intermediate.manifest CMakeFiles\\cmTC_94bf2.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_ce53d.dir\\objects1.rsp /out:cmTC_ce53d.exe /implib:cmTC_ce53d.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-dw380z\\cmTC_ce53d.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_ce53d.dir/intermediate.manifest CMakeFiles\\cmTC_ce53d.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_94bf2.dir/intermediate.manifest /out:CMakeFiles\\cmTC_94bf2.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_ce53d.dir/intermediate.manifest /out:CMakeFiles\\cmTC_ce53d.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_94bf2.dir/manifest.res CMakeFiles\\cmTC_94bf2.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_ce53d.dir/manifest.res CMakeFiles\\cmTC_ce53d.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_94bf2.dir\\objects1.rsp /out:cmTC_94bf2.exe /implib:cmTC_94bf2.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-zx8mbe\\cmTC_94bf2.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_94bf2.dir/intermediate.manifest CMakeFiles\\cmTC_94bf2.dir/manifest.res
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_ce53d.dir\\objects1.rsp /out:cmTC_ce53d.exe /implib:cmTC_ce53d.lib /pdb:C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Pico Transceiver Dual-LoRa\\Pico-LoRa-Transceiver\\build\\elf2uf2\\CMakeFiles\\CMakeScratch\\TryCompile-dw380z\\cmTC_ce53d.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_ce53d.dir/intermediate.manifest CMakeFiles\\cmTC_ce53d.dir/manifest.res
         
       exitCode: 0
 ...

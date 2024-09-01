@@ -18,6 +18,16 @@ unsigned long elapsedTime;
 
 
 void setup() {
+
+  Wire.setClock(400000);
+
+  Serial.begin(9600);
+  if (CrashReport) {
+      /* print info (hope Serial Monitor windows is open) */
+      Serial.print(CrashReport);
+    }
+
+
   rcon::radio_setup();
   disp::setup_display();
   pwm::setup_pwm();
@@ -44,7 +54,8 @@ void setup() {
   pwm::add_smooth_pwm(ESC_CHANNEL, 1500, 1500, 500, true);
   
 
-  Wire.setClock(400000);
+  
+
 
 
 }  
@@ -53,8 +64,6 @@ void setup() {
 
 
 void loop() {
-
-
 
 
   startTime = micros();

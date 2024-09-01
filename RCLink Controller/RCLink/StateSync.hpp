@@ -6,10 +6,13 @@
 #include <sstream>
 #include <iomanip>
 #include <iostream>
-
+#include <algorithm>
 
 #define BASE64_ENCODE_OUTPUT_SIZE(n) (((n + 2) / 3) * 4)
 #define BASE64_DECODE_OUTPUT_SIZE(n) (((n + 3) / 4) * 3)
+
+
+
 
 
 
@@ -57,51 +60,62 @@ bool decode_from_base64(const std::string& base64_input, std::tuple<Fields...>& 
     return !byteStream.fail();
 }
 
+
+
+
 // Structures
 struct ControllerState
 {
-    uint16_t LeftAileron = 0;
-    uint16_t RightAileron = 0;
-    uint16_t FrontWheel = 0;
-    uint16_t LeftElevator = 0;
-    uint16_t RightElevator = 0;
-    uint16_t Rudder = 0;
-    uint16_t Throttle = 0;
-    bool MCUReset = false;
-    uint64_t ControllerTimestamp = 0;
-    uint16_t network_ID = 0xa87c;
-    uint8_t jitter_test_byte = 0;
+    uint8_t NetworkID = 0xa8;
+    uint8_t JitterTestByte = 0;
+    uint8_t LeftAileron = 0;
+    uint8_t RightAileron = 0;
+    uint8_t FrontWheel = 0;
+    uint8_t LeftElevator = 0;
+    uint8_t RightElevator = 0;
+    uint8_t Rudder = 0;
+    uint8_t Throttle = 0;
+    uint8_t MCUReset = 0;
 
     // Get fields as a tuple for generic processing
     auto get_fields() const {
-        return std::tie(LeftAileron, RightAileron, FrontWheel, LeftElevator, RightElevator,
-            Rudder, Throttle, MCUReset, ControllerTimestamp, network_ID, jitter_test_byte);
-    }
+		return std::tie(NetworkID, JitterTestByte, LeftAileron,
+			RightAileron, FrontWheel, LeftElevator, RightElevator,
+            Rudder, Throttle, MCUReset);
+        
+	}
 
     auto get_fields() {
-        return std::tie(LeftAileron, RightAileron, FrontWheel, LeftElevator, RightElevator,
-            Rudder, Throttle, MCUReset, ControllerTimestamp, network_ID, jitter_test_byte);
+		return std::tie(NetworkID, JitterTestByte, LeftAileron,
+			RightAileron, FrontWheel, LeftElevator, RightElevator,
+            Rudder, Throttle, MCUReset);
     }
 };
 
 struct TelemetryState
 {
+    uint16_t NetworkID = 0xa9;
     int16_t Pitch = 0;
     int16_t Roll = 0;
     int16_t Yaw = 0;
-    uint16_t BatteryVoltage = 0;
-    uint64_t remoteTimestamp = 0;
-    uint16_t network_ID = 0xa87c;
+    uint8_t BatteryVoltage = 0;
+    uint16_t TimeSinceLastMinute = 0;
 
     // Get fields as a tuple for generic processing
     auto get_fields() const {
-        return std::tie(Pitch, Roll, Yaw, BatteryVoltage, remoteTimestamp, network_ID);
+        return std::tie(NetworkID, Pitch, Roll, Yaw, BatteryVoltage, TimeSinceLastMinute);
     }
 
     auto get_fields() {
-        return std::tie(Pitch, Roll, Yaw, BatteryVoltage, remoteTimestamp, network_ID);
+		return std::tie(NetworkID, Pitch, Roll, Yaw, BatteryVoltage, TimeSinceLastMinute);
     }
 };
+
+
+
+
+
+
 
 // Macros for defining encoding/decoding sizes (now unused)
 
@@ -121,7 +135,25 @@ bool decode(const std::string& base64_input, T& state) {
 }
 
 
+template<typename... Fields>
+void print_fields(const std::tuple<Fields...>& fields) {
+    auto printField = [](const auto& field) {
+        std::cout << field << " ";
+        };
+    std::apply([&](const Fields&... fields) { (printField(fields), ...); }, fields);
+    std::cout << std::endl;
+}
+
+template<typename T>
+void print_struct(const T& state) {
+    print_fields(state.get_fields());
+}
+
+
+
 bool EncodeDecodeTest(bool silent);
+
+
 
 extern TelemetryState telemetryState;
 extern ControllerState controllerState;

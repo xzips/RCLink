@@ -6,7 +6,7 @@
 #include "RCGraphics.hpp"
 #include <SFML/Graphics.hpp>
 #include <cmath>
-
+#include <algorithm>
 
 using namespace std;
 
@@ -165,26 +165,20 @@ void update_model_rotations()
 
 void UpdateControllerState()
 {
-	controllerState.FrontWheel = GetServoControllerByName("Front Wheel")->GetPhysicalAngle();
-	controllerState.LeftElevator = GetServoControllerByName("Left Elevator")->GetPhysicalAngle();
-	controllerState.RightElevator = GetServoControllerByName("Right Elevator")->GetPhysicalAngle();
-	controllerState.LeftAileron = GetServoControllerByName("Left Aileron")->GetPhysicalAngle();
-	controllerState.RightAileron = GetServoControllerByName("Right Aileron")->GetPhysicalAngle();
-	controllerState.Rudder = GetServoControllerByName("Rudder")->GetPhysicalAngle();
-    controllerState.Throttle = throttleController.GetMappedThrottle();
-    
-    
+    controllerState.FrontWheel = std::clamp(GetServoControllerByName("Front Wheel")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
+    controllerState.LeftElevator = std::clamp(GetServoControllerByName("Left Elevator")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
+    controllerState.RightElevator = std::clamp(GetServoControllerByName("Right Elevator")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
+    controllerState.LeftAileron = std::clamp(GetServoControllerByName("Left Aileron")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
+    controllerState.RightAileron = std::clamp(GetServoControllerByName("Right Aileron")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
+    controllerState.Rudder = std::clamp(GetServoControllerByName("Rudder")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
+    controllerState.Throttle = std::clamp((((float)throttleController.GetMappedThrottle() - 1500.f)/500.f ) * 255.f, 0.f, 255.f);
+
     uint64_t time_since_start = get_timestamp_ms() - controller_start_time;
-    
-    
-    controllerState.ControllerTimestamp = time_since_start;
     
     //sin of time since start, normalized 0-255
 	float sinVal = sin(time_since_start / 400.0f) * 127.5f + 127.5f;
 
-    controllerState.jitter_test_byte = (uint8_t)sinVal;
-
-    //std::cout << (int)controllerState.jitter_test_byte << std::endl;
+	controllerState.JitterTestByte = (uint8_t)sinVal;
 
 }
 

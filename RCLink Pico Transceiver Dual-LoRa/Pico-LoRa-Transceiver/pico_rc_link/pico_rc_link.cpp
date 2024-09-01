@@ -10,7 +10,7 @@
 #define RF_RECV_TIMEOUT_MS 1000
 
 #define SERIAL_LOOP_DELAY_MS 5
-#define RF_LOOP_DELAY_MS 25
+#define RF_LOOP_DELAY_MS 20
 
 #define MAX_STRING_LENGTH 64
 
@@ -75,11 +75,16 @@ void core0_rf_loop() {
         mutex_enter_blocking(&controller_mutex);
         strcpy(rf_outgoing_buffer, controllerState);
         mutex_exit(&controller_mutex);
+
+
         gpio_put(DEBUG_LED_PIN, 1);
+        gpio_put(DEBUG_GENERIC_PIN, 1);
+
         LoRa1.beginPacket();
         LoRa1.print(rf_outgoing_buffer);
         LoRa1.endPacket();
         gpio_put(DEBUG_LED_PIN, 0);
+        gpio_put(DEBUG_GENERIC_PIN, 0);
 
         last_send_time = to_ms_since_boot(get_absolute_time());
     }
@@ -120,9 +125,6 @@ void core0_rf_loop() {
 
             rf_incoming_buffer[i] = '\0';
             gpio_put(DEBUG_RX_PIN, 1);
-            gpio_put(DEBUG_LED_PIN, 1);
-            sleep_us(2000);
-            gpio_put(DEBUG_LED_PIN, 0);
             gpio_put(DEBUG_RX_PIN, 0);
 
             mutex_enter_blocking(&telemetry_mutex);
@@ -150,6 +152,8 @@ void core0_entry() {
     LoRa2.setSPIFrequency(8E6);
 
 
+
+
     //setup DEBUG_RX_PIN as output
 
 
@@ -171,6 +175,9 @@ void core0_entry() {
 
     LoRa1.setSyncWord( 0xAF);
     LoRa2.setSyncWord( 0xAB);
+
+    //LoRa1.setTxPower(20);
+    //LoRa2.setTxPower(20);
 
     
 

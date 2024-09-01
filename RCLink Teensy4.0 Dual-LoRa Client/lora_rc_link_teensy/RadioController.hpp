@@ -10,7 +10,7 @@
 #define LED_PIN 13
 #define TX_TIMING_DEBUG_PIN 2
 #define RF_RECV_TIMEOUT_MS 1000
-#define RF_TX_PERIOD_MS 100
+#define RF_TX_PERIOD_MS 50
 
 
 extern unsigned long last_packet_timestamp_millis;

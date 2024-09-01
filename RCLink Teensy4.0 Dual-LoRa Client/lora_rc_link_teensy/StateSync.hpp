@@ -1,51 +1,151 @@
 #pragma once
 
 #include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
-#include <stdio.h>
+#include <string>
+#include <tuple>
+#include <sstream>
+#include <iomanip>
+#include <iostream>
+#include "Arduino.h"
 
+#define BASE64_ENCODE_OUTPUT_SIZE(n) (((n + 2) / 3) * 4)
+#define BASE64_DECODE_OUTPUT_SIZE(n) (((n + 3) / 4) * 3)
+
+
+
+// Helper to encode/decode an individual item
+template<typename T>
+void serialize_item(std::ostringstream& stream, const T& item) {
+    stream.write(reinterpret_cast<const char*>(&item), sizeof(T));
+}
+
+template<typename T>
+void deserialize_item(std::istringstream& stream, T& item) {
+    stream.read(reinterpret_cast<char*>(&item), sizeof(T));
+}
+
+// Function to convert a byte array to base64
+std::string bytes_to_base64(const std::string& bytes);
+
+// Function to convert a base64 string to byte array
+std::string base64_to_bytes(const std::string& base64_input);
+
+// Function to encode a struct to base64
+template<typename... Fields>
+std::string encode_to_base64(const std::tuple<Fields...>& fields) {
+
+    //Serial.println("starting encode_to_base64");
+
+    std::ostringstream byteStream;
+    auto serializeField = [&byteStream](const auto& field) {
+        serialize_item(byteStream, field);
+        };
+    std::apply([&](const Fields&... fields) { (serializeField(fields), ...); }, fields);
+
+    //Serial.println("done making bytes, converting to base64 string");
+
+    return bytes_to_base64(byteStream.str());
+}
+
+// Function to decode a struct from base64
+template<typename... Fields>
+bool decode_from_base64(const std::string& base64_input, std::tuple<Fields...>& fields) {
+    std::string bytes = base64_to_bytes(base64_input);
+    std::istringstream byteStream(bytes);
+
+    auto deserializeField = [&byteStream](auto& field) {
+        deserialize_item(byteStream, field);
+        };
+    std::apply([&](Fields&... fields) { (deserializeField(fields), ...); }, fields);
+
+    return !byteStream.fail();
+}
 
 // Structures
 struct ControllerState
 {
-	uint16_t LeftAileron = 0;
-	uint16_t RightAileron = 0;
-	uint16_t FrontWheel = 0;
-	uint16_t LeftElevator = 0;
-	uint16_t RightElevator = 0;
-	uint16_t Rudder = 0;
-	uint16_t Throttle = 0;
-	bool MCUReset = false;
-	uint64_t ControllerTimestamp = 0;
-	uint16_t network_ID = 0xa87c;// constant network ID for confidently rejecting packets from other networks
-	uint8_t jitter_test_byte = 0;
+    uint8_t NetworkID = 0xa8;
+    uint8_t JitterTestByte = 0;
+    uint8_t LeftAileron = 0;
+    uint8_t RightAileron = 0;
+    uint8_t FrontWheel = 0;
+    uint8_t LeftElevator = 0;
+    uint8_t RightElevator = 0;
+    uint8_t Rudder = 0;
+    uint8_t Throttle = 0;
+    uint8_t MCUReset = 0;
+
+    // Get fields as a tuple for generic processing
+    auto get_fields() const {
+		return std::tie(NetworkID, JitterTestByte, LeftAileron,
+			RightAileron, FrontWheel, LeftElevator, RightElevator,
+            Rudder, Throttle, MCUReset);
+        
+	}
+
+    auto get_fields() {
+		return std::tie(NetworkID, JitterTestByte, LeftAileron,
+			RightAileron, FrontWheel, LeftElevator, RightElevator,
+            Rudder, Throttle, MCUReset);
+    }
 };
 
 struct TelemetryState
 {
-	int16_t Pitch = 0;
-	int16_t Roll = 0;
-	int16_t Yaw = 0;
-	uint16_t BatteryVoltage = 0; // in millivolts
-	uint64_t remoteTimestamp = 0; // in milliseconds
-	uint16_t network_ID = 0xa87c;// constant network ID for confidently rejecting packets from other networks
+    uint16_t NetworkID = 0xa9;
+    int16_t Pitch = 0;
+    int16_t Roll = 0;
+    int16_t Yaw = 0;
+    uint8_t BatteryVoltage = 0;
+    uint16_t TimeSinceLastMinute = 0;
+
+    // Get fields as a tuple for generic processing
+    auto get_fields() const {
+        return std::tie(NetworkID, Pitch, Roll, Yaw, BatteryVoltage, TimeSinceLastMinute);
+    }
+
+    auto get_fields() {
+		return std::tie(NetworkID, Pitch, Roll, Yaw, BatteryVoltage, TimeSinceLastMinute);
+    }
 };
 
 
-extern ControllerState controllerState;
+
+
+
+
+
+// Function Prototypes for encoding/decoding
+template<typename T>
+std::string encode(const T& state) {
+    return encode_to_base64(state.get_fields());
+}
+
+template<typename T>
+bool decode(const std::string& base64_input, T& state) {
+    // Capture the fields as a tuple and store it in a local variable
+    auto fields = state.get_fields();
+
+    // Pass the local variable (which is now an lvalue) to decode_from_base64
+    return decode_from_base64(base64_input, fields);
+}
+
+template<typename... Fields>
+void print_fields(const std::tuple<Fields...>& fields) {
+    auto printField = [](const auto& field) {
+        Serial.print(field);
+        Serial.print(" ");
+    };
+    std::apply([&](const Fields&... fields) { (printField(fields), ...); }, fields);
+    Serial.println();
+}
+
+template<typename T>
+void print_struct(const T& state) {
+    print_fields(state.get_fields());
+}
+
+
+
 extern TelemetryState telemetryState;
-
-// Macros
-#define BASE64_ENCODE_OUTPUT_SIZE(n) (((n + 2) / 3) * 4)
-#define BASE64_DECODE_OUTPUT_SIZE(n) (((n + 3) / 4) * 3)
-
-void bytes2base64(const uint8_t* data, size_t length, char* base64_output);
-bool base64_to_bytes(const char* base64_input, uint8_t* output, size_t* output_length, size_t max_bytes);
-
-void encode_ControllerState(const struct ControllerState* state, char* base64_output);
-bool decode_ControllerState(const char* base64_input, struct ControllerState* state);
-
-void encode_TelemetryState(const struct TelemetryState* state, char* base64_output);
-bool decode_TelemetryState(const char* base64_input, struct TelemetryState* state);
+extern ControllerState controllerState;

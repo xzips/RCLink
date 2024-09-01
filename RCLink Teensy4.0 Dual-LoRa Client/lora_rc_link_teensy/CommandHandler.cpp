@@ -21,7 +21,7 @@ namespace rcon
         //if the command is all AAA ignore it
 
         bool isAllA = true;
-        for (int i = 0; i < strlen(command); i++)
+        for (size_t i = 0; i < strlen(command); i++)
         {
             if (command[i] != 'A')
             {
@@ -37,7 +37,7 @@ namespace rcon
 
 
         // Decode the base64 command into the ControllerState struct
-        if (!decode_ControllerState(command, &receivedState)) {
+        if (!decode(command, receivedState)) {
             // Handle error: Invalid command format or decoding failure
 
 
@@ -48,7 +48,7 @@ namespace rcon
             return;
         }
 
-        if (controllerState.network_ID == 0xa87c)
+        if (receivedState.NetworkID == 0xA8)
         {
             controllerState = receivedState;
         }
@@ -56,22 +56,30 @@ namespace rcon
         else
         {
             Serial.println("Network ID mismatch, ignoring packet");
+            Serial.print("Received Network ID: ");
+            Serial.println(receivedState.NetworkID);
             return;
         }
 
         
+        print_struct(controllerState);
+          
 
         // Update PWM outputs based on the received state
-        pwm::update_smooth_pwm_target(SERVO_LEFT_AILERON, receivedState.LeftAileron);
-        pwm::update_smooth_pwm_target(SERVO_RIGHT_AILERON, receivedState.RightAileron);
-        pwm::update_smooth_pwm_target(SERVO_FRONT_WHEEL, receivedState.FrontWheel);
-        pwm::update_smooth_pwm_target(SERVO_LEFT_ELEVATOR, receivedState.LeftElevator);
-        pwm::update_smooth_pwm_target(SERVO_RIGHT_ELEVATOR, receivedState.RightElevator);
-        pwm::update_smooth_pwm_target(SERVO_RUDDER, receivedState.Rudder);
-        pwm::update_smooth_pwm_target(ESC_CHANNEL, receivedState.Throttle);
+        pwm::update_smooth_pwm_target(SERVO_LEFT_AILERON, (receivedState.LeftAileron / 255.f) * 360.f);
+        pwm::update_smooth_pwm_target(SERVO_RIGHT_AILERON, (receivedState.RightAileron / 255.f) * 360.f);
+        pwm::update_smooth_pwm_target(SERVO_FRONT_WHEEL, (receivedState.FrontWheel / 255.f) * 360.f);
+        pwm::update_smooth_pwm_target(SERVO_LEFT_ELEVATOR, (receivedState.LeftElevator / 255.f) * 360.f);
+        pwm::update_smooth_pwm_target(SERVO_RIGHT_ELEVATOR, (receivedState.RightElevator / 255.f) * 360.f);
+        pwm::update_smooth_pwm_target(SERVO_RUDDER, (receivedState.Rudder / 255.f) * 360.f);
+
+        // Inverse the throttle compression
+        float throttleValue = ((receivedState.Throttle / 255.f) * 500.f) + 1500.f;
+        pwm::update_smooth_pwm_target(ESC_CHANNEL, throttleValue);
 
         // Handle MCU reset if requested
         if (receivedState.MCUReset) {
+            Serial.println("REBOOT WAS REQUESTED BY REMOTE CONTROL, REBOOTING!!!");
             doReboot();
         }
 

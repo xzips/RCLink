@@ -15,6 +15,7 @@ unsigned long last_update_time_millis;
 
 U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0);
 
+#define DISPLAY_UPDATE_DEBUG_PIN 20
 
 namespace disp
 {
@@ -23,6 +24,10 @@ namespace disp
   {
     u8g2.begin();
     last_update_time_millis = millis();
+
+    //set pin 20 as output
+    pinMode(DISPLAY_UPDATE_DEBUG_PIN, OUTPUT);
+
   }
 
   void add_text_to_display(String text, int x, int y)
@@ -105,7 +110,7 @@ namespace disp
     u8g2.setFont(u8g2_font_u8glib_4_hr);  // set a smaller font for more text
     u8g2.drawStr(last_msg_pos_x, last_msg_pos_y, last_msg_str);
 
-    uint8_t jtb = controllerState.jitter_test_byte;
+    uint8_t jtb = controllerState.JitterTestByte;
 
     //Serial.println(controllerState.jitter_test_byte);
 
@@ -116,8 +121,13 @@ namespace disp
     u8g2.drawBox(jitter_test_byte_pos_x - 2, jitter_test_byte_pos_y, 4, 8);
 
     
-
+    //set pin 20 high
+    digitalWrite(DISPLAY_UPDATE_DEBUG_PIN, HIGH);
     u8g2.sendBuffer();  // transfer internal memory to the display
+
+    digitalWrite(DISPLAY_UPDATE_DEBUG_PIN, LOW);
+  
+  
   }
 
 

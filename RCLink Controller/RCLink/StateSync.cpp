@@ -59,8 +59,7 @@ bool EncodeDecodeTest(bool silent)
     cs.MCUReset = false;
     cs.Rudder = 128;
     cs.Throttle = 1500;
-    cs.ControllerTimestamp = 123456789;
-    cs.jitter_test_byte = 79;
+    cs.JitterTestByte = 79;
 
     std::string encoded = encode(cs);
 
@@ -76,11 +75,11 @@ bool EncodeDecodeTest(bool silent)
     if (!silent) {
         auto printFields = [](const auto& state) {
             auto [LeftAileron, RightAileron, FrontWheel, LeftElevator, RightElevator,
-                Rudder, Throttle, MCUReset, ControllerTimestamp, network_ID, jitter_test_byte] = state.get_fields();
+                Rudder, Throttle, MCUReset, ControllerTimestamp, network_ID] = state.get_fields();
             std::cout << LeftAileron << "\n" << RightAileron << "\n" << FrontWheel << "\n"
                 << LeftElevator << "\n" << RightElevator << "\n" << Rudder << "\n"
                 << Throttle << "\n" << MCUReset << "\n" << ControllerTimestamp << "\n"
-                << network_ID << "\n" << (int)jitter_test_byte << std::endl;
+                << network_ID  << std::endl;
             };
         printFields(cs2);
     }
@@ -96,7 +95,7 @@ bool EncodeDecodeTest(bool silent)
     ts.Roll = 124;
     ts.Yaw = 125;
     ts.BatteryVoltage = 126;
-    ts.remoteTimestamp = 124901241242;
+    ts.TimeSinceLastMinute = 124901241242;
 
     encoded = encode(ts);
 

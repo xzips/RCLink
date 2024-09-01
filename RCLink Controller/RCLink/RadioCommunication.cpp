@@ -204,11 +204,13 @@ void serial_thread() {
                             continue;
                         }
 
-
+						TelemetryState recvTelem = TelemetryState();
+                             
 
 						//bool telemetryDecodedSuccess = decode_TelemetryState(message.c_str(), &telemetryState);
-						bool telemetryDecodedSuccess = decode(message, telemetryState);
-                        
+						bool telemetryDecodedSuccess = decode(message, recvTelem);
+
+                    
                         {
                             lock_guard<mutex> lock3(last_incoming_message_mutex);
                         
@@ -220,6 +222,22 @@ void serial_thread() {
 								std::cout << "Decoding Error: " << message << std::endl;
                                 continue;
                             }
+
+                            else
+                            {
+                                if (recvTelem.NetworkID == 0xa9)
+                                {
+								    telemetryState = recvTelem;
+
+                                }
+
+                                else
+                                {
+									std::cout << "Received telemetry from unknown network ID: " << telemetryState.NetworkID << std::endl;
+
+                                }
+                            }
+                            
 
                         }
 

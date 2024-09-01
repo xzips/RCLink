@@ -46,8 +46,8 @@ void rcon::radio_setup() {
     LoRa1.setPins(9, 7, 5);
     LoRa2.setPins(8, 6, 4);
 
-    LoRa1.setTxPower(20);
-    LoRa2.setTxPower(20);
+    //LoRa1.setTxPower(10);
+   // LoRa2.setTxPower(10);
 
 
 
@@ -59,8 +59,6 @@ void rcon::radio_setup() {
         }
 
         pinMode(LED_PIN, OUTPUT);
-        
-        pinMode(TX_TIMING_DEBUG_PIN, OUTPUT);
 
         while (true) {
             digitalWrite(LED_PIN, HIGH);
@@ -96,6 +94,10 @@ void rcon::radio_setup() {
     if (SERIAL_DEBUG) {
         Serial.println(F("LoRa hardware fully initialized, proceeding"));
     }
+
+    //set pin 2 as output
+    pinMode(TX_TIMING_DEBUG_PIN, OUTPUT);
+
 }
 
 rcon::RadioLoopState rcon::radio_loop() {
@@ -112,11 +114,17 @@ rcon::RadioLoopState rcon::radio_loop() {
         return RadioLoopState::DISCONNECTED_RETRYING;
     }
 
-    
+
+
+
     int packetSize = LoRa1.parsePacket();
     if (packetSize) {
+        
+        //pull pin 2 high
+        digitalWrite(TX_TIMING_DEBUG_PIN, HIGH);
+
         // Read the incoming packet
-        int i = 0;
+        size_t i = 0;
         while (LoRa1.available() && i < sizeof(rf_incoming_buffer) - 1) {
             rf_incoming_buffer[i++] = LoRa1.read();
         }
@@ -136,11 +144,13 @@ rcon::RadioLoopState rcon::radio_loop() {
         snr = LoRa1.packetSnr();
         freqErr = LoRa1.packetFrequencyError();
 
+        delay(2);
+
+        //pull pin 2 low
+        digitalWrite(TX_TIMING_DEBUG_PIN, LOW);
 
 
 
-
-        
 
       
     }
@@ -156,12 +166,21 @@ rcon::RadioLoopState rcon::radio_loop() {
 
         // Prepare and send outgoing data
         clear_outgoing_buffer();
-        telemetryState.remoteTimestamp = millis();
-        encode_TelemetryState(&telemetryState, rf_outgoing_buffer);
 
+        //telemetryState.TimeSinceLastMinute = (uint16_t)(millis() % 60000UL);
+        //encode_TelemetryState(&telemetryState, rf_outgoing_buffer);
+
+        //Serial.println(millis());
+        //telemetryState.TimeSinceLastMinute = 5;
+
+
+        std::string outgoing = encode(telemetryState);
+
+        //std::string outgoing = "TEST123";
+
+        strncpy(rf_outgoing_buffer, outgoing.c_str(), 64);
 
         //pull pin 2 high
-        digitalWrite(TX_TIMING_DEBUG_PIN, HIGH);
 
 
         //Serial.print("Sending: ");
@@ -172,7 +191,6 @@ rcon::RadioLoopState rcon::radio_loop() {
         LoRa2.endPacket();
 
         //pull pin 2 low
-        digitalWrite(TX_TIMING_DEBUG_PIN, LOW);
 
         if (SERIAL_DEBUG) {
             Serial.println("Successfully sent data to remote transceiver");

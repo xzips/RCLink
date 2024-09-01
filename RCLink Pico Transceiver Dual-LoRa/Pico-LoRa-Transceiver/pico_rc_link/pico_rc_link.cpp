@@ -176,8 +176,8 @@ void core0_entry() {
     LoRa1.setSyncWord( 0xAF);
     LoRa2.setSyncWord( 0xAB);
 
-    //LoRa1.setTxPower(20);
-    //LoRa2.setTxPower(20);
+    LoRa1.setTxPower(20);
+    LoRa2.setTxPower(20);
 
     
 

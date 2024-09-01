@@ -46,8 +46,8 @@ void rcon::radio_setup() {
     LoRa1.setPins(9, 7, 5);
     LoRa2.setPins(8, 6, 4);
 
-    //LoRa1.setTxPower(10);
-   // LoRa2.setTxPower(10);
+    LoRa1.setTxPower(20);
+    LoRa2.setTxPower(20);
 
 
 

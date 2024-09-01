@@ -130,6 +130,13 @@ namespace imu
     //the ypr we're talking about here is imu::ypr which is a 3 array float
      void update_rotation_ypr()
      {
+        if (millis() - last_imu_comm_update_millis > IMU_COMM_UPDATE_DELAY) {
+            last_imu_comm_update_millis = millis();
+        }
+        else {
+            return;
+        }
+
         // if programming failed, don't try to do anything
         if (!dmpReady) return;
 

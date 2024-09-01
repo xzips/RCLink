@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\StateSync.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\StateSync.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCLink.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\RCLink.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\StateSync.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|solutionrelative:RCLink\\StateSync.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C10F065-E483-41F0-8589-537476C7F84D}|RCLink\\RCLink.vcxproj|C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RadioCommunication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -58,18 +58,17 @@
               "RelativeToolTip": "RCLink\\RadioCommunication.cpp",
               "ViewState": "AQIAAMYAAAAAAAAAAAAiwOsAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-18T23:17:53.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-18T23:17:53.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StateSync.hpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\StateSync.hpp",
               "RelativeDocumentMoniker": "RCLink\\StateSync.hpp",
               "ToolTip": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\StateSync.hpp",
               "RelativeToolTip": "RCLink\\StateSync.hpp",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAGAAAAAWAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAG0AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-08-21T23:29:05.655Z",
               "EditorCaption": ""
@@ -84,8 +83,7 @@
               "RelativeToolTip": "RCLink\\RadioCommunication.hpp",
               "ViewState": "AQIAACoAAAAAAAAAAAAiwEQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-20T18:56:15.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T18:56:15.578Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "RCLink\\Quick3D.hpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-24T02:49:15.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T02:49:15.23Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "RCLink\\RCGraphics.hpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-20T20:19:19.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T20:19:19.983Z"
             }
           ]
         },
@@ -121,13 +117,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RCLink.cpp",
               "DocumentMoniker": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCLink.cpp",
               "RelativeDocumentMoniker": "RCLink\\RCLink.cpp",
               "ToolTip": "C:\\Users\\aspen\\Desktop\\RCLink\\RCLink Controller\\RCLink\\RCLink.cpp",
               "RelativeToolTip": "RCLink\\RCLink.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAALoAAAAgAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvxMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-18T23:17:52.174Z",
               "IsPinned": true,
@@ -144,8 +140,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAG4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-21T23:29:13.551Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -157,8 +152,7 @@
               "RelativeToolTip": "RCLink\\RCGraphics.cpp",
               "ViewState": "AQIAAF8BAAAAAAAAAAAAACIEAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-20T04:44:50.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T04:44:50.073Z"
             },
             {
               "$type": "Document",
@@ -170,8 +164,7 @@
               "RelativeToolTip": "RCLink\\Quick3D.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAHkAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-24T02:49:21.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T02:49:21.893Z"
             }
           ]
         }

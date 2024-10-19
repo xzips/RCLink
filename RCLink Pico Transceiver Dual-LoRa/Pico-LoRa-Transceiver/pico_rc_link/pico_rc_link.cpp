@@ -9,12 +9,12 @@
 #define SERIAL_RECV_TIMEOUT_MS 100
 #define RF_RECV_TIMEOUT_MS 1000
 
-#define SERIAL_LOOP_DELAY_MS 5
+#define SERIAL_LOOP_DELAY_MS 10
 #define RF_LOOP_DELAY_MS 20
 
 #define MAX_STRING_LENGTH 64
 
-#define DEBUG_RX_PIN 11
+#define DEBUG_RX_PIN 21
 #define DEBUG_GENERIC_PIN 1
 
 #define DEBUG_LED_PIN 25
@@ -145,11 +145,21 @@ void core0_rf_loop() {
 
 
 void core0_entry() {
-    LoRa1.setPins(8, 9, 7, 8);
-    LoRa2.setPins(3, 4, 2, 3);
+    //ss, reset, dio0
+    //LoRa1.setPins(8, 9, 7, 8);
+
+
+    //OLD PINS, BASICALYL ISUE IS PINS 6 AND 7 INTERFERE WITH SPI0 PINS DUE TO PCB DESIGN ERROR
+   // LoRa2.setPins(3, 4, 2, 3);
+
+    //PLAN WILL BE TO DESOLDER ON TOP AND BOTTOM OF pcB FOR THESE PINS, AND THEN JUMP WIRE TO NEW PINS
+
+    LoRa1.setPins(12, 11, 13, 12);
+    LoRa2.setPins(7, 6, 8, 7);
+
     
-    LoRa1.setSPIFrequency(8E6);
-    LoRa2.setSPIFrequency(8E6);
+    //LoRa1.setSPIFrequency(8E5); // should be 8E6 normally
+    //LoRa2.setSPIFrequency(8E5);
 
 
 
@@ -157,12 +167,21 @@ void core0_entry() {
     //setup DEBUG_RX_PIN as output
 
 
-    if (!LoRa1.begin(438E6) || !LoRa2.begin(439E6)) {
+    if (!LoRa1.begin(438E6)) {
         mutex_enter_blocking(&telemetry_mutex);
-        strcpy(telemetryState, "ERROR: Radio Hardware Failure");
+        strcpy(telemetryState, "ERROR: Radio Hardware 1 Failure");
         mutex_exit(&telemetry_mutex);
         while (1);
     }
+
+    
+    if (!LoRa2.begin(439E6)) {
+        mutex_enter_blocking(&telemetry_mutex);
+        strcpy(telemetryState, "ERROR: Radio Hardware 2 Failure");
+        mutex_exit(&telemetry_mutex);
+        while (1);
+    }
+
 
         //500khz
     LoRa1.setSignalBandwidth( 500E3 );
@@ -176,8 +195,8 @@ void core0_entry() {
     LoRa1.setSyncWord( 0xAF);
     LoRa2.setSyncWord( 0xAB);
 
-    LoRa1.setTxPower(20);
-    LoRa2.setTxPower(20);
+    LoRa1.setTxPower(18);
+    LoRa2.setTxPower(18);
 
     
 

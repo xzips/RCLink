@@ -24,7 +24,7 @@ std::vector<q3d::TM> models;
 std::vector<sf::Texture*> textures;
 
 bool escCalibrateButtonPressed = false;
-
+sf::RenderWindow* P_window;
 
 //create rendertexture of the size of the window
 sf::RenderTexture* render_texture;// = sf::RenderTexture();
@@ -331,6 +331,12 @@ void UpdateDrawThrottleController(sf::RenderWindow& window)
 
 void ProcessControlInputs()
 {
+	//if window not in focus, don't process inputs
+	if (!P_window->hasFocus())
+	{
+		return;
+	}
+	
 	for (auto& servo : servoControllerVector)
 	{
 		if (!(sf::Keyboard::isKeyPressed(servo.increase_key) && sf::Keyboard::isKeyPressed(servo.decrease_key)))

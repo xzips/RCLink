@@ -130,6 +130,7 @@ namespace pwm {
       else
       {
         set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);
+        //set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.target_angle);
       }
       
       //set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);

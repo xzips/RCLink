@@ -147,6 +147,7 @@
     <ClInclude Include="RadioCommunication.hpp" />
     <ClInclude Include="RCGraphics.hpp" />
     <ClInclude Include="StateSync.hpp" />
+    <ClInclude Include="TestFile.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

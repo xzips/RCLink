@@ -46,6 +46,8 @@ namespace pwm{
     uint8_t servo_num;
     float current_angle;
     float target_angle;
+    float current_speed;
+    float max_acceleration;
     float max_speed; // degrees per second
     bool is_esc;
   };

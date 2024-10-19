@@ -19,7 +19,7 @@ unsigned long elapsedTime;
 
 void setup() {
 
-  Wire.setClock(400000);
+ // Wire.setClock(400000);
 
   Serial.begin(9600);
   if (CrashReport) {
@@ -36,7 +36,7 @@ void setup() {
   last_packet_timestamp_millis = millis();
 
     
-  const int MS24_SPEED_DEG_PER_SEC = 180;
+  const int MS24_SPEED_DEG_PER_SEC = 500;
 
 
   

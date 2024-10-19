@@ -16,6 +16,8 @@ extern ThrottleController throttleController;
 
 extern std::vector<sf::Texture*> textures;
 
+extern sf::RenderWindow* P_window;
+
 extern unsigned long frameCounter;
 
 extern std::vector<q3d::TM> models;

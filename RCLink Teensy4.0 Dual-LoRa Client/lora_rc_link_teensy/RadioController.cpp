@@ -134,10 +134,10 @@ rcon::RadioLoopState rcon::radio_loop() {
         incomingBufferProcessed = false;
         radioConnected = true;
 
-        if (SERIAL_DEBUG) {
+        //if (SERIAL_DEBUG) {
             Serial.print("Received: ");
             Serial.println(rf_incoming_buffer);
-        }
+        //}
 
         packets_in_last_sec += 1; 
         rssi = LoRa1.packetRssi();

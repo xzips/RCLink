@@ -15,16 +15,16 @@ using namespace std;
 void define_hardware()
 {
     
-    servoControllerVector.push_back(ServoController(1,  90, 180, 135, sf::Keyboard::Q, sf::Keyboard::E, 3, 2, "Left Aileron", false, true));
-    servoControllerVector.push_back(ServoController(2,  90, 180, 135, sf::Keyboard::E, sf::Keyboard::Q, 3, 2, "Right Aileron", false, false));
+    servoControllerVector.push_back(ServoController(1,  90, 180, 135, sf::Keyboard::Q, sf::Keyboard::E, 3, 1, "Left Aileron", false, true));
+    servoControllerVector.push_back(ServoController(2,  90, 180, 135, sf::Keyboard::E, sf::Keyboard::Q, 3, 1, "Right Aileron", false, false));
 
-	servoControllerVector.push_back(ServoController(5, 90, 130, 110, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Front Wheel", false, false));
+	servoControllerVector.push_back(ServoController(5, 90, 130, 110, sf::Keyboard::A, sf::Keyboard::D, 3, 1, "Front Wheel", false, false));
     //95
-    servoControllerVector.push_back(ServoController(8, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 0, "Left Elevator", false, false));
+    servoControllerVector.push_back(ServoController(8, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 1, "Left Elevator", false, false));
     
     //servoControllerVector.push_back(ServoController(10,  25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 3, 0, "Right Elevator", false));
-    servoControllerVector.push_back(ServoController(10, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 0, "Right Elevator", false, true));
-	servoControllerVector.push_back(ServoController(9, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 2, "Rudder", false, false));
+    servoControllerVector.push_back(ServoController(10, 25, 165, 95, sf::Keyboard::W, sf::Keyboard::S, 5, 1, "Right Elevator", false, true));
+	servoControllerVector.push_back(ServoController(9, 45, 135, 90, sf::Keyboard::A, sf::Keyboard::D, 3, 1, "Rudder", false, true));
 
 
 }
@@ -170,10 +170,18 @@ void UpdateControllerState()
     controllerState.RightElevator = std::clamp(GetServoControllerByName("Right Elevator")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
     controllerState.LeftAileron = std::clamp(GetServoControllerByName("Left Aileron")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
     controllerState.RightAileron = std::clamp(GetServoControllerByName("Right Aileron")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
+    
     controllerState.Rudder = std::clamp(GetServoControllerByName("Rudder")->GetPhysicalAngle() * (255.f / 360.f), 0.f, 255.f);
-    controllerState.Throttle = std::clamp((((float)throttleController.GetMappedThrottle() - 1500.f)/500.f ) * 255.f, 0.f, 255.f);
 
     uint64_t time_since_start = get_timestamp_ms() - controller_start_time;
+	//float tmpRudderState = 45 * sin(time_since_start / 300.0f) + 90;
+
+	//controllerState.Rudder = std::clamp(tmpRudderState * (255.f / 360.f), 0.f, 255.f);
+
+
+    
+    controllerState.Throttle = std::clamp((((float)throttleController.GetMappedThrottle() - 1500.f)/500.f ) * 255.f, 0.f, 255.f);
+
     
     //sin of time since start, normalized 0-255
 	float sinVal = sin(time_since_start / 400.0f) * 127.5f + 127.5f;
@@ -191,7 +199,6 @@ int main() {
     //exit(-1);
 
 
-    thread background(serial_thread);
 
     LoadFont();
     LoadTextures();
@@ -202,6 +209,10 @@ int main() {
 
     load_models();
 
+
+
+    thread background(serial_thread);
+
     roll_orientation = 20;
     pitch_orientation = 20;
     
@@ -210,6 +221,8 @@ int main() {
 
     //sf::RenderWindow window(sf::VideoMode(800, 600), "SFML shapes", sf::Style::Default, settings);
     sf::RenderWindow window(sf::VideoMode(1600, 1000), "RCLink Controller", sf::Style::Default, settings);
+
+	P_window = &window;
 
     SetupAttitudeDrawing(window);
     //set 60fps framerate limit

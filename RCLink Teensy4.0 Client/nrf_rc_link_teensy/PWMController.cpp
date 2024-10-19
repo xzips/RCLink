@@ -86,57 +86,71 @@ namespace pwm {
 
     pwm_driver.setPWM(servoNum, 0, anglePulse);
   }
-
-  void update_smooth_pwms()
-  {
+void update_smooth_pwms()
+{
     unsigned long current_millis = millis();
     unsigned long elapsed_millis = current_millis - last_pwm_update_millis;
-
-    //print in func
-   // Serial.println("Elapsed millis: " + String(elapsed_millis));
-
-    
 
     if (elapsed_millis < SMOOTH_PWM_UPDATE_DELAY_MS) return;
 
     last_pwm_update_millis = current_millis;
 
+    float elapsed_seconds = elapsed_millis / 1000.0;
+
     for (auto &smooth_pwm : smooth_pwms)
     {
-      if (smooth_pwm.current_angle == smooth_pwm.target_angle) continue;
+        // Skip if already at target and speed is zero
+        if (smooth_pwm.current_angle == smooth_pwm.target_angle && smooth_pwm.current_speed == 0)
+            continue;
 
-      float angle_diff = smooth_pwm.target_angle - smooth_pwm.current_angle;
-      float angle_diff_abs = abs(angle_diff);
+        // Compute angle difference
+        float angle_diff = smooth_pwm.target_angle - smooth_pwm.current_angle;
 
-      int angle_diff_sign = angle_diff > 0 ? 1 : -1;
+        // Determine desired acceleration
+        float desired_acceleration = (angle_diff > 0 ? 1 : -1) * smooth_pwm.max_acceleration;
 
-      float angle_diff_step = smooth_pwm.max_speed * (elapsed_millis / 1000.0);
+        // Adjust acceleration if overshooting
+        if ((smooth_pwm.current_speed * angle_diff) > 0)
+        {
+            // Decelerate to stop at the target
+            float required_deceleration = - (smooth_pwm.current_speed * smooth_pwm.current_speed) / (2 * angle_diff);
+            if (abs(required_deceleration) < abs(smooth_pwm.max_acceleration))
+                desired_acceleration = required_deceleration;
+        }
 
+        // Update speed
+        smooth_pwm.current_speed += desired_acceleration * elapsed_seconds;
 
+        // Limit speed to max_speed
+        if (smooth_pwm.current_speed > smooth_pwm.max_speed)
+            smooth_pwm.current_speed = smooth_pwm.max_speed;
+        else if (smooth_pwm.current_speed < -smooth_pwm.max_speed)
+            smooth_pwm.current_speed = -smooth_pwm.max_speed;
 
+        // Update position
+        smooth_pwm.current_angle += smooth_pwm.current_speed * elapsed_seconds;
 
-      if (angle_diff_abs <= angle_diff_step) {
-        smooth_pwm.current_angle = smooth_pwm.target_angle;
-      }
-      else {
-        smooth_pwm.current_angle += angle_diff_sign * angle_diff_step;
-      }
+        // Check if we have reached or passed the target position
+        if ((smooth_pwm.current_speed > 0 && smooth_pwm.current_angle >= smooth_pwm.target_angle) ||
+            (smooth_pwm.current_speed < 0 && smooth_pwm.current_angle <= smooth_pwm.target_angle))
+        {
+            // Set to target position and zero speed
+            smooth_pwm.current_angle = smooth_pwm.target_angle;
+            smooth_pwm.current_speed = 0;
+        }
 
-      
-      if (smooth_pwm.is_esc)
-      {
-        setThrottle((int)smooth_pwm.current_angle);
-      }
-      else
-      {
-        set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);
-      }
-      
-      //set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);
-
+        // Send PWM signal
+        if (smooth_pwm.is_esc)
+        {
+            setThrottle((int)smooth_pwm.current_angle);
+        }
+        else
+        {
+            set_servo_angle(smooth_pwm.servo_num, (int)smooth_pwm.current_angle);
+        }
     }
+}
 
-  }
 
   void add_smooth_pwm(uint8_t servo_num, int default_angle, int target_angle, int max_speed, bool is_esc)
   {

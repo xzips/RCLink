@@ -43,11 +43,13 @@ namespace pwm{
   void update_smooth_pwm_target(uint8_t servo_num, int target_angle);
 
   struct SmoothPWM {
-    uint8_t servo_num;
-    float current_angle;
-    float target_angle;
-    float max_speed; // degrees per second
-    bool is_esc;
+      float current_angle;
+      float target_angle;
+      float current_speed;
+      float max_speed;
+      float max_acceleration;
+      bool is_esc;
+      int servo_num;
   };
 
   extern unsigned long last_pwm_update_millis;

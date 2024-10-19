@@ -132,7 +132,7 @@ bool initialize_serial() {
 
         //COM7 for desktop, COM5 for laptop
 
-        serial_ = new serial_port(io, "COM6");  // Adjust the port name depending on your OS and port number
+        serial_ = new serial_port(io, "COM10");  // Adjust the port name depending on your OS and port number
         serial_->set_option(serial_port_base::baud_rate(1000000));
         serial_->set_option(serial_port_base::character_size(8));
         serial_->set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::one));
@@ -233,7 +233,7 @@ void serial_thread() {
 
                                 else
                                 {
-									std::cout << "Received telemetry from unknown network ID: " << telemetryState.NetworkID << std::endl;
+									std::cout << "Received telemetry from unknown network IFD: " << telemetryState.NetworkID << std::endl;
 
                                 }
                             }
